@@ -1,0 +1,22 @@
+Highlights & Device Specific Changes:
+Build type: Monthly
+Device: Realme GT Neo2 5G
+Device maintainer: Arsalan_zeus
+
+====================
+     11-05-2023
+====================
+
+-Update FP & Desc to RMX3370_11.F.05.
+
+-Update FCM target level to 6 [2/3].
+
+-May Security patch.
+
+-Update proprietary blobs to RMX3370_11.F.04.
+
+-Enable compr_voip feature.
+
+-Fixed optimizations.
+
+-Switch to bigshot kernel by default.

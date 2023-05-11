@@ -1,0 +1,28 @@
+{
+	"response": [
+		{
+			"maintainer": "Arsalan-Zeus",
+			"oem": "Realme",
+			"device": "Realme GT Neo2 5G",
+			"filename": "AlphaDroid-13.0-20230511-bitra-core_gapps-v1.5.zip",
+			"download": "https://sourceforge.net/projects/alphadroid-project/files/bitra/AlphaDroid-13.0-20230511-bitra-core_gapps-v1.5.zip/download",
+			"timestamp": 1683808683,
+			"md5": "ababe2e140472295781585038710eaf9",
+			"sha256": "1da1d0ecf6634dcdfb5dfcbbdc965c596bf56428c68e0ad6e4c13d2b1bf161e6",
+			"size": 2333865823,
+			"version": "core_gapps.core_gapps",
+			"buildtype": "core_gapps",
+			"forum": "",
+			"gapps": "",
+			"firmware": "",
+			"modem": "",
+			"bootloader": "",
+			"recovery": "",
+			"paypal": "",
+			"telegram": "https://t.me/zeusprojekts",
+			"dt": "https://github.com/arsalan-zeus/device_realme_bitra",
+			"common-dt": "https://github.com/arsalan-zeus/device_realme_sm8250-common",
+			"kernel": "https://github.com/arsalan-zeus/kernel_realme_sm8250"
+		}
+	]
+}
