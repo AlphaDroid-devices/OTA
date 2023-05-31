@@ -1,0 +1,28 @@
+{
+	"response": [
+		{
+			"maintainer": "KamiKaonashi",
+			"oem": "Xiaomi",
+			"device": "Xiaomi Mi 11",
+			"filename": "AlphaDroid-13.0-20230531-venus-full_gapps-v1.5.1.zip",
+			"download": "https://sourceforge.net/projects/alphadroid-project/files/venus/AlphaDroid-13.0-20230531-venus-full_gapps-v1.5.1.zip/download",
+			"timestamp": 1685508561,
+			"md5": "b7e570886c4b1387f662a70c21463624",
+			"sha256": "f5f6569a1978123347980fa571bb20befd1ca93cc79c581a980d2d4dc2fca7f3",
+			"size": 2160262588,
+			"version": "1.5.1",
+			"buildtype": "full_gapps",
+			"forum": "https://forum.xda-developers.com/m/kamikaonashi.4696609/",
+			"gapps": "",
+			"firmware": "",
+			"modem": "",
+			"bootloader": "",
+			"recovery": "",
+			"paypal": "",
+			"telegram": "https://t.me/kamikaonashi",
+			"dt": "https://github.com/AlphaDroid-devices/device_xiaomi_venus",
+			"common-dt": "https://github.com/AlphaDroid-devices/device_xiaomi_sm8350-common",
+			"kernel": "https://github.com/AlphaDroid-devices/kernel_xiaomi_venus"
+		}
+	]
+}
