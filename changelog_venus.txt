@@ -1,0 +1,12 @@
+Highlights & Device Specific Changes:
+Build type: Monthly
+Device: Xiaomi Mi 11
+Device maintainer: KamiKaonashi
+
+====================
+     31-05-2023
+====================
+
+Initial build
+Leica cam included
+added 90Hz per app refresh rate
