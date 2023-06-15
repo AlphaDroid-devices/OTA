@@ -1,0 +1,10 @@
+Build type: Monthly
+Device: Realme 5 Series (r5x)
+Device maintainer: Amrito
+
+====================
+     15-06-2023
+====================
+
+- initial AlphaDroid stable build
+- Encrypted & Enforcing

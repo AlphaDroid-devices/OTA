@@ -1,0 +1,28 @@
+{
+	"response": [
+		{
+	    "maintainer": "Amrito",
+            "oem": "Realme",
+            "device": "Realme 5/5i/5s (r5x)",
+            "filename": "AlphaDroid-13.0-20230615-r5x-core_gapps-v1.5.1.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/r5x/AlphaDroid-13.0-20230615-r5x-core_gapps-v1.5.1.zip/download",
+            "timestamp": 1686809418,
+            "md5": "b5265a7b433142f0c06a98084d1634fc",
+            "sha256": "abb7d7b8cd6fc43b741625c95921f7cf45ad811486a9a97cbd9efb",
+            "size": 1457942817,
+            "version": "1.5.1",
+            "buildtype": "core_gapps",
+            "forum": "https://t.me/alphadroid_chat",
+            "gapps": "",
+            "firmware": "",
+            "modem": "",
+            "bootloader": "",
+            "recovery": "",
+            "paypal": "",
+            "telegram": "https://t.me/Realme5Dev",
+            "dt": "https://github.com/AlphaDroid-devices/device_realme_r5x",
+            "common-dt": "",
+            "kernel": "https://github.com/AlphaDroid-devices/kernel_realme_r5x"
+		}
+	]
+}
