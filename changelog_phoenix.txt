@@ -1,0 +1,38 @@
+Highlights & Device Specific Changes:
+Build type: Monthly
+Device: Xiaomi Redmi K30 / Poco X2
+Device maintainer: JAYMISTRY258
+
+====================
+     22-07-2023
+====================
+Latest Source Synced
+Initial Official Build
+July 2023 Security Patch
+Alza-v1.7 kernel by default
+Upstreamed kernel to 4.14.320
+Added KSU Support
+Added Moto Dolby Atmos
+Added Xiaomi Leica Camera
+Safetynet Passed by default
+
+Disclaimer :-	This version of Alza Kernel is based
+		on Pure Kernel by PZQQT
+
+====================
+     Known Issue
+====================
+Fast charging support not available in this update
+Fast charging support will be added in next update
+Xiaomi Leica Camera Documents mode not working
+
+====================
+   Tips & Tricks
+====================
+Use to enable EX Kernel Manager fast charging
+Menu > Miscellaneous > USB fastcharge > Enable
+
+Disclaimer :-	if you are using pirated or moded
+		EX Kernel Manager then it will be
+		crash and not work it is batter
+		to buy genuine apk from playstore.
