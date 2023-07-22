@@ -47,6 +47,7 @@
 			"dt": "https://github.com/AlphaDroid-devices/device_xiaomi_phoenix",
 			"common-dt": "",
 			"kernel": "https://github.com/AlphaDroid-devices/kernel_xiaomi_phoenix"
+
 		},
 		{
 			"maintainer": "JAYMISTRY258",
