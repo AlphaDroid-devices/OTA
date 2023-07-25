@@ -1,0 +1,28 @@
+{
+	"response": [
+		{
+			"maintainer": "",
+			"oem": "",
+			"device": "",
+			"filename": "AlphaDroid-13.0-20230725-instantnoodlep-full_gapps-v1.7.zip",
+			"download": "https://sourceforge.net/projects/alphadroid-project/files/instantnoodlep/AlphaDroid-13.0-20230725-instantnoodlep-full_gapps-v1.7.zip/download",
+			"timestamp": 1690277031,
+			"md5": "0288963d3f14c41c0ac90f8712b97297",
+			"sha256": "8d8f5000a0b79530fb2c039c776aca0fb336c483be5515f6fc71007fee7a58d4",
+			"size": 2027276185,
+			"version": "1.7",
+			"buildtype": "",
+			"forum": "",
+			"gapps": "",
+			"firmware": "",
+			"modem": "",
+			"bootloader": "",
+			"recovery": "",
+			"paypal": "",
+			"telegram": "",
+			"dt": "",
+			"common-dt": "",
+			"kernel": ""
+		}
+	]
+}

@@ -1,0 +1,13 @@
+Highlights & Device Specific Changes:
+Build type: Monthly
+Device: OnePlus 8
+Device maintainer: ZIZZYBOI
+
+====================
+     25-07-2023
+====================
+
+- Initial OFFICIAL build
+- OOS cam included
+- Dolby included
+
