@@ -1,0 +1,19 @@
+Highlights & Device Specific Changes:
+Build type: Monthly
+Device: OnePlus 8 Pro
+Device maintainer: ZIZZYBOI
+Required firmware: OOS 13.1 F.67
+
+====================
+     02-08-2023
+====================
+
+- Initial OFFICIAL build
+- OOS cam included
+- Dolby included
+- EXT4 build
+- Meteoric kernel prebuilt
+
+Bugs: Back gesture animation and haptic broken
+
+Rest you tell me.
