@@ -1,0 +1,20 @@
+Highlights & Device Specific Changes:
+Build type: Monthly
+Device: OnePlus 8
+Device maintainer: ZIZZYBOI
+Required firmware: OOS 13.1 F.67
+
+====================
+     04-08-2023
+====================
+
+- Initial OFFICIAL build
+- OOS cam included
+- Dolby included
+- EXT4 build
+- Meteoric kernel prebuilt
+
+Bug: OOS cam doesn't work
+- Back gesture animation and haptic toggle broken
+
+Rest you tell me.
