@@ -23,7 +23,7 @@
 			"dt": "https://github.com/AlphaDroid-devices/device_samsung_beyond1lte",
 			"common-dt": "https://github.com/AlphaDroid-devices/device_samsung_exynos9820-common",
 			"kernel": "https://github.com/AlphaDroid-devices/kernel_samsung_exynos9820"
-		}
+		},
 	    {
 	        "maintainer": "Mgm2023",
 			"oem": "Samsung",

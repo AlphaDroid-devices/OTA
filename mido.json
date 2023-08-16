@@ -23,7 +23,7 @@
 			"dt": "https://github.com/AlphaDroid-devices/device_xiaomi_mido",
 			"common-dt": "",
 			"kernel": "https://github.com/AlphaDroid-devices/kernel_xiaomi_mido"
-		}
+		},
 		{
 			"maintainer": "KamiKaonashi",
 			"oem": "Xiaomi",
