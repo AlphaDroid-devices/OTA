@@ -5,6 +5,16 @@ Device maintainer: ZIZZYBOI
 Required firmware: OOS 13.1 F.67
 
 ====================
+     16-08-2023
+====================
+- FIXED BUNCH OF EVERYTHING
+- OOS CAM should be working now hopefully
+- Added lineage charge control (havent tested much let me know)
+- Screen off FOD fixed
+- Misc improvements and fixes
+- No AUG patch yet
+
+====================
      02-08-2023
 ====================
 
