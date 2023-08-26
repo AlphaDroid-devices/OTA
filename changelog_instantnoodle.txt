@@ -5,6 +5,21 @@ Device maintainer: ZIZZYBOI
 Required firmware: OOS 13.1 F.67
 
 ====================
+     26-08-2023
+====================
+
+- Updated to August patch
+- Very minimal gapps
+- Meteoric kernel inbuilt
+- OOS Cam and Dolby included
+- Misc improvements behind the hood
+
+Notes/Bugs: 
+
+-5G might not be working for some. will address this next update
+rest you tell me
+
+====================
      04-08-2023
 ====================
 
