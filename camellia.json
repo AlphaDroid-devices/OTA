@@ -1,0 +1,28 @@
+{
+	"response": [
+		{
+			"maintainer": "NaokoShoto",
+			"oem": "Xiaomi",
+			"device": "Xiaomi Redmi Note 10(T) 5G / 11SE / Poco M3 Pro 5G",
+			"filename": "AlphaDroid-13.0-20230904-camellia-gapps-v1.8.zip",
+			"download": "https://sourceforge.net/projects/alphadroid-project/files/camellia/AlphaDroid-13.0-20230904-camellia-gapps-v1.8.zip/download",
+			"timestamp": 1693828225,
+			"md5": "18ccf7487c107c301dfe4ea10b065e20",
+			"sha256": "35dab0b8c94d01cdba0d6e9fb0281a08ac317a5f03df49a8842e25969b22b7a5",
+			"size": 1452024101,
+			"version": "1.8",
+			"buildtype": "gapps",
+			"forum": "https://forum.xda-developers.com/m/naokoshoto.12617345/",
+			"gapps": "",
+			"firmware": "",
+			"modem": "",
+			"bootloader": "",
+			"recovery": "",
+			"paypal": "https://paypal.me/gemerfoxy",
+			"telegram": "https://t.me/naokoshoto",
+			"dt": "https://github.com/AlphaDroid-devices/device_xiaomi_camellia",
+			"common-dt": "",
+			"kernel": "https://github.com/AlphaDroid-devices/device_xiaomi_camellia-kernel"
+		}
+	]
+}

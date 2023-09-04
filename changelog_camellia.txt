@@ -1,0 +1,13 @@
+Highlights & Device Specific Changes:
+Build type: Monthly
+Device: Xiaomi Redmi Note 10(T) 5G / 11SE / Poco M3 Pro 5G
+Device maintainer: NaokoShoto
+Required firmware: v14.0.5.0
+
+====================
+     09-04-2023
+====================
+
+- Initial Official Build
+- SELinux Enforcing
+- GCamGo included
