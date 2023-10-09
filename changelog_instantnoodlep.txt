@@ -2,7 +2,20 @@ Highlights & Device Specific Changes:
 Build type: Monthly
 Device: OnePlus 8 Pro
 Device maintainer: ZIZZYBOI
-Required firmware: OOS 13.1 F.67
+Required firmware: OOS 13.1 F.69
+
+====================
+     09-10-2023
+====================
+
+- Fix logspam
+- Better ram management
+- Downgrade zram to 2GB instead of 4
+- Keep only neccessary Gapps
+- Keep animations 0.9x (chanegable in developer settings)
+- Misc fixes and improvements to system
+
+Bug: battery graph is missing in battery settings
 
 ====================
      02-08-2023
