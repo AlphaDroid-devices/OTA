@@ -1,0 +1,58 @@
+{
+        "response": [
+                {
+                        "maintainer": "Dr.Opto",
+                        "oem": "redmi",
+                        "device": "redmi Note 7Pro",
+                        "filename": "AlphaDroid-13.0-20231016-violet-gapps-v1.10.zip",
+                        "download": "https://sourceforge.net/projects/alphadroid-project/files/violet/AlphaDroid-13.0-20231016-violet-gapps-v1.10.zip/download",
+                        "timestamp": 1697443424,
+                        "md5": "8513594b85bf0ebe9fb4890cdc41fc1f",
+                        "sha256": "dfa85d0179a2225b9dd234216889a6fe362d723dca1b3f53cee8b777d7305b4a",
+                        "size": 1710176642,
+                        "version": "1.10",
+                        "buildtype": "Monthly",
+                        "forum": "",
+                        "gapps": "",
+                        "firmware": "https://xiaomifirmwareupdater.com/firmware/violet/",
+                        "modem": "",
+                        "bootloader": "",
+                        "recovery": "https://t.me/optoprjkt/5275",
+                        "paypal": "",
+                        "telegram": "https://t.me/optoprjkt",
+                        "dt": "https://github.com/AlphaDroid-devices/device_xiaomi_violet.git",
+                        "common-dt": "",
+                        "kernel": ""
+                }
+        ]
+}
+
+
+{
+        "response": [
+                {
+                        "maintainer": "Dr.Opto",
+                        "oem": "redmi",
+                        "device": "Redmi Note 7Pro",
+                        "filename": "AlphaDroid-13.0-20231016-violet-vanilla-v1.10.zip",
+                        "download": "https://sourceforge.net/projects/alphadroid-project/files/violet/AlphaDroid-13.0-20231016-violet-vanilla-v1.10.>
+                        "timestamp": 1697475544,
+                        "md5": "068576c7813a2c142477ad504eac6fc0",
+                        "sha256": "167795050d3cb3236cb23266d24e66c18d1d8876963736a51feaf9c8065e3f6b",
+                        "size": 1237986819,
+                        "version": "1.10",
+                        "buildtype": "Monthly",
+                        "forum": "",
+                        "gapps": "https://nikgapps.com/",
+                        "firmware": "https://xiaomifirmwareupdater.com/firmware/violet/",
+                        "modem": "",
+                        "bootloader": "",
+                        "recovery": ""https://t.me/optoprjkt/5275",
+                        "paypal": "",
+                        "telegram": "https://t.me/optoprjkt",
+                        "dt": "https://github.com/AlphaDroid-devices/device_xiaomi_violet.git",
+                        "common-dt": "",
+                        "kernel": ""
+                }
+        ]
+}
