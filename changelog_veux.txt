@@ -1,0 +1,12 @@
+Highlights & Device Specific Changes:
+Build type: Monthly
+Device: Poco X4 Pro
+Device maintainer: MrTopiA
+
+====================
+     09-03-2024
+====================
+- Synced latest source
+- Dropped OneplusDolby and Per-App Refresh Rate
+- Added Mi Dolby and MiSoundFX
+- Added Saturated Color Profile for Display
