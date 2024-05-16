@@ -1,7 +1,41 @@
 Highlights & Device Specific Changes:
 Build type: Monthly
 Device: Xiaomi Redmi Note10 Pro
-Device maintainer: UnmoveD
+Device maintainer: JYR_RC
+
+====================
+     16-05-2024
+====================
+
+- Gapps And Vanilla Build
+
+- NON EROFS BUILDS
+
+- Update kernel 4.14.344
+
+- Miuicamera Included Default
+
+- Lawnchair and Lanwicons Default launcher
+
+- Added OnePlus Dolby imported OnePlus 9R into parts settings
+
+- Added Spatial audio from Google Pixel (fixed again)
+
+- Kprofiles
+
+- App Refresh Rate
+
+- Refresh Rate in settings
+
+- Added ambient display
+
+- Haptick Feedback Settings
+
+- Play integrity pass default as of May 16
+
+- May Security Patch
+
+
 
 ====================
      16-10-2023
