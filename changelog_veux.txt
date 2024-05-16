@@ -4,6 +4,12 @@ Device: Poco X4 Pro
 Device maintainer: MrTopiA
 
 ====================
+     16-05-2024
+====================
+- Replaced Launcher3 with Lawnchair
+- Fixed Charging Overlay
+
+====================
      21-03-2024
 ====================
 
