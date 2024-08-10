@@ -1,0 +1,47 @@
+Highlights & Device Specific Changes:
+Build type: Monthly
+Device: Xiaomi Redmi Note 10
+Device maintainer: eklerismunir 
+
+====================
+    09-08-2024
+====================
+- Sync with AlphaDroid 2.3 source
+- Import Xiaomi Parts from xiaomi-sdm845-common
+- Move common wakeup nodes to qcom sepolicy
+- Update blobs from MIUI V14.0.9.0.SKGMIXM
+- Drop vendor.qti.hardware.cacert hal
+- Enable LZ4 compression for ramdisks
+- Prevent adding same dependency twice in blob_fixup
+- Migrate to task_profiles for prebuilt init scripts
+- Remove wait_for_keymaster and all references
+- Unset BUILD_BROKEN_INCORRECT_PARTITION_IMAGES
+- Convert WiFi firmware symlinks to install_symlink targets
+- Mark CNE symlink target as required package
+- Move to new RFS install_symlink targets
+- Don't allow bluetooth to read /data/vendor/wifi
+====================
+    08-07-2024
+====================
+- Sync with latest AlphaDroid source (https://t.me/alphadroid_releases/333)
+- Fixed Tap sensors (DT2W etc.)
+- Dropped built-in microg in vanilla build
+- The build has been signed and the problems with safetynet have been resolved
+- Switched to prebuilt camera provider
+- Patched camera provider to load new symbols
+- Adapted Aperture Camera overlays for prebuilt camera provider
+====================
+    12-05-2024
+====================
+- Initial OFFICIAL AlphaDroid build for Redmi Note 10 (sunny/mojito)
+====================
+     13-05-2023
+====================
+- Sync With May SecPatch
+- Initial Official Build
+- Shipping with STRIX Kernel
+- Update blobs to MIUI V14.0.2.0.SKGMIXM
+- Update CarrierConfig to LA.QSSI.13.0.r1-09700-qssi.0
+- Update surfaceflinger durations from MIUI
+- Add Power Boost Ext
+- Minor fix changes
