@@ -1,7 +1,22 @@
 Highlights & Device Specific Changes:
 Build type: Monthly
 Device: Xiaomi Redmi Note 10
-Device maintainer: eklerismunir 
+Device maintainer: musivian | eklerismunir
+
+====================
+    25-02-2025
+====================
+- Initial A15 QPR1 Build
+- User Signed Build
+- Febuary Security Patch
+- NetErnels State at r17b12
+- Introduce Torch Light Control
+- Fixed an issue where VOIP routing is misconfigured
+- Fixed an issue where WPA3 Hotspot refused to start
+- Fixed an issue where auxiliary cameras are zoomed in Aperture
+- Dropped HDR support (This fixes UI buttons being invisible in WallpaperPicker and PhotoPicker)
+- Custom kernels are not allowed to be used
+- Custom recoveries are not allowed to be used
 
 ====================
     20-08-2024
