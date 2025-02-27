@@ -1,0 +1,9 @@
+Highlights & Device Specific Changes:
+Build type: Monthly
+Device: Xiaomi Redmi Note 12 Pro 5G/Pro+ 5G
+Device maintainer: YagizErdemir
+
+====================
+     27-02-2025
+====================
+- Initial 3.x release 
