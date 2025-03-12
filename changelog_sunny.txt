@@ -4,6 +4,15 @@ Device: Xiaomi Redmi Note 10
 Device maintainer: musivian | eklerismunir
 
 ====================
+    11-03-2025
+====================
+- Removed RiMusic
+- Shipped with Leica Camera v5
+- Updater: Refresh list when update get deleted
+- Updater: Always delete updates after installation
+- Revert "Launcher3: Exclude themed icons from icon packs"
+
+====================
     25-02-2025
 ====================
 - Initial A15 QPR1 Build
