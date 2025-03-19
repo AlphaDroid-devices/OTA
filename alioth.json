@@ -1,0 +1,28 @@
+{
+	"response": [
+		{
+			"maintainer": "onettboots",
+			"oem": "Xiaomi",
+			"device": "Poco F3 / Redmi K40",
+			"filename": "AlphaDroid-15.1-20250318-gapps-alioth-v3.1.zip",
+			"download": "https://sourceforge.net/projects/alphadroid-project/files/alioth/AlphaDroid-15.1-20250318-gapps-alioth-v3.1.zip/download",
+			"timestamp": 1697295638,
+			"md5": "1621ef34aa661ac29b56a2c3e9272b54",
+			"sha256": "0ee7d1193353e00f9cb7db9592cdbca8bbf47d74b6c16b402d6c244e024af4fc",
+			"size": 2177524013,
+			"version": "3.1",
+			"buildtype": "gapps",
+			"forum": "https://t.me/alphadroid_chat",
+			"gapps": "",
+			"firmware": "",
+			"modem": "",
+			"bootloader": "",
+			"recovery": "",
+			"paypal": "https://paypal.me/atusyaripudin",
+			"telegram": "https://t.me/boolx_kehed",
+			"dt": "https://github.com/AlphaDroid-devices/device_xiaomi_alioth/commits/alpha-15.1",
+			"common-dt": "https://github.com/AlphaDroid-devices/device_xiaomi_sm8250-common_alioth/commits/alpha-15.1",
+			"kernel": "https://github.com/AlphaDroid-devices/kernel_xiaomi_sm8250/tree/rcu"
+		}
+	]
+}

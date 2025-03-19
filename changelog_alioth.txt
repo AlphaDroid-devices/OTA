@@ -1,0 +1,10 @@
+Device: Poco F3 (alioth)
+Device maintainer: OnettBoots
+
+====================
+    19-03-2025
+====================
+
+* AlphaDroid 3.1 Initial Build
+* Uses Boolx Kernel
+* Uses @darkphnx Trees
