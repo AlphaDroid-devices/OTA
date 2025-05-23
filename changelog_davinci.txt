@@ -3,6 +3,16 @@ Build type: Monthly
 Device: Xiaomi MI 9T
 Device maintainer: t.me/hopethislasts
 
+
+====================
+     23-May-2025
+====================
+* AlphaDroid 3.2
+* Upstreamed DT changs from Arian / Aryan
+* Added DeviceasWebcam
+* Tune some props for better fludity
+
+
 ====================
      21-Feb-2025
 ====================
