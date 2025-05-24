@@ -10,28 +10,29 @@ In order for a device to be OTA compliant, there are a few things to know.
 {
   "response": [
     {
-        "maintainer": "Name (nickname)",
-        "oem": "OEM",
-        "device": "Device Name",
-        "filename": "AlphaDroidAndroid-15.1-<date>-<device codename>-v<alphaversion>.zip",
-        "download": "https://sourceforge.net/projects/alphadroid-project/files/<device codename>/AlphaDroid-15.0-<date>-<device codename>-v<alphaversion>.zip/download",
-        "timestamp": 0000000000,
-        "md5": "abcdefg123456",
-        "sha256": "abcdefg123456",
-        "size": 123456789,
-        "version": "<alphaversion>",
-        "buildtype": "Testing/Alpha/Beta/Weekly/Monthly",
-        "forum": "https://forum link"
-        "gapps": "https://gapps link"
-        "firmware": "https://firmware link",
-        "modem": "https://modem link",
-        "bootloader": "https://bootloader link",
-        "recovery": "https://recovery link",
-        "paypal": "https://donation link",
-        "telegram": "https://telegram link",
-        "dt": "https://github.com/alphadroid-project/device_<oem>_<device_codename>"
-        "common-dt": "https://github.com/alphadroid-project/device_<orm>_<SOC>-common"
-        "kernel": "https://github.com/alphadroid-project/kernel_<oem>_device_codename"
+      "maintainer": "maintainer",
+      "oem": "manufacturer",
+      "device": "device",
+      "filename": "AlphaDroid-<android version>-<date>-<device>-v<alphadroid version>.zip",
+      "download": "https://sourceforge.net/projects/alphadroid-project/files/<device>/AlphaDroid-<android version>-<date>-<build variant>-<device>v<alphadroid version>.zip/download",
+      "timestamp": 0000000000,
+      "md5": "abcdefg123456",
+      "sha256": "abcdefg123456",
+      "size": 123456789,
+      "version": "alphadroid version",
+      "buildtype": "Official/Unofficial",
+      "buildvariant": "vanilla/microg/gapps",
+      "forum": "https://forum link"
+      "gapps": "https://gapps link"
+      "firmware": "https://firmware link",
+      "modem": "https://modem link",
+      "bootloader": "https://bootloader link",
+      "recovery": "https://recovery link",
+      "paypal": "https://donation link",
+      "telegram": "https://telegram link",
+      "dt": "https://github.com/alphadroid-devices/device_<oem>_<device>"
+      "common-dt": "https://github.com/alphadroid-devices/device_<oem>_<SOC>-common"
+      "kernel": "https://github.com/alphadroid-devices/kernel_<oem>_<device/SOC>"
     }
   ]
 }
@@ -39,11 +40,9 @@ In order for a device to be OTA compliant, there are a few things to know.
 
 ### 1.2 changelog.txt structure ###
 ```
-Highlights & Device Specific Changes:
-Build type: Testing/Alpha/Beta/Weekly/Monthly
 Device: Device name (<device codename>)
 Device maintainer: Name (nickname)
-Required firmware: add if any else remove this line
+Required firmware: (optional)
 
 ===== <date> =====
 - change 1
@@ -68,13 +67,9 @@ For following below description, replace *codename* with your device codename.
 6. Submit a pull request to this repo (this way we validate that you understood the requirements and if all is good you'll be granted direct push access to this repo)
 
 ### 3.2 Update build ###
-1. Clone this repo locally
+1. Go to OTA path and fetch updates from repo.
 ```
-git clone https://github.com/alphadroid-devices/OTA -b alpha-15.1
-```
-2. Change to the directory where you cloned this repo and fetch updates from repo.
-```
-cd OTA
+cd vendor/OTA
 git fetch --all
 git pull
 ```
