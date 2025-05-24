@@ -1,8 +1,0 @@
-Highlights & Device Specific Changes:
-Build type: Monthly
-Device: Poco M3/Redmi 9T/Redmi 9 Power/Redmi Note 9 4G (chime)
-Device maintainer: JuniorNoob
-Required firmware: For citrus 12.5.8 & 
-or lime/lemon 12.5.10
-===== 06/03/2023 =====
-- Initial GMS build

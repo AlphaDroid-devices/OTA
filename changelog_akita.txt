@@ -1,9 +1,0 @@
-Device: Google Pixel 8a (akita)
-Device maintainer: OscarM
-
-====================
-    08-01-2024
-====================
-
-* AlphaDroid 2.3 Initial Build
-

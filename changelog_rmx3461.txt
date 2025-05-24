@@ -1,9 +1,0 @@
-Build type: Monthly
-Device: Realme 9 SE (RMX3461)
-Device maintainer: DRvP00
-
-====================
-     17-03-2023
-====================
-
-* initial AlphaDroid stable build

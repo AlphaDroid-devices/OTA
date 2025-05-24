@@ -1,7 +1,0 @@
-Highlights & Device Specific Changes:
-Build type: Monthly
-Device: Poco F5 / Redmi Note 12 Turbo
-Device maintainer: CHAITANYA
-
-=====03/03/2025=====
-- initial a15 alpha build

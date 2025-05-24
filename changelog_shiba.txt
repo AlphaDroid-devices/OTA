@@ -1,7 +1,0 @@
-Device: Pixel 8 (shiba)
-Device maintainer: OscarM
-
-====================
-    08-01-2024
-====================
-* AlphaDroid 2.3 Initial Build
