@@ -4,6 +4,16 @@ Device: Redmi Note 4
 Device maintainer: KamiKaonashi
 
 ====================
+     24-05-2025
+====================
+
+Android 15 Update
+new kernel
+new tree
+new vendor
+on first bootup, the sound will come later
+
+====================
      28-10-2023
 ====================
 
