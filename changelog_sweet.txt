@@ -1,8 +1,18 @@
 Highlights & Device Specific Changes:
 Build type: Monthly
 Device: Xiaomi Redmi Note10 Pro
-Device maintainer: JYR_RC
+Device maintainer: Musafir1875
 
+====================
+     28-05-2025
+====================
+
+- AlphaDroid 3.2
+- Added DeviceasWebcam
+- Added xiaomi dolby
+- Added Vantom-ksu
+- Gapps and vanilla builds
+- Added Leica camera
 ====================
      20-08-2024
 ====================
