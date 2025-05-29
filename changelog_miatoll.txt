@@ -3,6 +3,15 @@ Device: Redmi Note 9s/Pro/Pro max, Poco m2 Pro (miatoll)
 Device maintainer: ihsan & Atharva
 
 ====================
+    28-05-2025
+====================
+* Initial AlphaDroid 3.2 build
+* May Security Patch
+* Added Sony Dolby Support 
+* New OptiMax-Lumina 4.14 Kernel
+* KernelSu Next 1.0.5
+
+====================
     17-02-2024
 ====================
 
