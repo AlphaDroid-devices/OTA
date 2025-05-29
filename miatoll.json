@@ -1,28 +1,29 @@
 {
-	"response": [
-		{
-			"maintainer": "ihsan",
-			"oem": "Xiaomi",
-			"device": "miatoll",
-			"filename": "AlphaDroid-13.0-20230726-miatoll-core_gapps-v1.7.zip",
-			"download": "https://sourceforge.net/projects/alphadroid-project/files/miatoll/AlphaDroid-13.0-20230726-miatoll-core_gapps-v1.7.zip/download",
-			"timestamp": 1690343404,
-			"md5": "585c0fd2ae5544a6cc3d9bea821732fb",
-			"sha256": "cd073ea9085f5b2f4afd50329c620425b9ab8773d9f87a332b0143dc497b45ed",
-			"size": 1857912725,
-			"version": "1.7",
-			"buildtype": "core_gapps",
-			"forum": "",
-			"gapps": "",
-			"firmware": "",
-			"modem": "",
-			"bootloader": "",
-			"recovery": "",
-			"paypal": "",
-			"telegram": "https://t.me/FujitoraSakusei",
-			"dt": "https://github.com/AlphaDroid-devices/device_xiaomi_miatoll",
-			"common-dt": "https://github.com/AlphaDroid-devices/device_xiaomi_sm6250-common",
-			"kernel": "https://github.com/AlphaDroid-devices/kernel_xiaomi_sm6250"
-		}
-	]
+    "response": [
+        {
+            "maintainer": "AFIF",
+            "oem": "Xiaomi",
+            "device": "miatoll",
+            "filename": "AlphaDroid-15-20250528-gapps-miatoll-v3.2.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/miatoll/AlphaDroid-15-20250528-gapps-miatoll-v3.2.zip/download",
+            "timestamp": 1748424474,
+            "md5": "5009a9aa2845ae99d60c64a06cb754cb",
+            "sha256": "c92935a6eddf557521b6b4b139487e2903343a9b16fcab62ee48e7ade7d7688e",
+            "size": 2488793081,
+            "version": "3.2",
+            "buildtype": "Official",
+            "buildvariant": "gapps",
+            "forum": "",
+            "gapps": "",
+            "firmware": "",
+            "modem": "",
+            "bootloader": "",
+            "recovery": "",
+            "paypal": "",
+            "telegram": "https://t.me/FujitoraSakusei",
+            "dt": "https://github.com/AlphaDroid-devices/device_xiaomi_miatoll",
+            "vendor": "https://github.com/AlphaDroid-devices/vendor_xiaomi_miatoll",
+            "kernel": "https://github.com/AlphaDroid-devices/kernel_xiaomi_sm6250"
+        }
+    ]
 }
