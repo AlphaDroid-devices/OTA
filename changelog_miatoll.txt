@@ -1,6 +1,6 @@
 Build type: Monthly
 Device: Redmi Note 9s/Pro/Pro max, Poco m2 Pro (miatoll)
-Device maintainer: ihsan & Atharva
+Device maintainer: AFIF
 
 ====================
     28-05-2025
