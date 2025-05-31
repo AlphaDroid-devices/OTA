@@ -4,6 +4,19 @@ Device: Xiaomi Redmi Note 12 Pro 5G/Pro+ 5G
 Device maintainer: YagizErdemir
 
 ====================
+     31-05-2025
+====================
+- AlphaDroid 3.2
+- Update blobs/firmware from OS2.0.2.0.UMOMIXM
+- Fixed IMS Service crash
+- Fixed Miui Camera lag and resolution issues
+- Fixed brightness issue
+- Always enable NFC for hwlevel=P1 devices
+- Drop Trustonic Soter Service
+- Drop Mediatek Secure Element Service
+- Declare WiFi Aware support to WiFi HAL
+
+====================
      27-02-2025
 ====================
 - Initial 3.x release 
