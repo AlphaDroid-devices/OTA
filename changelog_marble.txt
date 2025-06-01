@@ -3,5 +3,11 @@ Build type: Monthly
 Device: Poco F5 / Redmi Note 12 Turbo
 Device maintainer: CHAITANYA
 
+=====01/06/2025=====
+- initial build with powertools , dolbyatmos+dolbyvsion , per-app-thermal profiles
+- clean flash is mandatory
+- orange fox is mandatory
+- use 29 may ksu from support group
+
 =====03/03/2025=====
 - initial a15 alpha build
