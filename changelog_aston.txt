@@ -2,6 +2,17 @@ Device: OnePlus Ace 3 | 12R (Aston)
 Team Aston: elpaablo, REV3NT3CH
 
 ====================
+     08-06-2025
+====================
+
+Notes:
+* AlphaDroid 3.2 / Android 15
+* June security patches
+* KernelSU included
+* Custom GameBar
+* Bypass Charging tile (using Charging Control as trigger)
+
+====================
      25-09-2024
 ====================
 
