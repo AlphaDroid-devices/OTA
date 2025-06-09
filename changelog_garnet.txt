@@ -4,6 +4,33 @@ Device: Redmi Note 13 Pro 5G
 Device maintainer: JYR_RC
 
 ====================
+     09-06-2025
+====================
+- Bump version 3.2.1
+- June security patch
+- Update Blobs from OS2.0.10.0.VNRMIXM
+- Force GPU UI rendering and enable HW composer for improved visual performance
+- Add nodes to hide Magisk in banking apps
+- Increase initial stereo master volume
+- Disable hfpRemove hw_acc effect
+- Switch to QTI custom thermalFix thermal controller permission
+- Silence QTI Power HAL log spamQCOM Implementation for Audio Effects
+- Import QCOM audio effects from OnePlus 9RImport LDAC and LHDC prebuilts
+- Add writeback Zram propertiesFix "Earpiece" audio output
+- Use HintManager for HWUICompile libldacBT_.* blobs
+- Added support for real spatial audio from cheetah
+- Enhance dual speaker audio configuration for better sound quality
+- Add support to surround sound
+- Add Oneplus Dolby
+- Miuicamera Included
+
+CREDITS:
+AlphaDroid Team
+Aizen_apm247
+grewal for base tree,rama982 for gki kernel,unmoved21
+spade77777,Sokolataki1,Ruijmnunes,HMONSTER,melodiZ,Joshujosh,Bachu Arg,Matchbox1976 (Testers Team)
+
+====================
      25-05-2025
 ====================
 - Android 15 update
