@@ -3,6 +3,16 @@ Build type: Monthly
 Device: Poco F5 Pro / Redmi K60
 Device maintainer: Xenogenesys
 
+=====10/06/2025=====
+
+- Update to AlphaDroid 3.2.1
+- June Security Patch
+- Fixed FOD random light up
+- Added Xiaomi Parts: GameBar, PowerTools
+- Increase initial stereo master volume
+- Removed Lawnchair
+- Includes Sony Dolby Atmos, JamesDSP and MIUI Camera
+
 =====01/06/2025=====
 
 - Initial Official build
