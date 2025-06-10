@@ -1,7 +1,11 @@
 Highlights & Device Specific Changes:
 Build type: Monthly
 Device: Poco F6 / Redmi Turbo 3 (peridot)
-Device maintainer: MrTopiA
+Device maintainer: MrTopiA - JYR_RC
+
+===== 10.06.2025 =====
+- Initial A15 build
+- June security patch
 
 ===== 19.08.2024 =====
 - Initial Official Build
