@@ -6,7 +6,15 @@ Team Aston: elpaablo, REV3NT3CH
 ====================
 
 Notes:
-* AlphaDroid 3.2 / Android 15
+* Added ViperFX
+* Added vanilla and microg versions
+
+====================
+     08-06-2025
+====================
+
+Notes:
+* AlphaDroid 3.2.1 / Android 15
 * June security patches
 * KernelSU included
 * Custom GameBar
