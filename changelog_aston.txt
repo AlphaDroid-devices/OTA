@@ -2,10 +2,19 @@ Device: OnePlus Ace 3 | 12R (Aston)
 Team Aston: elpaablo, REV3NT3CH
 
 ====================
+     12-06-2025
+====================
+
+* Fixed ScreenOff/AoD FOD
+* Imported auto brightness configs from Oneplus 8T
+* Fixed lockscreen charging info
+* Fixed high touch polling rate
+* Switched to oplus color modes
+
+====================
      08-06-2025
 ====================
 
-Notes:
 * Added ViperFX
 * Added vanilla and microg versions
 
@@ -13,7 +22,6 @@ Notes:
      08-06-2025
 ====================
 
-Notes:
 * AlphaDroid 3.2.1 / Android 15
 * June security patches
 * KernelSU included
@@ -24,7 +32,6 @@ Notes:
      25-09-2024
 ====================
 
-Notes:
 * AlphaDroid 2.5
 * September security patches
 * Updated KernelSU
@@ -34,7 +41,6 @@ Notes:
      28-08-2024
 ====================
 
-Notes:
 * First release, using as base https://github.com/OnePlus12R-development
 * AlphaDroid 2.4
 * KernelSU built-in
