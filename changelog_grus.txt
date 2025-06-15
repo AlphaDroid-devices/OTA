@@ -2,6 +2,14 @@ Device: Xiaomi Mi 9 SE (Grus)
 Device maintainer: elpaablo
 
 ====================
+     15-06-2025
+====================
+
+* AlphaDroid 3.2.1
+* June security patches
+* Switched to KernelSU Next with SuSFS support
+
+====================
      18-02-2025
 ====================
 
