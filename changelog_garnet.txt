@@ -1,63 +1,23 @@
 Highlights & Device Specific Changes:
 Build type: Monthly
-Device: Redmi Note 13 Pro 5G
-Device maintainer: JYR_RC
+Device: Xiaomi Redmi Note 13 Pro 5G (Garnet)
+Device maintainer: franlop77
 
 ====================
-     09-06-2025
+     16-06-2025
 ====================
-- Bump version 3.2.1
-- June security patch
-- Update Blobs from OS2.0.10.0.VNRMIXM
-- Force GPU UI rendering and enable HW composer for improved visual performance
-- Add nodes to hide Magisk in banking apps
-- Increase initial stereo master volume
-- Disable hfpRemove hw_acc effect
-- Switch to QTI custom thermalFix thermal controller permission
-- Silence QTI Power HAL log spamQCOM Implementation for Audio Effects
-- Import QCOM audio effects from OnePlus 9RImport LDAC and LHDC prebuilts
-- Add writeback Zram propertiesFix "Earpiece" audio output
-- Use HintManager for HWUICompile libldacBT_.* blobs
-- Added support for real spatial audio from cheetah
-- Enhance dual speaker audio configuration for better sound quality
-- Add support to surround sound
-- Add Oneplus Dolby
-- Miuicamera Included
+- Initial Release by franlop77
+- Miui Camera Included
+- Moto Dolby included
+- Introduce Display Saturation
+- Introduce High Brightness Mode (HBM)
+- Introduce GameBar v4.0
+- Introduce Gaming Mode with per-game optimizations
+- Introduce PowerTools v3.0
+- ....and more things
 
 CREDITS:
-AlphaDroid Team
-Aizen_apm247
-grewal for base tree,rama982 for gki kernel,unmoved21
-spade77777,Sokolataki1,Ruijmnunes,HMONSTER,melodiZ,Joshujosh,Bachu Arg,Matchbox1976 (Testers Team)
 
-====================
-     25-05-2025
-====================
-- Android 15 update
-- New kernel
-- New tree
-- New vendor
+- AlphaDroid Team
+- Grewal for base tree, unmoved21 for the help
 
-NOTES:
-INSTALL CLEAN MANDATORY
-
-====================
-     30-08-2024
-====================
-- Initial Build
-- Signed Build
-- Added Qs toggle 60/90/120hz
-- Update blobs V816.0.9.0.UNRMIXM
-- Update fingerprints UKQ1.231003.002 V816.0.9.0.UNRMIXM hyperOS
-- Import XiaomiParts
-- Refresh rate per app,thermals,and clear speaker
-- Import 41_02_0c calibration and display config
-- Add foursemi audio configs
-- Enable AOSP surfaceflinger
-- Add fs19xx firmware
-- MiuiCamera already included
-- Added support XiaomiDolby, Graphic Equalizer, Dolby Vision, HDR
-- Enable FPSInfo
-- Update Adreno blobs from peridot V816.0.4.0.UNPMIXM
-- Update C2 Dolby audio blobs from nuwa
-- Drop some unsupported perf resources

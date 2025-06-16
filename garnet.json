@@ -1,15 +1,15 @@
 {
     "response": [
         {
-            "maintainer": "JYR_RC",
+            "maintainer": "franlop77",
             "oem": "Xiaomi",
             "device": "garnet",
-            "filename": "AlphaDroid-15-20250609-gapps-garnet-v3.2.1.zip",
-            "download": "https://sourceforge.net/projects/alphadroid-project/files/garnet/AlphaDroid-15-20250609-gapps-garnet-v3.2.1.zip/download",
-            "timestamp": 1749481970,
-            "md5": "064ac0100fab7d6dfc2d45a8d8d2e061",
-            "sha256": "08fccde6121424e8ab9723a95630c7ba7434f241c848bc452231b204d4ab8e4d",
-            "size": 2744999568,
+            "filename": "AlphaDroid-15-20250615-gapps-garnet-v3.2.1.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/garnet/AlphaDroid-15-20250615-gapps-garnet-v3.2.1.zip/download",
+            "timestamp": 1750009369,
+            "md5": "62f5c31904d51fb15adee45a46a46e27",
+            "sha256": "0fc13eb07b1e76b3a28729379e3981a675b191efff455824fd520eeb7058ada1",
+            "size": 2889521137,
             "version": "3.2.1",
             "buildtype": "Official",
             "buildvariant": "gapps",
@@ -20,7 +20,7 @@
             "bootloader": "",
             "recovery": "",
             "paypal": "",
-            "telegram": "https://t.me/garnet_JYRRC_builds",
+            "telegram": "https://t.me/garnet_builds_franlop",
             "dt": "https://github.com/AlphaDroid-devices/device_xiaomi_garnet",
             "common-dt": "",
             "kernel": "https://github.com/AlphaDroid-devices/device_xiaomi_garnet-kernel"
