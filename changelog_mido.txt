@@ -4,6 +4,16 @@ Device: Redmi Note 4
 Device maintainer: KamiKaonashi
 
 ====================
+     20-06-2025
+====================
+
+Update kernel/tree/vendor
+fixup OMX
+add new subsetting > kamis stuff
+add simple kernel manager
+add simple gpu manager
+
+====================
      24-05-2025
 ====================
 
