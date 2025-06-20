@@ -4,6 +4,14 @@ Device: Xiaomi Mi 11
 Device maintainer: KamiKaonashi
 
 ====================
+     20-06-2025
+====================
+
+reworked tree, vendor, kernel
+added kamis stuff under settings>system
+leica cam included
+
+====================
      12-09-2024
 ====================
 
