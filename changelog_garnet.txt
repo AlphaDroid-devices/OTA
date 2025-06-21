@@ -4,6 +4,13 @@ Device: Xiaomi Redmi Note 13 Pro 5G (Garnet)
 Device maintainer: franlop77
 
 ====================
+     21-06-2025
+====================
+- Sync with last sources
+- Add pixel launcher option
+- Fixed some things
+
+====================
      16-06-2025
 ====================
 - Initial Release by franlop77
