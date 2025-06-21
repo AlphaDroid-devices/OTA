@@ -4,6 +4,15 @@ Device: Redmi Note 8 Pro
 Device maintainer: KamiKaonashi
 
 ====================
+     21-06-2025
+====================
+
+sync trees, vendor, kernel with sai's sources
+added viper4fx
+add leica
+remove inbuilt fw and pbrp
+
+====================
      12-09-2024
 ====================
 
