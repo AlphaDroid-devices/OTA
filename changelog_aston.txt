@@ -2,6 +2,15 @@ Device: OnePlus Ace 3 | 12R (Aston)
 Team Aston: elpaablo, REV3NT3CH
 
 ====================
+     25-06-2025
+====================
+
+* Synced latest AlphaDroid
+* Switched to power-libperfmgr
+* Kernel: switched to KernelSU-Next with SuSFS support
+* Kernel: misc optimizations
+
+====================
      12-06-2025
 ====================
 
