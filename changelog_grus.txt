@@ -2,6 +2,15 @@ Device: Xiaomi Mi 9 SE (Grus)
 Device maintainer: elpaablo
 
 ====================
+     29-06-2025
+====================
+
+* Synced with the latest AlphaDroid
+* Fixed proximity sensor issues
+* Added ViperFX
+* Added SimpleTune (replaces descontinued RiMusic)
+
+====================
      15-06-2025
 ====================
 
