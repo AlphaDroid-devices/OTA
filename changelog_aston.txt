@@ -2,6 +2,12 @@ Device: OnePlus Ace 3 | 12R (Aston)
 Team Aston: elpaablo, REV3NT3CH
 
 ====================
+     30-06-2025
+====================
+
+* Synced latest AlphaDroid fixes
+
+====================
      25-06-2025
 ====================
 
