@@ -5,6 +5,14 @@ Device maintainer: t.me/hopethislasts
 
 
 ====================
+     01-July-2025
+====================
+* AlphaDroid 3.2.1
+* Update eKKo-Kernel to v1.1
+* Added torchlight control
+
+
+====================
      23-May-2025
 ====================
 * AlphaDroid 3.2
