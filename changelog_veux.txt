@@ -4,6 +4,17 @@ Device: Poco X4 Pro
 Device maintainer: MrTopiA
 
 ====================
+    04-07-2025
+====================
+- Synced to Latest 3.2.1 Source Changes
+- Synced to Latest Nebula Kernel Changes
+- Implemented DeviceAsWebcam Feature
+- Lineage Health HAL
+- Added Gamebar v4.0
+- Added Per-app Thermal Profile
+- Miscellaneous Improvements
+
+====================
     23-02-2025
 ====================
 - Initial A15 Release

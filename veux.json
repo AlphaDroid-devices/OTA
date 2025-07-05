@@ -22,7 +22,7 @@
             "telegram": "https://t.me/MrTopiA",
             "dt": "https://github.com/AlphaDroid-devices/device_xiaomi_veux",
             "common-dt": "",
-            "kernel": "https://github.com/AlphaDroid-devices/kernel_xiaomi_sm6375"
+            "kernel": "https://github.com/frost-testzone/kernel_xiaomi_sm6375"
         }
     ]
 }
