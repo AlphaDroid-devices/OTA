@@ -4,7 +4,15 @@ Device: Oneplus 11 5G
 Device maintainer: JYR_RC
 
 ====================
-     08-10-2023
+     17-07-2025
+====================
+- Copy media_codecs_vendor to media_codecs
+- Mount oplusreserve2 partition
+- Remove extra configuration options for DTBs
+- Suggested changes for A16
+
+====================
+     06-07-2025
 ====================
 - Initial A15 Build
 
