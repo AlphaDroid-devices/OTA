@@ -10,3 +10,4 @@ Required firmware: HyperOS
 - Initial official build
 - Sync latest source
 - Added XiaomiParts (Clear Speaker, Per-app Refresh Rate, Thermal Controls)
+- Added SurfaceFlinger optimization from @xyzuniverse 
