@@ -24,11 +24,7 @@
             "dt": "https://github.com/AlphaDroid-devices/device_xiaomi_garnet",
             "common-dt": "",
             "kernel": "https://github.com/AlphaDroid-devices/device_xiaomi_garnet-kernel"
-        }
-    ]
-}
-{
-    "response": [
+        },
         {
             "maintainer": "franlop77",
             "oem": "Xiaomi",
