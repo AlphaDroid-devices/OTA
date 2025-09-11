@@ -1,7 +1,15 @@
 Highlights & Device Specific Changes:
 Build type: Monthly
-Device: Xiaomi Redmi Note10 Pro
-Device maintainer: Musafir1875
+Device: Xiaomi Redmi Note 10 Pro (sweet)
+Device maintainer: Javi
+
+====================
+     09-09-2025
+====================
+
+- Dolby included
+- Miuicamera included
+- Stable released
 
 ====================
      28-05-2025
