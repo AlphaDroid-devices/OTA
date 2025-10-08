@@ -4,7 +4,18 @@ Device: Xiaomi Redmi Note 10 Pro (sweet)
 Device maintainer: Javi
 
 ====================
-     09-09-2025
+     08-10-2025
+====================
+
+- Initial Android 16 released AlphaDroid 4.1
+
+Credits:
+- aryannn999,neobuddy89 and Lineageos Team for continuing to support this fantastic device
+- DeltaForce_120FPS For testing
+- Team AlphaDroid
+
+====================
+09-09-2025
 ====================
 
 - Dolby included
