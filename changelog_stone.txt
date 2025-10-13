@@ -4,6 +4,16 @@ Device: POCO X5 5G/Redmi Note 12 5G
 Device maintainer: KamiKaonashi
 
 ====================
+     13-10-2025
+====================
+
+initial Android 16 release
+add simple performance mode
+add screen resolution options and per app resolution
+add fsr per app (experimental)
+update kernel, trees, vendor
+
+====================
      21-06-2025
 ====================
 
