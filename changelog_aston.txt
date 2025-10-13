@@ -2,6 +2,26 @@ Device: OnePlus Ace 3 | 12R (Aston)
 Team Aston: elpaablo, REV3NT3CH
 
 ====================
+     14-10-2025
+====================
+
+* Fixed alert slider
+
+====================
+     13-10-2025
+====================
+
+* AlphaDroid 4.1 / Android 16
+* Device Settings now include:
+  - Alert Slider actions
+  - Bypass Charging with target level
+  - OnePulse PWM
+  - Gamebar
+* Updated kernel (includes ksu + susfs 1.5.9)
+* Updated vendor to CPH2449_15.0.0.860(EX01)
+* Firmware included
+
+====================
      30-06-2025
 ====================
 
