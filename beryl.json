@@ -20,8 +20,8 @@
             "bootloader": "",
             "recovery": "",
             "paypal": "",
-            "telegram": "https://t.me/naokoshoto_discuss",
-            "dt": "https://github.com/AlphaDroid-devices/device_xiaomi_beryl",
+            "telegram": "https://t.me/naokoshoto_discuss/",
+            "dt": "https://github.com/AlphaDroid-devices/device_xiaomi_beryl/",
             "common-dt": "",
             "kernel": ""
         },
@@ -45,8 +45,8 @@
             "bootloader": "",
             "recovery": "",
             "paypal": "",
-            "telegram": "https://t.me/naokoshoto_discuss",
-            "dt": "https://github.com/AlphaDroid-devices/device_xiaomi_beryl",
+            "telegram": "https://t.me/naokoshoto_discuss/",
+            "dt": "https://github.com/AlphaDroid-devices/device_xiaomi_beryl/",
             "common-dt": "",
             "kernel": ""
         }
