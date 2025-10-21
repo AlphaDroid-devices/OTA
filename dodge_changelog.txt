@@ -1,0 +1,360 @@
+====================
+     10-20-2025
+====================
+
+   * frameworks/base
+fc5452bbaa4a KeyboxImitationHooks: Only generate certificates for play integrity calls
+99370e41a2a6 PixelPropsUtils: Dynamically spoof props for GMS
+b1f97462a439 PixelPropsUtils: Add prop to allow blocking cert chain
+8853c225539e Revert "Revert "UDFPS: always hide animation on cancel event""
+b63086abcb5c FixUp! UDFPS animation
+c64c49df86de Revert "Revert "Biometrics: Hook up support for halHandlesDisplayTouches prop""
+
+   * hardware/oplus
+498b4fb sepolicy: qti: Label oplus,ufcs_protocol wakeup node
+9ae2c72 sensors: Skip first fp state event
+
+   * kernel/oneplus/sm8750
+6693ec373e60e include: fix time.h inclusion
+
+   * vendor/oneplus/sm8750-common
+c5a6c0b add ConsumerIRApp
+6b2b339 sm8750-common: Sync with device tree
+
+====================
+     10-19-2025
+====================
+
+   * device/oneplus/dodge
+e213f3f DeviceSettings: rework bypass charging
+fd6012c dodge: overlay: Ignore some camera ids for Aperture
+63cdcc5 Device Settings
+59f5247 dodge: overlay: revert Brightness configs
+9dcaeeb dodge: displayconfig: Correct inverted width and height
+b6234cf FixUp! Set the correct path for keyhandler
+d7f2b14 Dodge: Set oneplus banner to Dodge
+05444bb Set strings to oneplus 13
+9fa693a DeviceSettings: rework bypass charging
+60a42bf DeviceSettings: lunch it from Settings
+aab6998 DeviceSettings: add PulseOne PWM
+dfda89b Import DeviceSettings from common tree
+43ec457 Adjust padding for status bar
+f9e0683 AlphaDroid Bringup
+a40965f dodge: overlay: Update Brightness configs
+012a241 dodge: Increase start statusbar padding
+78c5388 dodge: configs: Update display density
+d3f4dee dodge: Switch to FIFO vibration effects
+
+   * device/oneplus/sm8750-common
+8f0d170 sm8750-common: Switch to oplus sensors AIDL
+d4a013b sm7650-common: Set `debug.sf.disable_client_composition_cache` to 0
+3ac4663 sm8650-common: overlay: Enable fp screen off unlock feature and turn off by default
+066ecf7 sm8750-common: Ship ConsumerIR App
+58a7eb2 cleanup: remove unused code after decommonization
+fdad73a sm8750-common: Move required alert slider configs to SystemUI
+30b337d sm8750-common: Allow gcam/snapcam to skip HFR checks
+44b30f3 sm8750-common: Allow camera to skip high frame rate checks
+168fd17 sm8750-common: overlay: Switch to crdroid doze
+a0f3f66 sm8750-common: Nuke OnePlus doze
+1ecd578 sm8750-common: overlay: Configure VOOC charging display on lockscreen
+05e6708 sm8750-common: overlay: Fix lockscreen charging info
+f6ba6de sm8750-common: overlay: Use appropriate charging thresholds
+41ae83b sm8750-common: overlay: Enable VOOC charging support
+9e56632 sm8750-common: overlay: Enable multiple vibration intensity levels
+63ae062 Drop Lineage Health
+3f80f1b Init: set permissions for OnePulse PWM
+
+   * frameworks/av
+0cb2a210f1 OMX: Remove support for prebuilt ac4 decoder
+fbfc75a9c6 libstagefright: omx: Add support for loading prebuilt ddp and ac4 decoder lib
+
+   * frameworks/base
+64157aff4be4 base: [SettingsProvider] Resolve google gms configurator denials
+907b8a934638 SettingsProvider: Resolve package name that requires permission
+312bfe80b3b6 Update UdfpsAnimation constructor to accept KeyguardStateController
+5a404cef4dbf biometrics: Fix udfps races
+cc1cebfee62c Revert "UDFPS: always hide animation on cancel event"
+
+   * hardware/oplus
+1223162 oplus-fwk: Enable IR feature
+ae35f36 [TEMP] sensors: aidl: Glorified one-shotting
+1d4bd1a aidl: sensors: Return early if nothing is displayed over the light sensor
+73fe394 aidl: sensors: Import AlsCorrection from sm8150-common
+665f046 Import ALS capture service from sm8150-common
+68185f3 overlay/sensors: Configure Doze brightness sensor
+cd58b8b overlay: qssi: Define quick_pickup sensor string
+5e98b9f overlay: qssi: Enable config_dozePulsePickup
+68b217d sepolicy: qti: Label sensors AIDL multihal
+a2541c8 aidl: sensors: Standardize qti.sensor.amd to glance sensor
+215de06 aidl: sensors: Invert value for pickup gesture event
+251da9d aidl: sensors: Change standard tilt_detector to pickup_gesture
+574770f aidl: sensors: Avoid target name conflicts
+46b3d76 aidl: sensors: Change default applicable license to Android-Apache-2.0
+1afd562 aidl: sensors: Import 2.X sensors hal proxy
+e8f475f aidl: sensors: Revert^2 "SensorHAL: add moisture detection"
+baf357d aidl: sensors: Import aidl sensors MultiHal
+c7e1656 aidl: qti_vibrator: effect: import richtap effects
+33401b9 oplus-fwk: Update for compatibility with android-15 IMS stack
+66d1140 aidl: vibrator: Minimize code for ledVibratorDevice
+
+====================
+     10-18-2025
+====================
+
+====================
+     10-17-2025
+====================
+
+====================
+     10-16-2025
+====================
+
+   * build/soong
+9409e00f4 [hax} for now
+
+====================
+     10-15-2025
+====================
+
+   * device/qcom/sepolicy_vndr/sm8750
+a55570b88 mssing policies
+
+   * packages/apps/Settings
+122f616ac7d Styles and wallpaper: handle overlays and availability
+
+====================
+     10-14-2025
+====================
+
+   * kernel/oneplus/sm8750-devicetrees
+381413bf oplus: Configure erhai GPIO lid switch
+
+   * packages/apps/Settings
+6dc9d865bf5 oneplus 13
+
+====================
+     10-13-2025
+====================
+
+   * frameworks/base
+964770a3b309 QuickSwitch: update pkg names
+e0e6aa550096 UDFPS: always hide animation on cancel event
+
+   * hardware/oplus
+ec16278 Use alpha sepolicy path
+
+   * vendor/alpha
+5113e0f1 Nuke wallpaper picker overlays
+
+   * vendor/pixel/themepicker
+4e67726 ThemePicker: update overlays
+
+====================
+     10-12-2025
+====================
+
+====================
+     10-11-2025
+====================
+
+   * packages/apps/Settings
+976dd0232fa temp
+
+   * vendor/alpha
+90ddc34f overlay: move wallpaper picker action to wallpaper picker rro
+
+====================
+     10-10-2025
+====================
+
+====================
+     10-09-2025
+====================
+
+   * device/oneplus/dodge
+085f3b3 dodge: Update from OOS 11.C.70
+
+   * device/oneplus/sm8750-common
+8ebed55 sm8750-common: Update from OOS 11.C.70
+
+   * vendor/oneplus/dodge
+1897e52 dodge: Update from OOS 11.C.70
+
+   * vendor/oneplus/sm8750-common
+d17bed1 sm8750-common: Update from OOS 11.C.70
+
+====================
+     10-08-2025
+====================
+
+   * frameworks/base
+61085a42c46b New translations alpha_strings.xml (Indonesian) (#9)
+
+   * kernel/oneplus/sm8750
+719dee8f13d5e Merge remote-tracking branch 'sm8750/lineage-22.2' into HEAD
+1c1f68417fcd2 Merge tag 'ASB-2025-10-06_15-6.6' of https://android.googlesource.com/kernel/common into HEAD
+
+   * packages/apps/AlphaSettings
+eb47130 New Crowdin updates (#119)
+7a8b9da New Crowdin updates (#118)
+
+   * packages/apps/Launcher3
+623687f2e5 New translations alpha_strings.xml (Indonesian) (#16)
+
+====================
+     10-07-2025
+====================
+
+   * device/oneplus/dodge
+c43647a dodge: Migrate QTI power HAL to soong_config_set
+
+   * device/oneplus/sm8750-common
+15b50b6 sm8750-common: Remove vendor/lineage device framework matrix inclusion
+7ed81c1 sm8750-common: Remove libqtigefar from dependency check
+07f7355 sm8750-common: Update WFD system blobs from dada OS2.0.217.0.WOCMIXM
+979580d sm8750-common: Downgrade to ARMv8.2-A.
+957cb3f sm8750-common: Set `DISABLE_DEPS` more audio HAL/effects libs
+dc0e006 sm8750-common: Unblob audio/audio effects vintf manifests
+
+   * hardware/oplus
+f630fa8 dolby: Update layout to material expressive design
+3a97131 dolby: Make sure to persist value after toggling QS tile
+300320a powershare: gracefully fail in case powershare support not available some OP9 device don't have support for reverse wireless charging, so bail out gracefully
+fabdd0d dolby: Fix compilation error in TooltipIconButton
+fb7ad24 dolby: Migrate MainSwitchBar and Switch to Material3
+bd25f14 dolby: Add custom profile
+4e6b1f8 dolby: Add icons for dolby profiles
+ea9eced dolby: Make bass enhancer available on speakers as well
+0d61860 dolby: Switch to MaterialTheme settingsBackground for EqualizerScreen background color
+6e42827 Revert "dolby: Fix Building in Andoid 15"
+c1c6f14 oplus-fwk: Add missing classes for oplus camera
+8104a10 oplus-fwk: Remove unused imports
+5ca99aa dolby: translate strings to Russian
+3e6c9d2 dolby: Exempt installing package in clone or private space
+f4c3d48 dolby: Fix Building in Andoid 15
+e5e0f71 Import dolby from hardware/xiaomi
+977d344 vintf: Add compatibility fcm for dolby
+f435e8f oplus-fwk: Bring in camera bits
+d975ae2 overlay: qssi: Update QSSI RROs from CPH2573_11_A.76
+2c7d65d sepolicy: Address rild denial for prop
+819cde9 sepolicy: Fix bluetooth denial on user builds
+c10b438 sepolicy: Fix denial for FPS info tile
+5063dbf sepolicy: Allow GameSpace read fps node
+6e6ff28 sepolicy: Address cryptoeng denials
+20e648e sepolicy: Label hal_charger service
+a78a716 sepolicy: Fix hal_bootctl_default denial
+ea6eab0 sepolicy: Label missing wakeup nodes
+096cb41 sepolicy: Address various denials
+1d0cdaa sepolicy: Add dolby support
+713d6f7 sepolicy: Allow system app read battery health status
+0d7b970 sepolicy: Allow system_app to access zram sysfs nodes
+9e5e553 sepolicy: Address DeviceSettings and fast charging denials
+891c5a4 hardware: hidl: inscreen: Set thread to high CFS priority
+
+   * kernel/oneplus/sm8750
+c0dc97ca653a5 BACKPORT: vsock/virtio: Fix message iterator handling on transmit path
+c00259fd09d69 BACKPORT: net: Introduce skb_copy_datagram_from_iter_full()
+565afd1985c89 FROMLIST: KVM: arm64: Fix softirq masking in FPSIMD register saving sequence
+6bef2c60777dc ANDROID: KVM: Expose min hyp s1 free pages in debugfs
+99d7e925d31ba ANDROID: KVM: arm64: Expose hyp s1 pool stats in debugfs
+
+====================
+     10-06-2025
+====================
+
+   * kernel/oneplus/sm8750
+380bd9f7c5373 ANDROID: GKI: Add symbol to symbol list for imx
+
+   * packages/apps/AlphaSettings
+be4a19e crdroid: Add strings for force LTE_CA
+
+   * packages/apps/Settings
+72b305ccb6c Don't show homepage suggestions
+48e40b5f6fd Settings: Add a toggle to force LTE_CA
+46b87ad3c68 Reorder homepage preferences
+81017e82a75 Update settings homepage colors
+
+   * vendor/alpha
+f7a9abe6 overlay: Enable keyboard vibration
+cbdd31d9 component-overrides: Force disable google settings intelligence injects
+c36a0cdf overlay: SystemUI: Add plugin whitelist
+
+====================
+     10-05-2025
+====================
+
+   * hardware/oplus
+fe717b2 Pen: Wait up to 5s for BLE scanner to be available
+
+====================
+     10-04-2025
+====================
+
+====================
+     10-03-2025
+====================
+
+   * device/oneplus/sm8750-common
+a9bfaff sm8750-common: init: Add ROW and correct NA region mapping
+
+   * hardware/oplus
+34f36e2 folio-daemon: Remove unwanted event count check
+b759d9e folio-daemon: Fix ALooper_pollOnce() return value check
+3216027 folio-daemon: Do not use batching for hall sensor
+af9087a sepolicy: qti: Allow folio_daemon to find virtual_device_native_service
+
+   * kernel/oneplus/sm8750-devicetrees
+e04c70fb oplus: Import erhai changes from oneplus/sm8750_v_15.0.1_pad_3
+
+====================
+     10-02-2025
+====================
+
+   * device/oneplus/dodge
+e5a86bc dodge: displayconfig: Correct inverted width and height
+4d667fb dodge: Add liboprec_audrec/liboprec_audrec_wrapper
+
+   * device/oneplus/sm8750-common
+f7668e4 sm8750-common: Decommonize liboprec_audrec
+
+   * hardware/oplus
+80fe8c3 Pen: Support overriding peak refresh rate when pen is connected
+5c3146f sepolicy: qti: Add sepolicy for folio-daemon
+b3a4339 folio-daemon: Migrate to SPDX license header
+593f97f folio-daemon: Run clang-format
+08742df folio-daemon: Add init rc
+410aa35 folio-daemon: Move to /system_ext
+144646e folio-daemon: Explicity request wakeup version of hall sensor
+ed88bdc folio-daemon: Flip sensor event data check
+285eccf folio-daemon: Update sensor type
+a5621a3 folio-daemon: Convert Android.mk to bp
+e9f090f folio-daemon: PollOnce instead of PollAll
+f362a93 folio-daemon: Avoid UAF with stale sensor handle
+7430699 folio-daemon: Disable modules that can't be built in PDK
+bc1b861 folio-daemon: Remove LOCAL_CLANG := true
+244c88c folio-daemon: Use -Werror
+0168959 folio-daemon: Add missing includes.
+e67b5c7 folio-daemon: Move to system
+6044b35 folio-daemon: Retry slowly on failure
+a73d648 folio-daemon: Exit when poll returns zero events
+ed4caad folio-daemon: Improve logging for debugging
+d292aa0 oplus: Add support for folio cases
+
+   * kernel/oneplus/sm8750
+e164c2643cdeb BACKPORT: io_uring: enable toggle of iowait usage when waiting on CQEs
+
+   * vendor/oneplus/dodge
+cbe0b63 dodge: Add liboprec_audrec/liboprec_audrec_wrapper
+
+   * vendor/oneplus/sm8750-common
+cc11c79 sm8750-common: Update WFD system blobs from dada OS2.0.217.0.WOCMIXM
+28d51d8 sm8750-common: Unblob audio/audio effects vintf manifests
+664d19a sm8750-common: Decommonize liboprec_audrec
+
+====================
+     10-01-2025
+====================
+
+   * hardware/oplus
+090d5f2 Automatic translation import
+
