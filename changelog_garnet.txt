@@ -1,7 +1,13 @@
 Highlights & Device Specific Changes:
 Build type: Monthly
 Device: Xiaomi Redmi Note 13 Pro 5G (Garnet)
-Device maintainer: franlop77
+Device maintainer: Jotanh
+
+====================
+     21-06-2025
+====================
+- AlphaDroid 4.1 Initial Release by Jotanh
+- FW Updated to 2.0.202VNRMIXM
 
 ====================
      21-06-2025
