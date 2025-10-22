@@ -1,0 +1,19 @@
+Device: OnePlus 12 (waffle)
+Device maintainer: Javi
+
+====================
+     22-10-2025
+====================
+
+* Initial A16 AlphaDroid 4.1 official support
+* Synced with the latest AlphaDroid
+* Include Oneplus Dolby
+* Add media codecs support
+* Bcr Basic call recorder support
+* Update from OOS 11.C.24
+* KernelSu-Next support
+* Enable multiple vibration intensity levels
+
+NOTES: READ INSTALL METHOD PLEASE!!!
+
+Credits: Chandu Dyavanapelli for tree,lineageOS team,AlphaDroid team.

@@ -1,0 +1,29 @@
+{
+    "response": [
+        {
+            "maintainer": "javi",
+            "oem": "OnePlus",
+            "device": "waffle",
+            "filename": "AlphaDroid-16-20251022-gapps-waffle-v4.1.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/waffle/AlphaDroid-16-20251022-gapps-waffle-v4.1.zip/download",
+            "timestamp": 1761150458,
+            "md5": "78f9fd1b8624af1548dd74c869d60673",
+            "sha256": "6f2239da5f617b85b7c4f2b26e18403f2e0b94ec58769dd66b1bc316dab14f06",
+            "size": 3630206480,
+            "version": "4.1",
+            "buildtype": "Official",
+            "buildvariant": "gapps",
+            "forum": "",
+            "gapps": "",
+            "firmware": "",
+            "modem": "",
+            "bootloader": "",
+            "recovery": "",
+            "paypal": "https://www.paypal.com/donate/?hosted_button_id=UKKSXJYZDMH58",
+            "telegram": "https://t.me/alphadroid_chat",
+            "dt": "",
+            "common-dt": "",
+            "kernel": ""
+        }
+    ]
+}
