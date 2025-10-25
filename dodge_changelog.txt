@@ -1,11 +1,85 @@
 ====================
+     10-24-2025
+====================
+
+   * device/alpha/sepolicy
+01974a3 Add missing sepolicy
+
+   * device/oneplus/sm8750-common
+58ef330 DNM test facebook fix
+
+   * frameworks/base
+2e5aa63a38be KeyboxImitationHooks: Only generate certificates for play integrity calls
+5e6584d13e38 PixelPropsUtils: Drop spoof for vending
+58fcceeae175 PixelPropsUtils: Fix failing strong integrity with PIF disabled
+c2597a2ab078 PixelPropsUtils: Add more logs for debugging
+78a70f40ffd6 PixelPropsUtils: Drop overlay config
+3b96d932a7b5 PixelPropsUtils: Move from props to Settings switch
+505c0a44fbae PixelPropsUtils: Dynamically spoof props for GMS
+74284db93a9e PixelPropsUtils: Add prop to allow blocking cert chain
+9e7f6170c387 Adapt for AlphaDroid
+
+   * packages/apps/Settings
+74300c47eda Settings: Update lottie animations from Pixel 9 Pro XL BP2A.250805.005
+fcf3ca2b968 Settings: Implement reverse-engineered battery saver page
+
+   * system/core
+267f979d9 pin surfaceflinger render engine to top app
+2525dc63d Add additional init props
+
+====================
+     10-23-2025
+====================
+
+   * frameworks/base
+ef65e8f21493 SystemUI: Add toggle for doze wallpaper
+76ea2e16cdd9 SystemUI: Implement RefreshRateManager [1/2]
+6ddff62eae47 camera: Bump `MAX_PREVIEW_FPS` to 120
+63ed88403256 base: Allow disabling refresh rate lowering in battery saver
+
+   * packages/apps/Settings
+8588126f334 ManageStoragePreferenceController: Explicitly disable storage management preference
+70d23b582e8 Refresh rate : Add display refresh rate illustration
+b466e5fc683 Settings: Add null check for PreferenceScreen in BasePerAppConfigFragment
+f84a50522fe Settings: Use ArrayMap/Set instead of HashMap/Set
+2f166696390 Settings: Adapt for Android U QPR2
+a40f428f5ae Settings: Warn user app reload before switching fullscreen display
+08363d10b41 Settings: Make sure per-app list has no duplicates
+c5573ddfb4f Settings: Allow specific allowed system app list for per-app fragment
+0e837166e44 Settings: Pass uid in per-app config fragment
+31bf35e6571 Settings: Don't show system apps for sensor block fragment
+b4d6a741444 Settings: Add top info for per-app settings
+9b91ecadf0d Settings: Create PerAppSwitchConfigFragment
+7dbb696a5cd Settings: Create BasePerAppConfigFragment
+522f17f8a85 Settings: Implement RefreshRateManager [2/2]
+22926c95e51 Revert "Settings: Add peak refresh rate list preference"
+53cd0e56b0f Revert "Settings: Add min refresh rate list preference"
+a6dd3a9dc95 Settings: Allow disabling refresh rate lowering in battery saver
+
+====================
+     10-22-2025
+====================
+
+====================
+     10-21-2025
+====================
+
+   * frameworks/base
+e3b2eebb4358 fixup: [BUGFIX] fix mediametadata crash
+a5aae9e7ac19 Lockscreen Info: Fix conversion crashes and possible div by zero
+942d1bc68b5e HdrBrightnessModifier: allow changing HDR brightness intensity
+9bca0946c90a HdrBrightnessModifier: allow disabling hdr display boost
+97d0e96afd84 [KEYBOX] simplify keybox data parsing
+
+   * packages/apps/Settings
+60110e4195f display: allow changing HDR brightness intensity
+5deef3538d9 display: add hdr display switch preference
+
+====================
      10-20-2025
 ====================
 
    * frameworks/base
-fc5452bbaa4a KeyboxImitationHooks: Only generate certificates for play integrity calls
-99370e41a2a6 PixelPropsUtils: Dynamically spoof props for GMS
-b1f97462a439 PixelPropsUtils: Add prop to allow blocking cert chain
 8853c225539e Revert "Revert "UDFPS: always hide animation on cancel event""
 b63086abcb5c FixUp! UDFPS animation
 c64c49df86de Revert "Revert "Biometrics: Hook up support for halHandlesDisplayTouches prop""
@@ -64,10 +138,6 @@ f6ba6de sm8750-common: overlay: Use appropriate charging thresholds
 63ae062 Drop Lineage Health
 3f80f1b Init: set permissions for OnePulse PWM
 
-   * frameworks/av
-0cb2a210f1 OMX: Remove support for prebuilt ac4 decoder
-fbfc75a9c6 libstagefright: omx: Add support for loading prebuilt ddp and ac4 decoder lib
-
    * frameworks/base
 64157aff4be4 base: [SettingsProvider] Resolve google gms configurator denials
 907b8a934638 SettingsProvider: Resolve package name that requires permission
@@ -100,6 +170,10 @@ c7e1656 aidl: qti_vibrator: effect: import richtap effects
 ====================
      10-18-2025
 ====================
+
+   * frameworks/av
+0cb2a210f1 OMX: Remove support for prebuilt ac4 decoder
+fbfc75a9c6 libstagefright: omx: Add support for loading prebuilt ddp and ac4 decoder lib
 
 ====================
      10-17-2025
@@ -285,76 +359,4 @@ c36a0cdf overlay: SystemUI: Add plugin whitelist
 
    * hardware/oplus
 fe717b2 Pen: Wait up to 5s for BLE scanner to be available
-
-====================
-     10-04-2025
-====================
-
-====================
-     10-03-2025
-====================
-
-   * device/oneplus/sm8750-common
-a9bfaff sm8750-common: init: Add ROW and correct NA region mapping
-
-   * hardware/oplus
-34f36e2 folio-daemon: Remove unwanted event count check
-b759d9e folio-daemon: Fix ALooper_pollOnce() return value check
-3216027 folio-daemon: Do not use batching for hall sensor
-af9087a sepolicy: qti: Allow folio_daemon to find virtual_device_native_service
-
-   * kernel/oneplus/sm8750-devicetrees
-e04c70fb oplus: Import erhai changes from oneplus/sm8750_v_15.0.1_pad_3
-
-====================
-     10-02-2025
-====================
-
-   * device/oneplus/dodge
-e5a86bc dodge: displayconfig: Correct inverted width and height
-4d667fb dodge: Add liboprec_audrec/liboprec_audrec_wrapper
-
-   * device/oneplus/sm8750-common
-f7668e4 sm8750-common: Decommonize liboprec_audrec
-
-   * hardware/oplus
-80fe8c3 Pen: Support overriding peak refresh rate when pen is connected
-5c3146f sepolicy: qti: Add sepolicy for folio-daemon
-b3a4339 folio-daemon: Migrate to SPDX license header
-593f97f folio-daemon: Run clang-format
-08742df folio-daemon: Add init rc
-410aa35 folio-daemon: Move to /system_ext
-144646e folio-daemon: Explicity request wakeup version of hall sensor
-ed88bdc folio-daemon: Flip sensor event data check
-285eccf folio-daemon: Update sensor type
-a5621a3 folio-daemon: Convert Android.mk to bp
-e9f090f folio-daemon: PollOnce instead of PollAll
-f362a93 folio-daemon: Avoid UAF with stale sensor handle
-7430699 folio-daemon: Disable modules that can't be built in PDK
-bc1b861 folio-daemon: Remove LOCAL_CLANG := true
-244c88c folio-daemon: Use -Werror
-0168959 folio-daemon: Add missing includes.
-e67b5c7 folio-daemon: Move to system
-6044b35 folio-daemon: Retry slowly on failure
-a73d648 folio-daemon: Exit when poll returns zero events
-ed4caad folio-daemon: Improve logging for debugging
-d292aa0 oplus: Add support for folio cases
-
-   * kernel/oneplus/sm8750
-e164c2643cdeb BACKPORT: io_uring: enable toggle of iowait usage when waiting on CQEs
-
-   * vendor/oneplus/dodge
-cbe0b63 dodge: Add liboprec_audrec/liboprec_audrec_wrapper
-
-   * vendor/oneplus/sm8750-common
-cc11c79 sm8750-common: Update WFD system blobs from dada OS2.0.217.0.WOCMIXM
-28d51d8 sm8750-common: Unblob audio/audio effects vintf manifests
-664d19a sm8750-common: Decommonize liboprec_audrec
-
-====================
-     10-01-2025
-====================
-
-   * hardware/oplus
-090d5f2 Automatic translation import
 
