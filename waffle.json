@@ -4,12 +4,12 @@
             "maintainer": "javi",
             "oem": "OnePlus",
             "device": "waffle",
-            "filename": "AlphaDroid-16-20251022-gapps-waffle-v4.1.zip",
-            "download": "https://sourceforge.net/projects/alphadroid-project/files/waffle/AlphaDroid-16-20251022-gapps-waffle-v4.1.zip/download",
-            "timestamp": 1761150458,
-            "md5": "78f9fd1b8624af1548dd74c869d60673",
-            "sha256": "6f2239da5f617b85b7c4f2b26e18403f2e0b94ec58769dd66b1bc316dab14f06",
-            "size": 3630206480,
+            "filename": "AlphaDroid-16-20251026-gapps-waffle-v4.1.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/waffle/AlphaDroid-16-20251026-gapps-waffle-v4.1.zip/download",
+            "timestamp": 1761463540,
+            "md5": "3937528316ac83805216e29601daff17",
+            "sha256": "7600ac035b86962152fb9e59926b567b128dcb9669ef81c298c96b293ec3feda",
+            "size": 3634248953,
             "version": "4.1",
             "buildtype": "Official",
             "buildvariant": "gapps",
@@ -20,10 +20,10 @@
             "bootloader": "",
             "recovery": "",
             "paypal": "https://www.paypal.com/donate/?hosted_button_id=UKKSXJYZDMH58",
-            "telegram": "https://t.me/alphadroid_chat",
-            "dt": "",
-            "common-dt": "",
-            "kernel": ""
+            "telegram": "https://t.me/OnePlus_12_Custom/11451",
+            "dt": "https://github.com/AlphaDroid-devices/device_oneplus_waffle",
+            "common-dt": "https://github.com/AlphaDroid-devices/device_oneplus_sm8650-common",
+            "kernel": "https://github.com/Waffle-Backdoor/android_kernel_oneplus_sm8650"
         }
     ]
 }
