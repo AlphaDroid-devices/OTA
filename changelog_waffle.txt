@@ -2,6 +2,17 @@ Device: OnePlus 12 (waffle)
 Device maintainer: Javi
 
 ====================
+     26-10-2025
+====================
+
+* Synced with the latest AlphaDroid
+* Drop torch control
+* Added device.settings for waffle
+* Set GPU profiler
+* Add power_state (node for hibernation feature)
+* Add system permission for eMMC nodes
+
+====================
      22-10-2025
 ====================
 
