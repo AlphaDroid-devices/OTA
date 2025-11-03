@@ -4,6 +4,20 @@ Device: Xiaomi Redmi Note 12 Pro 5G/Pro+ 5G
 Device maintainer: YagizErdemir
 
 ====================
+     03-11-2025
+====================
+- AlphaDroid 4.1
+- Update blobs/firmware from OS2.0.8.0.UMOMIXM
+- Switched to common mediatek IMS
+- Upstream kernel from https://git.kernel.org/pub/scm/linux/kernel/git/cip/linux-cip
+- overlay: Disable safe headphone volume
+- Disable thumbnail_block_model of libstagefright
+- Drop debug.sf.disable_client_composition_cache
+- overlay: Downscale task snapshots to 70%
+- a few improvements for dolby
+- Drop Trustonic Soter service
+
+====================
      31-05-2025
 ====================
 - AlphaDroid 3.2
