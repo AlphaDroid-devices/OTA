@@ -9,3 +9,11 @@ Device maintainer: Romeo13card
 -  Initial 3.х release 
 -  Vanilla build
 -  Stable released
+
+====================
+     11-03-2025
+====================
+-  Initial 4.х release 
+-  Vanilla build
+-  Add KSU
+-  Stable released
