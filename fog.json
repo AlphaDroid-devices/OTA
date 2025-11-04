@@ -18,7 +18,7 @@
             "firmware": "",
             "modem": "",
             "bootloader": "",
-            "recovery": "",
+            "recovery": "https://sourceforge.net/projects/alphadroid-project/files/fog/AlphaDroid%204.x/boot.img/download",
             "paypal": "",
             "telegram": "https://t.me/romeo13card_chat",
             "dt": "https://github.com/AlphaDroid-devices/device_xiaomi_fog",
