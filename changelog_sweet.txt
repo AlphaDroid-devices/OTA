@@ -4,6 +4,27 @@ Device: Xiaomi Redmi Note 10 Pro (sweet)
 Device maintainer: Javi
 
 ====================
+     23-11-2025
+====================
+- October security patch
+- Dolby aospa OSS blobs OnePlus support
+- Leica Holly Bear support
+- Increase speaker volume
+- Add bluetooth power data to power_profile
+- Outertune support
+- Enable camera toggle support
+- Add per app maximum refresh rate
+- Implement torch light control
+- Enable anti_flicker by default
+- Move lift to check phone (doze support)
+- Reset swappiness to 100
+
+Credits:
+- aryannn999,neobuddy89 and Lineageos Team for continuing to support this fantastic device
+- Karan-Frost dolby repo https://github.com/frost-testzone/vendor_oneplus_dolby
+- Team AlphaDroid
+
+====================
      08-10-2025
 ====================
 
