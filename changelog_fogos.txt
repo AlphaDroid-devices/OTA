@@ -1,0 +1,15 @@
+Highlights & Device Specific Changes:
+Build type: Monthly
+Device: Moto G34 5G (fogos)
+Device maintainer: Abhishek Nakchwal (nakchwal)
+Required firmware: None
+
+===== 05-12-2025 =====
+- Initial official AlphaDroid A16 build for fogos
+- Improved battery and performance
+- Fixed Bluetooth calling issues
+- Fixed power button issue
+- Enabled blur by default
+- Added extra customization 
+- Unusual lag is solved
+- Many more thing were optimized...
