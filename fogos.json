@@ -1,0 +1,28 @@
+{
+  "response": [
+    {
+      "maintainer": "Name Abhishek Nakchwal",
+      "oem": "Motorola",
+      "device": "Moto G34 5G",
+      "filename": "AlphaDroid-16-20251205-gapps-fogos-v4.2",
+      "download": "https://sourceforge.net/projects/alphadroid-fogos/files/AlphaDroid-16-20251205-gapps-fogos-v4.2.zip/download",
+      "timestamp": 1764914409,
+      "md5": "b87cf7ab3dd9039bbe6f284c10740c79",
+      "sha256": "be1c5b3e085cc83e120213964ac167e9774cb462ce1763e75f35da1a491e51a9",
+      "size": 2419550624,
+      "version": "4.2",
+      "buildtype": "Monthly",
+      "forum": "https://forum link",
+      "gapps": "https://sourceforge.net/projects/alphadroid-fogos/files/AlphaDroid-16-20251205-gapps-fogos-v4.2.zip/download",
+      "firmware": "https://firmware link",
+      "modem": "https://modem link",
+      "bootloader": "https://bootloader link",
+      "recovery": "https://recovery link",
+      "paypal": "https://donation link",
+      "telegram": "https://t.me/nakchwal",
+      "dt": "https://github.com/alphadroid-project/device_<oem>_<device_codename>",
+      "common-dt": "https://github.com/alphadroid-project/device_<oem>_<SOC>-common",
+      "kernel": "https://github.com/alphadroid-project/kernel_<oem>_<device_codename>"
+    }
+  ]
+}
