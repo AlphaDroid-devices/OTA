@@ -1,362 +1,845 @@
 ====================
-     10-24-2025
-====================
-
-   * device/alpha/sepolicy
-01974a3 Add missing sepolicy
-
-   * device/oneplus/sm8750-common
-58ef330 DNM test facebook fix
-
-   * frameworks/base
-2e5aa63a38be KeyboxImitationHooks: Only generate certificates for play integrity calls
-5e6584d13e38 PixelPropsUtils: Drop spoof for vending
-58fcceeae175 PixelPropsUtils: Fix failing strong integrity with PIF disabled
-c2597a2ab078 PixelPropsUtils: Add more logs for debugging
-78a70f40ffd6 PixelPropsUtils: Drop overlay config
-3b96d932a7b5 PixelPropsUtils: Move from props to Settings switch
-505c0a44fbae PixelPropsUtils: Dynamically spoof props for GMS
-74284db93a9e PixelPropsUtils: Add prop to allow blocking cert chain
-9e7f6170c387 Adapt for AlphaDroid
-
-   * packages/apps/Settings
-74300c47eda Settings: Update lottie animations from Pixel 9 Pro XL BP2A.250805.005
-fcf3ca2b968 Settings: Implement reverse-engineered battery saver page
-
-   * system/core
-267f979d9 pin surfaceflinger render engine to top app
-2525dc63d Add additional init props
-
-====================
-     10-23-2025
+     12-05-2025
 ====================
 
    * frameworks/base
-ef65e8f21493 SystemUI: Add toggle for doze wallpaper
-76ea2e16cdd9 SystemUI: Implement RefreshRateManager [1/2]
-6ddff62eae47 camera: Bump `MAX_PREVIEW_FPS` to 120
-63ed88403256 base: Allow disabling refresh rate lowering in battery saver
-
-   * packages/apps/Settings
-8588126f334 ManageStoragePreferenceController: Explicitly disable storage management preference
-70d23b582e8 Refresh rate : Add display refresh rate illustration
-b466e5fc683 Settings: Add null check for PreferenceScreen in BasePerAppConfigFragment
-f84a50522fe Settings: Use ArrayMap/Set instead of HashMap/Set
-2f166696390 Settings: Adapt for Android U QPR2
-a40f428f5ae Settings: Warn user app reload before switching fullscreen display
-08363d10b41 Settings: Make sure per-app list has no duplicates
-c5573ddfb4f Settings: Allow specific allowed system app list for per-app fragment
-0e837166e44 Settings: Pass uid in per-app config fragment
-31bf35e6571 Settings: Don't show system apps for sensor block fragment
-b4d6a741444 Settings: Add top info for per-app settings
-9b91ecadf0d Settings: Create PerAppSwitchConfigFragment
-7dbb696a5cd Settings: Create BasePerAppConfigFragment
-522f17f8a85 Settings: Implement RefreshRateManager [2/2]
-22926c95e51 Revert "Settings: Add peak refresh rate list preference"
-53cd0e56b0f Revert "Settings: Add min refresh rate list preference"
-a6dd3a9dc95 Settings: Allow disabling refresh rate lowering in battery saver
-
-====================
-     10-22-2025
-====================
-
-====================
-     10-21-2025
-====================
-
-   * frameworks/base
-e3b2eebb4358 fixup: [BUGFIX] fix mediametadata crash
-a5aae9e7ac19 Lockscreen Info: Fix conversion crashes and possible div by zero
-942d1bc68b5e HdrBrightnessModifier: allow changing HDR brightness intensity
-9bca0946c90a HdrBrightnessModifier: allow disabling hdr display boost
-97d0e96afd84 [KEYBOX] simplify keybox data parsing
-
-   * packages/apps/Settings
-60110e4195f display: allow changing HDR brightness intensity
-5deef3538d9 display: add hdr display switch preference
-
-====================
-     10-20-2025
-====================
-
-   * frameworks/base
-8853c225539e Revert "Revert "UDFPS: always hide animation on cancel event""
-b63086abcb5c FixUp! UDFPS animation
-c64c49df86de Revert "Revert "Biometrics: Hook up support for halHandlesDisplayTouches prop""
-
-   * hardware/oplus
-498b4fb sepolicy: qti: Label oplus,ufcs_protocol wakeup node
-9ae2c72 sensors: Skip first fp state event
+6dd16faf458a camera: Bump `MAX_PREVIEW_FPS` to 120
+755cd6b331a3 UI Styles tile dialog: apply changes immediately and remove dim from shade while dragging, to have a clear view of QS tiles.
+2d679b88d0cd UI Styles: make Slash renderers respect user parameters
 
    * kernel/oneplus/sm8750
-6693ec373e60e include: fix time.h inclusion
+bb8fe2c3306d mm: vmstat: use power efficient workingqueues
+217cc612aa16 proc: Don't let Google Camera run in the background
+
+   * kernel/oneplus/sm8750-modules
+5baaae5a12 qcom: display-drivers: oplus_adfr: kickstart prop magic
+
+   * packages/apps/Settings
+2ef22e2ebf0 Device Settings: Oneplus13
+
+   * vendor/alpha
+51559859 Fix audio config
+2edb6566 Add tablet config
 
    * vendor/oneplus/sm8750-common
-c5a6c0b add ConsumerIRApp
-6b2b339 sm8750-common: Sync with device tree
+749f9a0 sm8750-common: Sync with device tree
 
 ====================
-     10-19-2025
+     12-04-2025
+====================
+
+   * frameworks/base
+4866ebd5bfc9 Brightness slider: change thumb dimensions for better ui style effect
+5499d411825c SystemUI: Extend QS Header Image to support animated GIF/WEBP [1/2]
+
+   * packages/apps/AlphaSettings
+2f886a0 Extend QS Header Image to support animated GIF/WEBP [2/2]
+
+   * vendor/apn
+e09a80d Add Bait MX
+
+====================
+     12-03-2025
+====================
+
+====================
+     12-02-2025
+====================
+
+   * hardware/oplus
+00fa9e8 fixup! will fix later
+
+   * packages/apps/AlphaSettings
+b38cff7 Make notifications and misc icons thicker
+759d687 Add About phone header strings
+
+====================
+     12-01-2025
+====================
+
+   * device/oneplus/sm8750-common
+44bd76f sm8750-common: Switch to oplus sensors AIDL
+5ce21a3 sm8750-common: define media settings to sun variant
+
+   * manifest
+c2c3bc4 Unpin settings
+
+   * packages/apps/Settings
+7c3ffd4c10c Revamp about phone header
+
+====================
+     11-30-2025
+====================
+
+   * manifest
+9811279 Unpin a few repos
+
+   * packages/apps/Launcher3
+755f5c1e5a Merge branch '16.0' of https://github.com/crdroidandroid/android_packages_apps_Launcher3 into HEAD
+
+====================
+     11-29-2025
+====================
+
+   * build/make
+aa724d34c8 Merge branch '16.0' of https://github.com/crdroidandroid/android_build into alpha-16.1
+4316871e2f Auto-fill lunch
+679fbb0a09 Remove lineage-sdk dependency
+
+   * build/soong
+bf2c7532f Merge branch '16.0' of https://github.com/crdroidandroid/android_build_soong into alpha-16.1
+
+   * hardware/oplus
+465f765 Add toggle for ltpo features
+
+   * manifest
+c3cb310 Update system/apex hash
+
+   * vendor/alpha
+ad84daf1 Bump AlphaDroid version to 4.2
+36d1e855 Merge branch 'alpha-16.1' of https://github.com/alphadroid-project/vendor_alpha into alpha-16.1
+
+====================
+     11-28-2025
+====================
+
+   * frameworks/base
+1a5e92d8804b PixelPropsUtils: Skip play Integrity props in isolated processes
+f08eadeed8bf KeyboxChainGenerator: fix build release parsing
+41bc452aee08 SystemUI: Avoid using deriveStateOf for media translation
+8f92cffa0623 graphics: Fixing typeface crash bug with susfs
+b18779334210 SystemUI: TunerServiceImpl: Safe concurrent iteration and modification
+d94877052d14 Revert "SystemUI: Fix thread safety issue when adding tunables"
+d0b69b508a92 MediaControlPanel: Fix media playback crash on chromium based browser
+043d521141b5 SettingsProvider: Resolve google gms configurator denials
+b0257e2edeee SettingsProvider: Fix NPE when upgrading
+069b95f37765 PhoneWindowManager: Fix duplicate handling of App switch key press event
+a8039b7dfe57 BlurController: Fix default blur enablement value
+d7d80b129f07 Fix keyboard cannot access slider issue
+adf42250bcb1 Always update mute icon along with slider value.
+1c9032176e9f Add a ripple highlight for the Output Switcher list items.
+b2d5214ccdc8 Make bg of QSCustomizer transparent
+5bdc6c93fd8e Update pin bouncer confirm button to match spec
+a5155dcab1de SystemUI: TunerActivity: Switch to material expressive design
+243be331eab4 Force behind and notification scrim alpha to be 0 when the device is unlocking.
+9cdd07886cb8 Don't further perform IO on socket if opening it fails
+25991ab26d1d Fix it has two times return back if only press the back key one time.
+1d61c7552f6a Fix index out of bounds exception in HandwritingModeController.
+938d479882e8 SystemUI: Prevent ShadeListBuilder illegal state on notification dump
+9a569d3b14cd SystemUI: Fix keyguard transition race conditions
+8b87aa26caa1 KeyProviderManager: Accept N >= 1 certs per key [1/2]
+6387fccb44e9 ComputerEngine: Fix signature spoofing for microG revanced
+23f1d76b6ef0 UI Styles: fix slash angle
+
+   * manifest
+3cf16c1 manifest: Track vendor/apn
+01cc3e4 manifest: Track LMO SystemUI clocks
+
+====================
+     11-27-2025
 ====================
 
    * device/oneplus/dodge
-e213f3f DeviceSettings: rework bypass charging
-fd6012c dodge: overlay: Ignore some camera ids for Aperture
-63cdcc5 Device Settings
-59f5247 dodge: overlay: revert Brightness configs
-9dcaeeb dodge: displayconfig: Correct inverted width and height
-b6234cf FixUp! Set the correct path for keyhandler
-d7f2b14 Dodge: Set oneplus banner to Dodge
-05444bb Set strings to oneplus 13
-9fa693a DeviceSettings: rework bypass charging
-60a42bf DeviceSettings: lunch it from Settings
-aab6998 DeviceSettings: add PulseOne PWM
-dfda89b Import DeviceSettings from common tree
-43ec457 Adjust padding for status bar
-f9e0683 AlphaDroid Bringup
-a40965f dodge: overlay: Update Brightness configs
-012a241 dodge: Increase start statusbar padding
-78c5388 dodge: configs: Update display density
-d3f4dee dodge: Switch to FIFO vibration effects
+e2ac912 dodge: Include LTPO settings
+4cc5f57 dodge: overlay: Enable multiple vibration intensity levels
+4adb090 dodge: Set market name for device
+d569609 dodge: overlay: Move in alert slider configs
+076213d dodge: Set proper screen density
+fc97332 dodge: Enable UDFPS animations
+1aff861 [Squash] Import Device Settings
+828b044 Adjust padding for status bar
+c0ea18d AlphaDroid Bringup
+0d39e0c dodge: overlay: Update Brightness configs
+aeabaf3 dodge: Increase start statusbar padding
+55b97d4 dodge: configs: Update display density
+aafa4c5 dodge: Switch to FIFO vibration effects
 
    * device/oneplus/sm8750-common
-8f0d170 sm8750-common: Switch to oplus sensors AIDL
-d4a013b sm7650-common: Set `debug.sf.disable_client_composition_cache` to 0
-3ac4663 sm8650-common: overlay: Enable fp screen off unlock feature and turn off by default
-066ecf7 sm8750-common: Ship ConsumerIR App
-58a7eb2 cleanup: remove unused code after decommonization
-fdad73a sm8750-common: Move required alert slider configs to SystemUI
-30b337d sm8750-common: Allow gcam/snapcam to skip HFR checks
-44b30f3 sm8750-common: Allow camera to skip high frame rate checks
-168fd17 sm8750-common: overlay: Switch to crdroid doze
-a0f3f66 sm8750-common: Nuke OnePlus doze
-1ecd578 sm8750-common: overlay: Configure VOOC charging display on lockscreen
-05e6708 sm8750-common: overlay: Fix lockscreen charging info
-f6ba6de sm8750-common: overlay: Use appropriate charging thresholds
-41ae83b sm8750-common: overlay: Enable VOOC charging support
-9e56632 sm8750-common: overlay: Enable multiple vibration intensity levels
-63ae062 Drop Lineage Health
-3f80f1b Init: set permissions for OnePulse PWM
+f1dcdd9 sm8750-common: Ship ConsumerIR App
+beef9dc Drop Lineage Health
+9f5e3e2 Init: set permissions for OnePulse PWM
+83fe406 sm8750-common: init: Set perm for LTPO nodes
+6d1d8c9 sm8750-common: overlay: Decommonize alert slider configs
+0b933bb sm8750-common: Allow gcam/snapcam to skip HFR checks
+4cebec1 sm8750-common: Allow camera to skip high frame rate checks
+e8696b5 Revert "sm8750-common: init: Set Blur property based on Soc id."
+311cde8 sm8750-common: overlay: Enable battery cycle count
+22e7709 sm8750-common: overlay: Add system ui restart option
+85cc570 sm8750-common: Disable frame rate override feature
+9a4b75c sm8750-common: init: Reset readahead values for 128 always
+94321ba sm8750-common: init: Remove IO read_ahead_kb tune
+0b7d3ed sm8750-common: overlay: Update pinner list
+36df02f sm8750-common: overlay: Turn on screen on unplug
+16e1369 sm8750-common: overlay: Add temp divider value for cpu info overlay
+c72643f sm8750-common: overlay: Add fps info path
+f78c7f7 sm8750-common: overlay: Switch to crdroid doze
+bb51a86 sm8750-common: Nuke OnePlus doze
+383e0ee sm8750-common: overlay: Use appropriate charging thresholds
+2d89f42 sm8750-common: init: Always use lz4 for zram
+fd3eec0 sm8750-common: overlay: Configure VOOC charging display on lockscreen
+ecfeade sm8750-common: overlay: Decouple auto-suspend and interactive state from display
+baa01f1 sm8750-common: overlay: Fix lockscreen charging info
 
    * frameworks/base
-64157aff4be4 base: [SettingsProvider] Resolve google gms configurator denials
-907b8a934638 SettingsProvider: Resolve package name that requires permission
-312bfe80b3b6 Update UdfpsAnimation constructor to accept KeyguardStateController
-5a404cef4dbf biometrics: Fix udfps races
-cc1cebfee62c Revert "UDFPS: always hide animation on cancel event"
+7280e4ea7c29 Merge branch alpha-16.1-wip into alpha-16.1
 
    * hardware/oplus
-1223162 oplus-fwk: Enable IR feature
-ae35f36 [TEMP] sensors: aidl: Glorified one-shotting
-1d4bd1a aidl: sensors: Return early if nothing is displayed over the light sensor
-73fe394 aidl: sensors: Import AlsCorrection from sm8150-common
-665f046 Import ALS capture service from sm8150-common
-68185f3 overlay/sensors: Configure Doze brightness sensor
-cd58b8b overlay: qssi: Define quick_pickup sensor string
-5e98b9f overlay: qssi: Enable config_dozePulsePickup
-68b217d sepolicy: qti: Label sensors AIDL multihal
-a2541c8 aidl: sensors: Standardize qti.sensor.amd to glance sensor
-215de06 aidl: sensors: Invert value for pickup gesture event
-251da9d aidl: sensors: Change standard tilt_detector to pickup_gesture
-574770f aidl: sensors: Avoid target name conflicts
-46b3d76 aidl: sensors: Change default applicable license to Android-Apache-2.0
-1afd562 aidl: sensors: Import 2.X sensors hal proxy
-e8f475f aidl: sensors: Revert^2 "SensorHAL: add moisture detection"
-baf357d aidl: sensors: Import aidl sensors MultiHal
-c7e1656 aidl: qti_vibrator: effect: import richtap effects
-33401b9 oplus-fwk: Update for compatibility with android-15 IMS stack
-66d1140 aidl: vibrator: Minimize code for ledVibratorDevice
+302bcaa sepolicy: qti: Allow system server to detect oem charging
+710895a sepolicy: adress fingerprint denials
+acb8ef3 sepolicy: qti: Allow system_server to r/w oplus_chg nodes
+e0f4234 sepolicy: qti: Allow binder calls for sensor hal to system_server
+b641982 sepolicy: Fix bluetooth denial on user builds
+e25e756 sepolicy: Fix hal_bootctl_default denial
+c108b37 sepolicy: Address DeviceSettings and fast charging denials
+4acd614 hardware: hidl: inscreen: Set thread to high CFS priority
+e35d5b9 sepolicy: Address various denials
+d567547 sepolicy: Label hal_charger service
+c00f50e overlay: qssi: Update QSSI RROs from CPH2573_11_A.76
+534c885 sepolicy: Label oplus bluetooth prop
+5528e0f sepolicy: Address nfc denial
+afaf2b2 sepolicy: Allow vendor_hal_perf_default to access surfaceflinger
+5809ba7 oplus-fwk: Add OsenseResClient and OplusUIFirstManager stub implementation
+1a41a02 [TEMP] sensors: aidl: Glorified one-shotting
+0547c45 aidl: sensors: Return early if nothing is displayed over the light sensor
+65b9256 aidl: sensors: Import AlsCorrection from sm8150-common
+ca8e18a Import ALS capture service from sm8150-common
+9549a03 overlay/sensors: Configure Doze brightness sensor
+225a950 overlay: qssi: Define quick_pickup sensor string
+e743859 overlay: qssi: Enable config_dozePulsePickup
+aef9acd sepolicy: qti: Label sensors AIDL multihal
+881c393 aidl: sensors: Standardize qti.sensor.amd to glance sensor
+8b35c27 aidl: sensors: Invert value for pickup gesture event
+8324141 aidl: sensors: Change standard tilt_detector to pickup_gesture
+d9ba057 aidl: sensors: Avoid target name conflicts
+cb02520 aidl: sensors: Change default applicable license to Android-Apache-2.0
+91ea7a5 aidl: sensors: Import 2.X sensors hal proxy
+35150a7 aidl: sensors: Revert^2 "SensorHAL: add moisture detection"
+f0768b8 aidl: sensors: Import aidl sensors MultiHal
+0e325a7 aidl: qti_vibrator: effect: import richtap effects
+be5174e oplus-fwk: Add missing classes for oplus camera
+06d2e14 oplus-fwk: Update for compatibility with android-15 IMS stack
+654fd15 aidl: vibrator: Minimize code for ledVibratorDevice
+9a1f70d doze: Use new method to listen for preference changes
+
+   * packages/apps/AlphaSettings
+0d511ca Minimal cleanup and re-organization
+496fbbf Expressive Alpha Settings
+3e3c25f Add UI Style settings
+900d740 Merge branch 'alpha-16.1' of https://github.com/alphadroid-project/packages_apps_AlphaSettings into HEAD
+
+   * vendor/alpha
+d0f219d7 overlay: Use google sans flex for lockscreen clock
+9893b8ad overlay: Remove duplicate DPS config
+7c7595f4 Update blur support
 
 ====================
-     10-18-2025
+     11-26-2025
 ====================
 
-   * frameworks/av
-0cb2a210f1 OMX: Remove support for prebuilt ac4 decoder
-fbfc75a9c6 libstagefright: omx: Add support for loading prebuilt ddp and ac4 decoder lib
+   * kernel/oneplus/sm8750
+7bfd38e99ba3 PM / freezer: Reduce freeze timeout to 1 second for Android
+48356601dd30 fs: Dont allow paths with lineage to be listed
+14af71b913ea mbcache: Speed up cache entry creation
+fa0ee3508e11 arm64/mm: Optimize loop to reduce redundant operations of contpte_ptep_get
+b8cd1a9302c9 ANDROID: gki_defconfig: Enable Clang ThinLTO support
+b2cfdc10dc76 ANDROID: gki_defconfig: Enable AUTOFDO_CLANG for AutoFDO optimizations
+40d3318027bb lib/lz4: Remove redundant MIN/MAX macros to fix compilation error
+a8c3e4b453b1 lib: update lz4 to v1.10.0
+3940db0227f6 lib/decompress_unlz4: Add NEON-optimized LZ4 decompression for ARM64
+5b56bcffe7d9 arm64: debug: disable self-hosted debug by default
+2f44e74d65e0 lib: Disable debug_locks
+57bca1d19a64 Makefile: Enable -mcpu=oryon-1
+8e629abb2981 f2fs: Demote GC thread to idle scheduler class
+8aefed7dee58 f2fs: set ioprio of GC kthread to idle
+3bea4ae01af5 f2fs/gc: Reduce GC thread urgent sleep time to 50ms
+10453eb55fbd f2fs: Use copy_page for full page copy
+b72a88275bd4 f2fs: reduce timeout for uncongestion
+e597037bc656 f2fs: Enable ATGC and GC_MERGE by default
+2f4067ad08f2 lz4: Use ARM64 NEON-optimized decompression where available
+7d5017bc68a8 kernelsu: replace renameat hook with fsnotify
+7a9c2cabfe1e kernelsu: Fix kernel panics caused by thread info flag corruption
+f7142b44384a kernelsu: Use SUS_SU by default
+4a0e4563f17f kernelsu: Fix SUS_SU feature
+434d242f25c9 devpts: KernelSU: Fix: Failed to execute pm in terminal
+4141ab3ac4fe drivers: Add missing KernelSU hooks
+33cb02d40860 kernelsu: implement v2_signature size/hash override from userspace through kernel module parameter
+58196799eee8 kernelsu: Allow compatible manager apks
+9b9ce4594e6d kernelsu: Remove duplicate function to fix compilation
+2fc7c7313160 kernelsu: Enable susfs for ksu
+223b8150eb8e kernelsu: Add susfs in gki android15-6.6
+d61386224406 drivers: Set proper version for KernelSU-Next
+667aeb498d6d drivers: Import KernelSU Next v1.1.1
+33a133ffba71 drivers: Add KSU config path
+919b77a5c394 thermal: qcom: tsens: Fix function prototype mismatch
+
+   * kernel/oneplus/sm8750-modules
+b096249139 display: Enforce ulps suspend
+1d13e7a7a3 display: Enforce ulps by default
+
+   * vendor/oneplus/sm8750-common
+d5a5859 add ConsumerIRApp
 
 ====================
-     10-17-2025
+     11-25-2025
+====================
+
+   * device/oneplus/sm8750-common
+556cb91 sm8750-common: Update from OOS 11.F.80
+3c35ec8 sm8750-common: Remove `oplus_bsp_tp_ft3419u` from modules list
+c8af67e sm8750-common: Enable the start of the Vendor VM HAL
+6f69079 sm8750-common: Update from OOS 11.F.74
+
+   * hardware/oplus
+824602c oplus-fwk: Stub NetworklessManager
+
+====================
+     11-24-2025
 ====================
 
 ====================
-     10-16-2025
+     11-23-2025
 ====================
 
-   * build/soong
-9409e00f4 [hax} for now
+   * hardware/oplus
+32308a2 KeyHandler: Modernize ButtonSettings
+7aa2810 KeyHandler: Switch to SwitchPreferenceCompat
+c936325 doze: Convert to SwitchPreferenceCompat
 
 ====================
-     10-15-2025
+     11-22-2025
 ====================
 
-   * device/qcom/sepolicy_vndr/sm8750
-a55570b88 mssing policies
+====================
+     11-21-2025
+====================
 
-   * packages/apps/Settings
-122f616ac7d Styles and wallpaper: handle overlays and availability
+   * device/oneplus/dodge
+a3c98b8 dodge: Update from OOS 11.F.80
+a702039 dodge: Update from OOS 11.F.74
+
+   * device/oneplus/sm8750-common
+1b8b99d sm8750-common: Move CNE and DPM to phone blobs list
+
+   * vendor/oneplus/dodge
+be23fe9 dodge: Update from OOS 11.F.80
+9858fea dodge: Update from OOS 11.F.74
+
+   * vendor/oneplus/sm8750-common
+93748fa sm8750-common: Update from OOS 11.F.80
+c9a6385 sm8750-common: Update from OOS 11.F.74
+ac979e7 sm8750-common: Move CNE and DPM to phone blobs list
 
 ====================
-     10-14-2025
+     11-20-2025
 ====================
 
    * kernel/oneplus/sm8750-devicetrees
-381413bf oplus: Configure erhai GPIO lid switch
+c51c00a9 Revert "qcom: wlan: Disable wlan_direct_link for select targets"
+df72e4a3 treewide: Update changes to CPH2723_16.0.0.211(EX01)
+75512164 qcom: Disable minidump.stack_dump
 
-   * packages/apps/Settings
-6dc9d865bf5 oneplus 13
-
-====================
-     10-13-2025
-====================
-
-   * frameworks/base
-964770a3b309 QuickSwitch: update pkg names
-e0e6aa550096 UDFPS: always hide animation on cancel event
-
-   * hardware/oplus
-ec16278 Use alpha sepolicy path
-
-   * vendor/alpha
-5113e0f1 Nuke wallpaper picker overlays
-
-   * vendor/pixel/themepicker
-4e67726 ThemePicker: update overlays
-
-====================
-     10-12-2025
-====================
-
-====================
-     10-11-2025
-====================
-
-   * packages/apps/Settings
-976dd0232fa temp
-
-   * vendor/alpha
-90ddc34f overlay: move wallpaper picker action to wallpaper picker rro
-
-====================
-     10-10-2025
-====================
-
-====================
-     10-09-2025
-====================
-
-   * device/oneplus/dodge
-085f3b3 dodge: Update from OOS 11.C.70
-
-   * device/oneplus/sm8750-common
-8ebed55 sm8750-common: Update from OOS 11.C.70
-
-   * vendor/oneplus/dodge
-1897e52 dodge: Update from OOS 11.C.70
-
-   * vendor/oneplus/sm8750-common
-d17bed1 sm8750-common: Update from OOS 11.C.70
-
-====================
-     10-08-2025
-====================
-
-   * frameworks/base
-61085a42c46b New translations alpha_strings.xml (Indonesian) (#9)
-
-   * kernel/oneplus/sm8750
-719dee8f13d5e Merge remote-tracking branch 'sm8750/lineage-22.2' into HEAD
-1c1f68417fcd2 Merge tag 'ASB-2025-10-06_15-6.6' of https://android.googlesource.com/kernel/common into HEAD
-
-   * packages/apps/AlphaSettings
-eb47130 New Crowdin updates (#119)
-7a8b9da New Crowdin updates (#118)
+   * manifest
+3db19a9 fixup! Unpin alpha manifest
 
    * packages/apps/Launcher3
-623687f2e5 New translations alpha_strings.xml (Indonesian) (#16)
+93f9b65895 New Crowdin updates (#507)
 
 ====================
-     10-07-2025
+     11-19-2025
 ====================
 
-   * device/oneplus/dodge
-c43647a dodge: Migrate QTI power HAL to soong_config_set
+   * kernel/oneplus/sm8750-modules
+4661b34f66 oplus: Update changes to CPH2723_16.0.0.211(EX01)
 
-   * device/oneplus/sm8750-common
-15b50b6 sm8750-common: Remove vendor/lineage device framework matrix inclusion
-7ed81c1 sm8750-common: Remove libqtigefar from dependency check
-07f7355 sm8750-common: Update WFD system blobs from dada OS2.0.217.0.WOCMIXM
-979580d sm8750-common: Downgrade to ARMv8.2-A.
-957cb3f sm8750-common: Set `DISABLE_DEPS` more audio HAL/effects libs
-dc0e006 sm8750-common: Unblob audio/audio effects vintf manifests
+====================
+     11-18-2025
+====================
+
+   * kernel/oneplus/sm8750
+d3ccdd2d1b8b treewide: Update changes to CPH2723_16.0.0.211(EX01)
+
+   * kernel/oneplus/sm8750-modules
+444125fb54 qcom: display-drivers: Update changes to CPH2723_16.0.0.211(EX01)
+f798ebd888 Revert "qcom: display-drivers: Revert DS merge_mode population"
+a4f6b11858 qcom: camera-kernel: Update changes to CPH2723_16.0.0.211(EX01)
+f59cc0a6e1 qcom: audio-kernel: Update changes to CPH2723_16.0.0.211(EX01)
+7e39e2955d nxp: Update changes to CPH2723_16.0.0.211(EX01)
+
+   * packages/apps/Launcher3
+59136792bc Launcher3: Disable predictive back to home blur
+
+====================
+     11-17-2025
+====================
 
    * hardware/oplus
-f630fa8 dolby: Update layout to material expressive design
-3a97131 dolby: Make sure to persist value after toggling QS tile
-300320a powershare: gracefully fail in case powershare support not available some OP9 device don't have support for reverse wireless charging, so bail out gracefully
-fabdd0d dolby: Fix compilation error in TooltipIconButton
-fb7ad24 dolby: Migrate MainSwitchBar and Switch to Material3
-bd25f14 dolby: Add custom profile
-4e6b1f8 dolby: Add icons for dolby profiles
-ea9eced dolby: Make bass enhancer available on speakers as well
-0d61860 dolby: Switch to MaterialTheme settingsBackground for EqualizerScreen background color
-6e42827 Revert "dolby: Fix Building in Andoid 15"
-c1c6f14 oplus-fwk: Add missing classes for oplus camera
-8104a10 oplus-fwk: Remove unused imports
-5ca99aa dolby: translate strings to Russian
-3e6c9d2 dolby: Exempt installing package in clone or private space
-f4c3d48 dolby: Fix Building in Andoid 15
-e5e0f71 Import dolby from hardware/xiaomi
-977d344 vintf: Add compatibility fcm for dolby
-f435e8f oplus-fwk: Bring in camera bits
-d975ae2 overlay: qssi: Update QSSI RROs from CPH2573_11_A.76
-2c7d65d sepolicy: Address rild denial for prop
-819cde9 sepolicy: Fix bluetooth denial on user builds
-c10b438 sepolicy: Fix denial for FPS info tile
-5063dbf sepolicy: Allow GameSpace read fps node
-6e6ff28 sepolicy: Address cryptoeng denials
-20e648e sepolicy: Label hal_charger service
-a78a716 sepolicy: Fix hal_bootctl_default denial
-ea6eab0 sepolicy: Label missing wakeup nodes
-096cb41 sepolicy: Address various denials
-1d0cdaa sepolicy: Add dolby support
-713d6f7 sepolicy: Allow system app read battery health status
-0d7b970 sepolicy: Allow system_app to access zram sysfs nodes
-9e5e553 sepolicy: Address DeviceSettings and fast charging denials
-891c5a4 hardware: hidl: inscreen: Set thread to high CFS priority
+b5a8e6c sepolicy: qti: Label /dev/sec_dev
 
-   * kernel/oneplus/sm8750
-c0dc97ca653a5 BACKPORT: vsock/virtio: Fix message iterator handling on transmit path
-c00259fd09d69 BACKPORT: net: Introduce skb_copy_datagram_from_iter_full()
-565afd1985c89 FROMLIST: KVM: arm64: Fix softirq masking in FPSIMD register saving sequence
-6bef2c60777dc ANDROID: KVM: Expose min hyp s1 free pages in debugfs
-99d7e925d31ba ANDROID: KVM: arm64: Expose hyp s1 pool stats in debugfs
-
-====================
-     10-06-2025
-====================
-
-   * kernel/oneplus/sm8750
-380bd9f7c5373 ANDROID: GKI: Add symbol to symbol list for imx
-
-   * packages/apps/AlphaSettings
-be4a19e crdroid: Add strings for force LTE_CA
-
-   * packages/apps/Settings
-72b305ccb6c Don't show homepage suggestions
-48e40b5f6fd Settings: Add a toggle to force LTE_CA
-46b87ad3c68 Reorder homepage preferences
-81017e82a75 Update settings homepage colors
+   * manifest
+b90254c Track arm-optimized-routines from alpha
+379b47a Track bionic from alpha
+606943f Unpin alpha manifest
 
    * vendor/alpha
-f7a9abe6 overlay: Enable keyboard vibration
-cbdd31d9 component-overrides: Force disable google settings intelligence injects
-c36a0cdf overlay: SystemUI: Add plugin whitelist
+58bdc922 Build LMO systemui clock plugin
+2d7dd7e9 envsetup: Set crdroid path for Pixel OOT kernel build
+35d1b797 Do not install matlog and updater in private space
+cde6a03b build: Ship adb_root only WITH_SU
+0780d8b3 Include vendor/certification when available
+b342687d release: Re-enable launcher blur flags
+68584db6 overlay: enable ambient burn in protection
+f0dbf9e6 component-overrides: Force disable google settings intelligence injects
+7334ea94 overlay: Enable keyboard vibration
+9b280d5f overlay: SystemUI: Add plugin whitelist
+72c293a1 overlay: SystemUI: Tune new biometric dialog UI
+4e7e81c8 overlay: Enable split shade for notifications in landscape
+66b5f125 release: Disable apply_picture_profiles
+39e0940b release: Disable lpp squeeze effect
+c0a80dd7 release: Generate themed/monochrome icons for all apps
+33e96fc6 release: Disable ambient AOD
+31aea5f4 release: Remove glanceable hub
+853531e5 release: Remove some useless notification flags
+b794287a release: Remove flag for using emphasized font family for shade header
+ddb13ed4 release: Remove glitchy depth push scaling effect
+513b0093 release: Drop notification themed icons
+12458bab release: drop more launcher flags
+2a5d1ca6 release: drop more flags
+f118dbce release: Disable enroll_layout_truncate_improvement
+280e3a96 release: Remove notifications redesign templates flag
+2ff5d299 release: Disable thumbnail_block_model flag
+0b9f6de0 release: Enable android.app flags
+03971316 release: drop launcher blur
+c1ee77fb release: Re-add transparent notification
+01def9e4 release: more flag changes
+898e17e7 release: enable more flags
+3ec551ad release: drop low_light_clock_dream
+b579daab release: drop some flags
+1a998a48 release: drop new sb icons
+b4938ed2 release: Enable WallpaperPicker2 flags
+e0732fe9 release: Enable SystemUI flags (com.android.systemui.shared)
+6ad2208a release: Enable SystemUI flags
+eb13060f release: Enable SettingsLib flags
+6c067f79 release: Enable Settings flags
+fd3ffd1f release: Enable Launcher3 flags
+5ae6b641 overlay: Make Google Sans the default headline font
+64dae4e0 Move adb_root outside userbuild
+95299038 Adding an option to build DeviceAsWebcam
+e1443a2d Allow disabling MatLog
+5e9eed5b generate json at build time
+7e0f5c43 component-overrides: Force disable various google components
+c45f079c Conditionally build ColumbusService
+5ed0fcf0 Move face unlock biometric permission to system_ext
+7410213c Switch to AOSPA's face unlock implementation
+6c6b30bb Build LMO Freeform app and sidebar
+00c2d353 Build GameSpace
+1e58fc0c Build BatteryStatsViewer
+9044afbb overlay: Add gms location history to extra location packages
+71c9df26 overlay: Add tethering to location exemption
+cbc23b01 overlay: Add SystemUI to location extra packages
+a4744635 overlay: Add OmniJaws to location extra packages
+372ccbd4 Build OmniJaws service
+8004584d Build OmniStyle
+712fb076 config: Enable Material Design 3 Expressive
+37458a86 overlay: DeviceConfig: update nearby flags
+24188424 soong: Add CAMERA_NEEDS_CLIENT_INFO_LIB{_OPLUS} to select()
+9029de90 soong: Add support for vendor tag with client package name to select
+efec9e8b build: Override host metadata
+31c98691 kernel: Set "safe" default values for kernel build host & user
+0cb40809 roomservice.py: use -j2 for repo sync
+7db6c880 overlay: Remove bouncer delay when face unlock is enabled
+669bf198 rro_overlay: Use headline font for PermissionController
+1ff12c0c overlay: device_config: Updates
+0ad1b37e overlay: device_config: Add values required for Speech Recognition
+bcc942cd overlay: device_config: Escape special characters
+27f1d196 overlay: device_config: animate navbar on long press
+29b15d4d overlay: Update circle to search overlays for vanilla builds
+0f0d8184 overlay: Enable circle to search
+633cbbfd overlay: Use google-sans for font config overlays
+70473955 Remove packages moved to addons
+e9659bcb Moved bootanimation to addons
+c0194ea8 Clean up wallpaper overlay
+8d58f9e8 Do not clone default AudioFX app
+c6a78d79 Disable default frame rate limit for games
+a9c57a1e config: Optimize Launcher3 and Settings for speed
+3b6c487b Disable memtag for different processes
+f60e3bd4 Execute changelog script once at a time
+2882fe1d Add changelog script
+ded8e2c4 overlay: update configs for AiAi
+11d919e9 overlay: Update device configs global overrides
+01202548 overlay: Offload WM shell to another thread
+add72d34 overlay: Update SettingsProvider defaults
+63861474 Update clone exemption list
+a1b70f1a Add preinstalled package list to stop auto cloning
+5bb88c56 overlay: Enable app-cloning feature in Settings
+52083a8d overlay: Settings: Show memory usage in app info
+c119f430 device_config: Enable Cloned App
+2892813b overlay: Update clock plugin list
+cc2bec49 overlay: Allow new SystemUI clocks
+fda2fd3d overlay: Set AOSP webview as fallback
+8b513d15 build: Enable ThinLTO cache
+0d0ceb24 Always disable app launch blur
+b7b9f309 common: Allow OTA downgrade regardless build type
+5eb899c8 roomservice: get me some crDroid
+29992a5a charger: Switch from LineageOS Teal to crDroid Blue
+b2d2d1fe Revert "overlay: Default to Seedvault backup transport"
+0406f462 Drop custom adb drawable
+4fab8506 build: Ship as crDroid based on LOS
 
 ====================
-     10-05-2025
+     11-16-2025
 ====================
+
+   * bionic
+a946b1299 bionic: libm: Remove duplicate e_log10f function
+
+   * device/oneplus/sm8750-common
+d662152 sm8750-common: Remove remaining URCC blobs
+97d55af sm8750-common: Drop IOplusLogCore prebuilts
 
    * hardware/oplus
-fe717b2 Pen: Wait up to 5s for BLE scanner to be available
+464b1d3 oplus: Introduce dummy liboplus-uah-client
+0c55408 interfaces: Update vendor.oplus.hardware.olc2 to V3
+9582ba0 interfaces: Update vendor.oplus.hardware.olc2 to V2
+81fa629 interfaces: Add vendor.oplus.hardware.olc2 V1
+6f268cd sepolicy: qti: Label battery gauge daemon
+
+   * manifest
+96e0933 Unpin arm-optimized-routines
+
+   * packages/apps/Launcher3
+09f45c6f97 New Crowdin updates (#506)
+9f2f29f685 Update Crowdin configuration file
+1ac9cc24b5 Launcher3: Allow taskbar for phones only if using gesture navigation
+cc23093015 Launcher3: Allow disabling taskbar toggle on tablet
+65f793f0e6 Launcher3: Clean up check for inverse layout
+2f6aa23c8e Launcher3: Remove D2S vibrate if not supported
+689f85302a Launcher3: BlurUtils: Always clear the base surface
+75e8ac5c90 Launcher3: RecentsView: Reuse a shared Matrix to reduce GC
+3eaa9d280a Launcher3: Restart on changing blur radius
+4229094d67 Launcher3: Remove blur radius option if not supported
+66df91ff28 Launcher3: Add an option to customize blur radius
+a536eff709 Launcher3: Change resource type for blur radius in DepthController
+68c4465944 Launcher3: RecentsView: Clear DepthController base surface on every exit
+0bc545b378 Launcher3: Cancel ongoing animations before entering allapps
+1d179cec35 Launcher3: Unify close and kill actions
+43aea55b84 Launcher3: Add recents and app drawer opacity customization
+86022dc43b Launcher3: Fix reset icon in CustomSeekBarPreference in RTL layout
+8fc6cc3f38 Launcher3: Allow to always show page indicator dots
+8575c02159 Launcher3: SettingsCache: Clear per-URI cache entries when empty
+d7151b25cb Launcher3: TaskbarManager: Fix wrong key used in dumpLogs
+37795403bd Launcher3: ReloadingListPreference: Improve layout
+7818e5afef Launcher3: PreviewSurfaceRenderer: Clear view tree on renderer destroy
+97a343fa95 Launcher3: PreloadIconDrawable: Animator listener cleanup
+a8a3f36721 Launcher3: Do not wrap icons from icon pack
+d4b3531a2e Launcher3: Increase tablet qsb margin
+e70d4cc683 Launcher3: Fix broken QSB in landscape mode for 6x5 tablet grid
+411b1155f0 Launcher3: QsbLayout: Set up icons in uniform way
+1fd8b096fd Launcher3: SplitAnimationController: fix crash if coming from freeform
+e3911ebd37 Launcher3: Prevent system not responding when launcher fails to set scaling
+77cdd887a1 Launcher3: DeviceProfile: Fix all apps border space after explicitly enabling grid options for tablets
+421a7ad6b4 Launcher3: Quickspace: Fix random quote
+c3f4ccb079 Launcher3: Quickspace: Do not load quickspace controller if disabled
+665040c9d0 Launcher3: Quickspace: Defer adding listners till layout is inflated
+d9f521da12 Launcher3: QuickSpace: Limit weather updates from google widget
+12a356b867 Launcher3: Add SeraphixGoogle helpers to pause listening
+ae8a339c72 Launcher3: Fix SeraphixGoogle to retrieve update properly
+a2d964713c Launcher3: Bind SeraphixDataProvider to the quickspace
+daf572eb67 Launcher3: Add Chaldea SeraphixGoogle
+54cd632fc5 Launcher3: Quickspace: Improve adding/removing listeners
+a7c4e281ff Launcher3: Quickspace: Prevent clipping of text
+03a61b9767 Launcher3: QuickSpace: Simplify QuickSpaceActonReceiver
+fdaddbc801 Launcher3: QuickSpace: Animate message updates
+316fb6a629 Launcher3: QuickSpace: Refactor to fix event update loops
+c32210cff6 Launcher3: Bring back QuickSpace events
+b408b8be83 Launcher3: Add toggle to use dark status bar on home screen
+35feda6198 Launcher3: Add missing PACKAGE_USAGE_STATS permission
+f435e28352 Launcher3: Add REGISTER_STATS_PULL_ATOM permission
+5a7f13b28f Launcher3: Fix cloned apps not appearing in app drawer
+a4b0d0d9fc Launcher3: Add an option to hide/show scrollbar in app drawer
+9aefc4d6e1 Launcher3: Implement auto open keyboard in drawer setting
+13544ae727 Launcher3: Fix keyboard disappear on empty search
+80319ec5f9 Launcher3: Hide keyboard when transitioning to home screen
+5767babcc1 Launcher3: LoadTrustComponents: Limit app list to only show launchable applications
+baa7be1a1b Launcher3: Allow to control parallax effect and center wallpaper
+fd949c411a Launcher3: Integrate LMOFreeform to system shortcut
+1fedaf4731 Launcher3: Update floating window drawable
+2adcab4d82 Launcher3: Add recents shortcut for floating window
+031cdb0048 Launcher3: Disable native freeform task shortcut
+b16d7a24dc Launcher3: Fix recents lag and NPE with third party launchers
+d078f5b8c9 Launcher3: Skip overview scale animation on tablet
+64adfd96d5 Launcher3: Fix overview scrolling scale animation
+0e188667e2 Launcher3: Introduce overview scrolling scale animation
+8009194a1b Launcher3: Fix ANR caused by DrawableFactory init blocking model executor
+e33eee4bb8 Launcher3: Optimize the display speed of desktop icons when switching icon styles
+e8785cdc67 Launcher3: Add proper clean up for TaskIconCache
+ab5ca24b0c Launcher3: Reload recents icons when changing icon pack
+d8aa093915 Launcher3: Use ClockDrawable from iconloaderlib
+9ba5934b32 Launcher3: Fix app info shortcut crash in recents from third party launcher
+e941eb8bdc Launcher3: Show default title for bottom sheet if not available
+ccc2963de7 Launcher3: Dismiss the task menu when launching app info
+2a15dbcd08 Launcher3: Fix black screen when clicking source pref in InfoBottomSheet
+c6368aa75f Launcher3: Use SelectorWithWidgetPreference for icon pack's selection
+f27b8503af Launcher3: Reload icon pack settings fragment on resume
+c846b17fd8 Launcher3: Setup icon pack's launchIntent
+2601535611 Launcher3: Remove repeated strings in app info
+19be940f59 Launcher3: Switch to icon pack theming preview
+99aa365d33 Launcher3: Preserve icon provider constructors
+3831cf6079 Launcher3: Add Icon Pack Support from Shade Launcher [SQUASHED]
+4a6d78c09c Launcher3: RecentsView: add null check for invocations mFirstFloatingTaskView
+c04b223b20 Launcher3: Little revamp for app info bottom sheet
+bb3bf4f2ed Launcher3: Make Bottomsheet AppInfo strings translatable
+60eed6a9c7 Launcher3: Just say "System" instead of "Unknown" for app source
+d65dfeb873 Launcher3: Open app info directly when opened from recents
+1cf7b7420c Launcher3: Add AppInfo Bottom Sheet from Shade Launcher
+bcc833cc5a Launcher3: Show AOSP clear all button when chip disabled
+14b481a54d Launcher3: Exclude overview lens activity from recents
+27fcd0a92a Launcher3: OverviewActionsView: Clean up once view is detached
+31fbba6d78 Launcher3: Add vibrate for all overview actions
+6af5dd1a7d Launcher3: Add back spacer between overview buttons
+21943e1d12 Launcher3: Add toggles for recent quick actions
+853ed73bb5 Launcher3: Start lens activity directly instead of sharesheet
+46183a7241 Launcher3: Go to home screen before launching lens activity
+994d3ee08c Launcher3: Add Google Lens scan button to recents
+ff08d8449b Launcher3: MemInfoView: Relax computations and allocation
+2e2ddaec13 Launcher3: Improve meminfo view height and margins
+ca0c3473aa Launcher3: Make zram info in recents optional
+517b931899 Launcher3: MemInfoView: Remove ZRAM text
+2d7786b225 Launcher3: Fix bottom margin for memory info view
+4deae42bec Launcher3: Rewrite MemInfoView for efficiency
+547b297ca9 Launcher3: Add ZRAM info on recents RAM overview
+ef08558e6f Launcher3: MemInfoView: Fix free memory calculation
+6c5017a0e2 Launcher3: Show actual memory without rounding up
+ec1e0cd198 Launcher3: Open running services activity when clicking meminfo view
+98e7044903 Launcher3: Update meminfo margin when using taskbar
+13916d3f3a Launcher3: Update recents view meminfo string
+0587134cde Launcher3: meminfo: Replace deprecated BigDecimal methods
+a025215503 Launcher3: Add toggle for memory info view
+788df8cf2b Launcher3: Introduce memory info in overview
+ca381f0c13 Launcher3: Ensure surfaces/animators are cleaned in onActivityDestroyed()
+2858a8b46f Launcher3: Prevent repeated calls resulting duplicate registrations
+2a633871aa Launcher3: Retrieve controller inside posted lamda
+07a26288d9 Launcher3: Fix settings activity theme
+2708abaee1 Launcher3: Align icons vertically when label is hidden
+716affeaa8 Launcher3: Refresh themed icons after OTA update
+5bba0a8282 Launcher3: Home press on default homescreen -> open drawer
+82c8b5694a Launcher3: DigitalWellBeingToast: Dont crash on invalid toasts
+363ad30a42 Launcher3: Fix hardware buffer crash
+042168071c Launcher3: Fix SCREEN_OFF intent ANR
+97dfd06184 Launcher3: Fix home swipe-up ANR
+391512c297 Launcher3: Fix NPE in onShowAllWidgetsMenuItemClick()
+2559712f97 Launcher3: Add missing dialog styles
+611d00a795 Launcher3: Fix page indicator exceptions
+0e28cb4dde Launcher3: Resolve widget settings icon theme attributes
+aa2c91da54 Launcher3: PopUpView: Restore legacy popup options order
+44d2b852f1 Launcher3: Check if google app is enabled before running query
+d105866ff5 Launcher3: Make google search of the query for app search bar
+0f72c528a6 Launcher3: quickstep: TouchInteractionService: Do not crash on boot
+6a7b21d618 Launcher3: Do not skip search animation for app icons
+9252ddabcc Launcher3: Do not limit the number of search results
+a70366075b Launcher3: Hide "all apps" view when search starts
+b69fff4a7e Launcher3: Pull in screenshot drawable from Pixel
+c79704ff59 Launcher3: SysUiScrim: Properly fix memory leak
+3ca4596fdf Launcher3: Allow hiding top shadow on statusbar
+be9fcc1e21 Launcher3: Add toggle to hide status bar
+aad393554e Launcher3: Add option to control wallpaper zooming
+df41aef3ba Launcher3: Fix memory leak in WallpaperOffsetInterpolator
+39674b231f Launcher3: Add pref to disable wallpaper scrolling
+09ccf623d5 Launcher3: QuickstepAtomicAnimationFactory: Add some null checks to prevent NPEs
+84b76fb688 Launcher3: Remove weird brown tint from tablet task menu
+0117008b31 Launcher3: Fix build warning in SplitShortcut
+950a1cd37c Launcher3: InvariantDeviceProfile: Do not hide grid options on Tablets
+dec9a57920 Launcher3: Fix all apps icon size for tablets
+cf78f1b93b Launcher3: Remove all_apps_search_bar_content_overlap on tablets
+bec5822c8e Launcher3: Improve persistent taskbar corner radius
+b4aecbb6f9 Launcher3: Update folder preview and background color
+ddb09f0d1a Launcher3: Apply material you palette to folder background
+5879b971c7 Launcher3: Adjust QSB width to align with hotseat
+795190eb95 Launcher3: Fix crash when using QSB with taskbar in landscape
+b25b5219e7 Launcher3: Fix taskbar crash when disabled on fold devices
+fd8d3a7761 Launcher3: Respect l/r cutout in tablet app drawer too
+8cc7f7c005 Launcher3: QsbContainerView: Allow configurable widgets
+3b8408b104 Launcher3: OnboardingPrefs: Disable hotseat education
+e7107f631c Launcher3: Allow setting stroke width for hotseat search bar
+694c9342fc Launcher3: Allow setting transparency for hotseat search bar
+e55ecd5859 Launcher3: Update app drawer colors to match themed icons color palette
+a605133935 Launcher3: Fix search bar background on light theme
+06e5838563 Launcher3: Tone down scrim background to N1 for vibrance
+b8c9c72aba Launcher3: Optional music search toggle for QSB
+648d942692 Launcher3: Improve paddings for all apps search bar
+aa10c821ce Launcher3: Adjust icons on dock search bar
+95e92fdff0 Launcher3: Match app searchbar theme with dock searchbar
+78ed5aeabb Launcher3: Apply corner radius setting for app searchbar
+500c006a46 Launcher3: Do not set hardcoded colors for widget background
+d019dd9f14 Launcher3: Refine dock and all apps UI
+22ab25b8c6 Launcher3: Add toggle to show/hide app drawer search bar
+4c3cc21a94 Launcher3: UI elements color palette changes
+850716476a Launcher3: Clean up AssistantIconView
+58e63230ba Launcher3: Make icons center properly in QSB
+b29334ca78 Launcher3: Fix QSB fill colour in dark theme
+b67c923610 Launcher3: Better hotseat searchbar colors
+feda033252 Launcher3: Make google icon in dock searchbar clickable
+cd45904341 Launcher3: Add ability to change corner radius of Dock search bar
+1165b7f71d Launcher3: Add search bar sub-category
+bc0fbaa3ef Launcher3: Add toggle to theme dock searchbar icons
+bb657e6125 Launcher3: Enable lens icon for dock searchbar
+a7b3fcffc2 Launcher3: DeviceProfile: ensure we dont get divide by zero
+6cb7e07156 Launcher3: Set QSB height to 0 if not visible
+591f40a844 Launcher3: Properly calculate hotseat padding
+62ba0ece4a Launcher3: Improve spacing above and below dock searchbar
+4136d66c46 Launcher3: Add toggle disable hotseat searchbar
+e1fd4ca880 Launcher3: Implement Hotseat searchbar
+45523c3c3d Launcher3: Add customization to set hotseat background opacity
+3b8896e753 Launcher3: Match hotseat background with app drawer scrim
+02a17aa298 Launcher3: Add light theme support for translucent hotseat background
+8edf841a9a Launcher3: Add toggle for translucent hotseat background
+7653e7385f Launcher3: Add ripple animation to task menu items
+ad81b1d551 Launcher3: Prevent clipping by row height reduction
+c71fad9f7f Launcher3: Make drawer cells square when labels are hidden
+4e55373ae6 Launcher3: Add pref to set app drawer row height
+b39913b759 Launcher3: Add force close system shortcut
+8ea680616a Launcher3: Add kill action to app shortcuts popup
+1fcfc317fe Launcher3: Add toggle to use two lines for app label
+9f55cf52d0 Launcher3: Add icon and icon text size customizations
+46d9b997b1 Launcher3: Import CustomSeekBarPreference from crdroid
+dc5bbe4f0a Launcher3: Fix upstream bug with dots enabled (#5167)
+5dd2651db3 Launcher3: HotseatEduController: Fix hotseat edu crash
+1fcbc7e101 Launcher3: Fix uninstalling apps from recents
+5ba5b88c1c Launcher3: Fix Uninstalling work apps
+2e18fd7ef3 Launcher3: Add UNINSTALL shortcut to QuickstepLauncher
+847e35c2e3 Launcher3: Add uninstall button to system shortcuts
+67fb06e2ce Launcher3: Queue restart on taskbar changes
+0cc66d5c98 Launcher3: SplitToWorkspaceController: Fix nullability crashes
+3098ed7419 Launcher3: Allow to customize bottom corner swipe up action [1/4]
+f0d6666946 Launcher3: Fix crashes when navigating from launcher settings to home screen
+2e8ec69756 Launcher3: Enable navbar animation on long press
+23d9ab54b8 Launcher3: Show bottom scrim even in gesture navigation
+f118118d61 Launcher3: Add permission for contextual search
+2c93a2009a Launcher3: Allow hiding navigation ime bar [4/4]
+4eb3c4b2e9 Launcher3: Fix NPE with navbar button layout settings
+f6c65528f2 Launcher3: Implement 3-btn-nav layout settings [2/3]
+a4842f73c6 Launcher3: Use settings key for navbar inverse
+faf32e490b Launcher3: Fix hiding navigation hint for tiny taskbar
+5de6098bdc Launcher3: Allow using tiny taskbar on phone
+3b809fc8ec Launcher3: Allow changing the height of gesture navbar [2/3]
+459497b61e Launcher3: Allow changing the length of gesture navbar [2/3]
+d8d4173980 Launcher3: Add method to get int value from SettingsCache
+8bf2366d84 Launcher3: Rework home button double tap handling
+e140f49ded Launcher3: Use match_parent for navigation button dimensions
+9f9b1544a4 Launcher3: Restart when FORCE_SHOW_NAVBAR changes
+674c113d5a Launcher3: Add hasNavigationBar() check
+0659ac93fd Launcher3: Implement gesture hint toggle
+033bb48213 Launcher3: Implement taskbar toggle
+45786c26de Launcher3: Implement taskbar navbar inversion
+6d97e7dc41 Launcher3: Inject events for taskbar double press actions
+00026863b3 Launcher3: Inject events for taskbar long press actions
+2a396168b7 Launcher3: Fix taskbar/3 button navigation SUW height
+880f2e82f3 Launcher3: Show clear all button in recents overview
+157d3e8fb2 Launcher3: Vibrate on double tap to sleep
+b695997b1f Launcher3: Make double tap to sleep gesture optional
+777dfec1a7 Launcher3: Double tap on home screen to turn off screen
+13ce52cb87 Launcher3: Debounce restart calls
+9733b6ee7e Launcher3: Improve restart logic
+74b3e0b35d Launcher3: Improve restart logic
+1839217d6c Launcher3: Show a toast when restarting the launcher
+e83ebbc19c Launcher3: Add a preference to manually restart the launcher
+3d771b7e16 Launcher3: Restart launcher on google app change
+8f83cf99d3 Launcher3: Add restart action for toggling settings
+4e8a0cc10d Launcher3: Fix app icon font
+4077ef305f Launcher3: Use regular body font for app labels
+688c728285 Launcher3: Use font configs instead hardcoded fonts
+fd64609271 Launcher3: Follow navbar color in base for settings
+b88683772a Launcher3: Add null check for BaseDragLayer
+5a406ab06a Launcher3: Allow widgets to have 1 row as minimum size
+4f50087bba Launcher3: Add WallpaperManager check to support WSA
+a90ab08336 Launcher3: Migrate deprecated getColor to one with Theme
+b496149bb2 Launcher3: Hide app suggestion entry if DPS not available
+b6915a35a2 Launcher3: Allow changing app suggestion settings
+ef29234bb7 Launcher3: Drop explicit applock hidden list check in AllAppsList
+620b5672a5 Launcher3: Use HiddenAppsFilter for all apps list
+f39bd390f6 Launcher3: Switch to AppLock API for protected and hidden apps
+aa9d1c0c3e Launcher3: Setup material expressive design for TrustActivity
+64c7d63917 Launcher3: TrustAppsActivity: Switch to collapsing toolbar
+17a64cc200 Launcher3: Improve hidden & protected apps
+5472c79f10 Launcher3: Implement hidden & protected apps
+c8cbc2cd96 Launcher3: Update pause apps feature dialog
+655caa6b53 Launcher3: Change "Pause work apps" to "Turn off work apps"
+84f88b31c3 Launcher3: Work tab adjustments for multiple profiles
+b45ce2f423 Launcher3: Re-add priv app permissions
+843e50343d Launcher3: Pause apps feature
+3a1bd21384 Launcher3: Ability to toggle themed icons for all apps
+8f4a1036e0 Launcher3: Google Feed integration
+4748c3ad79 Launcher3: Add toggle for desktop and drawer labels
+0dbfa7dbe6 Launcher3: Hide scrollbar when searching All Apps
+7f3bf3b02f Launcher3: Hide home screen rotation pref if not supported
+548a245569 Launcher3: Fix active tab color on light theme
+91ebdecbb1 Launcher3: Disable QSB on first screen by default
+e29dee609c Launcher3: Allow disabling workspace edit
+b3497e165d Launcher3: Move to SwitchPreferenceCompat
+f0609db4aa Launcher3: SwitchPreference -> SwitchPreferenceCompat
+b3cb343298 Launcher3: Setup material expressive design for preferences
+593f813d41 Launcher3: Drop settings layout for preferences
+abd2e02636 Launcher3: Adapt material expressive icons for main settings
+998ce98d8f Launcher3: Rearrange settings into categories
+8c3d57c32b Launcher3: Unconditionally hide split option for Go-enabled targets
+5dd9b5c140 Launcher3: WidgetsPredictionUpdateTask: Mitigate an NPE
+55aee33663 Launcher3: Address taskbar crash on fold devices
+cff0e7bba1 Launcher3: Hide app search results of profiles in quiet mode
+cb1e1f5e88 Launcher3: Implement private space access when hidden
+82db560b21 Launcher3: Workspace: Allow resizing any widget
+18d9b92e23 Launcher3: Fix potential ConcurrentModificationException
+7f04eedc57 Launcher3: Fix rtl layout error
+0236ab4db8 Launcher3: Fix crash in SurfaceTransactionApplier
+89b8159295 Launcher3: Fix monkey crash in createSurfaceParams
+fcab768126 Launcher3: Fix monkey crash in RecentsLaunchAnimator
+e2da9fd5fc Launcher3: Stability NullPointer issue
+9868089ec7 Launcher3: Prevent NPE when using custom themed icons
+f5233511a7 Launcher3: Add NPE check in TaskbarDragController
+53aa47a0b7 Launcher3: AppsSearchContainerLayout: Avoid NPE
+776e5e1ff4 Launcher3: Fix TaskbarViewCallbacksFactory instantiation
+b16b02aa9e Launcher3: Fix TaskbarModelCallbacksFactory instantiation
+92f0e0c5c5 Launcher3: Use different badges for different work profiles
+fa585f1b54 Launcher3: Implement oem sorting fix
+c4acd7bac9 Launcher3: Improve search bar header protection
+af0e22c700 Launcher3: Fix All Apps header protection and spacing again
+8406c15711 Launcher3: Skip glitchy search animation
+02ae9843ed Launcher3: Fix Personal/Work profile tab colors in AllApps
+1b7ca1e9b4 Launcher3: Disable all caps from Personal and Work tabs
+717ad48cc1 Launcher3: Fix gesture navigation fail to move to bottom
+5adf4f55db Launcher3: Update search icon to match Settings
+4364efef62 Launcher3: Increase end padding for search bar UI
+bd78bc2de8 Launcher3: Fix search bar UI in All Apps
+76a191113c Launcher3: Improve search bar UI in All Apps
+9e22c990ad Launcher3: Bump launcher min sdk version
+7d582c1e9f Launcher3: Use system collapsing toolbar
+01799194cf Launcher3: Fix all apps view not dismissing
+54e25ad1cd Launcher3: Expose themed icon setting in ThemePicker
+1b006647a0 Launcher3: Add 6x7 app grid
+8ae4bf9d6c Launcher3: Add 4x6 app grid
+a055981350 Launcher3: Ditch workspace top/bottom padding for 6*5 grid
+adf0fd0efc Launcher3: Update grid sizes from Pixel launcher
+7df9c5020a Launcher3: Restore 4x4 workspace
+1229d16007 Launcher3Go: Add Go specific default workspace
+ce6e1f758e Launcher3: Update default workspace
+552686bf23 Launcher3: Hide 2x2 grid from foldables
+8617d16088 Launcher3: Make taskbar start aligned in all grid sizes
+3bb4770b9b Launcher3: Make landscape tablet taskbar start aligned
+52d6be05e8 Launcher3: Make portrait tablet taskbar start aligned
+0de539e996 Launcher3: Adjust the icon size to the grid size
+a326a5a338 Launcher3: Reduce app label text size
+57471c55ab Launcher3: Add 2x2 workspace grid option
+37bcc7cb88 Launcher3: Add 5x6 and 5x7 default workspaces
+44f208ec77 Launcher3: Replace 4x4 grid option with a 4x5 one
+f912f68f1f Launcher3: Make it a platform package
+e3ac1eb646 Launcher3: Change app name to crDroid Home
+662e376882 Launcher3: Override QuickSearchBox
+3f7835ae53 Launcher3: Finish recents animation when dragging to launch non-live tile.
+f17ee08da0 Launcher3: Fix app tile blur when clicked on recents button rapidly.
+777b82e887 Launcher3: Fix leak of rotation button view from NavbarButtonsViewController#mFloatingRotationButton
+5c33d00d9b Launcher3: Apply blur to blur surface only when live tile is drawing below recents.
+d688276da2 Launcher3: Reduce calls to surface reparenting and set relative layer
+46bf181a0e Launcher3: Use adaptive icon
+
+   * vendor/oneplus/sm8750-common
+2150655 sm8750-common: Remove remaining URCC blobs
+1287387 sm8750-common: Drop IOplusLogCore prebuilts
 
