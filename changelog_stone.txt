@@ -4,6 +4,13 @@ Device: POCO X5 5G/Redmi Note 12 5G
 Device maintainer: KamiKaonashi
 
 ====================
+     06-12-2025
+====================
+
+updated trees, kernel and vendor
+minor tweaks
+
+====================
      13-10-2025
 ====================
 
