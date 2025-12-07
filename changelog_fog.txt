@@ -4,6 +4,12 @@ Device: Xiaomi Redmi 10C/10 India/10 Power (fog/rain/wind)
 Device maintainer: Romeo13card
 
 ====================
+     07-12-2025
+====================
+-Synchronized with the latest sources
+-hofix for vanilla build
+
+====================
      06-12-2025
 ====================
 - AlphaDroid 4.2
