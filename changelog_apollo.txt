@@ -1,8 +1,13 @@
 Highlights & Device Specific Changes:
 Build type: Monthly
 Device: Xiaomi Mi 10T/Pro (Apollo)
-Device maintainer: OzanKaya
-Required firmware: V14.0.1.0.SJDMIXM
+Device maintainer: KamiKaonashi
+
+====================
+     09-12-2025
+====================
+
+everything new
 
 ====================
      17-10-2023 (1.10)
