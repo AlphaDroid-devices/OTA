@@ -4,6 +4,18 @@ Device: Xiaomi Redmi Note 13 Pro 5G (Garnet)
 Device maintainer: Jotanh
 
 ====================
+     09-12-2025
+====================
+- Fixed Screen Mirroring
+- Fixed Hotspot + Wi-Fi
+- Updated Kernel 5.10.236 -> 5.10.245
+- Fixed Random Reboot for Some Devices
+- Added Fixes in Wi-Fi 6GHZ
+- Fixed OrangeFox
+- Updated to Alpha 4.2 QPR0
+- Added Recents Style in Settings
+
+====================
      27-10-2025
 ====================
 - Dolby Atmos AOSP Included
