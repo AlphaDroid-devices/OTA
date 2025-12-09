@@ -1,362 +1,382 @@
 ====================
-     10-24-2025
+     12-08-2025
 ====================
 
-   * device/alpha/sepolicy
-01974a3 Add missing sepolicy
-
-   * device/oneplus/sm8750-common
-58ef330 DNM test facebook fix
-
    * frameworks/base
-2e5aa63a38be KeyboxImitationHooks: Only generate certificates for play integrity calls
-5e6584d13e38 PixelPropsUtils: Drop spoof for vending
-58fcceeae175 PixelPropsUtils: Fix failing strong integrity with PIF disabled
-c2597a2ab078 PixelPropsUtils: Add more logs for debugging
-78a70f40ffd6 PixelPropsUtils: Drop overlay config
-3b96d932a7b5 PixelPropsUtils: Move from props to Settings switch
-505c0a44fbae PixelPropsUtils: Dynamically spoof props for GMS
-74284db93a9e PixelPropsUtils: Add prop to allow blocking cert chain
-9e7f6170c387 Adapt for AlphaDroid
+35453e48608b camera: Bump `MAX_PREVIEW_FPS` to 120
+
+   * packages/apps/Launcher3
+cfa18cde6d Launcher3: Add custom recent view styles
 
    * packages/apps/Settings
-74300c47eda Settings: Update lottie animations from Pixel 9 Pro XL BP2A.250805.005
-fcf3ca2b968 Settings: Implement reverse-engineered battery saver page
+30f51ca0c43 Device Settings: Oneplus13
 
-   * system/core
-267f979d9 pin surfaceflinger render engine to top app
-2525dc63d Add additional init props
+   * vendor/alpha
+edc7738e recovery: add alpha public key
 
-====================
-     10-23-2025
-====================
-
-   * frameworks/base
-ef65e8f21493 SystemUI: Add toggle for doze wallpaper
-76ea2e16cdd9 SystemUI: Implement RefreshRateManager [1/2]
-6ddff62eae47 camera: Bump `MAX_PREVIEW_FPS` to 120
-63ed88403256 base: Allow disabling refresh rate lowering in battery saver
-
-   * packages/apps/Settings
-8588126f334 ManageStoragePreferenceController: Explicitly disable storage management preference
-70d23b582e8 Refresh rate : Add display refresh rate illustration
-b466e5fc683 Settings: Add null check for PreferenceScreen in BasePerAppConfigFragment
-f84a50522fe Settings: Use ArrayMap/Set instead of HashMap/Set
-2f166696390 Settings: Adapt for Android U QPR2
-a40f428f5ae Settings: Warn user app reload before switching fullscreen display
-08363d10b41 Settings: Make sure per-app list has no duplicates
-c5573ddfb4f Settings: Allow specific allowed system app list for per-app fragment
-0e837166e44 Settings: Pass uid in per-app config fragment
-31bf35e6571 Settings: Don't show system apps for sensor block fragment
-b4d6a741444 Settings: Add top info for per-app settings
-9b91ecadf0d Settings: Create PerAppSwitchConfigFragment
-7dbb696a5cd Settings: Create BasePerAppConfigFragment
-522f17f8a85 Settings: Implement RefreshRateManager [2/2]
-22926c95e51 Revert "Settings: Add peak refresh rate list preference"
-53cd0e56b0f Revert "Settings: Add min refresh rate list preference"
-a6dd3a9dc95 Settings: Allow disabling refresh rate lowering in battery saver
+   * vendor/oneplus/dodge
+5164906 dodge: Ship NFC firmware
 
 ====================
-     10-22-2025
+     12-07-2025
 ====================
-
-====================
-     10-21-2025
-====================
-
-   * frameworks/base
-e3b2eebb4358 fixup: [BUGFIX] fix mediametadata crash
-a5aae9e7ac19 Lockscreen Info: Fix conversion crashes and possible div by zero
-942d1bc68b5e HdrBrightnessModifier: allow changing HDR brightness intensity
-9bca0946c90a HdrBrightnessModifier: allow disabling hdr display boost
-97d0e96afd84 [KEYBOX] simplify keybox data parsing
-
-   * packages/apps/Settings
-60110e4195f display: allow changing HDR brightness intensity
-5deef3538d9 display: add hdr display switch preference
-
-====================
-     10-20-2025
-====================
-
-   * frameworks/base
-8853c225539e Revert "Revert "UDFPS: always hide animation on cancel event""
-b63086abcb5c FixUp! UDFPS animation
-c64c49df86de Revert "Revert "Biometrics: Hook up support for halHandlesDisplayTouches prop""
 
    * hardware/oplus
-498b4fb sepolicy: qti: Label oplus,ufcs_protocol wakeup node
-9ae2c72 sensors: Skip first fp state event
-
-   * kernel/oneplus/sm8750
-6693ec373e60e include: fix time.h inclusion
-
-   * vendor/oneplus/sm8750-common
-c5a6c0b add ConsumerIRApp
-6b2b339 sm8750-common: Sync with device tree
+06a84b51 Add toggle for ltpo features
+de7bcfe6 sepolicy: qti: Allow system server to detect oem charging
+40f1aac9 sepolicy: adress fingerprint denials
+43e686c2 sepolicy: qti: Allow system_server to r/w oplus_chg nodes
+e11a6c77 sepolicy: qti: Allow binder calls for sensor hal to system_server
+4388828e sepolicy: Fix bluetooth denial on user builds
+ecc5a68d sepolicy: Fix hal_bootctl_default denial
+6f81c2be sepolicy: Address DeviceSettings and fast charging denials
+6120b91c hardware: hidl: inscreen: Set thread to high CFS priority
+3860c2f9 sepolicy: Address various denials
+b70ca1a9 sepolicy: Label hal_charger service
+78f87cfe overlay: qssi: Update QSSI RROs from CPH2573_11_A.76
+d5202f18 sepolicy: Label oplus bluetooth prop
+bf344fa0 sepolicy: Address nfc denial
+1834c175 sepolicy: Allow vendor_hal_perf_default to access surfaceflinger
+77eaacfe [TEMP] sensors: aidl: Glorified one-shotting
+df1d681a aidl: sensors: Return early if nothing is displayed over the light sensor
+f87308d4 aidl: sensors: Import AlsCorrection from sm8150-common
+2d649623 Import ALS capture service from sm8150-common
+f0f664a7 overlay/sensors: Configure Doze brightness sensor
+50291ff7 overlay: qssi: Define quick_pickup sensor string
+53296ad0 overlay: qssi: Enable config_dozePulsePickup
+e8233e43 sepolicy: qti: Label sensors AIDL multihal
+e6362c50 aidl: sensors: Standardize qti.sensor.amd to glance sensor
+23a50b71 aidl: sensors: Invert value for pickup gesture event
+cf8f1194 aidl: sensors: Change standard tilt_detector to pickup_gesture
+5ee2e558 aidl: sensors: Avoid target name conflicts
+95613a51 aidl: sensors: Change default applicable license to Android-Apache-2.0
+e1b5477f aidl: sensors: Import 2.X sensors hal proxy
+ef14d31f aidl: sensors: Revert^2 "SensorHAL: add moisture detection"
+68179b07 aidl: sensors: Import aidl sensors MultiHal
+1c971d1a aidl: qti_vibrator: effect: import richtap effects
+cf3c9bc9 oplus-fwk: Add missing classes for oplus camera
+d217c762 oplus-fwk: Update for compatibility with android-15 IMS stack
+aac4928e aidl: vibrator: Minimize code for ledVibratorDevice
 
 ====================
-     10-19-2025
+     12-06-2025
+====================
+
+   * kernel/oneplus/sm8750-modules
+5baaae5a12 qcom: display-drivers: oplus_adfr: kickstart prop magic
+
+   * vendor/alpha
+beb828ce Config version: explictly set TARGET_BUILD_PACKAGE to 1 (vanilla) if it's not set
+
+====================
+     12-05-2025
+====================
+
+   * frameworks/base
+755cd6b331a3 UI Styles tile dialog: apply changes immediately and remove dim from shade while dragging, to have a clear view of QS tiles.
+2d679b88d0cd UI Styles: make Slash renderers respect user parameters
+4866ebd5bfc9 Brightness slider: change thumb dimensions for better ui style effect
+5499d411825c SystemUI: Extend QS Header Image to support animated GIF/WEBP [1/2]
+
+   * kernel/oneplus/sm8750
+bb8fe2c3306d mm: vmstat: use power efficient workingqueues
+217cc612aa16 proc: Don't let Google Camera run in the background
+
+   * vendor/alpha
+51559859 Fix audio config
+2edb6566 Add tablet config
+
+   * vendor/oneplus/sm8750-common
+749f9a0 sm8750-common: Sync with device tree
+
+====================
+     12-04-2025
+====================
+
+   * packages/apps/AlphaSettings
+2f886a0 Extend QS Header Image to support animated GIF/WEBP [2/2]
+
+   * vendor/apn
+e09a80d Add Bait MX
+
+====================
+     12-03-2025
+====================
+
+====================
+     12-02-2025
+====================
+
+   * device/oneplus/sm8750-common
+44bd76f sm8750-common: Switch to oplus sensors AIDL
+5ce21a3 sm8750-common: define media settings to sun variant
+
+   * packages/apps/AlphaSettings
+b38cff7 Make notifications and misc icons thicker
+759d687 Add About phone header strings
+
+====================
+     12-01-2025
+====================
+
+   * hardware/oplus
+43a27ff0 Automatic translation import
+
+   * manifest
+c2c3bc4 Unpin settings
+
+   * packages/apps/Settings
+7c3ffd4c10c Revamp about phone header
+
+====================
+     11-30-2025
+====================
+
+   * hardware/oplus
+c0a67cae doze: Fix ClassCastException on pickup pref change
+
+   * manifest
+9811279 Unpin a few repos
+
+   * packages/apps/Launcher3
+755f5c1e5a Merge branch '16.0' of https://github.com/crdroidandroid/android_packages_apps_Launcher3 into HEAD
+
+====================
+     11-29-2025
+====================
+
+   * build/make
+aa724d34c8 Merge branch '16.0' of https://github.com/crdroidandroid/android_build into alpha-16.1
+4316871e2f Auto-fill lunch
+679fbb0a09 Remove lineage-sdk dependency
+
+   * build/soong
+bf2c7532f Merge branch '16.0' of https://github.com/crdroidandroid/android_build_soong into alpha-16.1
+
+   * manifest
+c3cb310 Update system/apex hash
+
+   * vendor/alpha
+ad84daf1 Bump AlphaDroid version to 4.2
+36d1e855 Merge branch 'alpha-16.1' of https://github.com/alphadroid-project/vendor_alpha into alpha-16.1
+
+====================
+     11-28-2025
+====================
+
+   * frameworks/base
+1a5e92d8804b PixelPropsUtils: Skip play Integrity props in isolated processes
+f08eadeed8bf KeyboxChainGenerator: fix build release parsing
+41bc452aee08 SystemUI: Avoid using deriveStateOf for media translation
+8f92cffa0623 graphics: Fixing typeface crash bug with susfs
+b18779334210 SystemUI: TunerServiceImpl: Safe concurrent iteration and modification
+d94877052d14 Revert "SystemUI: Fix thread safety issue when adding tunables"
+d0b69b508a92 MediaControlPanel: Fix media playback crash on chromium based browser
+043d521141b5 SettingsProvider: Resolve google gms configurator denials
+b0257e2edeee SettingsProvider: Fix NPE when upgrading
+069b95f37765 PhoneWindowManager: Fix duplicate handling of App switch key press event
+a8039b7dfe57 BlurController: Fix default blur enablement value
+d7d80b129f07 Fix keyboard cannot access slider issue
+adf42250bcb1 Always update mute icon along with slider value.
+1c9032176e9f Add a ripple highlight for the Output Switcher list items.
+b2d5214ccdc8 Make bg of QSCustomizer transparent
+5bdc6c93fd8e Update pin bouncer confirm button to match spec
+a5155dcab1de SystemUI: TunerActivity: Switch to material expressive design
+243be331eab4 Force behind and notification scrim alpha to be 0 when the device is unlocking.
+9cdd07886cb8 Don't further perform IO on socket if opening it fails
+25991ab26d1d Fix it has two times return back if only press the back key one time.
+1d61c7552f6a Fix index out of bounds exception in HandwritingModeController.
+938d479882e8 SystemUI: Prevent ShadeListBuilder illegal state on notification dump
+9a569d3b14cd SystemUI: Fix keyguard transition race conditions
+8b87aa26caa1 KeyProviderManager: Accept N >= 1 certs per key [1/2]
+6387fccb44e9 ComputerEngine: Fix signature spoofing for microG revanced
+23f1d76b6ef0 UI Styles: fix slash angle
+
+   * hardware/oplus
+db91ce03 oplus-fwk: Add OsenseResClient and OplusUIFirstManager stubs
+
+   * manifest
+3cf16c1 manifest: Track vendor/apn
+01cc3e4 manifest: Track LMO SystemUI clocks
+
+====================
+     11-27-2025
 ====================
 
    * device/oneplus/dodge
-e213f3f DeviceSettings: rework bypass charging
-fd6012c dodge: overlay: Ignore some camera ids for Aperture
-63cdcc5 Device Settings
-59f5247 dodge: overlay: revert Brightness configs
-9dcaeeb dodge: displayconfig: Correct inverted width and height
-b6234cf FixUp! Set the correct path for keyhandler
-d7f2b14 Dodge: Set oneplus banner to Dodge
-05444bb Set strings to oneplus 13
-9fa693a DeviceSettings: rework bypass charging
-60a42bf DeviceSettings: lunch it from Settings
-aab6998 DeviceSettings: add PulseOne PWM
-dfda89b Import DeviceSettings from common tree
-43ec457 Adjust padding for status bar
-f9e0683 AlphaDroid Bringup
-a40965f dodge: overlay: Update Brightness configs
-012a241 dodge: Increase start statusbar padding
-78c5388 dodge: configs: Update display density
-d3f4dee dodge: Switch to FIFO vibration effects
+e2ac912 dodge: Include LTPO settings
+4cc5f57 dodge: overlay: Enable multiple vibration intensity levels
+4adb090 dodge: Set market name for device
+d569609 dodge: overlay: Move in alert slider configs
+076213d dodge: Set proper screen density
+fc97332 dodge: Enable UDFPS animations
+1aff861 [Squash] Import Device Settings
+828b044 Adjust padding for status bar
+c0ea18d AlphaDroid Bringup
+0d39e0c dodge: overlay: Update Brightness configs
+aeabaf3 dodge: Increase start statusbar padding
+55b97d4 dodge: configs: Update display density
+aafa4c5 dodge: Switch to FIFO vibration effects
 
    * device/oneplus/sm8750-common
-8f0d170 sm8750-common: Switch to oplus sensors AIDL
-d4a013b sm7650-common: Set `debug.sf.disable_client_composition_cache` to 0
-3ac4663 sm8650-common: overlay: Enable fp screen off unlock feature and turn off by default
-066ecf7 sm8750-common: Ship ConsumerIR App
-58a7eb2 cleanup: remove unused code after decommonization
-fdad73a sm8750-common: Move required alert slider configs to SystemUI
-30b337d sm8750-common: Allow gcam/snapcam to skip HFR checks
-44b30f3 sm8750-common: Allow camera to skip high frame rate checks
-168fd17 sm8750-common: overlay: Switch to crdroid doze
-a0f3f66 sm8750-common: Nuke OnePlus doze
-1ecd578 sm8750-common: overlay: Configure VOOC charging display on lockscreen
-05e6708 sm8750-common: overlay: Fix lockscreen charging info
-f6ba6de sm8750-common: overlay: Use appropriate charging thresholds
-41ae83b sm8750-common: overlay: Enable VOOC charging support
-9e56632 sm8750-common: overlay: Enable multiple vibration intensity levels
-63ae062 Drop Lineage Health
-3f80f1b Init: set permissions for OnePulse PWM
+f1dcdd9 sm8750-common: Ship ConsumerIR App
+beef9dc Drop Lineage Health
+9f5e3e2 Init: set permissions for OnePulse PWM
+83fe406 sm8750-common: init: Set perm for LTPO nodes
+6d1d8c9 sm8750-common: overlay: Decommonize alert slider configs
+0b933bb sm8750-common: Allow gcam/snapcam to skip HFR checks
+4cebec1 sm8750-common: Allow camera to skip high frame rate checks
+e8696b5 Revert "sm8750-common: init: Set Blur property based on Soc id."
+311cde8 sm8750-common: overlay: Enable battery cycle count
+22e7709 sm8750-common: overlay: Add system ui restart option
+85cc570 sm8750-common: Disable frame rate override feature
+9a4b75c sm8750-common: init: Reset readahead values for 128 always
+94321ba sm8750-common: init: Remove IO read_ahead_kb tune
+0b7d3ed sm8750-common: overlay: Update pinner list
+36df02f sm8750-common: overlay: Turn on screen on unplug
+16e1369 sm8750-common: overlay: Add temp divider value for cpu info overlay
+c72643f sm8750-common: overlay: Add fps info path
+f78c7f7 sm8750-common: overlay: Switch to crdroid doze
+bb51a86 sm8750-common: Nuke OnePlus doze
+383e0ee sm8750-common: overlay: Use appropriate charging thresholds
+2d89f42 sm8750-common: init: Always use lz4 for zram
+fd3eec0 sm8750-common: overlay: Configure VOOC charging display on lockscreen
+ecfeade sm8750-common: overlay: Decouple auto-suspend and interactive state from display
+baa01f1 sm8750-common: overlay: Fix lockscreen charging info
 
    * frameworks/base
-64157aff4be4 base: [SettingsProvider] Resolve google gms configurator denials
-907b8a934638 SettingsProvider: Resolve package name that requires permission
-312bfe80b3b6 Update UdfpsAnimation constructor to accept KeyguardStateController
-5a404cef4dbf biometrics: Fix udfps races
-cc1cebfee62c Revert "UDFPS: always hide animation on cancel event"
+7280e4ea7c29 Merge branch alpha-16.1-wip into alpha-16.1
 
    * hardware/oplus
-1223162 oplus-fwk: Enable IR feature
-ae35f36 [TEMP] sensors: aidl: Glorified one-shotting
-1d4bd1a aidl: sensors: Return early if nothing is displayed over the light sensor
-73fe394 aidl: sensors: Import AlsCorrection from sm8150-common
-665f046 Import ALS capture service from sm8150-common
-68185f3 overlay/sensors: Configure Doze brightness sensor
-cd58b8b overlay: qssi: Define quick_pickup sensor string
-5e98b9f overlay: qssi: Enable config_dozePulsePickup
-68b217d sepolicy: qti: Label sensors AIDL multihal
-a2541c8 aidl: sensors: Standardize qti.sensor.amd to glance sensor
-215de06 aidl: sensors: Invert value for pickup gesture event
-251da9d aidl: sensors: Change standard tilt_detector to pickup_gesture
-574770f aidl: sensors: Avoid target name conflicts
-46b3d76 aidl: sensors: Change default applicable license to Android-Apache-2.0
-1afd562 aidl: sensors: Import 2.X sensors hal proxy
-e8f475f aidl: sensors: Revert^2 "SensorHAL: add moisture detection"
-baf357d aidl: sensors: Import aidl sensors MultiHal
-c7e1656 aidl: qti_vibrator: effect: import richtap effects
-33401b9 oplus-fwk: Update for compatibility with android-15 IMS stack
-66d1140 aidl: vibrator: Minimize code for ledVibratorDevice
+9a1f70d1 doze: Use new method to listen for preference changes
+
+   * packages/apps/AlphaSettings
+0d511ca Minimal cleanup and re-organization
+496fbbf Expressive Alpha Settings
+3e3c25f Add UI Style settings
+900d740 Merge branch 'alpha-16.1' of https://github.com/alphadroid-project/packages_apps_AlphaSettings into HEAD
+
+   * vendor/alpha
+d0f219d7 overlay: Use google sans flex for lockscreen clock
+9893b8ad overlay: Remove duplicate DPS config
+7c7595f4 Update blur support
 
 ====================
-     10-18-2025
+     11-26-2025
 ====================
 
-   * frameworks/av
-0cb2a210f1 OMX: Remove support for prebuilt ac4 decoder
-fbfc75a9c6 libstagefright: omx: Add support for loading prebuilt ddp and ac4 decoder lib
+   * kernel/oneplus/sm8750
+7bfd38e99ba3 PM / freezer: Reduce freeze timeout to 1 second for Android
+48356601dd30 fs: Dont allow paths with lineage to be listed
+14af71b913ea mbcache: Speed up cache entry creation
+fa0ee3508e11 arm64/mm: Optimize loop to reduce redundant operations of contpte_ptep_get
+b8cd1a9302c9 ANDROID: gki_defconfig: Enable Clang ThinLTO support
+b2cfdc10dc76 ANDROID: gki_defconfig: Enable AUTOFDO_CLANG for AutoFDO optimizations
+40d3318027bb lib/lz4: Remove redundant MIN/MAX macros to fix compilation error
+a8c3e4b453b1 lib: update lz4 to v1.10.0
+3940db0227f6 lib/decompress_unlz4: Add NEON-optimized LZ4 decompression for ARM64
+5b56bcffe7d9 arm64: debug: disable self-hosted debug by default
+2f44e74d65e0 lib: Disable debug_locks
+57bca1d19a64 Makefile: Enable -mcpu=oryon-1
+8e629abb2981 f2fs: Demote GC thread to idle scheduler class
+8aefed7dee58 f2fs: set ioprio of GC kthread to idle
+3bea4ae01af5 f2fs/gc: Reduce GC thread urgent sleep time to 50ms
+10453eb55fbd f2fs: Use copy_page for full page copy
+b72a88275bd4 f2fs: reduce timeout for uncongestion
+e597037bc656 f2fs: Enable ATGC and GC_MERGE by default
+2f4067ad08f2 lz4: Use ARM64 NEON-optimized decompression where available
+7d5017bc68a8 kernelsu: replace renameat hook with fsnotify
+7a9c2cabfe1e kernelsu: Fix kernel panics caused by thread info flag corruption
+f7142b44384a kernelsu: Use SUS_SU by default
+4a0e4563f17f kernelsu: Fix SUS_SU feature
+434d242f25c9 devpts: KernelSU: Fix: Failed to execute pm in terminal
+4141ab3ac4fe drivers: Add missing KernelSU hooks
+33cb02d40860 kernelsu: implement v2_signature size/hash override from userspace through kernel module parameter
+58196799eee8 kernelsu: Allow compatible manager apks
+9b9ce4594e6d kernelsu: Remove duplicate function to fix compilation
+2fc7c7313160 kernelsu: Enable susfs for ksu
+223b8150eb8e kernelsu: Add susfs in gki android15-6.6
+d61386224406 drivers: Set proper version for KernelSU-Next
+667aeb498d6d drivers: Import KernelSU Next v1.1.1
+33a133ffba71 drivers: Add KSU config path
+919b77a5c394 thermal: qcom: tsens: Fix function prototype mismatch
+
+   * kernel/oneplus/sm8750-modules
+b096249139 display: Enforce ulps suspend
+1d13e7a7a3 display: Enforce ulps by default
+
+   * vendor/oneplus/sm8750-common
+d5a5859 add ConsumerIRApp
 
 ====================
-     10-17-2025
+     11-25-2025
+====================
+
+   * device/oneplus/sm8750-common
+556cb91 sm8750-common: Update from OOS 11.F.80
+3c35ec8 sm8750-common: Remove `oplus_bsp_tp_ft3419u` from modules list
+c8af67e sm8750-common: Enable the start of the Vendor VM HAL
+6f69079 sm8750-common: Update from OOS 11.F.74
+
+   * hardware/oplus
+824602c6 oplus-fwk: Stub NetworklessManager
+
+====================
+     11-24-2025
 ====================
 
 ====================
-     10-16-2025
+     11-23-2025
 ====================
 
-   * build/soong
-9409e00f4 [hax} for now
+   * hardware/oplus
+32308a2c KeyHandler: Modernize ButtonSettings
+7aa28106 KeyHandler: Switch to SwitchPreferenceCompat
+c9363253 doze: Convert to SwitchPreferenceCompat
 
 ====================
-     10-15-2025
+     11-22-2025
 ====================
 
-   * device/qcom/sepolicy_vndr/sm8750
-a55570b88 mssing policies
+====================
+     11-21-2025
+====================
 
-   * packages/apps/Settings
-122f616ac7d Styles and wallpaper: handle overlays and availability
+   * device/oneplus/dodge
+a3c98b8 dodge: Update from OOS 11.F.80
+a702039 dodge: Update from OOS 11.F.74
+
+   * device/oneplus/sm8750-common
+1b8b99d sm8750-common: Move CNE and DPM to phone blobs list
+
+   * vendor/oneplus/dodge
+be23fe9 dodge: Update from OOS 11.F.80
+9858fea dodge: Update from OOS 11.F.74
+
+   * vendor/oneplus/sm8750-common
+93748fa sm8750-common: Update from OOS 11.F.80
+c9a6385 sm8750-common: Update from OOS 11.F.74
+ac979e7 sm8750-common: Move CNE and DPM to phone blobs list
 
 ====================
-     10-14-2025
+     11-20-2025
 ====================
 
    * kernel/oneplus/sm8750-devicetrees
-381413bf oplus: Configure erhai GPIO lid switch
+c51c00a9 Revert "qcom: wlan: Disable wlan_direct_link for select targets"
+df72e4a3 treewide: Update changes to CPH2723_16.0.0.211(EX01)
+75512164 qcom: Disable minidump.stack_dump
 
-   * packages/apps/Settings
-6dc9d865bf5 oneplus 13
-
-====================
-     10-13-2025
-====================
-
-   * frameworks/base
-964770a3b309 QuickSwitch: update pkg names
-e0e6aa550096 UDFPS: always hide animation on cancel event
-
-   * hardware/oplus
-ec16278 Use alpha sepolicy path
-
-   * vendor/alpha
-5113e0f1 Nuke wallpaper picker overlays
-
-   * vendor/pixel/themepicker
-4e67726 ThemePicker: update overlays
-
-====================
-     10-12-2025
-====================
-
-====================
-     10-11-2025
-====================
-
-   * packages/apps/Settings
-976dd0232fa temp
-
-   * vendor/alpha
-90ddc34f overlay: move wallpaper picker action to wallpaper picker rro
-
-====================
-     10-10-2025
-====================
-
-====================
-     10-09-2025
-====================
-
-   * device/oneplus/dodge
-085f3b3 dodge: Update from OOS 11.C.70
-
-   * device/oneplus/sm8750-common
-8ebed55 sm8750-common: Update from OOS 11.C.70
-
-   * vendor/oneplus/dodge
-1897e52 dodge: Update from OOS 11.C.70
-
-   * vendor/oneplus/sm8750-common
-d17bed1 sm8750-common: Update from OOS 11.C.70
-
-====================
-     10-08-2025
-====================
-
-   * frameworks/base
-61085a42c46b New translations alpha_strings.xml (Indonesian) (#9)
-
-   * kernel/oneplus/sm8750
-719dee8f13d5e Merge remote-tracking branch 'sm8750/lineage-22.2' into HEAD
-1c1f68417fcd2 Merge tag 'ASB-2025-10-06_15-6.6' of https://android.googlesource.com/kernel/common into HEAD
-
-   * packages/apps/AlphaSettings
-eb47130 New Crowdin updates (#119)
-7a8b9da New Crowdin updates (#118)
+   * manifest
+3db19a9 fixup! Unpin alpha manifest
 
    * packages/apps/Launcher3
-623687f2e5 New translations alpha_strings.xml (Indonesian) (#16)
+93f9b65895 New Crowdin updates (#507)
 
 ====================
-     10-07-2025
+     11-19-2025
 ====================
 
-   * device/oneplus/dodge
-c43647a dodge: Migrate QTI power HAL to soong_config_set
-
-   * device/oneplus/sm8750-common
-15b50b6 sm8750-common: Remove vendor/lineage device framework matrix inclusion
-7ed81c1 sm8750-common: Remove libqtigefar from dependency check
-07f7355 sm8750-common: Update WFD system blobs from dada OS2.0.217.0.WOCMIXM
-979580d sm8750-common: Downgrade to ARMv8.2-A.
-957cb3f sm8750-common: Set `DISABLE_DEPS` more audio HAL/effects libs
-dc0e006 sm8750-common: Unblob audio/audio effects vintf manifests
-
-   * hardware/oplus
-f630fa8 dolby: Update layout to material expressive design
-3a97131 dolby: Make sure to persist value after toggling QS tile
-300320a powershare: gracefully fail in case powershare support not available some OP9 device don't have support for reverse wireless charging, so bail out gracefully
-fabdd0d dolby: Fix compilation error in TooltipIconButton
-fb7ad24 dolby: Migrate MainSwitchBar and Switch to Material3
-bd25f14 dolby: Add custom profile
-4e6b1f8 dolby: Add icons for dolby profiles
-ea9eced dolby: Make bass enhancer available on speakers as well
-0d61860 dolby: Switch to MaterialTheme settingsBackground for EqualizerScreen background color
-6e42827 Revert "dolby: Fix Building in Andoid 15"
-c1c6f14 oplus-fwk: Add missing classes for oplus camera
-8104a10 oplus-fwk: Remove unused imports
-5ca99aa dolby: translate strings to Russian
-3e6c9d2 dolby: Exempt installing package in clone or private space
-f4c3d48 dolby: Fix Building in Andoid 15
-e5e0f71 Import dolby from hardware/xiaomi
-977d344 vintf: Add compatibility fcm for dolby
-f435e8f oplus-fwk: Bring in camera bits
-d975ae2 overlay: qssi: Update QSSI RROs from CPH2573_11_A.76
-2c7d65d sepolicy: Address rild denial for prop
-819cde9 sepolicy: Fix bluetooth denial on user builds
-c10b438 sepolicy: Fix denial for FPS info tile
-5063dbf sepolicy: Allow GameSpace read fps node
-6e6ff28 sepolicy: Address cryptoeng denials
-20e648e sepolicy: Label hal_charger service
-a78a716 sepolicy: Fix hal_bootctl_default denial
-ea6eab0 sepolicy: Label missing wakeup nodes
-096cb41 sepolicy: Address various denials
-1d0cdaa sepolicy: Add dolby support
-713d6f7 sepolicy: Allow system app read battery health status
-0d7b970 sepolicy: Allow system_app to access zram sysfs nodes
-9e5e553 sepolicy: Address DeviceSettings and fast charging denials
-891c5a4 hardware: hidl: inscreen: Set thread to high CFS priority
-
-   * kernel/oneplus/sm8750
-c0dc97ca653a5 BACKPORT: vsock/virtio: Fix message iterator handling on transmit path
-c00259fd09d69 BACKPORT: net: Introduce skb_copy_datagram_from_iter_full()
-565afd1985c89 FROMLIST: KVM: arm64: Fix softirq masking in FPSIMD register saving sequence
-6bef2c60777dc ANDROID: KVM: Expose min hyp s1 free pages in debugfs
-99d7e925d31ba ANDROID: KVM: arm64: Expose hyp s1 pool stats in debugfs
-
-====================
-     10-06-2025
-====================
-
-   * kernel/oneplus/sm8750
-380bd9f7c5373 ANDROID: GKI: Add symbol to symbol list for imx
-
-   * packages/apps/AlphaSettings
-be4a19e crdroid: Add strings for force LTE_CA
-
-   * packages/apps/Settings
-72b305ccb6c Don't show homepage suggestions
-48e40b5f6fd Settings: Add a toggle to force LTE_CA
-46b87ad3c68 Reorder homepage preferences
-81017e82a75 Update settings homepage colors
-
-   * vendor/alpha
-f7a9abe6 overlay: Enable keyboard vibration
-cbdd31d9 component-overrides: Force disable google settings intelligence injects
-c36a0cdf overlay: SystemUI: Add plugin whitelist
-
-====================
-     10-05-2025
-====================
-
-   * hardware/oplus
-fe717b2 Pen: Wait up to 5s for BLE scanner to be available
+   * kernel/oneplus/sm8750-modules
+4661b34f66 oplus: Update changes to CPH2723_16.0.0.211(EX01)
 

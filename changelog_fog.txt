@@ -4,6 +4,21 @@ Device: Xiaomi Redmi 10C/10 India/10 Power (fog/rain/wind)
 Device maintainer: Romeo13card
 
 ====================
+     07-12-2025
+====================
+-Synchronized with the latest sources
+-hofix for vanilla build
+
+====================
+     06-12-2025
+====================
+- AlphaDroid 4.2
+- Update proprietary blobs to MIUI V14.0.10.0.TGEEUXM
+- Switch EROFS for GMS build
+- Add Leica Camera
+- Add ViperFX
+
+====================
      10-04-2025
 ====================
 -  Initial 3.х release 
