@@ -3,6 +3,13 @@ Build type: Monthly
 Device: Poco F5 / Redmi Note 12 Turbo
 Device maintainer: CHAITANYA
 
+=====11/12/2025=====
+- initial build with dolby atmos
+- Firmware is removed download only hos2 , flash .211 fw or regional equivalent 
+- latest orange fox is compulsory to be used available on download page
+- use 10_December ksunext file from telegram support group
+- Update blobs and camera from OS2.0.211.0.VMRMIXM
+
 =====01/06/2025=====
 - initial build with powertools , dolbyatmos+dolbyvsion , per-app-thermal profiles
 - clean flash is mandatory
