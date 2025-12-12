@@ -2,6 +2,21 @@ Device: OnePlus Ace 3 | 12R (Aston)
 Team Aston: elpaablo, REV3NT3CH
 
 ====================
+     12-12-2025
+====================
+
+* AlphaDroid 4.2
+* Kernel updated to 5.15.196
+* KernelSU-Next v1.1.1
+* Device Settings: synced business logic with tiles
+  - PWM can be enabled/disabled in all cases
+  - Enabling PWM disables HBM
+  - Enabling HBM sets a fixed framerate of 90Hz
+  - Screen off disables HBM
+* Fixed power hal issues
+* Boosted auto-brightness values
+
+====================
      14-10-2025
 ====================
 
