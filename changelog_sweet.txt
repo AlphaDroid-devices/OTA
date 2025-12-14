@@ -4,6 +4,18 @@ Device: Xiaomi Redmi Note 10 Pro (sweet)
 Device maintainer: Javi
 
 ====================
+     14-12-2025
+====================
+- Nov security patch
+- Bump alphadroid 4.2
+- Update leica holly bear 5
+
+Credits:
+- aryannn999,neobuddy89 and Lineageos Team for continuing to support this fantastic device
+- Karan-Frost dolby repo https://github.com/frost-testzone/vendor_oneplus_dolby
+- Team AlphaDroid
+
+====================
      23-11-2025
 ====================
 - October security patch
