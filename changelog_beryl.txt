@@ -5,6 +5,15 @@ Device maintainer: NaokoShoto
 Required firmware: HyperOS
 
 ====================
+     17-12-2025
+====================
+- Initial 4.x release
+- Sync with latest changes
+- Removed XiaoniParts as it is bot longer used
+- Change kernel to Mahiru (Vanilla, Unrooted)
+- Fix up GApps sideloading issue
+
+====================
      18-08-2025
 ====================
 - Sync with latest changes
