@@ -2,6 +2,20 @@ Device: Xiaomi Mi 9 SE (Grus)
 Device maintainer: elpaablo
 
 ====================
+     22-12-2025
+====================
+
+* AlphaDroid 4.2
+* Initial Android 16 release
+* Rebased trees (©)
+* Restored dynamic partitions
+* Adjusted init scripts to boost overall performance
+* Teaked system properties to reduce QS lag
+* kernel: added KernelSU-Next (v1.1.1) and SuSFS (v1.5.9)
+
+(©) Credits: kyasu (https://github.com/kyasu)
+
+====================
      29-06-2025
 ====================
 
