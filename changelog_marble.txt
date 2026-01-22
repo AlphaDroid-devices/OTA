@@ -3,6 +3,15 @@ Build type: Monthly
 Device: Poco F5 / Redmi Note 12 Turbo
 Device maintainer: CHAITANYA
 
+=====22/01/2026=====
+- Firmware is removed download only hos2 , flash .216 fw or regional equivalent 
+- latest orange fox is compulsory to be used available on download page
+- ksu 1.1.1 with susfs 1.5.12 inbuilt
+- sensors: Allow access to display's sysfs
+- Add com.android.bluetooth context to seapp_contexts
+- Label persist.vendor.audio.scenario property
+- dolby: switch to HW blobs
+
 =====15/01/2026=====
 - Firmware is removed download only hos2 , flash .216 fw or regional equivalent 
 - latest orange fox is compulsory to be used available on download page
