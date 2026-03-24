@@ -1,382 +1,1797 @@
 ====================
-     12-08-2025
-====================
-
-   * frameworks/base
-35453e48608b camera: Bump `MAX_PREVIEW_FPS` to 120
-
-   * packages/apps/Launcher3
-cfa18cde6d Launcher3: Add custom recent view styles
-
-   * packages/apps/Settings
-30f51ca0c43 Device Settings: Oneplus13
-
-   * vendor/alpha
-edc7738e recovery: add alpha public key
-
-   * vendor/oneplus/dodge
-5164906 dodge: Ship NFC firmware
-
-====================
-     12-07-2025
-====================
-
-   * hardware/oplus
-06a84b51 Add toggle for ltpo features
-de7bcfe6 sepolicy: qti: Allow system server to detect oem charging
-40f1aac9 sepolicy: adress fingerprint denials
-43e686c2 sepolicy: qti: Allow system_server to r/w oplus_chg nodes
-e11a6c77 sepolicy: qti: Allow binder calls for sensor hal to system_server
-4388828e sepolicy: Fix bluetooth denial on user builds
-ecc5a68d sepolicy: Fix hal_bootctl_default denial
-6f81c2be sepolicy: Address DeviceSettings and fast charging denials
-6120b91c hardware: hidl: inscreen: Set thread to high CFS priority
-3860c2f9 sepolicy: Address various denials
-b70ca1a9 sepolicy: Label hal_charger service
-78f87cfe overlay: qssi: Update QSSI RROs from CPH2573_11_A.76
-d5202f18 sepolicy: Label oplus bluetooth prop
-bf344fa0 sepolicy: Address nfc denial
-1834c175 sepolicy: Allow vendor_hal_perf_default to access surfaceflinger
-77eaacfe [TEMP] sensors: aidl: Glorified one-shotting
-df1d681a aidl: sensors: Return early if nothing is displayed over the light sensor
-f87308d4 aidl: sensors: Import AlsCorrection from sm8150-common
-2d649623 Import ALS capture service from sm8150-common
-f0f664a7 overlay/sensors: Configure Doze brightness sensor
-50291ff7 overlay: qssi: Define quick_pickup sensor string
-53296ad0 overlay: qssi: Enable config_dozePulsePickup
-e8233e43 sepolicy: qti: Label sensors AIDL multihal
-e6362c50 aidl: sensors: Standardize qti.sensor.amd to glance sensor
-23a50b71 aidl: sensors: Invert value for pickup gesture event
-cf8f1194 aidl: sensors: Change standard tilt_detector to pickup_gesture
-5ee2e558 aidl: sensors: Avoid target name conflicts
-95613a51 aidl: sensors: Change default applicable license to Android-Apache-2.0
-e1b5477f aidl: sensors: Import 2.X sensors hal proxy
-ef14d31f aidl: sensors: Revert^2 "SensorHAL: add moisture detection"
-68179b07 aidl: sensors: Import aidl sensors MultiHal
-1c971d1a aidl: qti_vibrator: effect: import richtap effects
-cf3c9bc9 oplus-fwk: Add missing classes for oplus camera
-d217c762 oplus-fwk: Update for compatibility with android-15 IMS stack
-aac4928e aidl: vibrator: Minimize code for ledVibratorDevice
-
-====================
-     12-06-2025
-====================
-
-   * kernel/oneplus/sm8750-modules
-5baaae5a12 qcom: display-drivers: oplus_adfr: kickstart prop magic
-
-   * vendor/alpha
-beb828ce Config version: explictly set TARGET_BUILD_PACKAGE to 1 (vanilla) if it's not set
-
-====================
-     12-05-2025
-====================
-
-   * frameworks/base
-755cd6b331a3 UI Styles tile dialog: apply changes immediately and remove dim from shade while dragging, to have a clear view of QS tiles.
-2d679b88d0cd UI Styles: make Slash renderers respect user parameters
-4866ebd5bfc9 Brightness slider: change thumb dimensions for better ui style effect
-5499d411825c SystemUI: Extend QS Header Image to support animated GIF/WEBP [1/2]
-
-   * kernel/oneplus/sm8750
-bb8fe2c3306d mm: vmstat: use power efficient workingqueues
-217cc612aa16 proc: Don't let Google Camera run in the background
-
-   * vendor/alpha
-51559859 Fix audio config
-2edb6566 Add tablet config
-
-   * vendor/oneplus/sm8750-common
-749f9a0 sm8750-common: Sync with device tree
-
-====================
-     12-04-2025
-====================
-
-   * packages/apps/AlphaSettings
-2f886a0 Extend QS Header Image to support animated GIF/WEBP [2/2]
-
-   * vendor/apn
-e09a80d Add Bait MX
-
-====================
-     12-03-2025
-====================
-
-====================
-     12-02-2025
+     03-24-2026
 ====================
 
    * device/oneplus/sm8750-common
-44bd76f sm8750-common: Switch to oplus sensors AIDL
-5ce21a3 sm8750-common: define media settings to sun variant
+d8426b1 sm8750-common: vibrator: drop libsoc_helper
+ebc2bdc sm8750-common: vibrator: add .oplus_sm8750 suffix to targets
+
+   * frameworks/base
+dc179a89c584 services: Fixing powerhal soft reboot
+1ee1ed242faa SystemUI: allowlist ACCESS_NOTIFICATIONS privileged permission
+6dadff811ae8 SystemUI: Adding system color hooks
+50d7b82c75fa fix rate limiting for non-app tombstones
+e3cb04a2d235 SystemUI: drawable: Resize some system status icons
+025c2cf8e939 fix missing notification backgrounds
+c1c1aea85ab0 Systemui: force black shade for black theme
+68daca44682b SystemUI: fixing keyguard slice provider crashes
+84449ece75a0 core: Introduce VibrationUtils
+d0e006b687f9 Reduce blocking operation on display thread
+1c217b10fac0 services: Threads priority enhance
+3071335882df SystemUI: Reduce media metadata bitmap size
+aba93fd9bc17 services: Add clo like fling boost
+37189036ff74 [wm] optimizing home to desktop transition
+8869f723c40f hwui: Fix flickering issue in streaming video cases
+8c424e14a0af bugfix: automatic notification permission request breaks in some cases
+1b5a6d059e1d fwb: kill annoying appopservice log spam
+c2b2bcc321be fwb: stop performance hint spam
+60a92006a7fe core: Adding scroll optimizer port
+b788dca84fd9 core: Optimizing overscroller
+0fd8d653842f AconfigFlags: silence missing packages spam
+ef018ea05148 SystemUI: Simplify WiFi and Mobile Data tiles
+d59ecc458e42 fixup! EdgeEffect: Implement edge scroll fling haptics
+b08becd1b9a6 EdgeEffect: Implement edge scroll fling haptics
+69dea5a1a805 base: Add an icon for NR_SA (5G Standalone) data connection
+69bc26df5a7a statusbar: allow whitelisted callers to restart SystemUI
+a551c77195e4 Hide App list: Improve hide app list feature
+232fdb8bd704 base: Add support for hide applist [1/2]
+90e73d09aea4 Hide hidden apps from all apps except system
+ce68e6162d06 NetworkPolicyManagerService: honor POLICY_REJECT_ALL in allowed transport mask
+0a6ffb3aa535 UI styles: extend to volume panel
+f7241df48292 Cutout progress: cleanup and introduce expanded mode
+13ea12726bd4 QuickSwitchService: add navbar overlays
+574bcb054830 SystemUI: cutout progress ring optimizations
+11e8f3f38e0f Optimize the response speed of recents animations
+c650610fc931 SystemUI: Add progress ring color mode [1/2]
+e4ac48ddc9ed SystemUI: Progress ring charging indicator [1/2]
+083eb0a75378 SystemUI: Introduce cutout progress ring [1/2]
+84bbf7b60a23 QuickSwitchService: remove dead code and fix isDisabledPackage logic
+9e0325e0398b QuickSwitchService: update getUsers signature for QPR2
+e34f5bbb5abb base: Allow to hide screen capture status from apps [1/2]
+782e07c1ad55 Update bootanimation
+
+   * frameworks/native
+4b9eb1ba91 fix: lambda return type mismatch in graceTimeForPresentFenceMs
+070d0080d8 SF: Bring back support for disabling backpressure propagation
+
+   * manifest
+a3b199e Track frameworks/base from github
 
    * packages/apps/AlphaSettings
-b38cff7 Make notifications and misc icons thicker
-759d687 Add About phone header strings
+15d03012 Introduce Clock face feature
+
+   * packages/apps/ThemePicker
+3e7d5e06 ThemePicker: add separate lockscreen clock font picker
 
 ====================
-     12-01-2025
-====================
-
-   * hardware/oplus
-43a27ff0 Automatic translation import
-
-   * manifest
-c2c3bc4 Unpin settings
-
-   * packages/apps/Settings
-7c3ffd4c10c Revamp about phone header
-
-====================
-     11-30-2025
-====================
-
-   * hardware/oplus
-c0a67cae doze: Fix ClassCastException on pickup pref change
-
-   * manifest
-9811279 Unpin a few repos
-
-   * packages/apps/Launcher3
-755f5c1e5a Merge branch '16.0' of https://github.com/crdroidandroid/android_packages_apps_Launcher3 into HEAD
-
-====================
-     11-29-2025
-====================
-
-   * build/make
-aa724d34c8 Merge branch '16.0' of https://github.com/crdroidandroid/android_build into alpha-16.1
-4316871e2f Auto-fill lunch
-679fbb0a09 Remove lineage-sdk dependency
-
-   * build/soong
-bf2c7532f Merge branch '16.0' of https://github.com/crdroidandroid/android_build_soong into alpha-16.1
-
-   * manifest
-c3cb310 Update system/apex hash
-
-   * vendor/alpha
-ad84daf1 Bump AlphaDroid version to 4.2
-36d1e855 Merge branch 'alpha-16.1' of https://github.com/alphadroid-project/vendor_alpha into alpha-16.1
-
-====================
-     11-28-2025
+     03-23-2026
 ====================
 
    * frameworks/base
-1a5e92d8804b PixelPropsUtils: Skip play Integrity props in isolated processes
-f08eadeed8bf KeyboxChainGenerator: fix build release parsing
-41bc452aee08 SystemUI: Avoid using deriveStateOf for media translation
-8f92cffa0623 graphics: Fixing typeface crash bug with susfs
-b18779334210 SystemUI: TunerServiceImpl: Safe concurrent iteration and modification
-d94877052d14 Revert "SystemUI: Fix thread safety issue when adding tunables"
-d0b69b508a92 MediaControlPanel: Fix media playback crash on chromium based browser
-043d521141b5 SettingsProvider: Resolve google gms configurator denials
-b0257e2edeee SettingsProvider: Fix NPE when upgrading
-069b95f37765 PhoneWindowManager: Fix duplicate handling of App switch key press event
-a8039b7dfe57 BlurController: Fix default blur enablement value
-d7d80b129f07 Fix keyboard cannot access slider issue
-adf42250bcb1 Always update mute icon along with slider value.
-1c9032176e9f Add a ripple highlight for the Output Switcher list items.
-b2d5214ccdc8 Make bg of QSCustomizer transparent
-5bdc6c93fd8e Update pin bouncer confirm button to match spec
-a5155dcab1de SystemUI: TunerActivity: Switch to material expressive design
-243be331eab4 Force behind and notification scrim alpha to be 0 when the device is unlocking.
-9cdd07886cb8 Don't further perform IO on socket if opening it fails
-25991ab26d1d Fix it has two times return back if only press the back key one time.
-1d61c7552f6a Fix index out of bounds exception in HandwritingModeController.
-938d479882e8 SystemUI: Prevent ShadeListBuilder illegal state on notification dump
-9a569d3b14cd SystemUI: Fix keyguard transition race conditions
-8b87aa26caa1 KeyProviderManager: Accept N >= 1 certs per key [1/2]
-6387fccb44e9 ComputerEngine: Fix signature spoofing for microG revanced
-23f1d76b6ef0 UI Styles: fix slash angle
+61195f44c17a UI Styles tile dialog: apply changes immediately and remove dim from shade while dragging, to have a clear view of QS tiles.
+069b71719697 UI Styles: make Slash renderers respect user parameters
+11440b697030 UI Styles: tile + dialog with tuning parameters
+6aa0256b9885 UI Styles: Brightness slider implementation + module registry + compose hooks
+252cf27940b6 UI Styles: QuickSettings implementation + module registry + compose hooks
+79b6f35a29bc UI Styles: core structure
+1ae8213f3b87 New translations alpha_strings.xml (Spanish) (#11)
+8ee7d18c9b94 QuickSwitch: update pkg names
+027ca3fc8ef9 UDFPS: always hide animation on cancel event
+dc3ecc46b5ae New translations alpha_strings.xml (Indonesian) (#9)
+836d18cebc97 New Crowdin updates (#7)
+1758c2ea6cd8 core: Introduce SystemRestartUtils
+30eef7fc0bbc LineageHealth: set minimum accepted charging limit to 10%
+c8c4357b2a7b [SQUASH] base: Add support for window ignore secure [1/2]
+6df86e05a7f0 display: Adjust contrast in Triluminous Pro Mode to prevent black darkening
+c567112bfa45 base: Hide ADB and developer setting enable status [1/2]
+07da4f7031aa Disable night light when showing udfps overlay
+5cac24577c4d Add Digital Wellbeing short title
+eded70922994 Update crowdin config
+d7be5493baa0 Upload crash log to mkrbin
+fb29943bb9e7 Display Engine: Triluminous -> Triluminous Pro
+347a49fdef91 services: Introduce Reality Display engine [1/2]
+ad607c9e9b8c display: Add simple RGB color balance transform
+8deb8766ff8c Add Alpha stub files
+ded10ba9d049 SettingsLib: show more APK details on App info screen
+127d34ce533e QuickSwitch: handle other packages
+14211d4dc6d0 services: Introduce QuickSwitch feature [1/2]
+3aab75877c90 SystemUI: StatusIconContainer: Shorten entry animations
+069baaaefc8b speedup window animation scale
+1a633fd52a76 android.view: reduce animation speeds
+48ef5a0a3605 Whitelist Google Photos URIs
+eec6ca16a2c8 don't crash apps that depend on missing Gservices provider
+7754687f6292 Statusbar: adjustable max visible notification icons [1/2]
+db89e1e8e25f Bootanimation: add some color
+3522d8471604 Bootanimation: use alphadroid mask
+45a466cc1014 Use alpha namespaces
+fe4bf492f8cc Import core LineageOS features into frameworks/base internal namespace
+d4bf51247180 Revert "androidfw: Declare and load lineage sdk resource package w/ id"
+e3e2e5ba4881 Revert "Add lineage sdk resource APK to Zygote FD whitelist"
+833e84abb677 Revert "services: Include org.lineageos.platform.internal"
+32fe1adc2565 Revert "services: Kick off to LineageSystemServer for external service init."
+6d7753d253c5 Revert "services: Keep sdk classes"
+a128ff6411bf Revert "services: Keep vendor.lineage.* classes"
+0d4b75e37866 Revert "SettingsProvider: Allow accessing LineageSettings via settings command"
+9068e8fb0e51 Revert "Allow lineage resources package to be overlayed by RRO packages"
+0305f1285b9c Revert "androidfw: Add Lineage res to default assets"
+be1abf139d07 Revert "idmap2: Cache Lineage resources"
+a002bd04bb38 Revert "SystemUI: Add lineage-sdk dep"
+f741b4e790b4 Revert "Shell: Allow writing to lineage settings"
+ee30a2382a2a Revert "UsbDeviceManager: Implement trust USB restriction"
+4d7093429fb2 Revert "SystemUI: Add Profiles tile"
+14439e6ef6e1 Revert "SystemUI: On-The-Go Mode (1/2)"
+fcbe2e532ca0 Revert "SystemUI: OnTheGo: Update camera API for service"
+9879f2cf9eda Revert "SystemUI: QS: Add On-The-Go Tile"
+fe9c6fdb9ac3 Revert "SystemUI: OnTheGo: Update tile more dynamically"
+4cbc774fe178 Revert "Custom statusbar logo customizations [1/2]"
+e85251ceceb5 Revert "Add an option to force pre-O apps to use full screen aspect ratio"
+d76ff61c899f Revert "fwb: Implement cutout force full screen [1/2]"
+e7af511cdea7 Revert "SystemUI: Add QS tile gradient customization"
+bfe9f1612845 Revert "SystemUI: Add QS brightness slider gradient customization"
+eb3a096b4d2a Revert "SystemUI: Add volume slider gradient customization"
+c9c581a8afdc Revert "SystemUI: Add custom gradient start/end color support"
+c5a7f759e372 Revert "SystemUI: Add gradient for volume buttons along with slider"
+15ac74427590 Revert "SystemUI: Fix up gradient related glitch in volume slider"
+2bfbc28f2a88 SystemUI: Clocks: Various layout and font fixes
+ddda337d6365 SystemUI: Import stylish clock styles
+679871686754 SystemUI: Add block and bubble to no-color exclude list
+70ce33b9b3ff SystemUI: Add support custom clock color [1/2]
+733581337423 SystemUI: Allow adjust height of lockscreen clock styles [1/2]
+3a9dabccccc0 SystemUI: Hide clock properly when clock style set
+a555a7c9d00a SystemUI: Improve clock face color option
+fa94fa2e4c1c SystemUI: Lock Screen Clock Accent Color Option
+0787adf6141c SystemUI: Clocks: Add various clock styles
+b75f912aa556 SystemUI: Add layout section for clock style
+6b6f3f2e3364 SystemUI: Implement weather views for clock styles
+1a7f6283b7ee SystemUI: Introduce Clock face feature
 
    * hardware/oplus
-db91ce03 oplus-fwk: Add OsenseResClient and OplusUIFirstManager stubs
+637e14f AlphaDroid
+4abe525 sepolicy: Solve vendor_hal_perf_default denials
 
-   * manifest
-3cf16c1 manifest: Track vendor/apn
-01cc3e4 manifest: Track LMO SystemUI clocks
+   * packages/apps/AlphaSettings
+30dc41c3 Settings: Add support for hide applist [2/2] * Code is adapted from cutout force full screen * Give authorship * Add "Show system" and "Show overlay" menu based on ManageApplications.java * Query all apps installed by any user and set value for all user
+
+   * packages/apps/Launcher3
+371914f56e New Crowdin updates (#20)
+c944b0f8d2 quickstep: Fix build errors in RecentsView and TaskViewTouchControllerDeprecated
+7086963b37 Recents: fix stack mess on dismiss cancel gesture.
+75b8b1b3d0 recents: fix z-index order when dragging a card
+6881a86f8f Recents: move styles strings to alpha_strings to be translated
+f0640cd85e Recents: make dismiss animations smoother
+e5f1d754be Recents: apply custom styles immediately
+9689c39f0d Launcher3: Add custom recent view styles
+907395963f Launcher3: Restore 4x4 workspace
+418ef86b3d New Crowdin updates (#18)
+341c4a69dd New translations alpha_strings.xml (Indonesian) (#16)
+16a9bea237 New Crowdin updates (#14)
+218c77081e Update Crowdin config
+954d648d95 Remove lineage-sdk dependency
+c5e8478647 Introduce Alpha PSA messages
+75ce491090 Use AOSP Settings
+6099026db6 Ship as AlphaDroid based on crDroid
+
+   * vendor/addons
+99cb75af Add navbar overlays for Pixel Launcher
+adc8a95d Add AlphaDroid ufps icon (semi-transparent and transparent versions)
+b8e32ca8 add AlphaDroid udfps icon
+e54f2f7a UDFPS: import Keqings icon and animation
+6b829d03 clockfonts: Add more styles for lockscreen clock
+aac345d8 Build OuterTune
+cfbe43df Add guard for google overlays
+d4bfa4c9 Drop prebuilt bootanimation
+eb40e9f6 Use alpha overlay names
+bb03997f Migrate overlays to vendor/alpha
+ccae8eb0 addons: Update GlanceableHub overlays
+ed5b8301 addons: Add overlay for hiding clock and smartspace
 
 ====================
-     11-27-2025
+     03-22-2026
 ====================
 
    * device/oneplus/dodge
-e2ac912 dodge: Include LTPO settings
-4cc5f57 dodge: overlay: Enable multiple vibration intensity levels
-4adb090 dodge: Set market name for device
-d569609 dodge: overlay: Move in alert slider configs
-076213d dodge: Set proper screen density
-fc97332 dodge: Enable UDFPS animations
-1aff861 [Squash] Import Device Settings
-828b044 Adjust padding for status bar
-c0ea18d AlphaDroid Bringup
-0d39e0c dodge: overlay: Update Brightness configs
-aeabaf3 dodge: Increase start statusbar padding
-55b97d4 dodge: configs: Update display density
-aafa4c5 dodge: Switch to FIFO vibration effects
-
-   * device/oneplus/sm8750-common
-f1dcdd9 sm8750-common: Ship ConsumerIR App
-beef9dc Drop Lineage Health
-9f5e3e2 Init: set permissions for OnePulse PWM
-83fe406 sm8750-common: init: Set perm for LTPO nodes
-6d1d8c9 sm8750-common: overlay: Decommonize alert slider configs
-0b933bb sm8750-common: Allow gcam/snapcam to skip HFR checks
-4cebec1 sm8750-common: Allow camera to skip high frame rate checks
-e8696b5 Revert "sm8750-common: init: Set Blur property based on Soc id."
-311cde8 sm8750-common: overlay: Enable battery cycle count
-22e7709 sm8750-common: overlay: Add system ui restart option
-85cc570 sm8750-common: Disable frame rate override feature
-9a4b75c sm8750-common: init: Reset readahead values for 128 always
-94321ba sm8750-common: init: Remove IO read_ahead_kb tune
-0b7d3ed sm8750-common: overlay: Update pinner list
-36df02f sm8750-common: overlay: Turn on screen on unplug
-16e1369 sm8750-common: overlay: Add temp divider value for cpu info overlay
-c72643f sm8750-common: overlay: Add fps info path
-f78c7f7 sm8750-common: overlay: Switch to crdroid doze
-bb51a86 sm8750-common: Nuke OnePlus doze
-383e0ee sm8750-common: overlay: Use appropriate charging thresholds
-2d89f42 sm8750-common: init: Always use lz4 for zram
-fd3eec0 sm8750-common: overlay: Configure VOOC charging display on lockscreen
-ecfeade sm8750-common: overlay: Decouple auto-suspend and interactive state from display
-baa01f1 sm8750-common: overlay: Fix lockscreen charging info
+202f607 dodge: ALS props for brightness-lux polynomials
+4bcc6ef dodge: overlay: use auto brightness curves from akita
+18a1996 dodge: add ALS correction props
+8a040f3 dodge: configs: config screenBrightnessMap with measurements
+7922a3c dodge: decouple auto suspend mode from display state
+b45a22a dodge: set the doze and dim brightness
+3562f6b dodge: enable wide color gamut
+247b3d0 dodge: attempt to setup automatic color management
+0b5dd22 dodge: set a custom brightness ramp up/down speed
+1d41abb sepolicy add missing permission policy
+e62c1cc sepolicy: Add missing for GMS
+6bb246f BoardConfig: Add vendor SEPolicy directory
 
    * frameworks/base
-7280e4ea7c29 Merge branch alpha-16.1-wip into alpha-16.1
-
-   * hardware/oplus
-9a1f70d1 doze: Use new method to listen for preference changes
-
-   * packages/apps/AlphaSettings
-0d511ca Minimal cleanup and re-organization
-496fbbf Expressive Alpha Settings
-3e3c25f Add UI Style settings
-900d740 Merge branch 'alpha-16.1' of https://github.com/alphadroid-project/packages_apps_AlphaSettings into HEAD
-
-   * vendor/alpha
-d0f219d7 overlay: Use google sans flex for lockscreen clock
-9893b8ad overlay: Remove duplicate DPS config
-7c7595f4 Update blur support
-
-====================
-     11-26-2025
-====================
+1e0b7c8b793e New Crowdin updates (#1300)
+25b29988bc8c Update Crowdin configuration file
+1cb2784b5f09 SystemUI: keep Wi-Fi QS tile subtitle Wi-Fi-specific
+b620d7642526 Update EGL context type from EGLDisplay to EGLContext
+ea62e97dfe83 SystemUI: WeatherViewController: Implement settings observer
+2493b006c31f SystemUI: Allow Omnijaw weather to show on aod
+a28973a82157 SystemUI: Fix NPE in ongoing chip icon rasterization
+d665593bfaa4 SystemUI: Periodically re-evaluate to catch stale sessions
+b571bc77bfa0 SystemUI: Do not invalidate ongoing chip bg color often
+b95c66c539b3 SystemUI: Smoother seekbar for ongoing chip popup ui
+88304a16daab SystemUI: Improve music chip popup ui
+98f8d2f30e88 SystemUI: Do not collapse when interacting with seekbar
+86fd39191e03 SystemUI: Refactor for album art, icon and playback
+bb0ad2cb64d4 SystemUI: Update chip max width
+dfabe152f7c6 SystemUI: Use statusbar text size for ongoing chip text
+6ab2ad4c224a SystemUI: Apply fading edge only when text overflows chip width
+0d90dc110377 SystemUI: Color mode perf improvements for music chip bg
+c25f72ca746f SystemUI: Add color modes for music chip bg [1/2]
+55021e73dd78 SystemUI: Fix visual bug with notif progress in ongoing action chip
+a61562bf1285 SystemUI: Clean up unused currentAppLabel in ongoing action chip
+0feb3837dbfe SystemUI: Fix media info jitters in ongoing action media panel
+c47a9284afb2 SystemUI: Clean up track counter for album art change
+e26e90036469 SystemUI: Use squiggle for seekbar in ongoing progress media panel
+0b4ce472b2ec SystemUI: Retain compact mode for ongoing chip during visibility changes
+2fcc74e6f4a2 SystemUI: Rework media session helper for ongoing action progress chip
+5c036088dc63 SystemUI: Rewrite stale progress check
+d0b868c51ef0 SystemUI: Redesign ongoing music chip popup
+71b2f2c908cb SystemUI: Redesign ongoing music chip like oneui music chip
+c600ffcee436 SystemUI: Improve Ongoing Chip interactions
+b3da6649cf87 SystemUI: Use proper media buttons for ongoing action chip and theme it
+e58937a7307a SystemUI: Refactor ongoing action progress chip
+bc53fb337477 SystemUI: Clean up legacy code in ongoing action progress chip
+e5c020ac33fb SystemUI: Ongoing action progressbar chip implementation
+c89b3b7841d0 Avoid memory leak of activity in ExitTransitionCoordinator
+03406122fea9 Add config overlay for battery info update
+7d1b7386dae9 Update battery info every second when device is charging
+77f96ec75c8b SystemUI: Fix notification flicker with transluency enabled
+8a1b66f0e976 SettingsTheme: Correctly theming AlertDialog with M3 colors
+72e01d594a25 Avoid NPE in CriticalEventLog.saveLogToFileNow()
+fd86dabd875c SystemUI: Fix up gradient related glitch in volume slider
+7913b6c5f75b SystemUI: Add gradient for volume buttons along with slider
+984ade3fa2b3 SystemUI: Add custom gradient start/end color support
+f700a03673e0 SystemUI: Add volume slider gradient customization
+dc64a9046f06 SystemUI: Add QS brightness slider gradient customization
+0bbfaaa53e56 SystemUI: Add QS tile gradient customization
+fa107a9fa24b SystemUI: Hide mobile data tile when unsupported
+f58a1e3b241e base: Fix crash caused by back gesture on popup view
+7a0ad220f0e2 base: Add support for daily and weekly data usage cycles [1/2]
+8af69f8f14c0 Allow complex resource types to follow references
+a43fe589a3b7 SystemUI: Add charging bolt indicator for text-only battery style
+a58c17662bbe SystemUI: Add toggle for translucent notifications on lockscreen
+073007852a4f SystemUI: Fix notification transparency issues
+d899a5e05ed0 SystemUI: Add notification row transluency toggle
+29a3d0d65544 SystemUI: ConfigurationControllerImpl: Avoid NullPointerException
+fa43e917fb11 SystemUI: Fix concurrent modification exception on config change
+5bbe911e4c20 SystemUI: Start QS header animation only on expanding
+2b5c58807852 SystemUI: Extend QS Header Image to support animated GIF/WEBP [1/2]
+fa160a487b21 SystemUI: Fix imageloader spam in BrightnessSliderViewModel
+b4da16213a4b Update CE storage handling in StorageManagerService
+6cd41ae7e6cc SystemUI: Revert new landscape notification behaviour
+4dea35cf2b7f core: add guard to null ResourcesImpl log spam
+37f179369061 media: disable noisy exifinterface logs
+75e4f8484cc1 core: Preventing memory leaks from bloating os memory that leads to OOM
+35f44d6c84ba base: Migrate to MaterialExpressiveTheme
+a20e95960920 audio: add message MSG_L_BT_ACTIVE_DEVICE_CHANGE_EXT to messageMutesMusic logic
+326c6375c4b6 SystemUI: Fix edge light, media art, pulse on ambient display
+db90eaf01156 Fix NavBar haptic feedback after Bluetooth device disconnect
+28806e397f48 Fix boot race in NotificationManagerService
+d977368fbe60 Fix check for pinned shortcut in ShortcutRequestPinProcessor
+615877c26c23 SystemUI: TunerActivity: Remove vibrate icon if not supported
+9986d9c6232f use shared bitmaps in MediaMetadata to avoid Binder failures
+9fbda923b208 SystemUI: Prevent indicator text cutting off in biometric prompt
+aef220d8bb88 SystemUI: UdfpsHelper: Check if view is attached before updating layout
+f3a8f677e149 base: Use SingleKeyRule for assist long press
+e5850373cf7a wm: Only close system dialogs for visible windows
+c8bb57e1fea9 Minor code optimization for FileObserver.
+671fe23da36d add workaround for system_server startUserInBackgroundTemporarily crash
+d1347a23d10e fixup! aapt: Use a std::map instead of a SortedVector
+df21c26d1e5c Fix media duration calculation for HTTP streams larger than 2GB
+beadc1b7d359 Fix SecurityException crash when setting wallpaper from Google Photos
+85624e7a0276 Monitor Settings.Global.DEVICE_PROVISIONED, if changed from 0 to 1 and the autofill provider is not available, reset to default.
+aff829a06ecd fix system_server crash in NotificationHistory.getPooledStringsToWrite()
+88f13d0b83bf fix system_server crash in NotificationHistoryProtoHelper
+38e585a429c0 add workaround for WindowContext.finalize() system_server crash
+f420e04a11b9 add workaround for UsageStatsDatabase OOM system_server crash
+e3cd7daf9e06 Home screen is stuck at "phone is starting" screen
+043f76a53fdf fix an upstream infinite loop bug in ProtoFieldFilter.skipBytes()
+ff7b25e36ae2 SystemUI: Allow ambient wallpaper on pulsing
+b5ae33e51068 SmartSpace: Mark strings as non-translatable
+24d92069fab0 SystemUI: Handle secondary click for mobile data tile
+fc8ee0a5434c SystemUI: FlexClock: Read font from config_clockFontFamily
+20b85dfd31e4 SystemUI: Add status bar battery disable toggle
+8a71f3b0b63b SystemUI: Add repository method to observe settings change for string values
+f1a937fe2a29 SystemUI: Fix default font feature on lockscreen
+99507ff5a76a Remove Duplicate WIFI_DISPLAY permission entry
+8778ae760b69 totalScanTimeMs and totalWifiLockTimeMs may be 0, causing an ArithmeticException and triggering a reboot.
+d55bd158940b Add Fix Bluetooth status display issue after power cycle
+4748759b7cfc Fixes an issue where the lockscreen clock would display the incorrect time after a SystemUI restart or hot reload.
+fbeb1d850779 center-cropping media bitmaps to improve quality
+81418a506324 preventing media album bitmaps from impacting performance
+b4cb1d44ab77 appops: skip ops for invalid null package during state serialization
+7b9ceeb6532f Revert "Null safe package name in AppOps writeState"
+b2b924483d24 fixing configuration controller crash
+412743675862 fixing contacts apps crash
+f35b20120c89 SystemUI: Fix keyguard back button background
+bf6bd322a5cb Fix NullPointerException in PackageManagerService
+747a15703b81 Reduce unnecessary calls to getLatestVsyncEventData
+914ef4a6d700 ViewGroup: null-check child in dispatchDraw to avoid NPE
+b77f9d7b8e9b Fix RuntimeXfermode native memory leaks
+d06d85c495c2 SystemUI: Hide data switch tile on non-voice capable devices
+43177dc57b9d Fix index out of bounds exception in HandwritingModeController.
+cabe77abbd19 SystemUI: Prevent ShadeListBuilder illegal state on notification dump
+b82bd53ec8fa SystemUI: Prevent NotifCollection illegal state on notification dump
+d4759769a66c SystemUI: Fix stale colors on power menu after UI mode change
+2099d7d9baed CpuMonitorService: reduce cache size
+e35244bf6af1 Fix ConcurrentModificationException in LocaleStore
+c345fb198c0e system: Postpone NetworkWatchlistService scan during boot
+7bfdeb5baf4a try-catch unlinkToDeath called on unlinked Binder.
+46e88593d71f Minor code optimization.
+0168eefcb591 Move SaveUi from bottom to center
+5a04a780a936 Fix NullPointerException in ArtFastDataOutput.writeUTF()
+54b74e040aab Fix memory leak in car service
+51bc9102a781 ScreenshotController: Play haptic feedback even on normal ringer mode
+83a232ff9b80 ScreenshotController: Clean up resources when dismissed
+640bce89b35b Screenrecord: Fix notifications not being dismissed
+c5486637583f SystemUI: Screenrecord: Add delete action to the notification
+c7399def9a05 SystemUI: InternetTileNewImpl: Fix secondary click
+ab7fd117594c SystemUI: Allow devices to disable 5G toggle
+fc9652a554e0 SystemUI: Introduce 5G toggle in internet connectivity dialog
+cc86a029a48f SystemUI: Add hotspot toggle in QS internet dialog
+dd488bd6d0ab Optimize the DateTimeView logic time consumption when updating the Ui main thread time
+0b1665297c43 SystemUI: Add margin above small clock in lockscreen
+5609f63e1ba8 fix NullPointerException in Animator:callOnList
+014a8e33deda don't remove app widgets from user's home screen when the user stops
+b2bb41e3a7e4 SystemUI: Remove split navigation bar layout for sw900dp
+394fc0a8b3ce SystemUI: Constrain keyguard indication area burn-in offset
+bc966bf8062e AudioService: Cancel old toasts when switching ringer mode
+96956d5b5b56 AudioService: do not block focus request from applications compiled with lower version sdks
+3bb067581081 SystemUI: Fix Internet Tile showing no service
+f5783fc374aa frameworks/base: Import Xiaomi Image Tags defenitions
+3584101dc3a6 SystemUI: write initial value of SHOW_QR_CODE_SCANNER_SETTING on first call
+e934f7a0c073 SystemUI: Use privacy_chip_background for charger indicator bg
+ade821a362ec base: Add support for application downgrade [1/2]
+1129e1355965 base: Add option to cycle through ringer modes [1/3]
+f5f5bca75e01 base: Allow disabling private DNS for VPN [1/2]
+2c3c6b84e730 SystemUI: Refresh system icons on theme change
+3883d95b70f3 SystemUI: fix roaming icon
+838bfc777211 SystemUI: Fix wifi tile showing mobile data carrier name
+ffd270f698a6 SystemUI: Flashlight support secondary click
+90b0fbb6cbdc SystemUI: Improve flashlight strength control UX
+66ce546c8f38 SystemUI: Add flashlight strength control
+3a7c96d60c31 ActivityManagerService: Perform system compaction with GC
+5953ae9d89e9 ActivityManagerService: Adjust delay on boot system compaction
+783f3168b1b3 services: Reduce grace window to kill cache after user unlock
+ac00afe5bdc5 services: Reduce memory release interval guard
+38dbf25476fc ActivityManagerService: Rewrite release memory on screen wake
+45804eff1e0b SystemUI: clean heap memory on screen off
+45c405d0d650 services: clean system_server heap memory on screen off
+12c6f224a897 services: optimize memory on device wake
+8ac2660986dc CachedAppOptimizer: Pageout File pages during system compaction
+6771b1098340 CachedAppOptimizer: Initialize compactProfile and compactTime
+32ab6fbb7d14 CachedAppOptimizer: Fix persistent compact skipped
+df5fe81cb939 CachedAppOptimizer: Set thread group to background
+3fcdb6383a03 services: Disallow max cached processes above 128
+a965f0257b6d CUR_MAX_CACHED_PROCESSES is not greater than the maximum value allowed
+1163e47cfed0 Ask pin for shutdown/reboot on secure lockscreen
+877f829ff788 SystemUI: Redraw display cutout on overlay changes
+a249f5398a27 ComputerEngine: Fix signature spoofing for microG revanced
+0c267d9be9eb Fixes crash (race cond) when destroyActivity.
+dc784f72d0d7 base: Follow Dark/Light theme for Safe Mode dialog
+846c29a5aa46 BootReceiver: Return early if trace_pipe doesn't exists
+31fd0403cb80 core: Broadcast intent when display power state changes
+1df0302de716 AutoAODService: Add null checks to mSharedPreferences
+746aaea32a24 AppOpsService: Do not error out user app that was system app earlier
+ecf51a65112f SystemUI: Alter constraints for privacy chip on large screen header too
+ca13efa23219 SystemUI: InternetDialog: Fallback to first available subid
+a4587358426f display: Don't spam log when display state changes
+37e13dfc5a99 ignore virtual and overlay displays when turning displays off
+ed26d3314938 services: Suppress double upgrade notification for cloned profile
+6a475ce01d26 InputEventReceiver: Catch error in finishInputEvent()
+ff8cda2fa0fe SystemUI: Reset when sleeping state change
+eaa929260832 screenrecord: Set entire screenrecord as the default option
+64805eb711e9 Introduce `Force LTE_CA` override on per subscription basis [1/3]
+a08428ef375c core: Expose method to toggle recent apps through Binder
+fc5e69c21119 Settings: Expose clipboard auto clear setting [1/3]
+33efbc4ea331 SystemUI: MediaHierarchyManager: Initiate allowMediaPlayerOnLockScreen
+c96dfe29699c base: Add customization for double tap recents key [2/3]
+1f357e204744 base: Allow tuning app switch key regardless hw key
+6c0952db467f Fix incorrect text shown at PUK lock screen
+4733ac4b27b8 Don't update OverScroller fling state if improper time passed
+35acfab027af NSSLC: Prevent possible memory leak
+4b9df4530b84 Face: Do not throw exception if client does not support invalidation
+4b698c18a618 SenseProvider: Allow our face unlock to be used on third-party apps
+4f5a4dc7218f SystemUI: Implement pocket lock check for faceunlock
+3741d122dbb8 SystemUI: Add face unlock icon to keyguard blueprint
+9f64233f11f3 FaceUnlock: Remove background behind indicator on lockscreen
+b1a786aa4c8b FaceSense: Vibrate on successful authentication
+f2e262535977 services: Force load FaceSense providers
+b157ffe236db SystemUI: biometrics: Follow user setting to confirm face unlock
+4761c4c29646 SystemUI: Fix face unlock indication static calls
+6f5ba2128e98 FaceUnlockImageView: Prevent statusBarStateController memory leak
+7d6734d39f45 SystemUI: Implement bouncer face unlock animation
+faf19fca789e SystemUI: Use proper tint for face unlock icon
+5016c5b0e2a1 SystemUI: Implement face unlock recognition animation and text
+d93371d32d7f SystemUI: Disable FaceUnlock Lockouts
+d6936ea5b221 FaceService: Conditionally add ParanoidSense
+628b12474d97 base: Initial SenseProvider for FaceSense service
+b4b4239d2faf Fix timeout issue when Google Calculator app remains occluded after power key double-click
+0d144524cdf0 services: WindowOrientationListener: bail out if rotation resolver service instance is null
+a8d0b5a188c2 wm: Ensure freeform tasks bounds gets updated when launching tasks
+378b8a3f91af wm: Fixed screen flickering when launching horizontal apps from vertical apps
+c5c6908252f1 wm: Skip freeform displays from forcing desktop mode
+d01f81257385 WindowManager: finally proper desktop mode handling
+e08ff2ab16ab wm: Show rounded corners on freeform window on internal display
+eba7838d19e1 wm: Add API to listen for secure content in display
+2e35919b3c6f services: Add freeform system service
+db55a2545d3b base: Add support for LMOFreeform service
+4b9fb216b20c QS footer icon visibilities [1/2]
+5aefff414f3b SystemUI: add FloatingRotationButton for hw-key devices
+646bf14ab7cc SystemUI: Add VPNTethering tile
+9c8ad0d7b03f PreferredNetworkTile: Disable tile on Wi-Fi tablets
+6d4dc1677c46 SystemUI: Introduce preferred network tile
+2f54348fa1e8 SystemUI: Add private DNS QS tile
+1c8ba716a7b2 SystemUI: Update ChatGPT quickaffordance activity
+fd3f13df653d SystemUI: Add affordance shorcut for AI Voice Assistant
+92dbfef41ffe SystemUI: Use secondary label for language QS tile
+15178ae08a66 SystemUI: CastTile: Open cast settings on long click
+488dfa29b29a SystemUI: Re-designed caffeine tile icon
+27e55fa56bf8 SystemUI: Add Locale Tile
+a800071beea3 SystemUI: Add Screenshot tile
+12fbf01103d9 SystemUI: Add refresh rate tile
+3d70c7a489b6 BluetoothPowerStatsCollector: Handle onBluetoothActivityEnergyInfoError gracefully
+8d72333a2f54 SystemUI: Add Weather tile based on OmniJaws client
+4deed59671fc SystemUI: Add Smart Pixels tile
+b137be027355 SystemUI: Add tile to show volume panel
+2c242ae67c1c SystemUI: Introduce DataSwitchTile
+036d51cb4915 CompassTile: Make Compass point towards North
+6643df66f074 SystemUI: Add Compass tile
+236f2d124968 FPSInfoService: Improvements and clean up
+a55bdf174e9a CPUInfoService: Rewrite from scratch
+d97d39c8eae1 SystemUI: Add default path for FPS info service
+ae58a1d0c729 SystemUI: Rewrite FPSInfoService in kt from scratch
+9d484993708e SystemUI: FPS Info Overlay & Tile
+362f3ff3c301 QS: Add CPUInfo toggle tile
+e273204a707f base: add CPU info overlay
+423790be1628 SoundTile: Add DOUBLE_CLICK effect for vibrate mode
+682a8c0517a8 SystemUI: Add Sound tile to Quick Settings
+091263bd96d4 SystemUI: OnTheGo: Update tile more dynamically
+53b6a0412452 SystemUI: QS: Add On-The-Go Tile
+f76730ba4477 SystemUI: Update default tiles as per usability
+006535dc63a2 fixing app directory access
+a666e9232831 fixing ShadeDialogContextRepo crash
+ffa11908417e SystemUI: Hide QR code scanner tile if not launch activity available
+45c98e0947f3 Fix NPE problem to avoid systemserver process crash.
+c5d050b5386f PowerStats: extend the MAX_STATS_ARRAY_LENGTH
+038e071fd742 TelephonyManager: Gracefully handle null telephony service - isNullCipherNotificationsEnabled
+348d9beb0a84 Telephony: Gracefully handle data enablement checks
+5bbb3ca751d1 TelephonyManager: Gracefully handle null telephony service [2]
+bed22ac73b95 fixup! Broadcast radio power state changes
+1d4db9decad4 Broadcast radio power state changes
+6cffc5cca6b4 SettingsProvider: Fix NPE when upgrading
+83b934f954a5 SettingsProvider: Resolve google gms configurator denials
+76411fa85382 KeyProviderManager: Accept N >= 1 certs per key [1/2]
+18e90cc73ad9 Attestation: Update logging for keymint 4.0
+1432f6296e2a QSAnimator: fix random crash
+3c8968ea0905 Fix the system server restart issue caused by the fingerprint framework
+264142285d6d add a workaround for WallpaperManagerService.hasPermission() crash
+61e99b967b14 don't delay setting observer callbacks for background system packages
+0ae8ddff6888 PinnerService: catch exceptions while pinning files
+dfb7b3274b1f DeviceIdleController: fix google gms idle whitelist security exception
+3726087fac11 NetworkManagementService: fix crash when mUidCleartextPolicy is empty
+7d40cf2493ab fix NPE system_server crash in F2fsUtils.getFilesRecursive()
+3701785f1f57 SystemUI: Fix NullPointerException in updateFocusOverlayRadii for missing drawable layer
+9119c34d7b7c NavigationModeController: Silence log spam
+2422b57cc81e Shell: Use night/light theme for buttons/caption color instead of luminance
+96130ee290df SystemUI: force enable clock fidget animation
+c87cfa11fe76 SceneTransitionLayoutState: downgrade log spam to debug
+65dd467ac200 fwb: kill more debug spam
+d8ed559042f9 BiometricScheduler: Cancel operation if not idle
+4ee2d2b66acc disable safe media volume management
+55c299de2990 Increase Zenmode max hour limit from 12 to 24
+e65f2343f44d Revert "Disable blurs during critical thermal state"
+50c4b84b8e5c Revert "Adjust the threshold for disabling blur on thermal status"
+3dde045bef87 SystemUI: VolumeDialog: Add toggle for haptic feedback [1/2]
+334ad59406b3 VolumeHaptics: Tune the primitives
+cde01fa0f0e4 services: Fixing per-app volume ux
+9f2027b3d34f MediaFocusControl: fixing media focus issues
+e99809604ccb Use proper value for default multi-media focus
+47984c8d9eca Adding multi-media focus support
+dc874cf0f1cf base: support per-app volume [2/3]
+6a81ac54d0bc SystemUI: Adapt screenshot sound to ringer modes
+8bce204de2d0 SystemUI: Add toggle for media squiggle animation
+22e04fd4805f SystemUI: Fix heads up notification timeout on ambient display
+8c8340442b8e SystemUI: Allow to pulse on new tracks
+4164e5941851 Implement DeviceConfigUtils and service
+52b5c74d7a37 base: Allow scheduling always on display [1/2]
+8443f7123946 Doze-on-charge: Add few improvements and fixes
+d117e64c551c base: Add Doze-on-charge customization [1/2]
+587d7467b216 SystemUI: Allow toggling rotation button suggestion [1/2]
+ab97fade6b7c Fix crash with protected content with ElectronBeam/Scale screen-off animation
+bedcd211b20a fwb: Screen off animations [1/2]
+ec0e00822220 SystemUI: Allow devices to disable Smart Pixels on UDFPS
+0ddaad1a738b SystemUI: Smart Pixels [1/2]
+f9529ad20e7d fwb: Implement cutout force full screen [1/2]
+fe59ad799bbe Allow tuning ambient display with sensors [1/3]
+5b3f4bb03deb Add toggle to disable charging animation [1/2]
+979bc7d3c12d SystemUI: Implement burn-in protection for statusbar
+1ef16eadb7b7 SystemUI: Integrate Google Lens into Screenshot UI
+18bc5a763f16 SystemUI: Add switch for compact HUN [1/2]
+306a8db04fd5 Use IntArray instead of ArraySet<Integer> to store int lists
+cdbda5948080 SystemUI: Allow disabling clipboard overlay [1/2]
+a7f2a3d617ee Add kill button to notification guts [1/2]
+8987a77a4992 HeadsUp: add timeout option (1/2)
+b7e41a4ce6f9 Allow to suppress notifications sound/vibration if screen is ON [1/2]
+f45960623365 SystemUI: Default to true for HeadsUp notifications
+22a6243bb2c6 SystemUI: Add less boring heads up option
+1396c0aee146 base: Ensure pocket sensor is wakeup
+2eaeb3403f84 base: Allow to define custom pocket sensor value
+f9f5dcd9d8c7 services: Start pocket mode service only if supported
+a772a23ae5ab core: Use blue area for pocket mode illustration
+7766d507d289 core: Refactor pocket mode interface code
+ffd661e749fb policy: introduce pocket lock
+279407b28eda base: Introduce app lock [SQUASHED]
+d4db1b5ba1d7 services: GameSpaceManager: Update and clean up
+df4580a55e40 services: Add GameSpaceManagerService
+b1e0f13aa81d GameSpaceManager: cleanup and improvements
+e88c1f4e237b GameSpaceManager: Rewrite and fix app detection issues
+486218889d79 base: Fix lock gesture not working for secondary users
+86e180d9380a base: Rework lock gesture feature
+5b2dabe69a67 services: Clean up unused settings for three finger swipe
+b5025ca3a73f services: Switch to binder IPC for three finger swipe
+5202299d851f Add three fingers swipe actions [2/3]
+bd291d0d5f31 GameSpace: Improvements for detecting foreground app exit
+f142db950e87 base: Fix gamespace on secondary users
+861f4a40a479 base: Fix NPE in GameManagerService
+4d70eeee32f8 GameManagerService: Prevent multiple threads from accessing settings observer onChange
+cb952d5c68b2 GameManagerService: Set device_config property on behalf of GameSpace
+647d991bc4dc SystemUI: Add support for GameSpace
+657dff24450d base: Allow to customize bottom corner swipe up action [2/4]
+cd9a1bd5d89c inputmethod: allow hiding navigation ime bar [1/4]
+446ed6925796 base: Implement 3-btn-nav layout settings [1/3]
+41ac691bdb1a SystemUI: Fix edge back gestures
+4acd3047218f Settings: Allow changing the height of gesture navbar [1/3]
+c553c8748c7b Cancel long swipe for cancelBack in navigation gesture
+02a895223edf Optional haptic feedback on back gesture [1/2]
+d91ab33af08b Allow to hide arrow for back gesture [1/2]
+46927ec7e4b4 Use FORCE_SHOW_NAVBAR to actually toggle navbar
+db81e51aabed DisplayPolicy: Do not attach navbar during top app transition when tiny task bar is enabled
+3c4067904c51 SystemUI: Disable edge gesture if navbar is disabled
+df9f585bfcd7 EdgeBackGestureHandler: Change back gesture height intervals
+a033bfcade6c Allow changing back gesture height [1/2]
+bb5da627dc80 EdgeBackGestureHandler: Switch to Tuner API
+ca24db2bbdd5 Allow changing the length of gesture navbar [1/3]
+f67ee3b433c3 PhoneWindowManager: Add vibration when using physical camera button gesture
+da62620d1515 SystemUI: Avoid using deriveStateOf for media translation
+6923dccde2b5 MediaControlPanel: Fix media playback crash on chromium based browser
+854893ff7b01 SystemUI: Add/remove notification listener enhancement
+f412fff7e24e ScrimUtils: Add notifier for user change
+8902511ac50d MediaArt: Allow lockscreen media art on landscape
+7d450d5f93ae MediaArt: Register tunable for all users
+b2f99cb72c59 MediaArt: Allow user to disable media art on ambient display
+1dda9a16c2ac EdgeLight: Use dozing status from provider directly
+40816332aa2c Pulse: Respect keyguard and bouncer state changes
+5f450ddf209c ScrimUtils: Send dozing state change value to listeners
+e8612d602dae EdgeLight: Make it work independent of ambient display notifications
+0128001ec427 EdgeLight: Update effect animator
+61cefc95f90e EdgeLight: Do not run two moving effects at once
+8470ae905194 EdgeLight: Introduce EdgeLight animation style
+a5459090f870 EdgeLight: Add animated flowing rainbow gradient
+4cfdd1fffe5d EdgeLight: Set initial stroke width once in init
+6249a15e0c78 EdgeLight: Improve rainbow color implementation
+b5d48b1331eb EdgeLight: Add rainbow gradient color mode
+a5415025f295 EdgeLight: Do not set paint alpha every frame
+a682763ed084 EdgeLight: Add 4-side rounded style option
+c05b51dc8675 EdgeLight: Allow customizing stroke width
+929e99f0d0a7 EdgeLight: Allow customizing pulse count
+585e08797ca7 EdgeLight: Remove animator when finished
+d97ce806afa6 EdgeLight: Rework color handling and remove redundancy
+9de91afa3a1b EdgeLight: Allow granular color modes
+5604b9d56313 SystemUI: Add edge light feature
+3f9655086e1a Pulse: Add matrix renderer style
+5f16e5fb399c Pulse: Post on main thread
+2ba4f9cef452 Pulse: Invalidate cache on user change
+9e20000fd720 Pulse: Add sparkle pulse renderer style
+81bf6ff804d1 Pulse: Do not add listeners if pulse is disabled
+a37516b44450 Pulse: Unify pulse running/showing state
+49cc8f86af58 Pulse: Do not stop pulse if dozing
+76353241eed3 Pulse: State enhancements
+b43f9c4447fe Pulse: Make ambient pulse configurable
+b5c37eb491eb Pulse: Improve background design for RetroVUStyleRenderer
+2c4d43927fac Pulse: Fix length mismatch crash in MinimalStyleRenderer
+b37aed10c29f Pulse: Add 3 new pulse style
+e986f736078d Pulse: Add fading block renderer
+3306e9850e1b Pulse: Use visibility guard for draw and engine process
+ea01e576e5da SystemUI: Add pulse visualizer
+6c7fd5378108 MediaArt: Remove dozing condition for lockscreen media art
+ddd16b74b718 MediaArt: Improve updates logic for MediaSessionManager
+d92c66316063 MediaArt: Utilities: Update for media control
+a45b06ec6f4a MediaArt: Improve handling of lockscreen media art
+030c130ab776 MediaArt: Improvements for lockscreen media art
+789c6fc8885f MediaArt: Add advanced filtering and customization
+690c96c7a07e SystemUI: Update track title and artist on metadata change
+11f38a0f22b3 SystemUI: Add lockscreen media art
+bf1331840138 SystemUI: Prevent keyguard state conflicts that caused screen flickering
+b5cc7eded32f base: Do not reset keyguard going away state
+19912f3bd9b2 SystemUI: Filter out duplicate notification icons on statusbar
+223a1735bb6f SystemUI: Fixing doze vulnerability for disabling QS on keyguard
+c28dbfcd8fc2 SystemUI: Add option to disable quicksettings on keyguard
+3eb5959961ef SystemUI: Add ScrimUtils helper [SQUASHED]
+64fd86f831c9 AnimationUtils: Fix inverted flag logic and wrong timebase fallback
+47979cf4ec68 services: Disable automatic system server heap dumps by default
+c3d734187eb0 core: Make CHARGE_OPTIMIZATION_MODE readable for pixel agent
+0fa1db2d7db2 SystemUI: Inflate QS on orientation change
+84e31b5303f8 SystemUI: Add QS tile layout settings [1/2]
+776806dc4bc5 SystemUI: Add toggle for QS tile haptic feedback
+1e08fcbf153e SystemUI: Add brightness slider shapes
+4ae7cdd9b7a1 SystemUI: Add customization for proper circle QS tile shape
+ef780da1bc6d SystemUI: Add customization to select QS tile shape
+8a1951c455ad SystemUI: Extend brightness slider haptic toggle for auto brightness button
+e6fe3ecfcc01 SystemUI: SliderHaptics: Tune the primitives
+47cff0e9bbf4 SystemUI: SliderHaptics: Clamp the pre-power sum in scaleOnDragTexture
+3cabb42bcf34 SystemUI: SliderHaptics: Cache composed effects for primitives
+5916f56af008 SystemUI: Support legacy vibrator haptics for slider haptics as well
+49d7f4408674 SliderHapticFeedbackProvider: Improve slider haptics
+7f2dc8792002 Add toggle to enable brightness slider haptic feedback [1/2]
+b46bf015afff SystemUI: Show daily data usage in QS footer [SQUASHED]
+6e52aa8c7102 Partially Revert "Clean up unused methods from DataUsageController"
+2a3fa87fd60a QSFooter: Launch crDroid Settings when long clicking settings
+c9b785e10eef PiaV2: Only depend on aflag
+cc5042bfff40 SystemUI: TunerActivity: Remove icon toggles if not supported
+2dc1439a2d38 SystemUI: Use setValue from TunerService in TunerSwitch
+c630833d5c95 SystemUI: tuner: Enable enableOnBackInvokedCallback
+04d76840abc1 Status Bar Tuner: Fix preference icon tint
+2657cde2059a SystemUI: Tuner: Move to SwitchPreferenceCompat
+dda1ab1de69b BluetoothControllerImpl: Optimize connected battery level scanning
+cb1bbe596b3c BluetoothControllerImpl: fetch battery level from any device
+e50a8f8ddffc BluetoothControllerImpl: Synchronize mConnectedDevices access
+e8a6a616b5cc CarrierConfigManager: Enable inflate signal strength by default
+2b8311fed749 remove ScrollCache when Activity destroyed
+9b63cae7d772 fix missing make NonNull judgment when the old parent is null.
+032a17cd6584 BatteryStatsImpl: Guard against OOB
+26384d5be8c2 add workaround for SSM.newTargetUser() system_server crash
+45b2766863b5 VoiceInteraction: Check if default package is installed
+a68bb3b3ec4c core: Catch OOB when returning pooled string
+a9452b3de4be fix handling of MATCH_ARCHIVED_PACKAGES flag in getPackageUidInternal()
+52440c8fa761 core/res: Do not hardcode text height in shutdown dialog
+5fa5c46bb1b2 InputMethodUtils: Fix system bootloop when no IME found
+1650d2b66292 ThemedResourceCache: Replace ArrayMap with HashMap for performance
+d28eebce665d LayoutInflater: remove less frequently used widgets
+2121abef442b LayoutInflater: Fallback to reflection when view tryCreateViewDirect fails
+cd22e65dc078 LayoutInflater: Opportunistically create views directly for performance
+062e1842c5a9 SystemServiceRegistry: Replace ArrayMap with HashMap for performance
+8ad9424f7be3 LocalServices: Replace ArrayMap with HashMap for performance
+8f9b48c329ea fix an upstream race condition in handling of system error files
+074c0575515d SystemUI: biometrics: Add missing calls to parent onFinishInflate
+6d1b1216e064 FATAL EXCEPTION IN SYSTEM PROCESS: android.ui
+611d88b27362 OplusTypeCastingHelper: update stub
+21a36e3749e3 Add some fwb stubs from Oplus
+b8ead9ce5afe Keep a null check before accessing the BluetoothA2dpWrapper APIs.
+34c4074372c2 ImageReader: Allow skipping of nativeDetachImage
+9a89e39fa202 Make empty modem activity info as valid
+9f9879e09000 sounds: Implement new screenshot sound effect
+3914a662d5c0 Restore getSimStateForSlotIndex in SubscriptionManager
+36d7acd86e21 RuntimeInit: Prevent bootloop trying to handle app crash of null service
+f82e8b904cee StringBlock: Prevent SystemUI crash when inflating QS
+ca1e44485936 libandroid_defaults: explicitly enable ThinLTO
+f75a57d0d1d4 Optimize AbsListView to reduce click operation latency
+b1f5c4b8cb31 ViewConfiguration: Set scroll friction to 0.009
+db50b734d58e AbsListView: Improve scrolling cache
+70664cefdbff Speed up Orientation Listener
+9ec86f092d1e telephony: Trim warning log if app not installed
+7d7d4e63d8d4 Fix wrong pid in event_log when native crash
+7efa3177787f Fix NPE in TextToSpeechManagerPerUserService
+2dfa6861fa80 Fix NPE when IntentFilter doesn't have any data type.
+128adf064942 Fix crash on light/dark theme toggle
+e1991abfc312 Fix SystemUI crash when loading album art color
+c9bef6cb30a3 Support dark mode for default theme
+fccfba2b8174 SystemUI: OnTheGo: Update camera API for service
+92d1ec703b70 SystemUI: On-The-Go Mode (1/2)
+d5cd2096622f SystemUI: clear keyguard indication background and icon on empty text
+df6bbbe692c9 SystemUI: Remove power menu shadow
+acf419e722ce SystemUI: Sync power menu and restart menu layout
+e24de953099d SystemUI: Blur the power menu
+b4b3d2d2ea8a SystemUI: Add restart SystemUI in Advanced Reboot [1/2]
+a47955c5efec PhoneWindowManager: Prevent NPE with voice search action
+217fb8268319 PhoneWindowManager: Check NPE for LineageHardware
+e1c55514d987 base: Introduce Accidental Touch
+3601ed05d607 Switch gesture navbar to new navigation bar key event source
+a5e606b0db8e base: Introduce new navigation bar key event source
+4c62ca413d99 SystemUI: Fix slice view widget padding
+59404009534b Move Swap capacitive buttons to Settings [1/3]
+c7f7baa1ed02 Add toggle to disable HW keys [1/2]
+bcac1bd38f00 Add more device key actions
+75dc3a06e8bd KeyGestureController: Fix screenshot shortcut crash
+771cb4e8d108 base: Sensor block per-package switch
+29e58d75a6ac SystemUI: fix a screenshot process crash in ScrollCaptureController
+b353a975538f telephony: SmsMessage: Bring newFromCDS method back
+57d3c0f60add EnhancedEstimates: Get estimates from Device Health Services
+2b67d6806282 Avoid crash when dream starts
+09947bd6fa33 Make all activities resizable
+cefaa4e560ac ActivityManagerNative: Prevent possible soft-reboot
+63e267cb6207 FileRotator:fix NPE due to The File.list() method may be return null.
+e9832bd3ba28 ConfigurationController: Prevent app crash on orientation change
+4e7c34b4adfe development: Address NPE when removing preferences out of developer options
+699a53d23a81 Shell: Don't show bugreport on DocumentsUI
+f95a7532df97 SystemUI: Add ability to hide carrier name on lockscreen [1/2]
+c9a3ad1a7d68 SQLiteDatabase: Catch corrupt exception during transaction
+0d8f240eb18f FingerprintAuthenticationClient:fix NPE problem due to getListener method return var is null.
+1e85b423872a Fingerprint authentication vibration [1/2]
+c9728a2b1ba4 ThemeOverlayApplier: Exclude Launcher3 and Themepicker overlays
+fbb668bd3fb5 QRCodeScannerController: Check for google package availability
+3fa39f8205c5 QRCodeScannerController: Use Lens as fallback activity
+dc40bf5beea1 Allow overlaying font spacing for lockscreen clock
+4bea57245664 base: Allow screen off UDFPS when configured
+cf758f86c423 SystemUI: Update smartspace to CP1A.260305.018
+76412f856506 SystemUI: Disable smartspace default view
+9f820e86bbe9 SystemUI: Implement the newly reverse-engineered smartspace
+dc377f42191e BatteryStatsViewer: Go expressive
+901fbb8009ed BatteryStatsViewer: Enable enableOnBackInvokedCallback
+baf0706a4965 BatteryStatsViewer: Fix theme
+d08965cce4d2 BatteryStatsViewer: Fix initial activity after launch
+8ee009713b30 BatteryStatsViewer: Create IA entry in Settings -> Battery
+8a44c6e6ef14 BatteryStatsViewer: Remove some hardcoded strings
+7a256443a400 Revert "Hide the Battery Stats Viewer launcher by default"
+de4dc2ad7fc9 Partially revert "Fix for the lock icon issue"
+3b8bbfd6523f Add support for UDFPS icons
+b51fbe053a7a Bring back UDFPS animation [SQUASHED]
+ca4ed79d43d6 UDFPS: Make GhbmIlluminationListener interface public
+72ee63e9aa6e SystemUI: Fix keyguard user avatar margins
+fdc41f1747ad SystemUI: Launch power menu from QS only if enabled
+d727b5a5683a SystemUI: QQSGestureListener: Fix up for multi-user usage
+903426d7c9c9 Hide power menu on secure lockscreen [1/2]
+a1da24f3ac21 BatteryService: Add support for oem fast charger detection
+cb8301aee9c7 SystemUI: Update Bluetooth battery level assets
+4eec87bf098f AuthRippleController: Prevent potential global overflow
+e2920c792e59 base: allow disabling ripple effect on unlock [1/2]
+f0d497085c1a SystemUI: Reduce keyguard indication text padding
+071d08cd6d7a SystemUI: Add current divider config for lockscreen charging
+7d34d78d9ad1 LockscreenCharging: squashed (1/3)
+2d983a1c0571 base: SystemUI: Allow flags to be overrideable
+1ccf9d074dcf SystemUI: Move keyguard date slice row to header
+c1ad83f2c3e8 SystemUI: Move keyguard date slice row to a separate function
+d14b4fd78b08 SystemUI: Allow setting end section in keyguard slices
+c4f99f5b5d26 SystemUI: Prevent getting stale values for smartspace visibility
+a2289b342ba0 SystemUI: Rename AOSP toggle for smartspace
+dd15e60754f8 SystemUI: Add pixel style lockscreen weather based OmniJaws
+35fb4370e86d Revert "SystemUI: Don't remove keyguard slice view"
+b9eb7d09864b core: Add OmniJawsClient
+c88e3d74a75f Add button to AppErrorDialog to upload crash information to pasty
+a28a8887faf5 SystemUI: Improve guarding header image
+b2ec8d3d5232 QS Header: Fix memory leaks
+dfc62c325c39 SystemUI: Compress custom file headers properly
+c9dafd800b4c base: import ImageHelper
+c99b2c906a90 SystemUI: Add QS Header Image customization [1/2]
+095aaa9b3309 Show hidden apps on secondary users' app lists
+bf7a60d74b2a SettingsLib: Don't show system overlays on apps list
+9fb4dcee5875 SettingsLib: Prevent NPE for fragments without divider
+cce9d65c48c5 StatusBarIconController: Don't crash at boot
+7039f8cda2f4 base: change background activity start mode to allow for widget configure
+3af795dc44a1 PowerUI: Mute logcat spam.
+0745a1321960 TelephonyManager: Gracefully handle null telephony service
+ee7e59724f46 Remove unnecessary HashMap instantiation
+911f7f71e49f SystemUI: Add null check for wakelock in KeyguardViewMediator
+58443837d61c SystemUI: Fix logspam in NotificationMenuRow
+596354ca06b9 Fix WifiInjector instance exception if WifiService disabled
+9e2d27a4223a services: Add NPE check for updating system app from play store
+521ba514c78f SystemUI: Remove padding for system icons in status bar
+cbfb63846343 SystemUI: Fixup applying statusbar extra padding
+8a594050e052 SystemUI: Align keyguard carrier text with status bar
+3d9aa54b354c SystemUI: Allow tuning extra padding for statusbar layout [1/2]
+08aae8bc6340 SystemUI: BrightnessController: do not update slider from DisplayManager callback if user is changing brightness
+b569fe630081 Wifi Standard: apply MVC structure
+269fdcae7fe6 WifiStandardImageView: Modernize and improvements
+b6e278ee1c0e Wifi Standard: Use coroutines instead of handler
+e45ecbcb8197 Wifi Standard: Prevent possible memory leak
+b17b2f637bbf Wifi Standard: Rework handling logic
+8b55ccc2142c SystemUI: Tune wifi standard icon margins
+549f1a5784ff SystemUI: Introduce wifi standard icon feature [1/2]
+99b3d2d0aeae SystemUI: Move 4G icon instead LTE switch to statusbar tuner
+0229113f4f6e SystemUI: Allow using 4G icon instead of LTE [1/2]
+c1c8923a7250 SystemUI: Move data disabled icon switch to statusbar tuner
+e3f3d2535c57 SystemUI: Option to disable Data Disabled Indicator icon [1/2]
+9ae511db4473 Network traffic mode for status bar [1/2]
+9f561811b6a8 SystemUI: Fix NPE when IMS is not available
+f08c7ea8947f SystemUI: Forward port 'HD & wifi calling statusbar icons'
+70cf2b4a9948 SystemUI: Remove existing icon group if its overriding
+6471c68adec6 SystemUI: NetworkNameModel: Fall back to SPN if DATA_SPN is null
+2ed85294f9f3 SystemUI: Do not duplicate SPN and PLMN in network name
+7cc7fc3e90d4 SystemUI: Add roaming indicator to statusbar tuner
+ccc078a5db8c SystemUI: Allow toggling privacy indicators [1/2]
+9f6a9c64000b SystemUI: Kill old privacy indicator icons completely
+c745ff4f209c SystemUI: Re-add padding for left custom logo in statusbar
+dc178a2ad5a9 SystemUI: Move right logo in statusbar to extreme right
+92c31dcce9e4 Custom statusbar logo customizations [1/2]
+bcd6de5c773b SystemUI: Add ability to toggle bluetooth battery level [1/2]
+fa73bb51f982 Battery Styles: Add BatteryBar [1/2]
+4392e75156d7 SystemUI: Fix colored icons going blank
+08cadb6faf67 SystemUI: Apply colored icons and notification count to new icon area controller
+1d45aac43bc0 SystemUI: Fix notification count not working after a reboot
+56f5c01b8f32 SystemUI: Forward-port notification counters
+7af5baf03643 SystemUI: Use app icons for notifications in statusbar
+4b2fb629d829 base: Add method to restart SystemUI
+6fcb7220e375 SystemUI: Drop unused rounded corner padding
+fcbb932c3998 SystemUI: Add customization to show battery percent
+0ece31dfb47f Pause apps feature
+2cb5ef833478 SystemUI: Separate double tap to sleep on lockscreen [1/2]
+b4e4e9db87bc SystemUI: Fix up status bar start side content layout
+1e8f23be6fac SystemUI: Fix up status bar end side content layout
+850b6dd1af5a SystemUI: Improve ripple animation color
+4b09e77c9726 SystemUI: Fix neumorph color for clock background chip
+19f065fff8cd SystemUI: Fix static color in clock background chip styles
+1426e3f6ac0a SystemUI: Do not set white only for outline bg clock styles
+8231f09c3b36 SystemUI: Statusbar clock background chip styles [1/2]
+ada6a6dbb462 SystemUI: Statusbar clock background chip [1/2]
+d8f1fea9f88e NotificationPanelView: Switch to Tuner API
+fcbe951c498b SystemUI: Add case to quick pull down status bar anywhere
+f7e0c85af12e SystemUI: Disable quick QS pull down by default
+c89cc078d892 QuickSettingsController: Switch to Tuner API
+980ca29f3270 Add DeskClock to hiddenapi whitelist
+27f88538c77b Statusbar clock customizations
+9bed6fbbd28c Add separate tunable for clock seconds
+1a150436605a display: Allow HBM in manual brightness if no time limitation
+157c86cf2f88 display: Handle zero auto brightness adjustment
+b643c58ef321 SystemUI: Fix crash when click rotation button on keyguard
+a8a4af31a568 SystemUI: Remove tracing in `NoRemeasureMotionLayout`
+60713ca46244 SystemUI: Add more null checks for scrims
+96f1ecf6a59e SystemUI: Fix boot failure with white wallpaper
+40f7b1a9e9b5 SystemUI: Fix scrim using stale shade colors on UI mode change
+3b033e704fef SystemUI: Ensure behind scrim alpha is 0 when unlocking
+923a9a36a52f SystemUI: Force black tint when animating to/from AOD or PULSING
+a31633e4b978 SystemUI: Remove composite alpha from additional scrim on lockscreen
+ac257ebfe981 SystemUI: Follow light/dark theme in quick settings
+c3ff0a641c48 SystemUI: Improve shade fallback colors
+6121535f0219 core: Update shade panel colors
+71bb8d1c79ba SystemUI: Fix crash when resetting ShadeController views
+1a23d81534e5 SystemUI: don't hide date text on lockscreen when media is playing
+4ace571916cf SystemUI: Catch NPE when creating slice provider
+899bc66b6cfa Screenrecord: Export RecordingService for External Usage
+06575a1841df base: use a double click effect for charging if there is no amplitude control support
+1fcb02ba8946 SystemUI: Fix internet dialog background runtime exception
+80f6194d4d80 InternetDialogController: Allow scanning of networks while device is locked
+18f464567a7f InternetDialog: Properly nullify wifi toggle
+b393cc7ae84c SystemUI: Fix exception when retrieving signal strength drawable
+6188c7addb5b SystemUI: Prevent InternetDialog crashing system
+a5260aae1049 SystemUI: Add statusbar call strength icon to tuner prefs
+644166545d2e SystemUI: Add switch data saver icon
+30d16fb8d0ca SystemUI: Dismiss screenshot window on touch outside
+c67eba6911a0 SystemUI: Add statusbar NFC icon
+ebbe861ad3f3 SystemUI: Update NFC tile drawable
+c1116ea3d0fd base: Remove restrictions for system audio record [1/2]
+7c418c5f059a Move Bluetooth timeout back to AOSP settings
+97f4765b87a9 Wi-Fi timeout feature
+674d9a04ae52 FlashlightControllerImpl: Fix crash when camera IDs list is null
+4abf4f8619a3 camera2: StreamConfigurationMap: add another constructor for MIUI camera on A15 QPR2
+8cae8b86a066 Camera: Prevent array index out of bound exception
+f0babddc3ef5 CameraManager: Fix NPE in getting cameraIds
+66d07775542a Camera: Prevent crash when unable to find tag
+dfeadbf578cb CameraServiceProxy: fix exception
+0db23bda27e0 core: camera2: StreamConfigurationMap: add constructor for MIUI camera
+130c53450321 Camera: Clearing exception for Extended Face
+7925a4a3818f Camera: Decrement image references after 'onNextImageAvailable'
+6fa4cc626cbe camera: Add backwards-compatible CaptureResultExtras constructor
+9d7479b69933 CameraDeviceImpl: Don't crash when checking input configuration failed
+496707163a4f Select the proper request list size
+706f226f7eaf Camera: Prevent crash with prebuilt camera metadata
+7e999038cdbd Camera: Ignore torch status update for aux or composite camera
+921829235619 CameraManager: Fixup exposing aux camera to apps
+a08e9bb99b67 Camera2: Notify fps as Session Based Parameter
+e86c7c1c7d57 camera: Allow selected camera apps to skip unconfigure
+02deb7971c3b Guard in short-circuit evaluations for stringSplit methods.
+d2e3a7131b88 Camera: Don't crash when trying to disable shutter sound
+c66a5e6abf73 Camera: Don't throw exceptions when value pairs have spaces in them
+32315c4b7ca4 Camera: Add feature extensions
+293cc81b96d6 Camera: Extend face detection
+e29a240fd308 Fix Photosphere/Camera FCs
+9bd0cc21e7e3 SystemUI: monet: Allow chroma & luminance to affect secondary colors [1/3]
+557020c16783 SystemUI: monet: Allow a more granular control over shades [1/2]
+c2c88a98866d KeyguardIndication: Fix glitchy charging info on AOD
+98525f6a1ffe KeyguardIndication: Fix glitchy charging info on lockscreen
+5d606745a5df Crash occured due to null pointer exception.
+a4cca9cd92e0 view: add null check for dispatch touch view
+614657b47a03 wm: Fix NPE when pip onAnimationEnd
+29c269eec58b Fix SystemUI NPE when ScreenDecorations is disabled
+2f4a84100548 Calm down attention service logspam
+921bdaffd702 PowerMenu: Hide emergency affordance if not selected
+063dabe569ce services: Skip access check for matlog shipped with rom
+425e37aff908 Fix the NullPointerException in Android S Version:mServicesData
+15ec9456cd33 InputWrapper: Opt out early if session == null
+2f6b9104e8d5 neko/Cat: Mark FLAG_IMMUTABLE PendingIntent with FLAG_MUTABLE
+9f2d6abeda88 NetworkPolicyManagerService: turn this into just a warning
+be05feb4f947 KernelCpuUidActiveTimeReader: Do not spam log with negative active time
+09f11e710542 SystemUI: Fix SystemUI Crash
+a4654fbd31d2 Don't enable extra StrictMode features for userdebug builds
+251a277fb8a5 NightLight: Allow lower temperatures
+92f9d8a86fc0 MountService: Prevent NPE with DropBoxManager
+fb100e6ae053 ZygoteInit: Disable debug and tracing
+942f9b5d3ce0 fwb: Only enable some features on eng build
+b42875409ab1 JobScheduler: Remove jobs for non-existent packages
+735cb6f8e435 hwui: Compile without no-omit-frame-pointer
+24d6d846c825 libhwui: compile for performance
+72f9ee86fea1 libhwui: enable O3 when compiling for perf
+97b9a2cf9bd0 libhwui: remove deprecated perf flags
+81d16d3a4279 SystemUI: Add charging icon to the charging animation
+3cadef4a3fd7 base: Use wireless charging animation for wired charging too
+732a1148f46a config_progress_background_tint: Use accent color for progress bar background
+e2fc9e464a5b CarrierConfig: Enable payphone call blocking option
+f4a1a00f09d9 CarrierConfig: Always show ICCID
+a4f8adaf5205 CarrierConfig: allow toggling VoWiFi while roaming by default
+729664abfcfc CarrierConfig: Always show APN settings on CDMA carriers
+c49ae0c44a3c SystemUI: Link dialog radius to config_dialogCornerRadius
+a4e09c45f0d3 SystemUI: use default dialogCornerRadius for qs customize title
+d628c028585b SystemUI: Fix QS customizer corner radius
+2ab9c4b58388 DisplayModeDirector: Make sure we apply refresh rate on startup
+403ee06c57bb ColorUtils: Prevent crash if alpha component is translucent
+eb3f31a8a429 Fixed a crash in settings in tts engine selection screen.
+ee39aae1c880 ListView: Disable dividers by default
+5a4b5ce92f90 SystemUI: Make popup menus more rounded
+6fd3e8eb2217 services: Skip access check for matlog shipped with rom
+017c8353f1ec DisplayUtils: Introduce getScaleFactor
+27ada6bf4c35 SystemUI: Reduce screenshot dismiss delay to 3 seconds
+d70d7128b79a SystemUI: Remove Android build number from QS footer
+d94e957689e5 SystemUI: screenshot: Hide action chips text labels
+36fdbb98c69a TtsEngines: avoid crashes caused by null engine name
+3fb857970712 WebView: Add check before setting default or fallback provider
+6109d86a6542 KeyboxChainGenerator: Use real vbmeta digest
+f2076a4b7d40 base: Auto set vbmeta digest and other props [1/2]
+5537b43f30e3 KeyboxChainGenerator: fix build release parsing
+d1c133372b18 KeyboxImitationHooks: Add modificationTimeMs to key metadata
+2005b7143670 KeyboxImitationHooks: Delete old keys if newer ones fail to generate
+45ffe509daae KeyboxImitationHooks: Ignore keys requiring auth
+a5b0016b0c4f KeyboxImitationHooks: Persist generated verified boot hash
+e804c9df0113 PixelPropsUtils: Skip play Integrity props in isolated processes
+e4b5f8f5cb49 PixelPropsUtils: Fix failing strong integrity with PIF disabled
+00aa92890e13 PixelPropsUtils: Add more logs for debugging
+857edc5c08fc PixelPropsUtils: Drop overlay config
+c3be2f7752f2 KeyProviderManager: Drop overlay config
+921718390bab PixelPropsUtils: Move from props to Settings switch
+e0099de33a49 PixelPropsUtils: Dynamically spoof props for GMS
+d464d7c809c9 PixelPropsUtils: Add prop to allow blocking cert chain
+5255db5a55d5 base: Add key generation for keybox spoofing [1/2]
+9d7f95c04c07 Initial implementation of KeyboxImitationHooks
+6cb3a039caf3 PixelPropsUtils: Bring back PIF
+ebb7419af8de Introduce PixelPropsUtils for pixel features [SQUASHED]
+b5ca8f567045 core: Fix menu popup ripple
+b30b19bcbb77 SystemUI: More rounded corners
+3aaa48d8f8d8 SmoothSpinners: Makes the loading "spinner" animation smoother
+e632bfa2bcd0 base: Add rounded corners to activity open/close animation
+0041854c33ee base: Allow choosing a custom vibration pattern [1/3]
+85ad111475d3 base: Add vibration patterns from OOS [1/3]
+e9aaf3c32adf base: Add DND & Rate settings to flash on call [1/3]
+eedd2d98a93c base: Add Flashlight blink on incoming calls [1/3]
+caad9c356f51 Incall vibration options [1/3]
+e14929d6dcf4 RingtoneManager: Set an default ringtone for the SIM 2
+3d7d261baafb base: Add readable annotation for Ringtone2
+3bacb156bcd4 base: Phone ringtone setting for Multi SIM device [1/3]
+b480f905d398 Put bare minimum metadata in screenshots
+38f9c3df0e85 Battery light: 100% charged level (1/3)
+959fa859cac0 pm: Add seamless migration between test and release keys
+a56d35d68cb3 Add time to sleep preference controller
+4c41b6d39a90 Add deep sleep preference controller [1/2]
+6aba37c71dd9 SettingsLib: Change collapsed header color to match background color
+ba51cf18c836 SettingsLib: Use legacy material colors for settings' surface container
+7363db532bb6 SettingsLib: Start collapsing appbar as expanded by default
+0ca6e2436bb0 SettingsLib: Fix crash when checking emergency gesture state
+50e2c55da3f1 SettingsLib: UsageProgressBarPreference: Fix multiple NPEs
+2a94e8d9b4c8 SettingsLib: Animate the UsageProgressBarPreference
+47e947916dae SettingsLib: Change collapse mode to scale
+8f191f358d9a SettingsLib: Don't show system overlays on apps list
+d7c0ff86b4cf SettingsLib: Make IllustrationPreference bg protection transparent
+7cb879e0e610 SettingsLib: Update 5G+ icon to Silk design
+75592d296e4a SettingsLib: Update 4G+ icon to Silk design as well
+3e0bdec8cdd0 SettingsLib: Update LTE+ icon as per new Silk design
+a42ea6bb8a1a LockPatternUtils: Decrease minimum pin length for auto confirmation
+90eec6c2516a core: pm: Wipe package cache on upgrade
+6595fc494618 SystemUI: Add defensive checks in ClockRegistry
+073da489d6ea SystemUI: Avoid NPE in ClockRegistry
+0898b85dc912 Allow signature spoofing on user builds
+b0e7a86ff2ff Set FakeStore/PlayStore as Aurora Store installer package name
+5ba181622c31 Avoid Settings app NPE on broken packages
+deb82005e738 ThemeUtils: Improve overall usage
+1c3275b2bf6f ThemeOverlayApplier: Catch a potential NPE.
+28aecb20fabd ThemeUtils: Use current user for THEME_CUSTOMIZATION_OVERLAY_PACKAGES
+cae8dd4876dc ThemeUtils: Make it compatible for all targets
+c9b79016eab7 Bring back ThemeUtils for Theming
+e0c963ea9dc5 SystemUI: TunerServiceImpl: Safe concurrent iteration and modification
+d51b4609f4e5 SystemUI: Allow using tuner API for Global settings
+9bf243d4c625 TunerService: Add parseInteger method
+9121352c9585 TunerService: Prevent NPE with tunable
+ff3a32a7f5c9 SystemUI: Allow using tuner API for LineageSettings
+329f0a6c746a Revert "Deprecate TunerService"
+88d23023e420 base: Add metric for crDroid Settings
+1bdc5f4299f2 base: Add crDroid utils
+fcffe8a5231e Resources: don't crash the app if font is not found
+2681f970d704 Set alert dialog message to use system font
+04f4f67ac327 Adding dynamic font feature
+23643d656ea8 base: styles: Use user fonts for Material UI themes
+a9d866864da1 Fonts: Add regular / light font config
+73706ec86c28 base: Use font configs instead hardcoded fonts
+691ddaf0f3c2 Wire up default fonts with config
+8d733dd4a82a base: Export bodyFontFamily and bodyFontFamilyMedium symbols
+b9dfc2b1edab SystemUI: Update black theme package overlay
+1f5b9993651e Revert "SystemUI: Add Lineage statusbar item holder"
+b4b276bac707 Revert "SystemUI: Network Traffic"
+dd0fdb0ab9b6 Revert "LineageStatusBarItemHolder: Implement receivers removal methods"
+1198676a6e0a fixup! Firewall: Transport-based toggle support (1/3)
+8cbb5d3f3831 Allow screen unpinning on devices without navbar
+4ffe6e3f6cb0 fw/b: Add support for runtime toggle of navbar
+48eff80da610 base: Add stub files
 
    * kernel/oneplus/sm8750
-7bfd38e99ba3 PM / freezer: Reduce freeze timeout to 1 second for Android
-48356601dd30 fs: Dont allow paths with lineage to be listed
-14af71b913ea mbcache: Speed up cache entry creation
-fa0ee3508e11 arm64/mm: Optimize loop to reduce redundant operations of contpte_ptep_get
-b8cd1a9302c9 ANDROID: gki_defconfig: Enable Clang ThinLTO support
-b2cfdc10dc76 ANDROID: gki_defconfig: Enable AUTOFDO_CLANG for AutoFDO optimizations
-40d3318027bb lib/lz4: Remove redundant MIN/MAX macros to fix compilation error
-a8c3e4b453b1 lib: update lz4 to v1.10.0
-3940db0227f6 lib/decompress_unlz4: Add NEON-optimized LZ4 decompression for ARM64
-5b56bcffe7d9 arm64: debug: disable self-hosted debug by default
-2f44e74d65e0 lib: Disable debug_locks
-57bca1d19a64 Makefile: Enable -mcpu=oryon-1
-8e629abb2981 f2fs: Demote GC thread to idle scheduler class
-8aefed7dee58 f2fs: set ioprio of GC kthread to idle
-3bea4ae01af5 f2fs/gc: Reduce GC thread urgent sleep time to 50ms
-10453eb55fbd f2fs: Use copy_page for full page copy
-b72a88275bd4 f2fs: reduce timeout for uncongestion
-e597037bc656 f2fs: Enable ATGC and GC_MERGE by default
-2f4067ad08f2 lz4: Use ARM64 NEON-optimized decompression where available
-7d5017bc68a8 kernelsu: replace renameat hook with fsnotify
-7a9c2cabfe1e kernelsu: Fix kernel panics caused by thread info flag corruption
-f7142b44384a kernelsu: Use SUS_SU by default
-4a0e4563f17f kernelsu: Fix SUS_SU feature
-434d242f25c9 devpts: KernelSU: Fix: Failed to execute pm in terminal
-4141ab3ac4fe drivers: Add missing KernelSU hooks
-33cb02d40860 kernelsu: implement v2_signature size/hash override from userspace through kernel module parameter
-58196799eee8 kernelsu: Allow compatible manager apks
-9b9ce4594e6d kernelsu: Remove duplicate function to fix compilation
-2fc7c7313160 kernelsu: Enable susfs for ksu
-223b8150eb8e kernelsu: Add susfs in gki android15-6.6
-d61386224406 drivers: Set proper version for KernelSU-Next
-667aeb498d6d drivers: Import KernelSU Next v1.1.1
-33a133ffba71 drivers: Add KSU config path
-919b77a5c394 thermal: qcom: tsens: Fix function prototype mismatch
+b987867269be Uprev: AmberKernelV2
+eca7a4c02ac5 FixUp! bad merge
 
-   * kernel/oneplus/sm8750-modules
-b096249139 display: Enforce ulps suspend
-1d13e7a7a3 display: Enforce ulps by default
+   * packages/apps/AlphaSettings
+d09badac Cutout progress: introduce expanded mode
+9776b841 Cutout progress cleanup
+ad310012 CustomSeekBarPreference: fix reset button
+232868fe fixup! AlphaSettings v4.3 bringup
+8d0cc4dd New Crowdin updates (#127)
+58931706 Add missing Drawable for Cutout Ring Feature
 
-   * vendor/oneplus/sm8750-common
-d5a5859 add ConsumerIRApp
+   * packages/apps/GameSpace
+1700423 Merge branch '16.0' of https://github.com/crdroidandroid/android_packages_apps_GameSpace into HEAD
+
+   * packages/apps/Settings
+ca46814eb9f Cutout progress: allow to launch settings externally
+818ed9a87ff SystemNavigation: adapt availability to QuickSwitch multi-launcher support
+ee206e0a998 Refractor Color Mode/Display Engine
+82634a8e378 settings: Introduce QuickSwitch feature [2/2]
+a961c8579fe Styles and wallpaper: handle overlays and availability
+baed56c01d8 Don't show homepage suggestions
+685d5aa90d5 Reorder homepage preferences
+076769ad77a Update settings homepage colors
+8a451d59fee ChargingControl: fix preference availability status
+a5a475cf063 colors: Introduce Reality display engine [2/2] [SQUASH]
+77c8a470a85 Add BatteryDivider to fuelgauge
+bd3834c8754 Introduce AlphaDroid Firmware version
+3321ca69746 Revamp About Phone header
+420053351f0 Bringup AlphaDroid based on crDroid/LineageOS
+5a63de7f690 Sync lineage-sdk namespaces with frameworks/base
+ebbc2d0087d Partially import LineageParts
+
+   * vendor/alpha
+dfac175e vars: Add Pixel 10 series
+23ed2af8 release: Bump Security String to 2026-03-01
+d3f22b90 aconfig: Enable enable_presentation_for_connected_displays
+136fd9a7 vars: Add waipio-6.6-vendor
+8dbf3859 config: CUSTOM_LOCALES: Add Nynorsk
 
 ====================
-     11-25-2025
-====================
-
-   * device/oneplus/sm8750-common
-556cb91 sm8750-common: Update from OOS 11.F.80
-3c35ec8 sm8750-common: Remove `oplus_bsp_tp_ft3419u` from modules list
-c8af67e sm8750-common: Enable the start of the Vendor VM HAL
-6f69079 sm8750-common: Update from OOS 11.F.74
-
-   * hardware/oplus
-824602c6 oplus-fwk: Stub NetworklessManager
-
-====================
-     11-24-2025
+     03-21-2026
 ====================
 
 ====================
-     11-23-2025
+     03-20-2026
 ====================
 
-   * hardware/oplus
-32308a2c KeyHandler: Modernize ButtonSettings
-7aa28106 KeyHandler: Switch to SwitchPreferenceCompat
-c9363253 doze: Convert to SwitchPreferenceCompat
+   * frameworks/base
+3ca5f9315f72 SystemUIProxy: Add onSleepEvent
+
+   * packages/apps/Launcher3
+1a89468a58 Launcher3: Implement advanced color picker with HSB and RGB controls for app drawer background
 
 ====================
-     11-22-2025
-====================
-
-====================
-     11-21-2025
+     03-19-2026
 ====================
 
    * device/oneplus/dodge
-a3c98b8 dodge: Update from OOS 11.F.80
-a702039 dodge: Update from OOS 11.F.74
+216605d DeviceSettings: Add guard for OnePlus device settings
+252af51 dodge: overlay: raise minimum auto-brightness for better visibility
+ac9cc03 dodge: Modified .bin files to improve haptic feedback.
+96a51f7 sepolicy: system_app: Add rules for Bypass Charging, Gamebar, and OnePulse PWM
+e3d7a7e overlay: Set smooth display
+6cebfc6 dodge: overlay: Enable multiple vibration intensity levels
+20f1aba dodge: Set market name for device
+8cedc1e dodge: Switch to FIFO vibration effects
+2494a4f dodge: overlay: Adjust brightness debounce values
+1d60dee overlay: import overlays from common tree
+99afa05 Import DeviceSettings from common tree
+9145e1a AlphaDroid Bringup
 
-   * device/oneplus/sm8750-common
-1b8b99d sm8750-common: Move CNE and DPM to phone blobs list
-
-   * vendor/oneplus/dodge
-be23fe9 dodge: Update from OOS 11.F.80
-9858fea dodge: Update from OOS 11.F.74
-
-   * vendor/oneplus/sm8750-common
-93748fa sm8750-common: Update from OOS 11.F.80
-c9a6385 sm8750-common: Update from OOS 11.F.74
-ac979e7 sm8750-common: Move CNE and DPM to phone blobs list
-
-====================
-     11-20-2025
-====================
-
-   * kernel/oneplus/sm8750-devicetrees
-c51c00a9 Revert "qcom: wlan: Disable wlan_direct_link for select targets"
-df72e4a3 treewide: Update changes to CPH2723_16.0.0.211(EX01)
-75512164 qcom: Disable minidump.stack_dump
-
-   * manifest
-3db19a9 fixup! Unpin alpha manifest
+   * kernel/oneplus/sm8750
+0ba5628cc03d power: process: fix undeclared identifier 'todo_logging_on'
+16bfbe09dc0f batman-adv: fix random jitter calculation
+a3bca61f37c3 workqueue: Queue everything on system's power efficient wq
+9a1a56fa3057 treewide: use power efficient workingqueues
+13cba1204b58 kernel: power: faster deepsleep
+e917c5038c8d sched: core: tweaks perfomance for games CODM
+515437b9c4b2 treewide: Apply some memory optimizations patches.
+6e1bba5f1c85 selinux: Allow init exec ksud under nosuid
+71b63d79c543 sm8750: Amber Kernel
+f3c85ea02ed7 fs: default to noatime
+7a397eeff6aa f2fs: Demote GC thread to idle scheduler class
+f01a81f6b0f3 PM: QoS: Add check to make sure CPU freq is non-negative
+450399966d27 f2fs: Enlarge min_fsync_blocks to 20
+d63c27db3494 qcacld3: merge upstream
+9de2b0e308a6 math: upgrade INTFP to v1.2
+ffb11df4f7b6 block: upgrade ADIOS scheduler to v3.1.9
+faace6901f14 lib/string.c: Optimize memchr()
+4acad2dce2e1 lib/string.c: Add a macro for memchr_inv()
+0498f23da0f7 xxhash: inline round() functions
+80053144fae4 mm/slab_common: Align all caches' objects to hardware cachelines
+c9e82fc6e8c8 f2fs: add valid block ratio not to do excessive GC for one time GC
+e2108f58da73 f2fs: fix uninitialized one_time_gc in victim_sel_policy
+f69da9f51d8c tpm: add WQ_PERCPU to alloc_workqueue users
+857ba017b7b7 mm/page_alloc: optimize lowmem_reserve max lookup using its semantic monotonicity
+e7652d15bd20 bpf: make kprobe_multi_link_prog_run always_inline
+aaabd1668bf2 bpf: optimize bpf_map_update_elem() for map-in-map types
+09bea07cdb9d loop: add missing bd_abort_claiming in loop_set_status
+9271e06e4acf loop: don't change loop device under exclusive opener in loop_set_status
+642711b124d1 bpf: Fix invalid prog->stats access when update_effective_progs fails
+3c3b1fbc986a bpf: Improve program stats run-time calculation
+eb3397632b44 mm: simplify folio_expected_ref_count()
+b6590e737b47 fs/fat: remove unnecessary wrapper fat_max_cache() fat_max_cache() always returned FAT_MAX_CACHE and did not use the inode parameter. So, use the FAT_MAX_CACHE constant directly
+ccd8cb8560a2 mm/page_alloc: change all pageblocks migrate type on coalescing When a page is freed it coalesces with a buddy into a higher order page while possible.  When the buddy page migrate type differs, it is expected to be updated to match the one of the page being freed.
+cbc20fe5c5e1 mm/memremap: fix spurious large folio warning for FS-DAX This patch addresses a warning that I discovered while working on famfs, which is an fs-dax file system that virtually always does PMD faults (next famfs patch series coming after the holidays).
+52c41e308ca6 mm/vmalloc: move resched point into alloc_vmap_area() Currently vm_area_alloc_pages() contains two cond_resched() points. However, the page allocator already has its own in slow path so an extra resched is not optimal because it delays the loops.
+5a1fabbf91e5 mm/zone_device: support large zone device private folios
+247cfcee140a mm/hmm: populate PFNs from PMD swap entry
+013c0c55f8ed uksm: perform a range-walk in break_ksm Make break_ksm() receive an address range and change break_ksm_pmd_entry() to perform a range-walk and return the address of the first ksm page found.
+6fdb83e7f7d5 drm/msm: Replace unsafe snprintf usage with scnprintf The refill_buf function uses snprintf to append to a fixed-size buffer. snprintf returns the length that would have been written, which can exceed the remaining buffer size. If this happens, ptr advances beyond the buffer and rem becomes negative. In the 2nd iteration, rem is treated as a large unsigned integer, causing snprintf to write oob.
+210faf71b0f5 loop: use READ_ONCE() to read lo->lo_state without locking When lo->lo_mutex is not held, direct access may read stale data. This patch uses READ_ONCE() to read lo->lo_state and data_race() to silence code checkers, and changes all assignments to use WRITE_ONCE().
+7ca0e82bfec3 blk-mq: delete task running check in blk_hctx_poll() blk_hctx_poll() always checks if the task is running or not, and returns 1 if the task is running. This is a leftover from when polled IO was purely for synchronous IO, and doesn't make sense anymore when polled IO is purely asynchronous. Similarly, marking the task as TASK_RUNNING is also superflous, as the very much has to be running to enter the function in the first place.
+3ad3e4cf47a2 blk-mq: use BLK_POLL_ONESHOT for synchronous poll completion blk_execute_rq() with polling is used in kernel code paths such as NVMe controller connect. The aggressive spinning in blk_hctx_poll() can prevent the completion task from getting a chance to run, causing a lockup.
+26f3241c75ac sched/fair: Fix pelt clock sync when entering idle
+b862f4925cf3 migrate: correct lock ordering for hugetlb file folios commit b7880cb upstream.
+593371708c3e debugfs: Make debugfs_lookup() return NULL when debugfs is disabled
+cb583f3c5054 rcu: Panic on stalls by default
+76bc343321f5 PM/Sleep: Start killing wakelocks after two minutes of idle (120s)
+83defe6c29f7 selinux: Avoid dynamic memory allocation for INITCONTEXTLEN buffers
+497389a2279c Makefile: Force ARCH to be arm64
+643934908e95 kernel: Warn when an IRQ's affinity notifier gets overwritten
+6ab7cf5a6081 kernel: Only set one CPU in the default IRQ affinity mask
+f1699a6474b4 kernel: Don't allow IRQ affinity masks to have more than one CPU
+4b91103d29a0 sched/core: Forbid Unity-based games from changing their CPU affinity
+1a1ed49b8e6d bpf: Avoid allocating small buffers for map keys and values
+aa68364f064a Suppress overly verbose log spam
+c21b56ed481d sched/fair: Reduce PELT half-life from 32 ms to 16 ms
+66eba6fcdc85 AmberKernelV1-BETA
+a2fc9d6ed1fc gki_defconfig:  Enable boeffla_wl_blocker
+727d15d3270e boeffla_wl_blocker: allow spaces to be stored
+ab5a6e869c9b boeffla_wl_blocker: Update `LIST_WL_DEFAULT`
+1f030e1edded boeffla_wl_blocker: Increase `LENGTH_LIST_WL` and `LENGTH_LIST_WL_DEFAULT`
+1ec97935845c boeffla_wl_blocker: Remove timerfd from default block list
+48458af0a30c boeffla_wl_blocker: Block some wakelocks by default
+d91877b2831b boeffla_wl_blocker: don't block wakelocks by default
+0b120739d22a boeffla_wl_blocker: update to wakelock blocker driver v1.1.0
+d62793370beb boeffla_wl_blocker: update to wakelock blocker driver v1.0.1
+5533be4161c5 boeffla_wl_blocker: add generic wakelock blocker driver v1.0.0
+a7a3ac7f3d9a power: process: Use lesser time to enter sleep
+98cd8a4bafba gpu: drm: Use power efficient workingqueues
+da1aba4527f3 gpu: drm: Use power efficient workingqueues
+9a14ffd24053 gki_defconfig: Don't sync when entering suspend
+7771469b0583 gki_defconfig: Enable power efficient workqueues
+1061c3d688db gki_defconfig: Disable some hardening configs
+ec616d9ef5fd gki_defconfig: Enable LLVM Polly optimizer
+0ba980335f31 Makefile: Rework on Polly optimizer flags
+cb46d0e6fa88 kbuild: Add support for LLVM's Polly optimizer
+999e43ceb666 mm: vmstat: use power efficient workingqueues
+fd27d0bfe787 proc: Don't let Google Camera run in the background
+e2362434b762 Remove Duplicates
+b24754ac937f lz4: Enable LZ4_FAST_DEC_LOOP on aarch64 Clang builds
+e85c563e50a2 lz4: fix kernel integration
+f41263014b8a lz4: Adapt to Linux kernel
+aaab60e1cb9b lz4: Import v1.10.0 from upstream
+0d01e61cbe21 Revert "lz4: Use ARM64 NEON-optimized decompression where available"
+4acd51ffb740 PM / freezer: Reduce freeze timeout to 1 second for Android
+cc7e6fbaa85f mbcache: Speed up cache entry creation
+7c82ba22ee36 arm64/mm: Optimize loop to reduce redundant operations of contpte_ptep_get
+0bc00943d51e ANDROID: gki_defconfig: Enable Clang ThinLTO support
+b25edbefe035 ANDROID: gki_defconfig: Enable AUTOFDO_CLANG for AutoFDO optimizations
+42d8eee36d8d arm64: debug: disable self-hosted debug by default
+a3889d361068 lib: Disable debug_locks
+85a6906f71c2 Makefile: Enable -mcpu=oryon-1
+0f782d971d5e f2fs: Demote GC thread to idle scheduler class
+5029bb19e81d f2fs: set ioprio of GC kthread to idle
+0ae398cc723e f2fs/gc: Reduce GC thread urgent sleep time to 50ms
+4f517e09ea99 f2fs: Use copy_page for full page copy
+cc5dbba6b3d5 f2fs: reduce timeout for uncongestion
+ead9ecfc40e6 f2fs: Enable ATGC and GC_MERGE by default
+bddc68ec4838 lz4: Use ARM64 NEON-optimized decompression where available
+a102a5f2a9a9 thermal: qcom: tsens: Fix function prototype mismatch
+c12d62eed9cc videodev2: Use <linux/time.h> for struct timespec
 
    * packages/apps/Launcher3
-93f9b65895 New Crowdin updates (#507)
+dd49363ad1 Launcher3: Fix custom color not working in OneUI style (vertical paged) and refine fullscreen behavior
+379e6b9376 Launcher3: Fix custom color not working in Legacy Fullscreen mode and improve consistency
+b8d7f1c2b0 Launcher3: Allow custom background colors for the app drawer
 
 ====================
-     11-19-2025
+     03-18-2026
+====================
+
+   * packages/apps/GameSpace
+baa4538 New translations (#135)
+
+   * packages/apps/Launcher3
+a61fd8a8e1 New Crowdin updates (#528)
+
+====================
+     03-17-2026
+====================
+
+   * device/oneplus/sm8750-common
+0b7d9a3 sm8750-common: sensors: fix the return type of IsWrappedHandle
+3cf5d9c sm8750-common: vibrator: translate compose primitives to effects
+0dd4bb8 sm8750-common: vibrator: turn effect loader into a singleton
+1674523 sm8750-common: sepolicy: label the vibrator service
+e5c6e5f sm8750-common: switch to the in-tree vibrator HAL
+03a44f2 sm8750-common: vibrator: always define USE_EFFECT_STREAM
+324613a sm8750-common: vibrator: fix implicit capture of this in lambdas
+9db0033 sm8750-common: vibrator: fix format specifier warnings
+9d5091e sm8750-common: vibrator: fix unused labels, parameters, and variables
+0966a90 sm8750-common: vibrator: fix misleading indentations
+411f28e sm8750-common: vibrator: fix the init order of effect
+1c6fb7e sm8750-common: vibrator: fix VibratorCL header includes
+dbaf152 sm8750-common: import hardware/qcom-caf/sm8750 namespace
+2153512 sm8750-common: vibrator: drop libsoc_helper
+2e6117f sm8750-commom: vibrator: qti: load effects from blobs
+885f39c sm8750-common: vibrator: add .oplus_sm8750 suffix to targets
+d4beaf5 sm8750-common: vibrator: remove vibrator-vendor-product.mk
+73cc1b8 sm8750-common: import qcom vibrator aidl hal
+
+   * packages/apps/Launcher3
+a0f3ee9430 Launcher3: Fix alpha calculation for all apps searchbar
+2cceef1750 Launcher3: Add appdrawer sort options
+90f11ce72a Launcher3: Fix crash in vertical appdrawer styles
+fa7a53bb08 Launcher3: Introduce appdrawer styles
+f5d10fd31f Launcher3: Dark text on appdrawer toggle
+1c1c35fc00 Launcher3: Add appdrawer searchbar location
+
+====================
+     03-16-2026
+====================
+
+   * frameworks/native
+1b9df1f48d system_server LW_EVENT_SYNC_NATIVE_CRASH in InputDispatcher
+
+====================
+     03-15-2026
+====================
+
+   * frameworks/av
+7bfda39e07 fix null derefence exception when surface is reset
+088bf74e98 fixing visualizer not working on bluetooth audio
+fa46990d1c audio: Check MODIFY_AUDIO_ROUTING permission for per-app volume
+cd23f0820a av: updating syntax for IAfTrackBase
+d498188741 av: updating syntax for keyed vector -> map transition
+6cd6ecc930 fixup! av: support per-app volume [1/3]
+8eca8322a2 av: support per-app volume [1/3]
+543735726f codec2,aom/Android.bp: Disable CFI
+a069b985c3 don't require RECORD_AUDIO permission for REMOTE_SUBMIX audio source
+eb913ff3a3 Add AC4Tbl params for dolby AC4 decoder [1/2]
+f93f378468 Revert "codec2,aom/Android.bp: add libcodec2_soft_sanitize_cfi"
+89971ead99 MediaCodec: Improve mediacrypto async priorty
+913fe378de audio: fix incorrect eos in sync offload output case.
+d85f7dea99 Null Pointer Exception in CameraServer during user switch
+fae9ab2150 CameraProviderExtension: add enabled bool and always set torch
+9a8fee1ffc CameraProviderExtension: Reset strength level on torch off
+717e909d62 CameraProviderExtension: Update mTorchStrengthLevel with new level
+afb40c4a0f CameraProviderExtension: Return BAD_VALUE for invalid strength level
+e6deda50e1 CameraProviderExtension: Use weak linkage for default implementations
+9b91f6760e CameraProviderExtension: Inject strength in fixupTorchStrengthTags
+39e7783a4b Extends "Camera: Skip stream size check for whitelisted apps"
+041e319188 Fix usb camera number is not correct after plug out.
+a50528b204 camera: Add extension to control torch light strength
+f0f0d28e5c updatePolicyState after updating all EffectHandle state.
+0b0ac66d67 libcameraservice: support disabling torch control support
+29f0a178ab libcameraservice: Fixup! add TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB
+17c02c75e0 libcameraservice: add TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB
+76c842668a libcameraservice: Fixup! Add support to set vendor tag with client package name
+50afbb72ab libcameraservice: Add support to set vendor tag with client package name
+009a143810 skip mediametrics when statsd is not available
+f332fc5350 issue: After connecting the Bluetooth earphones and projecting the screen, music will play from the earphones. At this point, disconnect the earphones, click play, and the projection will be silent
+6c5d53a630 MediaHTTP: resolve mName race condition issue
+325389e78b MediaProfiles: Check before overriding media settings xml
+3ecb19b77a media: Add changes to pick target specific media xml's
+fb822ffcc4 media: OMXStore: Import loading libstagefrightdolby
+cda1373ea5 OMX: Remove support for prebuilt ac4 decoder
+1a0bdc9468 libstagefright: omx: Add support for loading prebuilt ddp and ac4 decoder lib
+80ee8f5143 frameworks/av: Import Xiaomi Image Tags defenitions
+05d89b104e av: Initial support for 24bit encoding and 6 channels
+95d20e3532 nuplayer: Avoid crash when codec fails to load
+5b36b24c81 StagefrightRecorder: Add "set-title" parameter
+d6eff73cd7 libstagefright: Support YVU420SemiPlanar camera format
+56b70315bd stagefright: add changes related to high-framerates in CameraSource
+55e8541453 camera: Don't segfault if we get a NULL parameter
+cf90455ed2 Camera: Removing cachedump call to miminimize delay during close.
+f9ca543d9e Camera: Flush Improvements - Result drain optimization
+111a8846b3 CameraService: Fix deadlock in binder death cleanup
+94457ff391 av: Remove restrictions for system audio record
+969d880e03 Camera: Add support for preview frame fd
+0ef14e5ab2 fixup! Camera: Skip stream size check for whitelisted apps
+f6932628a9 Effects: Do not allow SW dolby effect to be supsended
+4cdb851766 Effects: Do not allow ViperFx effect to be supsended
+
+   * frameworks/base
+ee7811df7c47 Automatic translation import
+
+   * kernel/oneplus/sm8550
+19185a9a0371 fixup ksu
+
+   * packages/apps/GameSpace
+c80114a New Crowdin updates (#133)
+
+   * packages/apps/Launcher3
+65692d2175 New Crowdin updates (#523)
+
+   * packages/apps/Settings
+bb33c0723a3 Settings: Hide ambient from search
+2a1b55c4fb5 Settings: Update illustrations from Canary
+
+   * vendor/certification
+d62a7ff certification: Update from Android 16 QPR3
+d5d7cd0 certification: Add script to fetch pif from beta
+9cea2df certification: Remove unused overlay
+
+====================
+     03-14-2026
+====================
+
+   * frameworks/av
+33249c48ab Revert "CCodec: Control the inputs to avoid pipeline overflow"
+2a464a2215 Revert "codec2: Use numClientBuffers to control the pipeline"
+68b5e73139 Revert "codec2: Change a Info print into Verbose"
+
+   * manifest
+edff12b Track packages/modules/Permission from Alpha
+
+   * packages/apps/Launcher3
+a21101457b Launcher3: Quickspace: Update media session helper
+3f1f6ab8a4 Launcher3: Fix SelectorWithWidgetPreference with material expressive design
+
+====================
+     03-13-2026
+====================
+
+   * frameworks/base
+96e928da4f09 Fix external storage access with system user locked
+a48bd2e70639 Fix secondary user crash with system user locked
+48c72f4c1ee2 SystemUI: Remove screenshot action chip labels
+c3a9cac8e5e3 RESTRICT AUTOMERGE Ignore pinned Windows (Consolidated fix)
+e5a3093cb531 Revert "Ignore pinned Windows"
+fe89b2495e8f Apps clearing self data shouldn't get permissions restored
+8a1eea023f16 Enforce permission and debuggability for `am dumpbitmaps`
+dc4811db46ce [UidMigration] fix update uninstallation with sharedUserMaxSdkVersion
+dc8121842868 Limit the number of services (NLSes, etc) that can be approved per user
+92958c1fca32 Block overriding satellite carrier config keys on user builds
+b0886443b0ff Remove any revoked associations after reboot
+5f60c0aa8962 MediaSession: Enforce max name length on broadcast receivers too
+3aaff9fb5b1b Be more strict about content types for message array
+e2ec6637d1f2 Prevent long press on profile notifs when locked
+17419c476b2a [PM] Check unknown sources for intent installation
+63997105017e Reapply "[PM] Check unknown sources user restriction for intent installation"
+cdb2898bd9cd Explicitly unset INSTALL_FROM_MANAGED_USER_OR_PROFILE flag
+4264c2f606cd Prevent launchedFromPackage spoofing via FLAG_ACTIVITY_FORWARD_RESULT.
+a062a953ebca Handle loadDescription OutOfMemoryError in DeviceAdminInfo
+bec80a52aaab Introduce InputMethodSubtypeSafeList
+304bb7de32de Harden InputMethodInfo parsing against large metadata
+e3e28bfe5f6d Fixed "Unlock your phone" unexpectedlly turned ON after OTA
+ad7a4a15be35 Sanitize a11y qs shortcut tile service name before using it
+2a55afecc319 Trim permission, permission group names
+6838d6b09f75 Prohibit untrusted proxys from specifying proxied attribution tags
+e8e5095c5796 Ensure sandboxed UIDs are treated as untrusted in Appops
+1baa0c781ff9 [RESTRICT AUTOMERGE] Stay in app pinned mode upon SystemUI crash
+
+====================
+     03-12-2026
+====================
+
+   * manifest
+14dd37a Update README
+721f399 Track AlphaSettings from github
+
+   * packages/apps/AlphaSettings
+e2f86aaa Extend navbar styles support to other launchers
+
+====================
+     03-11-2026
 ====================
 
    * kernel/oneplus/sm8750-modules
-4661b34f66 oplus: Update changes to CPH2723_16.0.0.211(EX01)
+77542bfa4a qcacld: use MLGO inliner model
+
+   * manifest
+8a689e4 Track google sounds
+
+   * vendor/alpha
+30666cde Include Google Sounds in GAPPS builds
+
+   * vendor/pixel/gms
+ccf634a Adapt gms flags  to Alpha
+
+   * vendor/pixel/launcher
+f12038d Adapt WITH_GMS flag to Alpha
+daaba5d Remove overrides
+
+   * vendor/pixel/sounds
+b1b6c11 Comment sounds properties (already defined in vendor/alpha/config/common.mk)
+a4ef299 Adapt to alpha
+
+   * vendor/pixel/themepicker
+4e0d558 Adapt WITH_GMS flag to Alpha
+e666748 ThemePicker: update overlays
+3086325 Remove overrides
+
+====================
+     03-10-2026
+====================
+
+   * packages/apps/AlphaSettings
+67186442 New Crowdin updates (#126)
+fe053af2 AlphaSettings: follow Settings text style
+833c2c05 Progress ring color mode [2/2]
+fb2d1e03 Progress ring charging indicator [2/2]
+36aa0c5f Introduce cutout progress ring [2/2]
+a51da9f5 AlphaSettings v4.3 bringup
+504ec7f0 Revert "Add gradients customization"
+b4b1f7db New Crowdin updates (#1298)
+b94e3b50 Remove alert slider notifications
+
+====================
+     03-09-2026
+====================
+
+   * device/oneplus/sm8750-common
+456b0ae sm8750-common: Bump dEQP levels to 2024-03-01
+54fca4e sm8750-common: Disable aptX voice codec
+
+   * frameworks/native
+ecea493cc4 surfaceflinger: Ignore when `getLuts` is unsupported
+c2ec70bfbe surfaceflinger: allow overriding min supported frame rate
+8726fc5d3e surfaceflinger: allow overriding FrameRateCategoryRateHigh
+a7a6dd1b91 surfaceflinger: Lower DisplayModeController log verbosity
+ec56d3b276 HWComposer: Silence duplicate VSYNC logspam
+1be4063e41 increasing max frame buffer for capable targets
+bdef196d66 BLASTBufferQueue: Add epoll_pwait2 fallback for older kernels
+71dcfe19c5 Add AC4Tbl params for dolby AC4 decoder [2/2]
+fd1d148e78 Add dalvik-heap device configs for 8/12/16 GiB devices
+603c207bf2 increasing dalvik heap growth limit for 6gb+ targets
+9256b048b3 Add check to prevent duplicate device registration
+008159af56 nativedisplay: fix the flicker issue in streaming video
+019c02c42f SF: Restore debug.sf.latch_unsignaled sysprop
+6f79526e75 SF: Bring back support for disabling backpressure propagation
+cd7b501840 Reduce thread scheduling overhead
+6dd191b4c8 libbinder: Suppress log spam when unlinking death recipients
+
+   * hardware/interfaces
+84f71bdfc4 compatibility_matrices: Add p/android-4.4 into FCM 5
+508796084d Restore q/android-4.9 again
+
+   * manifest
+a91b406 Sync hardware/interfaces from Alpha
+
+   * packages/apps/Settings
+612aa9364cb Settings: BackgroundCheckSummary: use InstrumentedFragment to avoid NPE
+29df179d411 Settings: Add missing icon for Adaptive connectivity
+5d19c27d5ea Settings: Add a preference to battery optimization page
+c4d311cf720 Settings: Improve udfps enroll introduction layout
+55e74a10167 Settings: reset_network: Give new life to reset buttons
+3b28dedb130 Settings: Fixup fingerprint enroll finish layout
+1b6ce9eb278 Settings: Add support for daily and weekly data usage cycles [2/2]
+d5e898337da Settings: SoftAp: add Hidden SSID preference
+b1f586f3af4 Settings: SoftAp: add support for setting shutdown timeout
+82c8b9c414d Settings: SoftAP: Add client manager
+9a500fb6dfe Revert "[Catalyst] Migrate Wi-Fi hotspot auto-off switch preference"
+00b26afa2f0 fixup! RU: Google Import translations
+b9138996113 Settings: Reset mobile data always on developer setting correctly
+af656669454 Settings: Export an activity for private DNS settings
+7a875a9caa4 Settings: Enable glanceble hub for all
+9e7dbe86512 fixup! Settings: Expose radio info (*#*#4636#*#*)
+014d999f75a fixup! Settings: Expose radio info (*#*#4636#*#*)
+f84a3e64305 Settings: Hide radio info if device don't support voice
+c982192b2f8 Settings: Expose radio info (*#*#4636#*#*)
+cce088f6d45 Settings: Make google's battery widget work
+d75645f4a31 Settings: Allow disabling private DNS for VPN [2/2]
+a676b167670 Settings: Use seekbar to allow setting arbitrary animation values
+c4bda5a12ca Settings: Implement localepicker from SettingsGoogle
+00fb0d0db82 Settings: Set proper initial value for multi media focus
+1b7575ae095 Settings: Adding multi-media focus support
+a8444cdc619 fixup! Settings: Add config check for screen off UDFPS
+e09141bd779 AppVolumeSlice: Allow querying icon of apps installed by any user
+09cbaa76f5a Settings: support per-app volume [3/3]
+d05b16f88e8 Settings: Remove flag check for blur toggle
+10822f8487d Revert "[Wi-Fi] Remove 'Do not validate' option in CA certificate spinner"
+54ae94a292c Settings: Enable "install available apps"
+82fe698b2b6 Settings: Add config check for screen off UDFPS
+420edc84a51 add per-connection Wi-Fi MAC address randomization option
+e60a1b17553 Settings: Reduce the churn for running services
+0a96fdc0fd2 Remove stray closing tag in mode_interstitial_layout.xml
+950b85982c4 Settings: add SearchIndexProviderHolder interface
+53df7bf894d Settings: add abstract fragment class to reduce fragments boilerplate
+c15fdc735de DevelopmentSettings: Disable automatic updates
+63872f16298 Settings: Forcefully enable Hotspot Speed setting
+baad1895f64 Settings: Observe auto brightness mode changes
+b383f817e92 Settings: deviceinfo: Try read designed capacity from PowerProfile if unavailable
+d2f78f8c376 Settings: Hide the nav bar during udfps fp enrolling
+722e97c834e Settings: Retain udfps overlay shown state on restoring activity
+d3cd14fda3e Settings: Address a memory leak
+5d111c6558c Settings: Update strings for override dark mode
+9022311c482 Settings: Move force dark mode to dark mode settings
+6e4c9fd70ef Settings: Add config to display Now Playing
+19b725e9725 Introduce `Force LTE_CA` override on per subscription basis [3/3]
+92f6ab79ff8 Settings: Fix incorrect sort
+b2d48c3cf6c Settings: Fix slice data illegal state in credentials
+2c3003a54c8 Settings: Fix upstream NPE crash in UserAspectRatioDetails.launchApplication()
+2f8dc45ade6 Settings: Update FaceEnroll ActivityDirector and Confirmation
+8e188c534e9 Settings: Create face confirmation activity
+9c61df499a4 Settings: Create a ActivityDirector to optionally use SettingsGoogleFutureFaceEnroll
+cf3e459bbc2 Settings: Fix crash with face lock preference for limited access users
+8f9568165b1 Settings: Import expressive face unlock lottie
+7427c45763a Add Face Unlock with ParanoidSense
+e5d8ef59cef Settings: Allow choosing a custom vibration pattern [3/3]
+fb655022caf Settings: Add vibration patterns from OOS [3/3]
+2a573f34ca2 Settings: Add back increasing ring feature (2/2).
+d94ac43ab4f Settings: Add simcard number title for SIM1
+4e195dea1d9 Settings: Fix ringtone selection for devices with e-SIM
+40dd6cbbbea MSIM Ringtone: Improve on devices with ESIM
+33fe406deb9 Settings: Use AOSP translations for MSIM ringtone
+7a772a129c6 Settings: enable SIM card ringtone only if slot not empty [1/2]
+8fe9a814db4 Settings: Phone ringtone setting for Multi SIM device [2/3]
+6a46f62a465 Settings: Hide headsup toggle
+38406befdf8 Settings: Add activity for cutout force full screen
+ab2ac685da4 Allow tuning ambient display with sensors [3/3]
+a9a8514ad7a Fix long click intent for Smart Pixels tile [2/2]
+9d77c2a0f5e Settings: Allow to quickly open Running Services from meminfo view
+6ac84496ac8 Settings: Add permission to hold wake lock
+a3d5267eed9 Settings: Do not rely on androidx.preference_preference-ktx
+541066dc894 Settings: Move applock to apps section
+4cb114cf802 Settings: AppLock: Update for kotlin errors
+9be712a55a4 Settings: Don't make app lock settings searchable
+292c8217941 Settings: Let app lock use face unlock
+8d01db9a850 Settings: Add app lock summary for 0 protected apps
+dbcc3e43683 AppLock: Slightly bigger icon size
+42edaa77bc3 Settings: Update AppLock API
+97b3e3a39a1 Settings: Allow locking all apps visible in launcher
+fe27194e382 Settings: Introduce App Lock [3/4]
+ff7e62a9e1b Settings: Hide force full screen settings
+b8339491c68 Settings: Allow dismissing suggestions
+047617daa67 Settings: Hide back haptics setting if not supported
+639270a2737 Settings: Move to new navbar inverse layout settings
+72f45fd4a13 Settings: Hide extra settings when navigaton mode not enabled
+bf2a921b12a Settings: Fix inconsistent settings for taskbar on tablet
+d53f1fdc8b8 Settings: Suggest restarting SystemUI on taskbar toggle
+d9141c792c8 Settings: Allow hiding navigation ime bar [2/4]
+05a447c0f76 Settings: Implement 3-btn-nav layout settings [3b/3]
+775b2bf235c Settings: Prompt SystemUI restart on toggling navbar
+a752b68d6fd Settings: Disable navigation modes if navbar is disabled
+aee342027fc Settings: Keep page search enabled for legacy navigation customization
+74015340f91 Settings: Do not hide navigation modes
+efeba7e598f Revert "Settings: Only show gesture navigation if device has a software nav bar"
+47802711589 Settings: Add toggle for navbar visibility
+ea75fda195c Settings: Move swipe actions to gesture navigation settings
+72d2b483849 Settings: Move in navbar styles
+5ff02a88a48 Settings: Add taskbar toggle
+c3e94b10504 Settings: Move in settings for 3-button navbar
+639f6c04baa Settings: Disable Navbar radius customization if hint disabled
+e19be0cc646 Settings: Allow changing the height of gesture navbar [3/3]
+cb77908e247 Optional haptic feedback on back gesture [2/2]
+66f6884e244 Allow to hide arrow for back gesture [2/2]
+07580a89379 Settings: Change back gesture height intervals
+debc3d4c235 Allow changing back gesture height [2/2]
+4b0ad5b6bb5 Allow changing the length of gesture navbar [3/3]
+71eac651c07 Settings: Use ActionPrimaryButton style for face buttons
+c8e0a457f0a Add support for manually installed google sound picker
+e1f3c4495d8 RunningServices: Remove DeveloperOptionAwareMixin interface
+fa26f79593e Settings: Prevent IllegalArgumentException in storage settings
+c92763a597b Fix memory leak on wifi
+750e90b8148 Settings: Use List Preference for Zen mode settings
+fbba18121dd Settings: Use List Preference for Dock speaker plays and Emergency tone
+dd3e4e04f63 Settings: Add icon for WEP in wifi network settings
+c5a3ec8d951 Open app when clicking on icon in App Info
+cb130263f3f WiFi: Remove country code checking.
+fe89883cb1c DataProcessor: Do not skip and replace screen on component with screen on time
+b01670348ea Settings: Fix regulatory info availability check
+76b2bd05a1c ChooseLockPassword: Decrease minimum pin length for auto confirm
+764ae80b12e FaceEnroll: Fix circle camera view background color
+179dc3f157c Settings: Improve code for time spent in app
+f71cf064b10 Settings: Make all user apps cloneable
+2007b97f5ba Settings: Pull navigation mode settings out
+717980bc61f Refactor AppPicker page to adopt Settings main theme
+bd0f7aa21e3 Settings: Avoid enforcing weird backgrounds
+afdc2f0b9b6 AppInfo: Add time spent in app from Wellbeing
+d5e20fbe710 Settings: add sim status listener in about phone
+18e710737f3 Settings: OverlayCategoryPreferenceController: Sort overlays by name
+eb15ae42aec Expand abbreviation in average memory usage string
+9ed2f534454 Settings: Prevent NPE in LoadingViewController
+9904ac6043d Settings: Prevent Wifi Tethering NPE
+af0568abad4 Revert "Update the battery saver scheduler minimum level"
+ad369811081 Settings: Fix NPE with customdialogpref for backlight settings
+f1ea6092294 Setting: batteryinfo: Add config to enable/disable battery design & maximum capacity info
+be4425b4d6b Settings: Skip auth for WiFi net share when unlocked in the last 60s
+bc9785c0501 Settings: Move Vo5G toggle right below VoLTE
+464ec941934 fuelgauge: Hide screen time since last full charge if not valid
+6fc61fc63ed Port "Battery Usage Alerts" feature from factory images
+e0fb9f8b942 Settings: Link smallest width options in display settings
+a8403777d16 Settings: Fix up panel theme and layout
+129d23a0fc1 Settings: Move battery/notification light settings to crdroid
+86684d4c358 Add the rest of Cloudflare and Quad9 Private DNS options
+489a36e1fd1 Settings: Fix invalid private DNS help text if URI is missing
+23ba4a90302 Settings: Add more DNS providers
+34d50513cd3 Settings: Add AdGuard DNS as a private DNS Provider
+aef3a23df8b Settings: move Extra Dim feature to display
+f1bcb894e8a Settings: Add icon for 'WiFi cellular data fallback'
+7f43071a894 Settings: Add icon for WiFi -> Install certificates
+00a58ee2cd0 Settings: Add icon for 'WiFi timeout'
+1986b60191a Wi-Fi timeout feature
+18016568603 Bluetooth timeout feature
+88cc129715b UsbDefaultFragment: Remove DeveloperOptionAwareMixin
+a078825095a Use default letter spacing for category titles
+94f805e90ce Settings: Use legacy material background color
+5de302affa2 Revert "Settings: Move Google Setting way down"
+810951533a3 Settings: Define crdroid support activity
+b4ebfcd1775 Changelog: Rework with Activity [1/2]
+9798a561499 Settings: Integrate crDroidSettings into Settings
+0a353bc2869 Settings: Disable automatic system server heap dumps by default
+924a64ac522 Remove feedback and bug report stuff
+fd11c4f48c9 InstalledAppDetails: fix refreshing storage summary after force stop
+36c4259f0ba Settings: Safeguard ringtone pref against faulty gapps
+cd3b6628ec6 Settings: Don't show module version if isn't a date
+ef8a08f6c18 Disable SettingsDumpService
+6c42eca2f4f Fix memory leak on sensormanager
+545e1e4b1f9 Drawables: Dark mode support for app installation restriction icon
+46520f3dbc9 Settings: Move blur toggle to Display options.
+00aa815e621 Settings: Fix potential NPE in WifiTetherSecurityPreferenceController
+f892ff09d1f Add back arrow to Desktop backup password
+5f147c732d6 Settings: add TextView for summary into SeekBarDialogPreference
+14ec4734a15 Settings: Check wifi direct feature for showing preferences
+3931cb92f2b Settings: Change kernel preference behavior
+d7bc7108eea Settings: Show full proc/version information
+28b1f02db5e Settings: Make kernel version clickable
+bc7ea69677f Settings: Desktop backup password: Tint buttons to match system theme
+b6b09ee41bb display: Import screen resolution from cheetah stock
+2cd9f4e9f5e battery usage UI: use a fallback name for unknown components
+aee4d3e4be8 Settings: Link to crdroid legal
+13df2c12ed1 Add deep sleep preference controller [2/2]
+dca611490dc Settings: Fix rest of the edit menu icon tint
+bfe4892de4e Settings: Remove remaining hardcoded fonts
+5be86b3e762 Settings: Use font configs instead fonts directly
+19ddbb15c70 Settings: Add icon for 'WiFi direct'
+f6f467dad75 Settings: Add missing animations from google
+5254211c2e5 Settings: Follow system theme for SD card activities
+d4619dc74ea Settings: Add missing icon for media output
+f2ddecbe615 Settings: Add Device codename to Firmware version window
+2aedf14164e Settings: Add platform and RAM to Model & Hardware
+fa0083e8174 Settings: Add icon for emergency broadcasts
+983b5ec6deb Settings: Remove dividers in Network & Internet
+5adfb9259bc NightDisplay Settings: Use List Preference for NightLight settings
+1cbdd79b30f Settings: Use ListPreference instead of DropDownPreference
+66ec66d3573 Settings: Use List Preference for Dark mode
+9bebfab0476 Settings: Use pixel blue for icon
+bfba516a4b8 Settings: Update overlay package for pure black theme
+ce014e57c2e Enable FeatureFlags on "user" builds too
+b4ceafbebcf Settings: Add back crdroid logo
+b7b502312c0 Settings: Show CR version in About menu
+367380f968c fixup! Fix background data clobbering other policies
+86ef58570ac Merge commit 'refs/changes/01/476601/2' of https://github.com/LineageOS/android_packages_apps_Settings into 16.0
+
+   * packages/modules/Permission
+f6d2e015c7 SafetyCenterUtils: This function is only used by tests
+6b163ef454 PermissionController: Use headline font from framework resource
+df8d81a8a1 PermissionController: Remove check/s for permission controller version
+3ea4a968e1 PermissionController: set textAllCaps theme property to off by default
+546ea38313 PermissionController: Use new privacy indicators for location
+b50020c0e9 PermissionController: Add missing permission groups
+
+   * packages/services/Telephony
+d874de95f Telephony: Migrate MainSwitchBar and Switch to Material3
+ecc9b4c8a Telephony: Apply Material You to exposed settings
+
+====================
+     03-08-2026
+====================
+
+   * frameworks/base
+8346420f9f80 SettingsLib: Ensure divider is set before view is returned in onCreateView
+
+   * hardware/interfaces
+b81eca0edc fixup! audio: Allow opting out of speaker_layout_channel_mask field
+
+   * vendor/oneplus/salami
+3366882 salami: Update from OOS 11.H.11
+
+   * vendor/oneplus/sm8550-common
+797c0ce sm8550-common: Update from OOS 11.H.11
+
+====================
+     03-07-2026
+====================
+
+   * frameworks/base
+a9589527dd92 LineageStatusBarItemHolder: Implement receivers removal methods
+
+   * kernel/oneplus/sm8750
+4bde5abff3fb Merge remote-tracking branch 'sm8750/lineage-22.2' into HEAD
+e7d1995101bb Merge tag 'KERNEL.PLATFORM.4.0.r1-15800-kernel.0' of https://git.codelinaro.org/clo/la/kernel/qcom into HEAD
+0d0b812bf2d0 Merge tag 'ASB-2026-03-02_15-6.6' of https://android.googlesource.com/kernel/common into HEAD
+
+   * packages/apps/AlphaSettings
+702d0ce6 New Crowdin updates (#1297)
+760de788 Add color modes for music chip bg [2/2]
+
+====================
+     03-06-2026
+====================
+
+   * device/oneplus/salami
+4a7c65b DeviceSettings: add global refresh rate tile
+f15529f DeviceSettings: create DisplayModeController and move the boot complete logic to main service
+7a873d7 DeviceSettings: clean up unused features
+eedafa3 config: boost auto-brightness values
+e30838b Allow power hal to access /sys/proc/walt
+cd1337d Merge Utils into FileUtils
+34b4ec0 device-settings: GameBar rewrite with static layouts
+369ec51 DeviceSettings: refactor and feature additions
+080b041 Change density to 450
+3f64fff fixup! Import DeviceSettings from common tree
+34f14ad Disable anti-flicker and hbm mode for now
+6e798a8 sepolicy: fix some denials
+c81bdc0 DeviceSettings: rework bypass charging
+fcbf962 DeviceSettings: lunch it from Settings
+aa34789 DeviceSettings: add One pulse PWM
+8d6e90f Import DeviceSettings from common tree
+a4be0cb overlays-lineage: enable touchscreen gestures
+179f96c DeviceSettings: disable all features except alert slider
+0ee3a9e salami: Enable UDFPS animations
+95ddc1b DeviceSettings: remove lineage-sdk dependency
+d10e27a DeviceSettings: Switch to material expressive design layout
+13ce302 DeviceSettings: Migrate to Android.bp
+9e59503 DeviceSettings: Migrate to SwitchPreferenceCompat
+0c4ebad DeviceSettings: Fix up for A14 QPR2
+8a0062b DeviceSettings: Define used libraries
+2589f16 DeviceSettings: Add game mode and edge touch switches
+246b11b DeviceSettings: Add russian translations
+94f0322 DeviceSettings: Add node for USB fast charge
+2c88aa9 Add DeviceSettings
+5ab0c1f salami: Initial Alphadroid bringup
+
+   * device/oneplus/sm8550-common
+83c4bed Move lineage-sdk overlays
+f0b19ed DeviceSettings: remove lineage-sdk dependency
+6bdda74 Remove build dependencies
+23d60b5 sm8550-common: Relocate audio props to address sepolicy denials
+def54bf sm8550-common: Increase reserve partition sizes
+6284526 sm8550-common: Do not load QTI thermal limiter module
+daa63b3 sm8550-common: init: Set perm for LTPO nodes
+ff9137b sm8550-common: DeviceAsWebcam: set HQ mode as default
+35add51 sm8550-common: DeviceAsWebcam: disable USAGE_VIDEO_ENCODE ImageReader flag
+68ac039 sm8550-common: Build DeviceAsWebcam service
+0daba41 sm8550-common: Setup DeviceAsWebcam
+b42d6be sm8550-common: Add support for OnePlus Ace 2 Pro
+6a39cea sm8550-common: audio: Do not disable post processing effects for dolby
+8c8b673 sm8550-common: Don't latch unsignal buffers
+e4812a2 sm8550-common: Disable SF client composition cache
+9d235c2 sm8550-common: Disable backpressure propagation in SF
+f70ae83 sm8550-common: Explicitly disable "Enable GL comp backpressure"
+b9a2c3e sm8550-common: Include Dolby Atmos
+ff67fb1 sm8550-common: Remove memory debug module
+ff82e98 sm8550-common: Move required alert slider configs to SystemUI
+b3e0dce sm8550-common: Allow gcam/snapcam to skip HFR checks
+2b84a5a sm8550-common: Allow camera to skip high frame rate checks
+5fd288c sm8550-common: overlay: Enable battery cycle count
+4224e05 sm8550-common: overlay: Add system ui restart option
+f520a58 sm8550-common: Disable frame rate override feature
+16622f2 sm8550-common: init: Retrict cpuset for non-critical groups
+cb79d2c sm8550-common: init: Disable multiple kswapd threads
+7043671 sm8550-common: init: Reset readahead values for 128 always
+ea19c95 sm8550-common: init: Remove IO read_ahead_kb tune
+b82811b sm8550-common: overlay: Update pinner list
+3131207 sm8550-common: overlay: Turn on screen on unplug
+c27eb28 sm8550-common: overlay: Add temp divider value for cpu info overlay
+c97f3e4 sm8550-common: overlay: Add fps info path
+e4f8b5d sm8550-common: overlay: Switch to crdroid doze
+dd341b5 sm8550-common: Nuke OPlusDoze
+8269b4b sm8550-common: overlay: Decouple auto-suspend and interactive state from display
+249eb69 sm8550-common: overlay: Configure VOOC charging display on lockscreen
+0c2d5ec sm8550-common: overlay: Fix lockscreen charging info
+e6ba036 sm8550-common: overlay: Use appropriate charging thresholds
+f7cd392 sm8550-common: init: Always use lz4 for zram
+
+   * kernel/oneplus/sm8550
+14576e272ff4 selinux: Allow init exec ksud under nosuid
+71f099bec4f0 fs: Patch kernel with SUSFS 2.0.0
+4df5f64ac421 kernelsu: Allow compatible manager apks
+dd4f9f9be069 driver: kernelsu: Introduce SuSFS v2.0.0
+60850741a0ea drivers: Import Ksu-next 3.0.1
+
+====================
+     03-05-2026
+====================
 
