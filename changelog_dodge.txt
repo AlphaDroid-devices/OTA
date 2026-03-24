@@ -2,10 +2,6 @@
      03-24-2026
 ====================
 
-   * device/oneplus/sm8750-common
-d8426b1 sm8750-common: vibrator: drop libsoc_helper
-ebc2bdc sm8750-common: vibrator: add .oplus_sm8750 suffix to targets
-
    * frameworks/base
 dc179a89c584 services: Fixing powerhal soft reboot
 1ee1ed242faa SystemUI: allowlist ACCESS_NOTIFICATIONS privileged permission
@@ -54,18 +50,28 @@ e34f5bbb5abb base: Allow to hide screen capture status from apps [1/2]
 4b9eb1ba91 fix: lambda return type mismatch in graceTimeForPresentFenceMs
 070d0080d8 SF: Bring back support for disabling backpressure propagation
 
-   * manifest
-a3b199e Track frameworks/base from github
-
    * packages/apps/AlphaSettings
 15d03012 Introduce Clock face feature
+
+   * packages/apps/Settings
+ca6d5c5d265 Settings: Add guard for OnePlus device settings tile
 
    * packages/apps/ThemePicker
 3e7d5e06 ThemePicker: add separate lockscreen clock font picker
 
+   * vendor/alpha
+129486ff [scripts] changing kernel remote
+
+   * vendor/pixel/gms
+ee51f48 pixel shit again
+
 ====================
      03-23-2026
 ====================
+
+   * device/oneplus/sm8750-common
+d8426b1 sm8750-common: vibrator: drop libsoc_helper
+ebc2bdc sm8750-common: vibrator: add .oplus_sm8750 suffix to targets
 
    * frameworks/base
 61195f44c17a UI Styles tile dialog: apply changes immediately and remove dim from shade while dragging, to have a clear view of QS tiles.
@@ -132,22 +138,13 @@ eb3a096b4d2a Revert "SystemUI: Add volume slider gradient customization"
 c9c581a8afdc Revert "SystemUI: Add custom gradient start/end color support"
 c5a7f759e372 Revert "SystemUI: Add gradient for volume buttons along with slider"
 15ac74427590 Revert "SystemUI: Fix up gradient related glitch in volume slider"
-2bfbc28f2a88 SystemUI: Clocks: Various layout and font fixes
-ddda337d6365 SystemUI: Import stylish clock styles
-679871686754 SystemUI: Add block and bubble to no-color exclude list
-70ce33b9b3ff SystemUI: Add support custom clock color [1/2]
-733581337423 SystemUI: Allow adjust height of lockscreen clock styles [1/2]
-3a9dabccccc0 SystemUI: Hide clock properly when clock style set
-a555a7c9d00a SystemUI: Improve clock face color option
-fa94fa2e4c1c SystemUI: Lock Screen Clock Accent Color Option
-0787adf6141c SystemUI: Clocks: Add various clock styles
-b75f912aa556 SystemUI: Add layout section for clock style
-6b6f3f2e3364 SystemUI: Implement weather views for clock styles
-1a7f6283b7ee SystemUI: Introduce Clock face feature
 
    * hardware/oplus
 637e14f AlphaDroid
 4abe525 sepolicy: Solve vendor_hal_perf_default denials
+
+   * manifest
+a3b199e Track frameworks/base from github
 
    * packages/apps/AlphaSettings
 30dc41c3 Settings: Add support for hide applist [2/2] * Code is adapted from cutout force full screen * Give authorship * Add "Show system" and "Show overlay" menu based on ManageApplications.java * Query all apps installed by any user and set value for all user
@@ -183,27 +180,24 @@ d4bfa4c9 Drop prebuilt bootanimation
 eb40e9f6 Use alpha overlay names
 bb03997f Migrate overlays to vendor/alpha
 ccae8eb0 addons: Update GlanceableHub overlays
-ed5b8301 addons: Add overlay for hiding clock and smartspace
 
 ====================
      03-22-2026
 ====================
 
-   * device/oneplus/dodge
-202f607 dodge: ALS props for brightness-lux polynomials
-4bcc6ef dodge: overlay: use auto brightness curves from akita
-18a1996 dodge: add ALS correction props
-8a040f3 dodge: configs: config screenBrightnessMap with measurements
-7922a3c dodge: decouple auto suspend mode from display state
-b45a22a dodge: set the doze and dim brightness
-3562f6b dodge: enable wide color gamut
-247b3d0 dodge: attempt to setup automatic color management
-0b5dd22 dodge: set a custom brightness ramp up/down speed
-1d41abb sepolicy add missing permission policy
-e62c1cc sepolicy: Add missing for GMS
-6bb246f BoardConfig: Add vendor SEPolicy directory
-
    * frameworks/base
+2bfbc28f2a88 SystemUI: Clocks: Various layout and font fixes
+ddda337d6365 SystemUI: Import stylish clock styles
+679871686754 SystemUI: Add block and bubble to no-color exclude list
+70ce33b9b3ff SystemUI: Add support custom clock color [1/2]
+733581337423 SystemUI: Allow adjust height of lockscreen clock styles [1/2]
+3a9dabccccc0 SystemUI: Hide clock properly when clock style set
+a555a7c9d00a SystemUI: Improve clock face color option
+fa94fa2e4c1c SystemUI: Lock Screen Clock Accent Color Option
+0787adf6141c SystemUI: Clocks: Add various clock styles
+b75f912aa556 SystemUI: Add layout section for clock style
+6b6f3f2e3364 SystemUI: Implement weather views for clock styles
+1a7f6283b7ee SystemUI: Introduce Clock face feature
 1e0b7c8b793e New Crowdin updates (#1300)
 25b29988bc8c Update Crowdin configuration file
 1cb2784b5f09 SystemUI: keep Wi-Fi QS tile subtitle Wi-Fi-specific
@@ -330,6 +324,69 @@ c345fb198c0e system: Postpone NetworkWatchlistService scan during boot
 83a232ff9b80 ScreenshotController: Clean up resources when dismissed
 640bce89b35b Screenrecord: Fix notifications not being dismissed
 c5486637583f SystemUI: Screenrecord: Add delete action to the notification
+
+   * kernel/oneplus/sm8750
+b987867269be Uprev: AmberKernelV2
+eca7a4c02ac5 FixUp! bad merge
+
+   * packages/apps/AlphaSettings
+d09badac Cutout progress: introduce expanded mode
+9776b841 Cutout progress cleanup
+ad310012 CustomSeekBarPreference: fix reset button
+232868fe fixup! AlphaSettings v4.3 bringup
+8d0cc4dd New Crowdin updates (#127)
+58931706 Add missing Drawable for Cutout Ring Feature
+
+   * packages/apps/GameSpace
+1700423 Merge branch '16.0' of https://github.com/crdroidandroid/android_packages_apps_GameSpace into HEAD
+
+   * packages/apps/Settings
+ca46814eb9f Cutout progress: allow to launch settings externally
+818ed9a87ff SystemNavigation: adapt availability to QuickSwitch multi-launcher support
+ee206e0a998 Refractor Color Mode/Display Engine
+82634a8e378 settings: Introduce QuickSwitch feature [2/2]
+a961c8579fe Styles and wallpaper: handle overlays and availability
+baed56c01d8 Don't show homepage suggestions
+685d5aa90d5 Reorder homepage preferences
+076769ad77a Update settings homepage colors
+8a451d59fee ChargingControl: fix preference availability status
+a5a475cf063 colors: Introduce Reality display engine [2/2] [SQUASH]
+77c8a470a85 Add BatteryDivider to fuelgauge
+bd3834c8754 Introduce AlphaDroid Firmware version
+3321ca69746 Revamp About Phone header
+420053351f0 Bringup AlphaDroid based on crDroid/LineageOS
+5a63de7f690 Sync lineage-sdk namespaces with frameworks/base
+ebbc2d0087d Partially import LineageParts
+
+   * vendor/addons
+ed5b8301 addons: Add overlay for hiding clock and smartspace
+
+   * vendor/alpha
+dfac175e vars: Add Pixel 10 series
+23ed2af8 release: Bump Security String to 2026-03-01
+d3f22b90 aconfig: Enable enable_presentation_for_connected_displays
+136fd9a7 vars: Add waipio-6.6-vendor
+8dbf3859 config: CUSTOM_LOCALES: Add Nynorsk
+
+====================
+     03-21-2026
+====================
+
+   * device/oneplus/dodge
+202f607 dodge: ALS props for brightness-lux polynomials
+4bcc6ef dodge: overlay: use auto brightness curves from akita
+18a1996 dodge: add ALS correction props
+8a040f3 dodge: configs: config screenBrightnessMap with measurements
+7922a3c dodge: decouple auto suspend mode from display state
+b45a22a dodge: set the doze and dim brightness
+3562f6b dodge: enable wide color gamut
+247b3d0 dodge: attempt to setup automatic color management
+0b5dd22 dodge: set a custom brightness ramp up/down speed
+1d41abb sepolicy add missing permission policy
+e62c1cc sepolicy: Add missing for GMS
+6bb246f BoardConfig: Add vendor SEPolicy directory
+
+   * frameworks/base
 c7399def9a05 SystemUI: InternetTileNewImpl: Fix secondary click
 ab7fd117594c SystemUI: Allow devices to disable 5G toggle
 fc9652a554e0 SystemUI: Introduce 5G toggle in internet connectivity dialog
@@ -1013,52 +1070,12 @@ dd0fdb0ab9b6 Revert "LineageStatusBarItemHolder: Implement receivers removal met
 4ffe6e3f6cb0 fw/b: Add support for runtime toggle of navbar
 48eff80da610 base: Add stub files
 
-   * kernel/oneplus/sm8750
-b987867269be Uprev: AmberKernelV2
-eca7a4c02ac5 FixUp! bad merge
-
-   * packages/apps/AlphaSettings
-d09badac Cutout progress: introduce expanded mode
-9776b841 Cutout progress cleanup
-ad310012 CustomSeekBarPreference: fix reset button
-232868fe fixup! AlphaSettings v4.3 bringup
-8d0cc4dd New Crowdin updates (#127)
-58931706 Add missing Drawable for Cutout Ring Feature
-
-   * packages/apps/GameSpace
-1700423 Merge branch '16.0' of https://github.com/crdroidandroid/android_packages_apps_GameSpace into HEAD
-
-   * packages/apps/Settings
-ca46814eb9f Cutout progress: allow to launch settings externally
-818ed9a87ff SystemNavigation: adapt availability to QuickSwitch multi-launcher support
-ee206e0a998 Refractor Color Mode/Display Engine
-82634a8e378 settings: Introduce QuickSwitch feature [2/2]
-a961c8579fe Styles and wallpaper: handle overlays and availability
-baed56c01d8 Don't show homepage suggestions
-685d5aa90d5 Reorder homepage preferences
-076769ad77a Update settings homepage colors
-8a451d59fee ChargingControl: fix preference availability status
-a5a475cf063 colors: Introduce Reality display engine [2/2] [SQUASH]
-77c8a470a85 Add BatteryDivider to fuelgauge
-bd3834c8754 Introduce AlphaDroid Firmware version
-3321ca69746 Revamp About Phone header
-420053351f0 Bringup AlphaDroid based on crDroid/LineageOS
-5a63de7f690 Sync lineage-sdk namespaces with frameworks/base
-ebbc2d0087d Partially import LineageParts
-
-   * vendor/alpha
-dfac175e vars: Add Pixel 10 series
-23ed2af8 release: Bump Security String to 2026-03-01
-d3f22b90 aconfig: Enable enable_presentation_for_connected_displays
-136fd9a7 vars: Add waipio-6.6-vendor
-8dbf3859 config: CUSTOM_LOCALES: Add Nynorsk
-
-====================
-     03-21-2026
-====================
-
 ====================
      03-20-2026
+====================
+
+====================
+     03-19-2026
 ====================
 
    * frameworks/base
@@ -1066,9 +1083,12 @@ d3f22b90 aconfig: Enable enable_presentation_for_connected_displays
 
    * packages/apps/Launcher3
 1a89468a58 Launcher3: Implement advanced color picker with HSB and RGB controls for app drawer background
+dd49363ad1 Launcher3: Fix custom color not working in OneUI style (vertical paged) and refine fullscreen behavior
+379e6b9376 Launcher3: Fix custom color not working in Legacy Fullscreen mode and improve consistency
+b8d7f1c2b0 Launcher3: Allow custom background colors for the app drawer
 
 ====================
-     03-19-2026
+     03-18-2026
 ====================
 
    * device/oneplus/dodge
@@ -1188,15 +1208,6 @@ bddc68ec4838 lz4: Use ARM64 NEON-optimized decompression where available
 a102a5f2a9a9 thermal: qcom: tsens: Fix function prototype mismatch
 c12d62eed9cc videodev2: Use <linux/time.h> for struct timespec
 
-   * packages/apps/Launcher3
-dd49363ad1 Launcher3: Fix custom color not working in OneUI style (vertical paged) and refine fullscreen behavior
-379e6b9376 Launcher3: Fix custom color not working in Legacy Fullscreen mode and improve consistency
-b8d7f1c2b0 Launcher3: Allow custom background colors for the app drawer
-
-====================
-     03-18-2026
-====================
-
    * packages/apps/GameSpace
 baa4538 New translations (#135)
 
@@ -1303,9 +1314,6 @@ f6932628a9 Effects: Do not allow SW dolby effect to be supsended
    * frameworks/base
 ee7811df7c47 Automatic translation import
 
-   * kernel/oneplus/sm8550
-19185a9a0371 fixup ksu
-
    * packages/apps/GameSpace
 c80114a New Crowdin updates (#133)
 
@@ -1330,15 +1338,24 @@ d5d7cd0 certification: Add script to fetch pif from beta
 2a464a2215 Revert "codec2: Use numClientBuffers to control the pipeline"
 68b5e73139 Revert "codec2: Change a Info print into Verbose"
 
+   * kernel/oneplus/sm8550
+19185a9a0371 fixup ksu
+
    * manifest
 edff12b Track packages/modules/Permission from Alpha
 
    * packages/apps/Launcher3
 a21101457b Launcher3: Quickspace: Update media session helper
-3f1f6ab8a4 Launcher3: Fix SelectorWithWidgetPreference with material expressive design
 
 ====================
      03-13-2026
+====================
+
+   * packages/apps/Launcher3
+3f1f6ab8a4 Launcher3: Fix SelectorWithWidgetPreference with material expressive design
+
+====================
+     03-12-2026
 ====================
 
    * frameworks/base
@@ -1371,17 +1388,6 @@ e8e5095c5796 Ensure sandboxed UIDs are treated as untrusted in Appops
 1baa0c781ff9 [RESTRICT AUTOMERGE] Stay in app pinned mode upon SystemUI crash
 
 ====================
-     03-12-2026
-====================
-
-   * manifest
-14dd37a Update README
-721f399 Track AlphaSettings from github
-
-   * packages/apps/AlphaSettings
-e2f86aaa Extend navbar styles support to other launchers
-
-====================
      03-11-2026
 ====================
 
@@ -1389,7 +1395,12 @@ e2f86aaa Extend navbar styles support to other launchers
 77542bfa4a qcacld: use MLGO inliner model
 
    * manifest
+14dd37a Update README
+721f399 Track AlphaSettings from github
 8a689e4 Track google sounds
+
+   * packages/apps/AlphaSettings
+e2f86aaa Extend navbar styles support to other launchers
 
    * vendor/alpha
 30666cde Include Google Sounds in GAPPS builds
@@ -1421,9 +1432,6 @@ fe053af2 AlphaSettings: follow Settings text style
 fb2d1e03 Progress ring charging indicator [2/2]
 36aa0c5f Introduce cutout progress ring [2/2]
 a51da9f5 AlphaSettings v4.3 bringup
-504ec7f0 Revert "Add gradients customization"
-b4b1f7db New Crowdin updates (#1298)
-b94e3b50 Remove alert slider notifications
 
 ====================
      03-09-2026
@@ -1451,12 +1459,13 @@ fd1d148e78 Add dalvik-heap device configs for 8/12/16 GiB devices
 cd7b501840 Reduce thread scheduling overhead
 6dd191b4c8 libbinder: Suppress log spam when unlinking death recipients
 
-   * hardware/interfaces
-84f71bdfc4 compatibility_matrices: Add p/android-4.4 into FCM 5
-508796084d Restore q/android-4.9 again
-
    * manifest
 a91b406 Sync hardware/interfaces from Alpha
+
+   * packages/apps/AlphaSettings
+504ec7f0 Revert "Add gradients customization"
+b4b1f7db New Crowdin updates (#1298)
+b94e3b50 Remove alert slider notifications
 
    * packages/apps/Settings
 612aa9364cb Settings: BackgroundCheckSummary: use InstrumentedFragment to avoid NPE
@@ -1682,7 +1691,8 @@ ecc9b4c8a Telephony: Apply Material You to exposed settings
 8346420f9f80 SettingsLib: Ensure divider is set before view is returned in onCreateView
 
    * hardware/interfaces
-b81eca0edc fixup! audio: Allow opting out of speaker_layout_channel_mask field
+84f71bdfc4 compatibility_matrices: Add p/android-4.4 into FCM 5
+508796084d Restore q/android-4.9 again
 
    * vendor/oneplus/salami
 3366882 salami: Update from OOS 11.H.11
@@ -1697,6 +1707,9 @@ b81eca0edc fixup! audio: Allow opting out of speaker_layout_channel_mask field
    * frameworks/base
 a9589527dd92 LineageStatusBarItemHolder: Implement receivers removal methods
 
+   * hardware/interfaces
+b81eca0edc fixup! audio: Allow opting out of speaker_layout_channel_mask field
+
    * kernel/oneplus/sm8750
 4bde5abff3fb Merge remote-tracking branch 'sm8750/lineage-22.2' into HEAD
 e7d1995101bb Merge tag 'KERNEL.PLATFORM.4.0.r1-15800-kernel.0' of https://git.codelinaro.org/clo/la/kernel/qcom into HEAD
@@ -1704,7 +1717,6 @@ e7d1995101bb Merge tag 'KERNEL.PLATFORM.4.0.r1-15800-kernel.0' of https://git.co
 
    * packages/apps/AlphaSettings
 702d0ce6 New Crowdin updates (#1297)
-760de788 Add color modes for music chip bg [2/2]
 
 ====================
      03-06-2026
@@ -1790,6 +1802,9 @@ f7cd392 sm8550-common: init: Always use lz4 for zram
 4df5f64ac421 kernelsu: Allow compatible manager apks
 dd4f9f9be069 driver: kernelsu: Introduce SuSFS v2.0.0
 60850741a0ea drivers: Import Ksu-next 3.0.1
+
+   * packages/apps/AlphaSettings
+760de788 Add color modes for music chip bg [2/2]
 
 ====================
      03-05-2026
