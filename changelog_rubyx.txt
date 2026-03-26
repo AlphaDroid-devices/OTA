@@ -4,6 +4,20 @@ Device: Xiaomi Redmi Note 12 Pro 5G/Pro+ 5G
 Device maintainer: YagizErdemir
 
 ====================
+     26-03-2026
+====================
+- AlphaDroid 4.3
+- Update blobs/firmware from OS2.0.11.0.UMOMIXM
+- Merge tag v4.19.325-cip125 kernel from https://git.kernel.org/pub/scm/linux/kernel/git/cip/linux-cip
+- Resolves in-call volume where slider changes but audio remains constant
+- Disabled high performance transitions
+- Updated Clang
+- Wifi and Hotspot WPA3 issues fixed
+- Added torch light control
+- Fixed c2.media crash issues
+- Switched common bluetooth audio
+
+====================
      03-11-2025
 ====================
 - AlphaDroid 4.1
