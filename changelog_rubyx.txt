@@ -4,7 +4,7 @@ Device: Xiaomi Redmi Note 12 Pro 5G/Pro+ 5G
 Device maintainer: YagizErdemir
 
 ====================
-     26-03-2026
+     27-03-2026
 ====================
 - AlphaDroid 4.3
 - Update blobs/firmware from OS2.0.11.0.UMOMIXM
@@ -14,8 +14,15 @@ Device maintainer: YagizErdemir
 - Updated Clang
 - Wifi and Hotspot WPA3 issues fixed
 - Added torch light control
-- Fixed c2.media crash issues
 - Switched common bluetooth audio
+- Switched Common C2 service
+- Switched AIDL C2 service
+- Import volumes audio policy from raven
+- Switch to AOSP remote submix
+- Fully Disable OMX
+- Prefer HW codecs over SW
+- Bump BPF version to 5.10
+- Enable AOSP color management
 
 ====================
      03-11-2025
