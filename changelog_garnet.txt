@@ -4,6 +4,15 @@ Device: Xiaomi Redmi Note 13 Pro 5G (Garnet)
 Device maintainer: Jotanh
 
 ====================
+     27-03-2025
+====================
+- Initial Alpha v4.3 QPR2
+- Updated Kernel
+- Undervolted GPU
+- Improved Battery and Performance
+- FW Update to 2.0.206VNRMIXM
+
+====================
      09-12-2025
 ====================
 - Fixed Screen Mirroring
