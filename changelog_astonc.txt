@@ -1,5 +1,17 @@
-Device: OnePlus Ace 3 | 12R (Aston)
+Device: OnePlus Ace 3 (astonc)
 Team Aston: elpaablo, REV3NT3CH
+
+====================
+     27-03-2026
+====================
+
+* Split Ace 3 (astonc) from 12R (aston)
+* AlphaDroid 4.3
+* Synced with LOS trees
+* Fixed auto-brightness
+* Switched to Dolby Atmos
+* Updated KernelSU-Next to 3.1
+* Updated SuSFS to 2.0
 
 ====================
      12-12-2025
