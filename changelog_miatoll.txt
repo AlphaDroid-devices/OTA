@@ -1,6 +1,15 @@
 Build type: Monthly
 Device: Redmi Note 9s/Pro/Pro max, Poco m2 Pro (miatoll)
-Device maintainer: AFIF
+Device maintainer: ナマン
+
+====================
+    31-03-2026
+====================
+* Initial AlphaDroid 4.3 Build
+* March Security Patch
+* Added Lunaris Dolby
+* Added Leica Camera
+* Added Torch Strength
 
 ====================
     28-05-2025
