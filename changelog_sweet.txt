@@ -4,6 +4,18 @@ Device: Xiaomi Redmi Note 10 Pro (sweet)
 Device maintainer: Javi
 
 ====================
+     04-04-2026
+====================
+- March security patch
+- Switch to miuicamera stock
+- XiaomiDolby
+- Update perf kernel 4.14.356 ksunext support
+
+Credits:
+- aryannn999,neobuddy89 and Lineageos Team for continuing to support this fantastic device
+- Team AlphaDroid
+
+====================
      14-12-2025
 ====================
 - Nov security patch
