@@ -2,6 +2,13 @@ Device: OnePlus 12R (aston)
 Team Aston: elpaablo, REV3NT3CH
 
 ====================
+     18-04-2026
+====================
+
+* AlphaDroid 4.4
+* DeviceSettings: properly integrate with the Settings homepage
+
+====================
      27-03-2026
 ====================
 
