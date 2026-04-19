@@ -1,6 +1,17 @@
 Build type: Monthly
 Device: Google Pixel 7 Pro (cheetah)
-Device maintainer: Pyrtle93
+Device maintainer: Javi
+
+====================
+     19-04-2026
+====================
+
+* Initial build 4.4 Android 16
+* MANDATORY CLEAN INSTALL
+
+CREDITS:
+ AlphaDroid Team
+ LineageOS Team
 
 ====================
      08-31-2023

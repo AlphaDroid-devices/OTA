@@ -1,28 +1,29 @@
 {
-	"response": [
-		{
-			"maintainer": "Pyrtle93",
-			"oem": "Google",
-			"device": "7Pro",
-			"filename": "AlphaDroid-13.0-20231020-cheetah-gapps-v1.10.zip",
-			"download": "https://sourceforge.net/projects/alphadroid-project/files/cheetah/AlphaDroid-13.0-20231020-cheetah-gapps-v1.10.zip/download",
-			"timestamp": 1697749081,
-			"md5": "902faf5c811cbac4b912a50a4dc348c4",
-			"sha256": "7fa640177b515363bd0183420776f85a9595b062c1e6bbe8fc948f72bacf38a1",
-			"size": 2449321646,
-			"version": "1.10",
-			"buildtype": "gapps",
-			"forum": "https://xdaforums.com/t/rom-official-13-0-alphadroid-1-10-cheetah-10-20-2023.4624145/",
-			"gapps": "",
-			"firmware": "",
-			"modem": "",
-			"bootloader": "",
-			"recovery": "",
-			"paypal": "",
-			"telegram": "https://t.me/PyrtlesPixels",
-			"dt": "https://github.com/AlphaDroid-devices/device_google_gs201",
-			"common-dt": "https://github.com/AlphaDroid-devices/device_google_pantah",
-			"kernel": "https://github.com/AlphaDroid-devices/Kirisakura_Pantah"
-		}
-	]
+    "response": [
+        {
+            "maintainer": "Javi",
+            "oem": "Google",
+            "device": "cheetah",
+            "filename": "AlphaDroid-16-20260419-gapps-cheetah-v4.4.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/cheetah/AlphaDroid-16-20260419-gapps-cheetah-v4.4.zip/download",
+            "timestamp": 1776606915,
+            "md5": "227b42c43697004bdbb50a97950904be",
+            "sha256": "09561a5003192e5c675d6f1b49963202134545529231021a79f81c8226ac9c9e",
+            "size": 3119082666,
+            "version": "4.4",
+            "buildtype": "Official",
+            "buildvariant": "gapps",
+            "forum": "",
+            "gapps": "",
+            "firmware": "",
+            "modem": "",
+            "bootloader": "",
+            "recovery": "https://sourceforge.net/projects/alphadroid-project/files/cheetah/recovery_images/",
+            "paypal": "",
+            "telegram": "https://t.me/stahed_cheetah",
+            "dt": "https://github.com/AlphaDroid-devices/device_google_pantah",
+            "common-dt": "",
+            "kernel": "https://github.com/LineageOS/android_device_google_pantah-kernels"
+        }
+    ]
 }
