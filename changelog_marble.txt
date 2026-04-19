@@ -3,6 +3,36 @@ Build type: Monthly
 Device: Poco F5 / Redmi Note 12 Turbo
 Device maintainer: CHAITANYA
 
+=====19/04/2026=====
+- Latest HOS3 global Firmware is added in rom if you face network issue flash latest regional firmware from download page
+- latest orange fox is compulsory to be used available on download page
+- ksunext 3.2.0 with susfs 2.1.0 is included in rom
+- Reduce surfaceflinger min uclamp value
+- Set SurfaceFlinger uclamp.min to 20%
+- Updated blobs and camera from latest hos3 global
+- Bluetooth: Move PAN properties to system_ext
+- Bluetooth: Set "bluetooth.auto_connect_profiles.enabled" to true
+- Use stack alloc for _oem_msg to avoid memory leaks
+- Enable fp screen off unlock feature
+- drop sched_boost and fix uclamp override
+- surfaceflinger: Reduce max acquired frame buffers to 2
+- tune SF buffering and rendering behavior
+- tune powerhint for better usability
+- powerhint is tuned for better battery and performance simultaneously
+- sepolicy: Allow Power HAL to access Thermal and Stats services
+- parts: Remove unused Doze implementation and service
+- Fix sections of ca cert blobs
+- Import missing libjnihelper.so for CACertService app
+- Update common blobs from diting OS3.0.1.0.VLFMIXM
+- Fixed poweropt crashes
+- parts: thermals: Re-write in jetpack compose
+- Properly handle HIDL return values
+- Disable AptX voice property(fix bluetooth calling issues)
+- Rework on Stock Audio HAL
+- Pin Audio blobs from marble
+- update device blobs from OS2.0.218.0.VMRMIXM
+- Eol update suppoert for marble is dropped now
+
 =====22/01/2026=====
 - Firmware is removed download only hos2 , flash .216 fw or regional equivalent 
 - latest orange fox is compulsory to be used available on download page
