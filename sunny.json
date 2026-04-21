@@ -1,16 +1,16 @@
 {
     "response": [
         {
-            "maintainer": "ZNAIV|Munir",
+            "maintainer": "ZNAIV",
             "oem": "Xiaomi",
             "device": "sunny",
-            "filename": "AlphaDroid-15-20250616-gapps-sunny-v3.2.1.zip",
-            "download": "https://sourceforge.net/projects/alphadroid-project/files/sunny/3.2/AlphaDroid-15-20250616-gapps-sunny-v3.2.1.zip/download",
-            "timestamp": 1750080776,
-            "md5": "1846d207080b08bbb0dd49ed6155dfa7",
-            "sha256": "0327006cd0538cb4a7459c3a7e633810162ce03c31a9b6b40993ee921525a253",
-            "size": 2001561216,
-            "version": "3.2.1",
+            "filename": "AlphaDroid-16-20260421-gapps-sunny-v4.4.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/sunny/4.4/AlphaDroid-16-20260421-gapps-sunny-v4.4.zip/download",
+            "timestamp": 1776733797,
+            "md5": "6c470e3e1456d9797ef5a31d9c5f66cf",
+            "sha256": "f2fa38b6369448edc9d2c570fa6b8f10a24816921672fb7d8cecece2178f2f6c",
+            "size": 1945519589,
+            "version": "4.4",
             "buildtype": "Official",
             "buildvariant": "gapps",
             "forum": "https://t.me/alphadroid_chat",
@@ -18,10 +18,10 @@
             "firmware": "https://drive.google.com/file/d/1y_V2SgRkpRSYnc1IhHqvfu4l5QELqgQ0/view",
             "modem": "",
             "bootloader": "",
-            "recovery": "https://sourceforge.net/projects/alphadroid-project/files/sunny/3.2/AlphaDroid-15-20250616-recovery.zip/download",
+            "recovery": "https://sourceforge.net/projects/alphadroid-project/files/sunny/4.4/AlphaDroid-16-20260421-recovery-sunny-v4.4.zip/download",
             "paypal": "https://www.paypal.com/paypalme/znaiv",
-            "telegram": "https://t.me/shawkbuilddiscussion/15362",
-            "dt": "https://github.com/AlphaDroid-devices/device_xiaomi_sunny/tree/alpha-15",
+            "telegram": "https://t.me/shawkcommunity/15362",
+            "dt": "https://github.com/AlphaDroid-devices/device_xiaomi_sunny/tree/alpha-16.2",
             "common-dt": "",
             "kernel": "https://github.com/Neternels/android_kernel_xiaomi_sunny/tree/staging"
         }

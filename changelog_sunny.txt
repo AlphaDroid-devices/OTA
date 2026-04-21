@@ -4,6 +4,14 @@ Device: Xiaomi Redmi Note 10
 Device maintainer: musivian | eklerismunir
 
 ====================
+    21-04-2025
+====================
+- Initial A16 QPR2 Build
+- User Signed Build
+- April Security Patch
+- NetErnels State at r18a2
+
+====================
     16-06-2025
 ====================
 - Update libnotifyaudiohal from ruby V816.0.5.0.UMOMIXM to resolve an issue where the proximity sensor wasn't working.
