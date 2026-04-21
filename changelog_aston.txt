@@ -2,6 +2,13 @@ Device: OnePlus 12R (aston)
 Team Aston: elpaablo, REV3NT3CH
 
 ====================
+     20-04-2026
+====================
+
+* Add Device Settings to Settings dashboard
+* Kernel updated to 5.15.202
+
+====================
      18-04-2026
 ====================
 
