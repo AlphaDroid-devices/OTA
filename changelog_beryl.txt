@@ -2,7 +2,14 @@ Highlights & Device Specific Changes:
 Build type: Monthly
 Device: Xiaomi Redmi Note 14 5G / Poco M7 Pro 5G
 Device maintainer: NaokoShoto
-Required firmware: HyperOS
+Required firmware: HyperOS 2
+
+====================
+     24-04-2026
+====================
+- A16 QPR2
+- Sync with latest changes
+- Add vibration strength
 
 ====================
      17-12-2025
