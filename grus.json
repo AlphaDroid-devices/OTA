@@ -1,16 +1,16 @@
 {
     "response": [
-        {
+            {
             "maintainer": "elpaablo",
             "oem": "Xiaomi",
             "device": "grus",
-            "filename": "AlphaDroid-16-20251222-vanilla-grus-v4.2.zip",
-            "download": "https://sourceforge.net/projects/alphadroid-project/files/grus/AlphaDroid-16-20251222-vanilla-grus-v4.2.zip/download",
-            "timestamp": 1766404498,
-            "md5": "7e487a522bdcd7c58aabfaa55426a0a1",
-            "sha256": "43a6496444e150eff9503b73ba9213b94ca8ad228109a3391adc49c353f99849",
-            "size": 1547147245,
-            "version": "4.2",
+            "filename": "AlphaDroid-16-20260425-vanilla-grus-v4.4.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/grus/AlphaDroid-16-20260425-vanilla-grus-v4.4.zip/download",
+            "timestamp": 1777131128,
+            "md5": "500c4eb3f39fb38b8af45494b93b82c7",
+            "sha256": "fbeedc5ad6b2048db23f31a1ffb5421b53df4c8e7b5fd4304156a812d9c4eab7",
+            "size": 1587310628,
+            "version": "4.4",
             "buildtype": "Official",
             "buildvariant": "vanilla",
             "forum": "https://t.me/alphadroid_chat",
@@ -21,21 +21,21 @@
             "recovery": "",
             "paypal": "https://www.paypal.com/donate/?hosted_button_id=UKKSXJYZDMH58",
             "telegram": "https://t.me/aexarrowgrus",
-            "dt": "https://github.com/alphadroid-devices/device_xiaomi_grus/tree/alpha-16.1",
+            "dt": "https://github.com/alphadroid-devices/device_xiaomi_grus/tree/alpha-16.2",
             "common-dt": "",
-            "kernel": "https://github.com/alphadroid-devices/kernel_xiaomi_sdm710/tree/alpha-16.1"
+            "kernel": "https://github.com/alphadroid-devices/kernel_xiaomi_sdm710/tree/alpha-16.2"
         },
         {
             "maintainer": "elpaablo",
             "oem": "Xiaomi",
             "device": "grus",
-            "filename": "AlphaDroid-16-20251221-gapps-grus-v4.2.zip",
-            "download": "https://sourceforge.net/projects/alphadroid-project/files/grus/AlphaDroid-16-20251221-gapps-grus-v4.2.zip/download",
-            "timestamp": 1766360397,
-            "md5": "8afe427a53888adf9da64bb02ad7c3ac",
-            "sha256": "0aa36c81124ecfacfb3b872dc6f0e8959849c05459adce3277da3af12255e002",
-            "size": 2516684506,
-            "version": "4.2",
+            "filename": "AlphaDroid-16-20260425-gapps-grus-v4.4.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/grus/AlphaDroid-16-20260425-gapps-grus-v4.4.zip/download",
+            "timestamp": 1777116655,
+            "md5": "8650a9853eefd7c3f972c527a97348e7",
+            "sha256": "83b1fe7741f7f1df23dbce8d08176866d54cd958d5f05784bf7bf14d78597856",
+            "size": 2630326999,
+            "version": "4.4",
             "buildtype": "Official",
             "buildvariant": "gapps",
             "forum": "https://t.me/alphadroid_chat",
@@ -46,9 +46,9 @@
             "recovery": "",
             "paypal": "https://www.paypal.com/donate/?hosted_button_id=UKKSXJYZDMH58",
             "telegram": "https://t.me/aexarrowgrus",
-            "dt": "https://github.com/alphadroid-devices/device_xiaomi_grus/tree/alpha-16.1",
+            "dt": "https://github.com/alphadroid-devices/device_xiaomi_grus/tree/alpha-16.2",
             "common-dt": "",
-            "kernel": "https://github.com/alphadroid-devices/kernel_xiaomi_sdm710/tree/alpha-16.1"
+            "kernel": "https://github.com/alphadroid-devices/kernel_xiaomi_sdm710/tree/alpha-16.2"
         }
     ]
 }

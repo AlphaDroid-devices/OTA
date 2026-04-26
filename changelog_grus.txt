@@ -2,6 +2,19 @@ Device: Xiaomi Mi 9 SE (Grus)
 Device maintainer: elpaablo
 
 ====================
+     26-04-2026
+====================
+
+* AlphaDroid 4.4
+* Rebased trees (©)
+* Dropped ViperFX
+* Added Lunaris Dolby
+* Updated KernelSU-Next to version 3.2
+* Updated SUSFS to version 2.1
+
+(©) Credits: Rocky7842 (https://github.com/Rocky7842)
+
+====================
      22-12-2025
 ====================
 
