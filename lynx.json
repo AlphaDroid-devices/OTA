@@ -1,0 +1,29 @@
+{
+    "response": [
+        {
+            "maintainer": "Javi",
+            "oem": "Google",
+            "device": "lynx",
+            "filename": "AlphaDroid-16-20260426-gapps-lynx-v4.4.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/lynx/AlphaDroid-16-20260426-gapps-lynx-v4.4.zip/download",
+            "timestamp": 1777214379,
+            "md5": "0ac56e4cfbcd8e14945cac3ecf68d63a",
+            "sha256": "a423497bb2e8459888e6413153feaaa90bfbd38c282135babc8ec34d4e9cf564",
+            "size": 2296747618,
+            "version": "4.4",
+            "buildtype": "Official",
+            "buildvariant": "gapps",
+            "forum": "",
+            "gapps": "",
+            "firmware": "",
+            "modem": "",
+            "bootloader": "",
+            "recovery": "https://sourceforge.net/projects/alphadroid-project/files/lynx/recovery_images/",
+            "paypal": "",
+            "telegram": "https://t.me/stahed_cheetah",
+            "dt": "",
+            "common-dt": "",
+            "kernel": "https://github.com/LineageOS/android_device_google_lynx-kernels"
+        }
+    ]
+}
