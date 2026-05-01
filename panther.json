@@ -1,28 +1,29 @@
 {
-	"response": [
-		{
-			"maintainer": "Pyrtle93",
-			"oem": "Google",
-			"device": "7",
-			"filename": "AlphaDroid-13.0-20231020-panther-gapps-v1.10.zip",
-			"download": "https://sourceforge.net/projects/alphadroid-project/files/panther/AlphaDroid-13.0-20231020-panther-gapps-v1.10.zip/download",
-			"timestamp": 1697757950,
-			"md5": "fbb7e67bbc89a113081928cadeeb33e0",
-			"sha256": "0656f1f1e5720ee98d496cc0649b0c28e4b80c69c90bd3931b9e56d7a8ca04a6",
-			"size": 2447335084,
-			"version": "1.10",
-			"buildtype": "gapps",
-			"forum": "https://xdaforums.com/t/rom-official-13-0-alphadroid-1-10-cheetah-10-20-2023.4624145/",
-			"gapps": "",
-			"firmware": "",
-			"modem": "",
-			"bootloader": "",
-			"recovery": "",
-			"paypal": "",
-			"telegram": "https://t.me/PyrtlesPixels",
-			"dt": "https://github.com/AlphaDroid-devices/device_google_gs201",
-			"common-dt": "https://github.com/AlphaDroid-devices/device_google_pantah",
-			"kernel": "https://github.com/AlphaDroid-devices/Kirisakura_Pantah"
-		}
-	]
+    "response": [
+        {
+            "maintainer": "Javi",
+            "oem": "Google",
+            "device": "panther",
+            "filename": "AlphaDroid-16-20260501-gapps-panther-v4.4.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/panther/AlphaDroid-16-20260501-gapps-panther-v4.4.zip/download",
+            "timestamp": 1777647976,
+            "md5": "6a460ecd77b91b18288673fef313bf29",
+            "sha256": "8bbcb0f3c9d3e4cb190e911914d05e9dcf1cfdcce4dd7e7eae4158bc8813d10a",
+            "size": 3124919179,
+            "version": "4.4",
+            "buildtype": "Official",
+            "buildvariant": "gapps",
+            "forum": "",
+            "gapps": "",
+            "firmware": "",
+            "modem": "",
+            "bootloader": "",
+            "recovery": "",
+            "paypal": "",
+            "telegram": "https://t.me/stahed_cheetah",
+            "dt": "https://github.com/AlphaDroid-devices/device_google_pantah",
+            "common-dt": "",
+            "kernel": "https://github.com/LineageOS/android_device_google_pantah-kernels"
+        }
+    ]
 }

@@ -1,5 +1,5 @@
 Build type: Monthly
-Device: Google Pixel 7 (panther)
+Device: Google Pixel 7a (lynx)
 Device maintainer: Javi
 
 ====================
@@ -16,21 +16,8 @@ Device maintainer: Javi
 - Remove most proprietary Google apps
 
 CREDITS:
+ lynx_idx for fantastic test
  duhjokersinhell for info
  Michael Bestas for all job in this device
  AlphaDroid Team
  LineageOS Team
-
-====================
-     10-20-2023
-====================
-
-* initial AlphaDroid stable build
-* Fixed gcam f/c
-* Fixed hold for me & direct my call
-* Fixed no default sound for phone/alarm
-* Some QS footer updates
-* Port statusbar brightness control
-* Refactor PixelProps
-* Increased default qs header size from 110 to 130
-* Other Misc improvements/updates

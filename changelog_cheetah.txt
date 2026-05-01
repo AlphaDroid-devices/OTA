@@ -3,6 +3,25 @@ Device: Google Pixel 7 Pro (cheetah)
 Device maintainer: Javi
 
 ====================
+     01-05-2026
+====================
+
+- Fixed battery drain,excessive heat and deep sleep
+- Fixed portrait mode on the stock camera did not save pictures
+- Fixed permissions to update stock camera in the Play Store
+- Fixed problems with ESim
+- Reapply smart pixels
+- Add PixelParts support and fix HbmSVManager (thanks to duhjokersinhell for info)
+- Add The full Google Pixel experience (fix camera and other things)
+- Remove most proprietary Google apps
+
+CREDITS:
+ duhjokersinhell for info
+ Michael Bestas for all job in this device
+ AlphaDroid Team
+ LineageOS Team
+
+====================
      19-04-2026
 ====================
 
