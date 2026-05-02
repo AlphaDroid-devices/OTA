@@ -4,6 +4,29 @@ Device: Xiaomi Redmi Note 13 Pro 5G (Garnet)
 Device maintainer: Jotanh
 
 ====================
+     02-05-2025
+====================
+- Latest Source Sync
+- Note : Remove all Susfs modules before updating.
+
+---- Kernel ----
+Updated SUSFS to 2.1.0
+Changed KernelsuNext to KernelSU 3.2.4
+Updated Kernel to 5.10.252
+Improved GPU Undervolt
+
+---- Device ----
+Implemented torch light control
+Enabled eUICC only in Supported Devices
+Bluetooth Updates
+
+---- Vendor ----
+Added All Dolby C2 Codecs
+
+---- Parts ----
+Fixed GameBar Infos
+
+====================
      27-03-2025
 ====================
 - Initial Alpha v4.3 QPR2
