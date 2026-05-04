@@ -1,0 +1,29 @@
+{
+    "response": [
+        {
+            "maintainer": "Jotanh",
+            "oem": "Motorola",
+            "device": "xpeng",
+            "filename": "AlphaDroid-16-20260503-gapps-xpeng-v4.4.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/xpeng/AlphaDroid-16-20260503-gapps-xpeng-v4.4.zip/download",
+            "timestamp": 1777839661,
+            "md5": "4a943c50e1fefe2e9bbf2a96511adf82",
+            "sha256": "97f2f988a4badf7f0d2c8703b2acf6dec328a864db1eb1684cccb1f9d4df503d",
+            "size": 2419659444,
+            "version": "4.4",
+            "buildtype": "Official",
+            "buildvariant": "gapps",
+            "forum": "",
+            "gapps": "",
+            "firmware": "",
+            "modem": "",
+            "bootloader": "",
+            "recovery": "https://sourceforge.net/projects/alphadroid-project/files/xpeng/Assets/",
+            "paypal": "",
+            "telegram": "https://t.me/joaodoximicustom",
+            "dt": "https://github.com/AlphaDroid-devices/device_motorola_xpeng",
+            "common-dt": "https://github.com/AlphaDroid-devices/device_motorola_sm7325-common",
+            "kernel": "https://github.com/AlphaDroid-devices/kernel_motorola_sm7325"
+        }
+    ]
+}

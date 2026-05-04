@@ -1,0 +1,10 @@
+Highlights & Device Specific Changes:
+Build type: Monthly
+Device: Motorola Moto G200
+Device maintainer: Jotanh
+
+====================
+     03-05-2025
+====================
+- Latest Source Sync
+- Intial Release.
