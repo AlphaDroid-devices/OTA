@@ -1,7 +1,16 @@
 Highlights & Device Specific Changes:
 Build type: Monthly
 Device: Poco X4 Pro
-Device maintainer: MrTopiA
+Device maintainer: 𝙩𝙧𝙖𝙣𝙌𝙪𝙞𝙡𝙖
+
+====================
+    08-05-2026
+====================
+- Synced to **Latest 4.4 Source**
+- Initial **Android 16 Release**
+- Add **Lunaris Dolby Atmos**
+- Add Support For **Kernel-SU Next & Kernel-SU 3.1.0+ versions**
+- Miscellaneous Improvements
 
 ====================
     04-07-2025
