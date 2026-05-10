@@ -1,0 +1,9 @@
+Device: Xiaomi 11 lite 5G NE/ Mi 11 LE (lisa)
+Device maintainer: Termux
+
+====================
+    09-05-2026
+====================
+
+* AlphaDroid 4.4 Initial Build
+* Uses lifesteal v2.3 Kernel

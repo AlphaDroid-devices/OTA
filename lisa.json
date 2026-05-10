@@ -1,0 +1,29 @@
+{
+    "response": [
+        {
+            "maintainer": "Termux",
+            "oem": "Xiaomi",
+            "device": "lisa",
+            "filename": "AlphaDroid-16-20260509-gapps-lisa-v4.4.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/lisa/v4.4/AlphaDroid-16-20260509-gapps-lisa-v4.4.zip/download",
+            "timestamp": 1778322023,
+            "md5": "64653e274886c2b570d14d4bee474693",
+            "sha256": "8bda06e99554202e56a649d8eb527e4d3568b281b2e6f9abbdfc88e25e5415bc",
+            "size": 2424103480,
+            "version": "4.4",
+            "buildtype": "Official",
+            "buildvariant": "gapps",
+            "forum": "",
+            "gapps": "",
+            "firmware": "",
+            "modem": "",
+            "bootloader": "",
+            "recovery": "",
+            "paypal": "",
+            "telegram": "https://t.me/Termuxtest2",
+            "dt": "https://github.com/AlphaDroid-devices/device_xiaomi_lisa",
+            "common-dt": "https://github.com/AlphaDroid-devices/device_xiaomi_sm8350-common",
+            "kernel": "https://github.com/AlphaDroid-devices/kernel_xiaomi_lisa"
+        }
+    ]
+}
