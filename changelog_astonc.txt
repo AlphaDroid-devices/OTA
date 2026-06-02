@@ -2,6 +2,16 @@ Device: OnePlus Ace 3 (astonc)
 Team Aston: elpaablo, REV3NT3CH
 
 ====================
+     02-06-2026
+====================
+
+* AlphaDroid 4.5
+* KernelSU-Next 3.2
+* SUSFS 2.1
+* Switched to LunarisDolby
+* Introduced AxFx support
+
+====================
      18-04-2026
 ====================
 
