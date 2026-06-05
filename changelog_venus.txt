@@ -4,6 +4,14 @@ Device: Xiaomi Mi 11
 Device maintainer: KamiKaonashi
 
 ====================
+     03-06-2026
+====================
+
+rebase over lineageos trees and kernel
+clean flash required
+add some perf and battery tweaks
+
+====================
      20-06-2025
 ====================
 
