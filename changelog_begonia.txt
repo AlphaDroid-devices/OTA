@@ -4,6 +4,16 @@ Device: Redmi Note 8 Pro
 Device maintainer: KamiKaonashi
 
 ====================
+     06-06-2026
+====================
+
+sync stuff with sai's resources
+backport memory reclaim
+remove inbuilt fw
+use dolby
+thanks sai
+
+====================
      21-06-2025
 ====================
 
