@@ -2,6 +2,16 @@ Device: Xiaomi 11 lite 5G NE/ Mi 11 LE (lisa)
 Device maintainer: Termux
 
 ====================
+     06-12-2026
+====================
+
+* Improved app launch timing
+* Disabled useless logging
+* added some missing props and configs
+* fix some detections
+* Improved overall smoothness and BB
+
+====================
     09-05-2026
 ====================
 
