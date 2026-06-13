@@ -4,6 +4,17 @@ Device: Xiaomi Redmi Note 10
 Device maintainer: musivian | eklerismunir
 
 ====================
+    13-06-2026
+====================
+- Initial A16 QPR2 Build
+- User Signed Build
+- June Security Patch
+- Patch com.vidhance.node.eis.so with libui-v34
+- Enable camera override format from reserved for high framerate video
+- Switch back to OSS AIDL camera provider
+- Skip failed camera ids from initialization
+
+====================
     21-04-2025
 ====================
 - Initial A16 QPR2 Build
