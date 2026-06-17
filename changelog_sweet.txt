@@ -4,6 +4,22 @@ Device: Xiaomi Redmi Note 10 Pro (sweet)
 Device maintainer: Javi
 
 ====================
+     17-06-2026
+====================
+- May security patch
+- AlphaDroid version 4.5
+- Switch to Leica Camera
+- Switch to LunarisDolby
+- Switch to vantom kernel
+- Remove fwk-detect lib from PRODUCT_PACKAGES
+- Cleanup more flags
+- Restore arch setup
+
+Credits:
+- aryannn999,neobuddy89 and Lineageos Team for continuing to support this fantastic device
+- Team AlphaDroid
+
+====================
      19-04-2026
 ====================
 - April security patch
