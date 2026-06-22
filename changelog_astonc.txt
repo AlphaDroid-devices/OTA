@@ -5,6 +5,12 @@ Team Aston: elpaablo, REV3NT3CH
      22-06-2026
 ====================
 
+* Oneplus camera: fixed front panorama
+
+====================
+     22-06-2026
+====================
+
 * Included Oneplus camera
   - Full stack from CPH2585_16.0.1.400
   - 10bit color mode removed for now
