@@ -2,6 +2,19 @@ Device: OnePlus 12R (aston)
 Team Aston: elpaablo, REV3NT3CH
 
 ====================
+     28-06-2026
+====================
+
+Oneplus Camera:
+* Fixed HEIC format and 10bit color mode. Options restored to format settings.
+* Fixed quick video. Option restored to 'Touch and hold shutter button' settings.
+* Fixed front video portrait.
+* Fixed preview thumbnail not persisting after exiting camera viewbinder page.
+
+Oneplus Gallery:
+* Fixed share options
+
+====================
      22-06-2026
 ====================
 
