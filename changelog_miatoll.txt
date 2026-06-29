@@ -3,6 +3,12 @@ Device: Redmi Note 9s/Pro/Pro max, Poco m2 Pro (miatoll)
 Device maintainer: ナマン
 
 ====================
+    28-06-2026
+====================
+*Initial AlphaDroid 4.5 Build
+*May Security Patch
+
+====================
     29-04-2026
 ====================
 *Initial AlphaDroid 4.4 Build
