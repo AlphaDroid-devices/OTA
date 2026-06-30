@@ -2,6 +2,13 @@ Device: OnePlus 12R (aston)
 Team Aston: elpaablo, REV3NT3CH
 
 ====================
+     30-06-2026
+====================
+
+Oneplus Gallery:
+* Fixed AI edit options (Retouch and Remover)
+
+====================
      28-06-2026
 ====================
 
