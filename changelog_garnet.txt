@@ -4,6 +4,16 @@ Device: Xiaomi Redmi Note 13 Pro 5G (Garnet)
 Device maintainer: Jotanh
 
 ====================
+     02-07-2025
+====================
+- Added LeicaCamera 6.2
+- Fixed QR Code Scanner in Camera
+- Dropped Unecessary Blobs
+- Reverted: Torch Control and Other Torch Modifications 
+- Drop MM Tweak in Kernel
+- Dropped Unecessary Blobs
+
+====================
      02-05-2025
 ====================
 - Latest Source Sync
