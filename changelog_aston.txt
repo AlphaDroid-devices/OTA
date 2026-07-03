@@ -32,7 +32,7 @@ Oneplus Gallery:
 ====================
 
 * Included Oneplus camera
-  - Full stack from CPH2585_16.0.1.400
+  - Full stack from CPH2609_16.0.2.400
   - 10bit color mode removed for now
   - Everything else should work as stock
 
