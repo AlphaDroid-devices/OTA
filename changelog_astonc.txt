@@ -5,6 +5,12 @@ Team Aston: elpaablo, REV3NT3CH
      08-07-2026
 ====================
 
+* kernel: restore the right kernelsu-next checkout point, with susfs support
+
+====================
+     08-07-2026
+====================
+
 * AlphaDroid 4.6
 * June security patch
 * Included BCR (Basic Call Recorder)
