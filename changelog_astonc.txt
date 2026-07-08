@@ -2,6 +2,26 @@ Device: OnePlus Ace 3 (astonc)
 Team Aston: elpaablo, REV3NT3CH
 
 ====================
+     08-07-2026
+====================
+
+* AlphaDroid 4.6
+* June security patch
+* Included BCR (Basic Call Recorder)
+* Fixed auto-brightness (adopted stock OOS brightness curves; corrected the too-dim mapping, added debounce to ride out screen-content flashes)
+* Reworked LTPO / adaptive refresh rate:
+  - Refresh rate tile is now the single control: Auto hands the panel to dynamic LTPO (drops to a low self-refresh when idle), a fixed 60/90/120 pins it
+  - Fixed Auto mode being capped at 60Hz
+* Fixed One Pulse PWM (was silently disabled on this panel's backlight)
+* Device Settings:
+  - Bypass Charging: target level now holds across reboots and app restarts, and tops back up if the battery drains below target under load
+* Themed icons for Oneplus Camera and Gallery
+
+Oneplus Gallery:
+* Fixed "set as wallpeper"
+* Fixed scrolling on share options (more)
+
+====================
      30-06-2026
 ====================
 
