@@ -4,6 +4,18 @@ Device: Xiaomi Redmi Note 10 Pro (sweet)
 Device maintainer: Javi
 
 ====================
+     09-07-2026
+====================
+- Jun security patch
+- AlphaDroid version 4.6
+- Switch to Leica Camera HollyBear
+- Switch to Erofs
+
+Credits:
+- aryannn999,neobuddy89 and Lineageos Team for continuing to support this fantastic device
+- Team AlphaDroid
+
+====================
      17-06-2026
 ====================
 - May security patch
