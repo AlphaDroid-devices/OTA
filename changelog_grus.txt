@@ -2,6 +2,14 @@ Device: Xiaomi Mi 9 SE (Grus)
 Device maintainer: elpaablo
 
 ====================
+     13-07-2026
+====================
+
+* AlphaDroid 4.6
+* Added AxionFX
+* Added BCR
+
+====================
      26-04-2026
 ====================
 
