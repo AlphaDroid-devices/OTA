@@ -2,6 +2,17 @@ Device: OnePlus 12R (aston)
 Team Aston: elpaablo, REV3NT3CH
 
 ====================
+     13-07-2026
+====================
+
+* Display & Auto-Brightness:
+  - Integrated screen content compensation
+  - Restored native stock auto-brightness curves
+  - Smoothed HDR lux-to-nit mapping
+  - Enabled HDR Enhancement
+* OnePlus Camera: fixed Super Resolution zoom.
+
+====================
      08-07-2026
 ====================
 
