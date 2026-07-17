@@ -2,7 +2,13 @@ Device: Xiaomi 11 lite 5G NE/ Mi 11 LE (lisa)
 Device maintainer: Termux
 
 ====================
-     06-12-2026
+     17-07-2026
+====================
+
+* fixed some Indian apps crashing
+
+====================
+     12-06-2026
 ====================
 
 * Improved app launch timing
