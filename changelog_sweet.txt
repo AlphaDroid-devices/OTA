@@ -4,6 +4,87 @@ Device: Xiaomi Redmi Note 10 Pro (sweet)
 Device maintainer: Javi
 
 ====================
+     18-07-2026
+====================
+
+# AlphaDroid Android 16 Version 4.6
+
+## Complete Device Changelog
+
+### 🚀 Performance & Responsiveness
+
+* Optimized kernel memory management with updated swappiness and watermark thresholds.
+* Added animation performance tuning for a smoother UI experience.
+* Enabled 120 FPS support for compatible games.
+* Improved refresh-rate selection and per-app refresh-rate management.
+* Added per-app thermal control support.
+
+### 🔊 Audio & XiaomiDolby
+
+* Added XiaomiDolby audio support based on Xiaomi's stock sound effects implementation.
+* Introduced a modern Material Expressive settings interface.
+* Migrated audio controls to Material 3 slider preferences.
+* Improved sliders with visible value ticks.
+* Restored volume lever support.
+* Added Spanish translations for XiaomiDolby.
+* Refactored and improved the Dolby icon.
+* Added DSPVolumeSynchronizer support.
+* Prevented DSPVolumeSynchronizer from being installed for clone apps and Private Space.
+
+### 🔵 Connectivity & Bluetooth
+
+* Fixed Bluetooth 5.x device connectivity issues, including smartwatches and other modern peripherals.
+
+### 🔦 Device Features
+
+* Added torch light control.
+* Improved device-specific power and thermal configuration.
+* Updated CPU temperature overlay paths.
+* Restored required architecture setup.
+* Improved display cutout and refresh-rate configuration.
+
+### 🧩 Xiaomi Hardware
+
+* Updated Xiaomi hardware compatibility with additional AIDL interfaces.
+* Added FCM compatibility for display feature, fingerprint, camera, sensor, payment and other Xiaomi services.
+* Improved fingerprint HAL compatibility with updated AIDL implementations.
+* Added improved fingerprint enumerate/remove result parsing.
+* Updated compatibility matrices for Xiaomi-specific HALs.
+* Moved the Megvii stub to the compatibility repository.
+* Added additional Xiaomi device compatibility improvements.
+
+### 🧠 Kernel
+
+* Updated SUSFS to v2.2.0.
+* Added `sus_memfd` support and enabled the required driver integration.
+* Improved SUS_PATH handling and fixed errno leaks for subpaths.
+* Improved SUS_MAP implementation and fixed multiple issues.
+* Updated su-domain handling.
+* Improved SUSFS path processing by deferring work to a workqueue.
+* Added APatch compatibility fixes.
+* Backported RTMutex and futex fixes to improve locking stability.
+* Fixed potential NULL pointer dereference issues during waiter removal.
+* Added modern `__cleanup()` infrastructure backport.
+* Added compatibility fixes for Qualcomm Wi-Fi and boot memory code.
+* Improved ptrace handling and reset stale ptrace state correctly.
+
+### 🛠️ System & Stability
+
+* Updated power HAL permissions and SELinux integration.
+* Refined device overlays and system configuration.
+* Cleaned up obsolete build flags and legacy dependencies.
+* Removed unnecessary framework detection components.
+* Reverted experimental kernel and compiler changes where required to maintain stability.
+
+### 📱 Overall
+
+This update brings a major refresh to the `sweet` device experience on AlphaDroid Android 16, combining improved performance, enhanced refresh-rate and thermal management, XiaomiDolby integration, better Xiaomi hardware compatibility, Bluetooth fixes and extensive kernel-level improvements focused on stability, compatibility and advanced customization.
+
+Credits:
+- aryannn999,neobuddy89 and Lineageos Team for continuing to support this fantastic device
+- Team AlphaDroid
+
+====================
      09-07-2026
 ====================
 - Jun security patch
