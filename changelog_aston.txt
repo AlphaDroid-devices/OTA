@@ -1,5 +1,13 @@
 Device: OnePlus 12R (aston)
-Team Aston: elpaablo, REV3NT3CH
+Changelog: elpaablo
+
+====================
+     18-07-2026
+====================
+
+* Auto-brightness: fine tune compensation values and match stock underscreen reaction floor. Auto-brightness should now be completely stable.
+* SDR/HDR video: set a minimum allowed brightness when playing media content. Scale HDR on a tri-stabe basis: 40-60-80% for dark - mid light - light enviroment.
+* AOD brightness: 10 nits default, 50 nits high brightness AOD mode, selectable from the device settings. It was pinned at 50 nits.
 
 ====================
      13-07-2026
