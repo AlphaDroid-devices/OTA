@@ -1,525 +1,423 @@
 ====================
-     06-14-2026
+     07-22-2026
+====================
+
+   * device/oneplus/salami
+74344db salami: Restore HDR video boost via hdrBrightnessConfig
+f0d2a5e salami: Rebuild auto brightness from the stock OOS calibration data
+a0171ce salami: device-settings: Handle unsupported one-pulse PWM gracefully
+
+====================
+     07-21-2026
+====================
+
+   * device/oneplus/salami
+ca498d8 salami: Fix auto refresh rate 60Hz cap; put FPS meters on correct sources
+d048bd9 salami: Fixed refresh rates now pin the panel
+3f4e2e0 salami: Drop SF idle timer, show measured fps in the refresh rate overlay
+64dea04 salami: device-settings: Fix bypass charging, PWM onepulse and refresh rate handling
+ef68f96 salami: vendor.prop: set OPlus market name props
+
+   * kernel/oneplus/sm8550
+0e390fab8a25 kernel: Integrate ReSukiSU + defconfig + su-collision fix + SUSFS (gki-android14-5.15)
+
+   * kernel/oneplus/sm8550-modules
+647039b2a9 qcom: display-drivers: oplus_adfr: add adfr_min_fps userspace request node
+041cd825b6 qcom: display-drivers: oplus_adfr: kernel-driven min fps + HBM interlock for aston
+ed5c6714cf qcom: display-drivers: oplus_adfr: kickstart prop magic
+
+====================
+     07-20-2026
 ====================
 
 ====================
-     06-13-2026
-====================
-
-   * frameworks/base
-17945b463e3e base: Fix and improve lockscreen charging info for VOOC/SuperVOOC devices
-
-====================
-     06-12-2026
-====================
-
-   * hardware/qcom-caf/sm8750/audio/primary-hal
-e1390b43a audio: effects: Register AxionFX effect engine in QTI AIDL effect factory
-8e4430828 audio: Register AxionFX effect engine in audio_effects_config
-
-   * vendor/alpha
-35f6de597 AxFX
-
-====================
-     06-11-2026
-====================
-
-====================
-     06-10-2026
-====================
-
-====================
-     06-09-2026
-====================
-
-   * kernel/oneplus/sm8750
-8e737d4c40218 fix build errors for kernel 6.6 compatibility across zram, lz4hc, and sysms_finder
-1cf71776bdba8 sysms_finder: fix redefinition errors by moving definitions out of header
-f660c115f9ef3 Enable RCU lazy
-63286074e9787 af_unix: GC cleanup and optimisation.
-29c7930df9d57 sysms_finder: cleanup unused symbols
-b2a72caf03e9a thermal: add sysctl-based global temperature offset
-c2bdcbea1705f zram: track page types and optimize file-backed page shrinking
-d667b66e25f60 zram: adjust batch sizes for improved shrinking
-6950bf59a1ace zram: Fix compilation error
-dc77fa66dee4d zram: embed writeback request in bio via bioset front_pad
-bd105ba33dc56 zram: enable asynchronous writeback
-110a25542ac41 UPSTREAM: zram: modernize writeback interface
-cec91984f54da UPSTREAM: zram: do not leak page on writeback_store error path
-74802c8aef20f UPSTREAM: zram: do not leak page on recompress_store error path
-58cb11d7b3016 UPSTREAM: zram: move post-processing target allocation
-50518d5ebc660 UPSTREAM: zram: filter out recomp targets based on priority
-b71aa76ca4c02 zram: add async writeback infrastructure
-36878b75f9ff3 zram: refactor writeback helpers
-4a24b5be54a63 zram: do not skip the first bucket
-a4936c754b266 zram: Fix compilation error and convert shrinker to use post-processing bucket
-3d0f22f29aed8 zram: remove UNDER_WB and simplify writeback
-140b0c9c7c223 zram: reshuffle zram_free_page() flags operations
-fc0004bb1d4c7 zram: rework writeback target selection strategy
-a7da759af3e11 zram: rework recompress target selection strategy
-ef88e71c476bf zram: add max_pages param to recompression
-881fb83559ae3 zram: permit only one post-processing operation at a time
-57a8f0bf35085 zram: introduce ZRAM_PP_SLOT flag
-67854175aaaf2 zram: disable shrinker during system suspend/sleep
-032733a49c704 zram: Remove unnecessary memcg support from shrinker and LRU
-fc58572f6ab07 zram: Remove unnecessary rcu_read_lock in zram_lru_add and zram_lru_del
-3ff428ec4a7d1 mm/zram: Rename game_pid to sysms_finder for improved clarity
-6a352c8b82fca zram: Move cutoff_time initialization into monitor_func loop
-5d043aeb43e56 zram: Move CONFIG_ZRAM_TRACK_ENTRY_ACTIME check out of loop
-fbb13d42a9842 zram: Adjust idle page cutoff time to 30 seconds
-dd1d99ea3d7a1 zram: Optimize writeback and usage calculation in zram_drv.c
-b5904fe450054 zram: Implement second chance algorithm and adjust batch size
-3dca9da5ec26d zram: adjust batch sizes and pressure thresholds for improved shrinking
-2587115e18b48 zram: Reduce idle page marking time from 10 minutes to 5 minutes
-7e2fa0715e5ba zram: Add init_lock protection for mark_idle() in monitor_func
-55334d1d64367 zram: add shrinker for writeback of idle pages
-351e1272fcd3d zram: Add Immediate Recompression (ZRAM-IR) feature
-636471da0e5a9 zram: Adjust monitoring thresholds and interval
-7f335fff3a8d5 zram: Refactor disksize calculation
-57318a6b08b20 zram: Introduce ZRAM_AUTO_SIZE feature for dynamic size adjustment
-2400adc17d895 Use copy_page in uksm, zram_drv and kernel/power/swap.c
-2372889326cb4 zram: Set default compressor to LZ4 and initialize default disksize to 16GB
-e13e5dcba93a8 Compress multiple commits into one
-
-====================
-     06-08-2026
-====================
-
-====================
-     06-07-2026
-====================
-
-   * device/oneplus/sm8750-common
-1b656e7 sm8750: Fix charging current display scaling
-
-   * hardware/oplus
-23dcdac oplus: import sm8750-common namespace
-7bfd55d als: remove duplicate oplus_als AIDL interface
-5ad036f sepolicy: Add dolby support
-4f579f7 sepolicy: Label audio props to avoid denials
-ff80f6c sepolicy: Label project name prop
-cf61b9d sepolicy: Address charger aidl denial
-176b300 sepolicy: Solve vendor_hal_perf_default denials
-61a1d4e sepolicy: qti: Allow system server to detect oem charging
-aeecc42 sepolicy: adress fingerprint denials
-72b3b8c sepolicy: qti: Allow system_server to r/w oplus_chg nodes
-910f4c4 sepolicy: qti: Allow binder calls for sensor hal to system_server
-4fe863a sepolicy: Fix bluetooth denial on user builds
-1bfd85e sepolicy: Fix hal_bootctl_default denial
-1c0476c sepolicy: Address DeviceSettings and fast charging denials
-ab1b63e hardware: hidl: inscreen: Set thread to high CFS priority
-38df05b sepolicy: Address various denials
-9c8f211 sepolicy: Label hal_charger service
-0a9e0a8 overlay: qssi: Update QSSI RROs from CPH2573_11_A.76
-ac50156 sepolicy: Label oplus bluetooth prop
-cac6d14 sepolicy: Address nfc denial
-f487899 sepolicy: Allow vendor_hal_perf_default to access surfaceflinger
-351675d [TEMP] sensors: aidl: Glorified one-shotting
-2ea98a4 aidl: sensors: Return early if nothing is displayed over the light sensor
-5f6f27a aidl: sensors: Import AlsCorrection from sm8150-common
-1db52f8 Import ALS capture service from sm8150-common
-9e262ab overlay/sensors: Configure Doze brightness sensor
-1c30a94 overlay: qssi: Define quick_pickup sensor string
-69ade95 overlay: qssi: Enable config_dozePulsePickup
-84e6f16 sepolicy: qti: Label sensors AIDL multihal
-f20f6ce aidl: sensors: Standardize qti.sensor.amd to glance sensor
-9ab706a aidl: sensors: Invert value for pickup gesture event
-bdc22d5 aidl: sensors: Change standard tilt_detector to pickup_gesture
-da8ae95 aidl: sensors: Avoid target name conflicts
-dec83b3 aidl: sensors: Change default applicable license to Android-Apache-2.0
-b12f7dc aidl: sensors: Import 2.X sensors hal proxy
-677c8a8 aidl: sensors: Revert^2 "SensorHAL: add moisture detection"
-4e5a017 aidl: sensors: Import aidl sensors MultiHal
-
-   * vendor/oneplus/sm8750-common
-4be44c1 sm8750-common: Sync with device tree
-6e1aead add ConsumerIRApp
-
-====================
-     06-06-2026
-====================
-
-====================
-     06-05-2026
+     07-19-2026
 ====================
 
    * frameworks/native
-598e2e926b renderengine: Skip cross-frame blur cache for dynamic blur input
-
-   * kernel/oneplus/sm8750
-71ae007a7c46a fs: Patch Kernel With Susfs v2.1.0
-5792afd812932 drivers: Import KernelSU-Next as submodule
-5776f158d17b5 AmberKernel: uprev v3
-4901be3818f8b config: enable thermal cooling devices and TLS module for SM8750
-9ad5b471b7e48 Uprev: AmberKernelV2
-3d3d633feeae0 FixUp! bad merge
-104169bacbbcc power: process: fix undeclared identifier 'todo_logging_on'
-25fa42d6b70d8 batman-adv: fix random jitter calculation
-fd45af640e5a1 workqueue: Queue everything on system's power efficient wq
-871901c02cda0 treewide: use power efficient workingqueues
-a8d06d5ee181e kernel: power: faster deepsleep
-80eeaa6f82211 sched: core: tweaks perfomance for games CODM
-ed0ae181e9326 treewide: Apply some memory optimizations patches.
-1ef7141a9ba06 selinux: Allow init exec ksud under nosuid
-1ea6ecdd383ef sm8750: Amber Kernel
-2f858540a6b9e fs: default to noatime
-47b1709e97361 f2fs: Demote GC thread to idle scheduler class
-81b852743a922 PM: QoS: Add check to make sure CPU freq is non-negative
-f741f556496bb f2fs: Enlarge min_fsync_blocks to 20
-521a945d4e8eb qcacld3: merge upstream
-e32904450446d math: upgrade INTFP to v1.2
-61274b54f3d27 block: upgrade ADIOS scheduler to v3.1.9
-5734061f3317c lib/string.c: Optimize memchr()
-4fcf749699dc8 lib/string.c: Add a macro for memchr_inv()
-0beb38c4738eb xxhash: inline round() functions
-ae9a7b2fde412 mm/slab_common: Align all caches' objects to hardware cachelines
-dca3f7d8db0b2 f2fs: add valid block ratio not to do excessive GC for one time GC
-4368d96af1a01 tpm: add WQ_PERCPU to alloc_workqueue users
-b763a6b47b8fe mm/page_alloc: optimize lowmem_reserve max lookup using its semantic monotonicity
-f756975cdb576 bpf: make kprobe_multi_link_prog_run always_inline
-ba02762b17976 bpf: optimize bpf_map_update_elem() for map-in-map types
-11aaa6147abf4 loop: add missing bd_abort_claiming in loop_set_status
-43d75a0b2e9d2 loop: don't change loop device under exclusive opener in loop_set_status
-f0bf7c71382fd bpf: Fix invalid prog->stats access when update_effective_progs fails
-2e271ce28b5c4 bpf: Improve program stats run-time calculation
-e9ccfa2330357 mm: simplify folio_expected_ref_count()
-561f7f65bd7d6 fs/fat: remove unnecessary wrapper fat_max_cache() fat_max_cache() always returned FAT_MAX_CACHE and did not use the inode parameter. So, use the FAT_MAX_CACHE constant directly
-b1eb14f788f82 mm/page_alloc: change all pageblocks migrate type on coalescing When a page is freed it coalesces with a buddy into a higher order page while possible.  When the buddy page migrate type differs, it is expected to be updated to match the one of the page being freed.
-69542090e62bc mm/memremap: fix spurious large folio warning for FS-DAX This patch addresses a warning that I discovered while working on famfs, which is an fs-dax file system that virtually always does PMD faults (next famfs patch series coming after the holidays).
-3affa38c87cbd mm/vmalloc: move resched point into alloc_vmap_area() Currently vm_area_alloc_pages() contains two cond_resched() points. However, the page allocator already has its own in slow path so an extra resched is not optimal because it delays the loops.
-5763acefe8543 mm/zone_device: support large zone device private folios
-410795b78f5aa mm/hmm: populate PFNs from PMD swap entry
-3777d08270516 uksm: perform a range-walk in break_ksm Make break_ksm() receive an address range and change break_ksm_pmd_entry() to perform a range-walk and return the address of the first ksm page found.
-79c99b81e8f78 drm/msm: Replace unsafe snprintf usage with scnprintf The refill_buf function uses snprintf to append to a fixed-size buffer. snprintf returns the length that would have been written, which can exceed the remaining buffer size. If this happens, ptr advances beyond the buffer and rem becomes negative. In the 2nd iteration, rem is treated as a large unsigned integer, causing snprintf to write oob.
-0c8a37d639e1a loop: use READ_ONCE() to read lo->lo_state without locking When lo->lo_mutex is not held, direct access may read stale data. This patch uses READ_ONCE() to read lo->lo_state and data_race() to silence code checkers, and changes all assignments to use WRITE_ONCE().
-58d9a1c363d04 blk-mq: delete task running check in blk_hctx_poll() blk_hctx_poll() always checks if the task is running or not, and returns 1 if the task is running. This is a leftover from when polled IO was purely for synchronous IO, and doesn't make sense anymore when polled IO is purely asynchronous. Similarly, marking the task as TASK_RUNNING is also superflous, as the very much has to be running to enter the function in the first place.
-a60fa6dfe1395 blk-mq: use BLK_POLL_ONESHOT for synchronous poll completion blk_execute_rq() with polling is used in kernel code paths such as NVMe controller connect. The aggressive spinning in blk_hctx_poll() can prevent the completion task from getting a chance to run, causing a lockup.
-fc2ae9a40a0dc sched/fair: Fix pelt clock sync when entering idle
-d9b328141a43b migrate: correct lock ordering for hugetlb file folios commit b7880cb upstream.
-cfb9cf6b389c8 debugfs: Make debugfs_lookup() return NULL when debugfs is disabled
-d8269e7671bce rcu: Panic on stalls by default
-78a6635bed217 PM/Sleep: Start killing wakelocks after two minutes of idle (120s)
-d233f924f26fb selinux: Avoid dynamic memory allocation for INITCONTEXTLEN buffers
-fa0b54c4a6a57 Makefile: Force ARCH to be arm64
-3730ac22d557f kernel: Warn when an IRQ's affinity notifier gets overwritten
-de5f5085bec97 kernel: Only set one CPU in the default IRQ affinity mask
-2b2742ac2abb1 kernel: Don't allow IRQ affinity masks to have more than one CPU
-398c0912ff22e sched/core: Forbid Unity-based games from changing their CPU affinity
-836e7651159ef bpf: Avoid allocating small buffers for map keys and values
-e16151511d2e0 Suppress overly verbose log spam
-ac8283920bea4 sched/fair: Reduce PELT half-life from 32 ms to 16 ms
-1b6655dc8b41c AmberKernelV1-BETA
-d8f1cd230a500 gki_defconfig:  Enable boeffla_wl_blocker
-20f67074b3cdd boeffla_wl_blocker: allow spaces to be stored
-dba8afa5c720b boeffla_wl_blocker: Update `LIST_WL_DEFAULT`
-3a4a8302d5189 boeffla_wl_blocker: Increase `LENGTH_LIST_WL` and `LENGTH_LIST_WL_DEFAULT`
-7ff040be3def2 boeffla_wl_blocker: Remove timerfd from default block list
-d8fa426cdab2a boeffla_wl_blocker: Block some wakelocks by default
-51fa541cabac2 boeffla_wl_blocker: don't block wakelocks by default
-460295a22d177 boeffla_wl_blocker: update to wakelock blocker driver v1.1.0
-30b8d4698c5f2 boeffla_wl_blocker: update to wakelock blocker driver v1.0.1
-efbc4ab2d580b boeffla_wl_blocker: add generic wakelock blocker driver v1.0.0
-cc976bdfe8d03 power: process: Use lesser time to enter sleep
-6f62478032fbb gpu: drm: Use power efficient workingqueues
-e2a8e7ac4f59a gpu: drm: Use power efficient workingqueues
-2f41fb5f253f9 gki_defconfig: Don't sync when entering suspend
-c7f8e09e8daee gki_defconfig: Enable power efficient workqueues
-eb0dffbfd4030 gki_defconfig: Disable some hardening configs
-c874d7bbfeca2 gki_defconfig: Enable LLVM Polly optimizer
-68ee6facaf487 Makefile: Rework on Polly optimizer flags
-ce578f92bc4ad kbuild: Add support for LLVM's Polly optimizer
-99d7ac282fafb mm: vmstat: use power efficient workingqueues
-1c1c5bce357ff proc: Don't let Google Camera run in the background
-1b4c057e3b603 Remove Duplicates
-88a50b2dc532a lz4: Enable LZ4_FAST_DEC_LOOP on aarch64 Clang builds
-0a4c1ebca59b9 lz4: fix kernel integration
-d64461b545def lz4: Adapt to Linux kernel
-bef4d5ea936b0 lz4: Import v1.10.0 from upstream
-b4a4aa45760a1 Revert "lz4: Use ARM64 NEON-optimized decompression where available"
-468668ec00aac PM / freezer: Reduce freeze timeout to 1 second for Android
-f482374c53120 mbcache: Speed up cache entry creation
-56b8b1b3b9081 arm64/mm: Optimize loop to reduce redundant operations of contpte_ptep_get
-9690ab0e80072 ANDROID: gki_defconfig: Enable Clang ThinLTO support
-f946a1a5c748c ANDROID: gki_defconfig: Enable AUTOFDO_CLANG for AutoFDO optimizations
-9ac4b573a6149 arm64: debug: disable self-hosted debug by default
-12d1a99083122 lib: Disable debug_locks
-32016104871de Makefile: Enable -mcpu=oryon-1
-dc10ec1c1ceee f2fs: Demote GC thread to idle scheduler class
-1b828a751f541 f2fs: set ioprio of GC kthread to idle
-e752fc9ec2a86 f2fs/gc: Reduce GC thread urgent sleep time to 50ms
-9e199f58d4659 f2fs: Use copy_page for full page copy
-70afdec2e3f60 f2fs: reduce timeout for uncongestion
-8c62bf7203628 f2fs: Enable ATGC and GC_MERGE by default
-169ddf58a9623 lz4: Use ARM64 NEON-optimized decompression where available
-f07cc4d826fe2 videodev2: Use <linux/time.h> for struct timespec
+91c53493a5 sensorservice: fusion: force virtual dispatch for the fusion handles
 
 ====================
-     06-04-2026
+     07-18-2026
 ====================
 
    * device/oneplus/dodge
-9a0a889 axfx
-314e6c5 dodge: Add KeyHandler and configs
-064a0d3 dodge: overlay: Lower display brightness in sub-90 lux scenarios
-97ac6cc add missing sepolicy
-6e80871 DeviceSettings: properly integrate with the Settings homepage
-4c87c0b Revert "DeviceSettings: lunch it from Settings"
-2d0da17 alertslider location
-7a6c89a dodge: ALS props for brightness-lux polynomials
-faa490b dodge: overlay: use auto brightness curves from akita
-bdac565 dodge: add ALS correction props
-df2b470 dodge: configs: config screenBrightnessMap with measurements
-0575dfb dodge: decouple auto suspend mode from display state
-5c9229e dodge: set the doze and dim brightness
-0911c97 dodge: enable wide color gamut
-bbfd16f dodge: attempt to setup automatic color management
-d250f7e dodge: set a custom brightness ramp up/down speed
-8a31127 sepolicy add missing permission policy
-6abb53d sepolicy: Add missing for GMS
-8cc3e33 BoardConfig: Add vendor SEPolicy directory
-a8d1f7d DeviceSettings: Add guard for OnePlus device settings
-fd1db40 dodge: overlay: raise minimum auto-brightness for better visibility
-82715af dodge: Modified .bin files to improve haptic feedback.
-f5e00cd sepolicy: system_app: Add rules for Bypass Charging, Gamebar, and OnePulse PWM
-13580c4 overlay: Set smooth display
-2656134 dodge: overlay: Enable multiple vibration intensity levels
-b5b7e22 dodge: Set market name for device
-3947b1a dodge: Switch to FIFO vibration effects
-616237e dodge: overlay: Adjust brightness debounce values
-6554e9e overlay: import overlays from common tree
-bf49729 Import DeviceSettings from common tree
-0ac907b AlphaDroid Bringup
-c75302b dodge: Update from OOS 11.F.89
+450277d dodge: fusion feed props on; consumer opt-in via setprop after boot
+f63afd4 dodge: Enable fusion light feed and retune ABC hysteresis
 
-   * device/oneplus/sm8750-common
-e889e17 sm8750-common: vibrator: Map haptic effects to ColorOS bins and fix on() path
-8edb756 sm8750-common: update sf durations for 120hz frame boosted targets
-bedd009 sm8750-common: Add oplus-sm8750 ALS [SQUASHED]
-a2c11b6 sm8750-common: Expand on logspam silencing
-b35551c sm8750-common: Silence some spammy logging
-2f9ed90 sm8750-common: Update input boost
-002f546 Revert "Drop Lineage Health"
-0ba1704 sm8750-common: vibrator: drop libsoc_helper
-4784092 sm8750-common: vibrator: add .oplus_sm8750 suffix to targets
-3ec9c4a sm8750-common: sensors: fix the return type of IsWrappedHandle
-8032178 sm8750-common: vibrator: translate compose primitives to effects
-2c79b2c sm8750-common: vibrator: turn effect loader into a singleton
-beaa222 sm8750-common: sepolicy: label the vibrator service
-65a5eeb sm8750-common: switch to the in-tree vibrator HAL
-ca893b1 sm8750-common: vibrator: always define USE_EFFECT_STREAM
-e6b4276 sm8750-common: vibrator: fix implicit capture of this in lambdas
-8b61ce4 sm8750-common: vibrator: fix format specifier warnings
-2f4cd54 sm8750-common: vibrator: fix unused labels, parameters, and variables
-e0cb64d sm8750-common: vibrator: fix misleading indentations
-74b7ae8 sm8750-common: vibrator: fix the init order of effect
-136ab14 sm8750-common: vibrator: fix VibratorCL header includes
-5f4584c sm8750-common: import hardware/qcom-caf/sm8750 namespace
-5dbacc8 sm8750-common: vibrator: drop libsoc_helper
-c3208a5 sm8750-commom: vibrator: qti: load effects from blobs
-34755e2 sm8750-common: vibrator: add .oplus_sm8750 suffix to targets
-588bf9b sm8750-common: vibrator: remove vibrator-vendor-product.mk
-d8b74d3 sm8750-common: import qcom vibrator aidl hal
-b97c7ee sm8750-common: Update sf duration to 12.3ms
-c2f68f5 sm8750-common: Trick the camera HAL to unlock full sensors capacity
-c10553a sm8750-common: Disable SF client composition cache
-8e31db4 sm8750-common: Set `debug.sf.disable_client_composition_cache` to 0
-a873612 sm8750-common: Disable backpressure propagation in SF
-50cf589 sm8750-common: Disable the property debug.sf.enable_gl_backpressure
-08e3e57 sm8750-common: Ship ConsumerIR App
-ffa9125 Drop Lineage Health
-8932752 sm8750-common: Switch to oplus sensors AIDL
-4c70e53 sm8750-common: define media settings to sun variant
-580d8b8 sm8750-common: set config_hasAlertSlider
-f1fd471 sm8750-common: Build Device Settings
-f8fddba sm8750-common: Relocate audio props to address sepolicy denials
-b5b42c9 sm8750-common: Allow gcam/snapcam to skip HFR checks
-bcaef43 sm8750-common: Allow camera to skip high frame rate checks
-20c2d9b Revert "sm8750-common: init: Set Blur property based on target capability"
-2e3245f sm8750-common: overlay: Enable battery cycle count
-cbddde3 sm8750-common: overlay: Add system ui restart option
-6a9a529 Revert "sm8750-common: init: Set Blur property based on Soc id."
-40b9fe8 sm8750-common: init: Reset readahead values for 128 always
-1ef9ea9 sm8750-common: init: Remove IO read_ahead_kb tune
-46884c2 sm8750-common: overlay: Update pinner list
-d745f3f sm8750-common: overlay: Turn on screen on unplug
-752fe90 sm8750-common: overlay: Add temp divider value for cpu info overlay
-21757fb sm8750-common: overlay: Add fps info path
-9612baa sm8750-common: overlay: Switch to crdroid doze
-79a7e65 sm8750-common: Nuke OplusDoze
-1745769 sm8750-common: overlay: Use appropriate charging thresholds
-040139f sm8750-common: init: Always use lz4 for zram
-37e1c5c sm8750-common: overlay: Configure VOOC charging display on lockscreen
-84676f6 sm8750-common: overlay: Decouple auto-suspend and interactive state from display
-0cc1497 sm8750-common: overlay: Fix lockscreen charging info
-44e4e22 sm8750-common: Update from OOS 11.F.89
-
-   * manifest
-bee3275 Track wallpaper LivePicker from Alpha
-
-   * packages/apps/WallpaperPicker2
-2e271ca87 WallpaperPicker2: Inject AssetId and EffectType for cinematic wallpapers
-
-   * packages/wallpapers/LivePicker
-8b1bc76 LivePicker: Hide cinematic effects from standalone picker
-
-====================
-     06-03-2026
-====================
-
-   * kernel/oneplus/sm8750
-e5e07923dc892 Merge remote-tracking branch 'sm8750/lineage-22.2' into HEAD
-2ba452f99a005 Merge tag 'ASB-2026-06-01_15-6.6' of https://android.googlesource.com/kernel/common into HEAD
-
-   * manifest
-089be63 device/qcom/sepolicy_vndr: update hashes
-
-====================
-     06-02-2026
-====================
-
-   * kernel/oneplus/sm8750
-6bc773e9c9f8e ANDROID: KVM: arm64: iommu: Harden map/unmap checks
-
-   * packages/apps/AlphaVisuals
-4d1513d AlphaVisuals: add navbar to SYNCED_OVERLAY_CATEGORIES
-
-   * vendor/alpha
-2f72bf4b5 Switch to AxFx
-
-====================
-     06-01-2026
-====================
+   * device/oneplus/salami
+255914a salami: tidy camera inherit comment
 
    * frameworks/base
-938c59cfb2cf SystemUI: Fix lockscreen clock size and dynamic bar media art animations
+2892b8bd658f Picture Adjustment: don't crash system server if getPictureAdjustmentRanges fails
 
-   * hardware/oplus
-1b57b82 Automatic translation import
-
-   * kernel/oneplus/sm8750
-99556d6f90332 ANDROID: ARM64: virtio_balloon: Disable balloon with warning if granule too large
-22ae719f35b14 ANDROID: KVM: arm64: Make the pvmfw primary slot permanent
-bd9aaec66cf50 ANDROID: KVM: arm64: Commit vCPU power_state at the top of pkvm_reset_vcpu
-f89e83e20aa69 ANDROID: KVM: arm64: Return SUCCESS to guest if CPU_ON target ran
-acce19149cb8e ANDROID: KVM: arm64: Make CPU_ON failure rollback atomic
-e10fb80c80387 ANDROID: KVM: arm64: Treat non-protected vCPUs as always on at EL2
-01ff2abe49057 ANDROID: KVM: arm64: Remove MP state tracking from EL2
-
-====================
-     05-31-2026
-====================
-
-   * frameworks/av
-d5f1f7aa54 [axion_fx] adding axion fx audio effect
-
-   * hardware/interfaces
-b255a70edb fixup! [ax_fx] integrating axfx and into audio aidl
-09315880f3 [ax_fx] integrating axfx and into audio aidl
-
-   * manifest
-1e657a0 Track AxionFx
-99697d4 AlphaDroid v4.5
-
-====================
-     05-30-2026
-====================
-
-   * frameworks/base
-d75fa308aa91 SystemUI/ThemeEngine: static QS connectivity icons when icon pack is active
-
-   * hardware/oplus
-7d36841 fingerprint: Use iconlocation prop for UDFPS sensor location
-
-   * kernel/oneplus/sm8750
-6db8e82df66fb Merge branch 'android15-6.6-lts' of https://android.googlesource.com/kernel/common into HEAD
-5d173e6727c70 Merge tag 'KERNEL.PLATFORM.4.0.r1-16900-kernel.0' of https://git.codelinaro.org/clo/la/kernel/qcom into HEAD
-
-   * vendor/oneplus/dodge
-b02c8ce dodge: Update from OOS 11.F.89
+   * frameworks/native
+3e0436b3de sensorservice: fusion: latch RGB path and remap ExtImpl's -1 handle
 
    * vendor/oneplus/sm8750-common
-c48ae15 sm8750-common: Update from OOS 11.F.89
+1b727b4 sm8750-common: libcwb_qcom_aidl: relink against display.config V12
 
 ====================
-     05-29-2026
+     07-17-2026
 ====================
+
+====================
+     07-16-2026
+====================
+
+   * frameworks/native
+28990d57be sensorservice: Drive the fusion engine's onSensorFound + SensorDeviceExt
+
+====================
+     07-15-2026
+====================
+
+====================
+     07-14-2026
+====================
+
+====================
+     07-13-2026
+====================
+
+   * device/oneplus/dodge
+0f5716a dodge: Wire the fusion light sensor port (dormant)
+
+   * frameworks/native
+69b640e86d sensorservice: Load the OPLUS fusion light sensor (dodge)
+
+====================
+     07-12-2026
+====================
+
+   * device/oneplus/dodge
+477a9b6 dodge: Mask ALS screen-glow leaks in the ambient hysteresis
+3608c47 dodge: Give HDR more pop at low SDR brightness
+376caaf dodge: device-settings: Auto sunlight boost
+b963fe7 dodge: Restore HDR video boost via hdrBrightnessConfig
+3466f62 dodge: Rebuild auto brightness from the stock OOS calibration data
+46a5064 dodge: device-settings: Fix GameBar FPS meter node path for sun
+0505c04 dodge: Wire up kernel-driven LTPO; drop the LTPO toggle
+d867eaf dodge: device-settings: sync fixes from astonc
+fe0a60f dodge: Include LTPO settings
+
+   * device/oneplus/sm8750-common
+ba0fc5b sm8750-common: Fix FPS Info tile node path for sun
+7219908 sm8750-common: Drop the SF idle timer
+6d5327e sm8750-common: init: Set perm for LTPO nodes
 
    * frameworks/base
-f8d3a5ee906c ThemeEngine: icon-pack overlay support and statusbar fallback fixes
+40716c14dbbd base: Fix and improve lockscreen charging info for VOOC/SuperVOOC devices
 
-   * packages/apps/AlphaVisuals
-661869a AlphaVisuals: batch-apply icon-pack overlays in one pass
-
-   * vendor/addons
-1324c460 iconpacks: add QS connectivity and bluetooth drawables to SystemUI overlays
-
-====================
-     05-28-2026
-====================
-
-   * external/pffft
-721b667 exposing pffft to axion fx and steam audio
+   * hardware/oplus
+07094ac sepolicy: Label early_wakeup on sun's card0-sde-crtc-N paths
+360bfb6 Add toggle for ltpo features
+d93c773 Alphadroid
 
    * kernel/oneplus/sm8750
-f6d22ea6ae50a UPSTREAM: net: skbuff: propagate shared-frag marker through frag-transfer helpers
-32b16e61d1a02 UPSTREAM: net: skbuff: preserve shared-frag marker during coalescing
-c6e31cdacd6ef BACKPORT: FROMGIT: f2fs: add logs in f2fs_disable_checkpoint()
+2680ee67d016 kernel: Integrate ReSukiSU + defconfig + su-collision fix + SUSFS (gki-android15-6.6)
+
+   * kernel/oneplus/sm8750-devicetrees
+bd7d27b4 dodge: AA569: enable ADFR idle mode
+
+   * kernel/oneplus/sm8750-modules
+5a1980c51e qcom: display-drivers: oplus_adfr: kernel-driven min fps + adfr_min_fps node
+9cfd89923c tristatekey: Kill logspace on refresh rate change
+c82bd3486a qcom: display-drivers: oplus_adfr: kickstart prop magic
+
+====================
+     07-11-2026
+====================
+
+   * device/oneplus/salami
+a895924 salami: wire OPlus camera into the build
+
+   * device/oneplus/sm8550-common
+bf390f2 extract-files: add APS turbo libs to vendor public.libraries.txt
+0fe7405 vendor.prop: deduplicate OPlus camera props to vendor/oplus/camera
+
+   * device/qcom/sepolicy_vndr/sm8550
+d7ed78ed sm8550: add opluscamera_app to DSP neverallow exceptions
+
+   * frameworks/av
+9747d78fd8  HDR FIX. Enhance MPEG4Writer to handle Oplus user data with custom 'oplu' metadata atom in MP4.
+283b363486 Add kKeyOplusUserData to MetaDataBase.h
+8229c6e757 Implement Oplus user data handling for HDR
+3e948e7632 Add Oplus user data member to StagefrightRecorder
+cb29a8852f camera: fix Google-Lens->back provider deadlock on shared rear sensor
+5b1c926d53 camera: Relax monotonic timestamp guard for still captures
+
+   * frameworks/base
+0e6ca4d7bae5 wm: ActivityStarter: Redirect proprietary OPlus file manager intents to DocumentsUI
+
+   * hardware/oplus
+39508c2 oplus-fwk: add gallery-share icon helpers + ViewWrapper (fix blank share items)
+eb21ddb Revert "oplus-fwk: add missing OPlus camera framework stubs for OnePlus 11 (salami)"
+3714c4e oplus-fwk: add missing OPlus camera framework stubs for OnePlus 11 (salami)
+
+   * vendor/oneplus/salami
+1851e09 salami: ship libui_oplus (GraphicBuffer ABI shim) + libOplusSecurity
+
+====================
+     07-10-2026
+====================
+
+====================
+     07-09-2026
+====================
+
+   * device/oneplus/salami
+6238751 AlphaDroid BringUp FixUp
+6dfd0a0 DeviceSettings: remove lineage-sdk dependency
+7666b3d salami: Initial Alphadroid bringup
+
+   * hardware/qcom-caf/sm8750/audio/primary-hal
+a0ecc3330 audio: effects: Register AxionFX effect engine in QTI AIDL effect factory
+20d1b95b1 audio: Register AxionFX effect engine in audio_effects_config
+
+   * vendor/alpha
+25678e367 AxFX
+
+   * vendor/oneplus/sm8750-common
+2a468d5 sm8750-common: Update libaudioeffecthal.qti with AxionFX support
+
+====================
+     07-08-2026
+====================
+
+   * device/oneplus/sm8750-common
+8d36ff4 Revert "sm8750-common: Add oplus-sm8750 ALS [SQUASHED]"
+
+   * device/qcom/sepolicy_vndr/sm8750
+5e9fa6d02 sepolicy: Fix neverallow triggered by opluscamera_app
+3dc2641b2 sepolicy: Allow oplus camera to access xdsp device
+
+   * frameworks/av
+6ed84b2259 Add some logging
+3212f68219 CameraService: Add OnePlus camera extension support for zoom
+
+   * frameworks/base
+e360356a0e96 AHardwareBuffer fixes for OnePlus 13 stock Camera
+
+   * frameworks/native
+2ccfc2535d nativewindow: Recognize Qualcomm vendor YUV formats in formatIsYuv
+
+   * hardware/oplus
+0cd0252d Revert "KeyHandler: Add support to toggle torch"
+
+   * system/sepolicy
+9d665a266 Allow init and vendor_init to access proc_type
+
+====================
+     07-07-2026
+====================
+
+   * axion-sdk
+8b2c40d CustomSeekBar: Add onValueChangeFinished callback
+
+   * device/alpha/sepolicy
+5316fbb sepolicy: Label ro.surface_flinger.panel_refresh_rate_node
+
+   * frameworks/base
+f2c13a57de36 fonts: Trust AlphaThemePicker for user font installs
+
+   * hardware/oplus
+200dc395 FixUp: Fix broken Android.bp merge in oplus interfaces
+4bf0ecad oplus-fwk: Wire up OplusBlurParam blur path for OplusCamera
+0f8f7568 oplus-fwk: Add OplusBlurParam and OplusCanvas for OplusCamera
+c79a92c7 sepolicy: Move regionmark property to exported
+905dfa5e oplus-fwk: Update feature config manager
+228ea257 Add stub startBackgroundRunning
+78dd32c4 oplus-fwk: import full OOS-16 camera framework from dodge-camera-port
+8a00feb7 oplus-fwk: import OOS-16 base classes from dodge-camera-port for camera port
+6e64900d sepolicy: Add dolby support
+dbff90e7 sepolicy: Label audio props to avoid denials
+32ea9178 sepolicy: Label project name prop
+46614fc3 sepolicy: Address charger aidl denial
+5d7d898e sepolicy: Solve vendor_hal_perf_default denials
+254452b0 sepolicy: qti: Allow system server to detect oem charging
+46c72808 sepolicy: adress fingerprint denials
+20fef38a sepolicy: qti: Allow system_server to r/w oplus_chg nodes
+841a47e6 sepolicy: qti: Allow binder calls for sensor hal to system_server
+873f2696 sepolicy: Fix bluetooth denial on user builds
+e1de6152 sepolicy: Fix hal_bootctl_default denial
+ecefef6d sepolicy: Address DeviceSettings and fast charging denials
+96e1a063 hardware: hidl: inscreen: Set thread to high CFS priority
+f142fa36 sepolicy: Address various denials
+4d1ee9ff sepolicy: Label hal_charger service
+9821f2b2 overlay: qssi: Update QSSI RROs from CPH2573_11_A.76
+d6ff51d3 sepolicy: Label oplus bluetooth prop
+2fa9e8fc sepolicy: Address nfc denial
+c944f1f8 sepolicy: Allow vendor_hal_perf_default to access surfaceflinger
+3cca1cf8 [TEMP] sensors: aidl: Glorified one-shotting
+4d17b674 aidl: sensors: Return early if nothing is displayed over the light sensor
+3ee47f87 aidl: sensors: Import AlsCorrection from sm8150-common
+0c33bf2f Import ALS capture service from sm8150-common
+0106e72e overlay/sensors: Configure Doze brightness sensor
+6db3685b overlay: qssi: Define quick_pickup sensor string
+d7c741ba overlay: qssi: Enable config_dozePulsePickup
+0e2b4736 sepolicy: qti: Label sensors AIDL multihal
+bc49d1e3 aidl: sensors: Standardize qti.sensor.amd to glance sensor
+05c78f2b aidl: sensors: Invert value for pickup gesture event
+d06007e6 aidl: sensors: Change standard tilt_detector to pickup_gesture
+ffdad400 aidl: sensors: Avoid target name conflicts
+68eaecdd aidl: sensors: Change default applicable license to Android-Apache-2.0
+0933fb11 aidl: sensors: Import 2.X sensors hal proxy
+00f5dcc3 aidl: sensors: Revert^2 "SensorHAL: add moisture detection"
+a065ff79 aidl: sensors: Import aidl sensors MultiHal
+
+   * kernel/oneplus/sm8550
+e475082a057b Enable THIN LTO
+986110810110 Amber Kernel v1 BETA
+c4124905bc3d Revert "power: Don't disable cpuidle when entering suspend"
+99210162be8c fs: f2fs: Enlarge min_fsync_blocks to 20
+51c0d6f32377 power: Don't disable cpuidle when entering suspend
+6bd36d749049 gki_defconfig: Disable some hardening configs
+e7d82c8c223c gki_defconfig: Enable LLVM Polly optimizer
+9bcc2e663fc4 Makefile: Rework on Polly optimizer flags
+9583c8da5dd1 kbuild: Add support for LLVM's Polly optimizer
+13f50689f1dd gki_defconfig: Enable power efficient workqueues
+cfa84946cd90 gki_defconfig: Don't sync when entering suspend
+ebafe518d61d f2fs: reduce timeout for uncongestion
+195c69b3825c f2fs: Demote GC thread to idle scheduler class
+5afa78ddb873 gki_defconfig:  Enable boeffla_wl_blocker
+52dcba6dbbc3 PM: QoS: Add check to make sure CPU freq is non-negative
+b6b47c3fef0e block: disable I/O stats accounting by default
+6393eee049a4 drivers: scsi: ufs: Disable clock scaling
+f0bb9f5b4a67 drivers: i2c-qcom-geni: Move geni_i2c_driver_init to async probe
+8e58d3052153 alarmtimer: Minimize wakeup time
+ccd97d1a2d49 sched/psi: report zeroes for CPU full at the system level
+c4d87362c67f psi: Fix trigger being fired unexpectedly at initial
+3de9788c82d6 sched: reduce softirq conflicts with RT
+8fa2bab9a37f f2fs: reduce timeout for uncongestion
+7637588f9e6a drivers: usb: dwc3: Specify sync probe for dwc3-of-simple.
+1ae6cc5591bf drivers: usb: dwc3: Specify sync probe for msm-dwc3 driver
+21cd2c44f67a drivers: usb: dwc3: Specify sync probe for dwc3 driver
+8baedb708b8f drivers: iommu: Specify sync probe for qcom-iommu
+db32ec08253c drivers: iommu: Specify sync probe for msm_iommu driver
+c1263b731d39 drivers: iommu: Specify sync probe for qsmmuv500-tbu
+b37762d874e0 drivers: iommu: Specify sync probe for arm-smmu-v3 driver
+a6869531e37f drivers: i2c: Specify sync probe for dummy i2c driver
+9fbe0502e368 drivers: dma: qcom: Specify sync probe for gpi_dma
+ef08bea34cd1 drivers: clk: Specify sync probe for gcpu_cc-kalama
+0dad4188b063 drivers: clk: Specify sync probe for gcc-kalama
+dc7ef7b44b67 drivers: clk: Specify sync probe for videocc-kalama
+1d5b338884d5 drivers: char: adsprpc: Specify sync probe for fastrpc
+659715742e34 boeffla_wl_blocker: allow spaces to be stored
+53bc40d4d876 boeffla_wl_blocker: Update `LIST_WL_DEFAULT`
+a8b42353faa4 boeffla_wl_blocker: Increase `LENGTH_LIST_WL` and `LENGTH_LIST_WL_DEFAULT`
+5fa9bb5d5a87 boeffla_wl_blocker: Remove timerfd from default block list
+5e10b480d52a boeffla_wl_blocker: Block some wakelocks by default
+bd78b2206ab9 boeffla_wl_blocker: don't block wakelocks by default
+2045652eceb5 boeffla_wl_blocker: update to wakelock blocker driver v1.1.0
+b580ffe1c94d boeffla_wl_blocker: update to wakelock blocker driver v1.0.1
+2724d9ce6782 boeffla_wl_blocker: add generic wakelock blocker driver v1.0.0
+cf7e7376507e treewide: use power efficient workingqueues
+ba57a5a41466 mm: vmstat: use power efficient workingqueues
+58892fef1032 gpu: drm: Use power efficient workingqueues
+9f97775f7ace fs: default to noatime
+62dc30c279eb f2fs: reduce timeout for uncongestion
+d13938e58791 f2fs: set ioprio of GC kthread to idle
+9f6d8406bd80 power: process: Use lesser time to enter sleep
 
    * manifest
-3eaa729 Track external/pffft from Alpha
-9abf479 Track external_steam-audio
-08fb3e5 track system_media from Alpha
+736f099 snippets: update LOS pins for June 2026 security patch
 
-   * system/media
-f497b04e registering AxionFx effect UUIDs
+   * packages/apps/AlphaThemePicker
+872919e AlphaThemePicker: Add clock position offset sliders
+
+   * packages/apps/AlphaVisuals
+2198727 AlphaVisuals: Fix stale status bar icons on theme change
+
+   * packages/apps/WallpaperEffects
+4d3d138 WallpaperEffects: Left-align lockscreen wallpaper crop
+
+   * packages/services/QuickLook
+8b81377 QuickLook: Add weather provider selector and lockscreen weather options
+
+   * vendor/addons
+af35b96d update BCR
+7c33e6ca update BCR v1.8
+908a3348 [SQUASH] Add Basic Call Recorder
+7f8915e5 adding font ext overlay
+
+   * vendor/alpha
+c2df260d0 Drop generic map for oplus camera and gallery
 
 ====================
-     05-27-2026
-====================
-
-   * kernel/oneplus/sm8750
-9fd02790b324c ANDROID: Update AutoFDO profile to 6.6.129
-
-====================
-     05-26-2026
+     07-06-2026
 ====================
 
    * frameworks/base
-ca27677eedd7 core: tune default animation durations for snappier UX
-35d318fa9bf8 SystemUI/theme: fall back to iconpack for statusbar wifi/signal
-88f357589126 axdynamicbar: Fix sports event team-name regression and add live event fallback
-0192d23a2ad1 view/SystemUI: UI thread performance optimizations
-18cb8e9075c5 SettingsLib: Fix UsageProgressBarPreference progress animation
-b63a38fa890b SystemUI: Remove notification layer-type debounce in ViewState
-38d79f72f7cf Notifier: Reduce user activity broadcast minimum interval to 100ms
-5a1dd3a64ea2 SystemUI: Finalize Stylish 7 clock layout and scaling
-638512a7ce28 [ax_animations] fixing wp depth animation delay
-a84c9f98fad5 fixup! [ax_animations] adding screen on wp depth animation
-ca31269d8686 [ax_animations] adding screen on wp depth animation
-8f8bef5c87cd [ax_ambient] adding aod screen off animation
-de9ef7a8f9c9 SystemUI: Port legacy Stylish clocks and fix layout bugs
-b4c95a2bc32c SystemUI: Fix custom large clock sizing issues with dynamic clock
-a898cbdd927c SystemUI: Notification stack and icon container tweaks
-0357d3a6db66 services: Update QuickSwitchService to new AlphaThemePicker namespace
-534662539449 SystemUI: Sync Monet fidelity and chroma engine
-ee5b2464b71b SystemUI: Update Axion clock engine and Smartspace
-dd23378e9e84 SystemUI: Nuke AOSP KeyguardSlice and legacy weather views
-3283abd4d401 SystemUI: Implement QS Weather Tile tap dialog
-d9697de5bd9b core: settings: Add new custom secure settings keys
-6221ac9d36a4 core: Catch IndexOutOfBoundsException in TypedArray
-6aac4f691e7a [ax_themepicker] adding system color hooks
-ba79a153bb47 [feature] adding lockscreen widgets feature
-e54f85231a6b [ax_clocks|bugfix] fixing time update regressions
-587911bf32b4 fixup! [ax_clocks|bugfix] fixing clock issues
-e0158046781c [ax_clocks|bugfix] fixing clock issues
-ea96983827ac [feature] adding nothing lockscreen clocks provider
-35ebeb9ef30f SystemUI: cleanup custom clock system
+428e5c04575c SystemUI: Tune ThemeEngine status-bar icon scaling
+45afbf6f23e2 SystemUI: Axion clocks - width fit, font clip fix, position offsets
+70f3d7c820ad axdynamicbar: Fix cutout overlay touch stealing in landscape/immersive
+f361867dc99e biometrics: Remap Goodix vendor acquired codes to framework message
+8574740f4d44 fw/b: Suggestion Popup: Tint properly
+e2eea34a03f6 Allow overriding Wi-Fi and Bluetooth MAC addresses
+24ac3b00a3a7 [AAPM] Check radio interface for 2G availability.
+64b47c42ff69 wm: don't disable rot hint on low_ram
+d8292978f47e DO NOT MERGE: Enforce suspend restrictions in startOp and noteOp paths
+21d241e02f5b Enforce package name length limits in PackagePolicy setters.
+661fbf2da58c Skip serialization of huge vibration effects in NotificationChannel
+db33e5228988 Block adding toast windows to non-empty tokens.
+6d57cae8305a Validate package ID range in LoadedArsc
+d51c298c9af6 Check caller for clearDeveloperVerificationExperiment
+55646f5c4d02 Check caller for addDeveloperVerificationExperiment
+d4b0594f26ec Compare period character as well during wildcard matching
+9889ebc38dbe Map animation delegate to the transition instead of plumbing it
+751626baf597 Prevent configAtEnd dispatching to finishing AR
+552981c124a0 Validate max proxy string length for proxySpec and exclusionList using PolicySizeVerifier.
+61e32f048c0d RESTRICT AUTOMERGE Require to be bound with non-pinned visible window
+1b349395ac3f Make sure we properly validate the XML attr size
+af6fb8baf5a4 On face auth success, verify the face auth'd user is the current user
+cef5f3d59f7a Add StorageManager.convert() check earlier in the stack so the command fails early instead of crashing system later.
+dd08a66c18a4 Quick fix for WCLS security vulnerability.
+84b8c640a464 Validate ResStringPool_header.styleCount
+7f21170fda0e Don't allow hiding critical apps.
+d3930d4a45a1 Allow default per-thread and per-process OnHeaderDecodedListeners
+a966cdcdac8c Remove multi user flag reference
+4049e19dcb25 Fix Tapjacking caused by touch slipping out of letterbox
+764e16883887 Checking userId in com.android.server.pm.ComputerEngine#resolveContentProvider
+91edaa758355 Hide non system overlay window immediately if it is animating exit
+dea973c023d0 Apply visibility policy to window state surface
+f4229bb66d97 Start a new transition to ignore split-enter from a malformed transition
+6f936dd79a0c Fix bugs caused on package update events
+3f9df75077dd Catch uncaught IllegalStateException
+e576e5feb4b9 ColorDisplayService: initialize global saturation matrix before rebuild
+0a96e1c8fb94 core: allow low_ram devices to enable multiwindow
+f7c21764bb24 fixup! SystemUI: Clock position customization
+dc1e8bc50463 SystemUI: Match circle battery style colors with landscape icon
+1a8290cc9041 base: Allow locking tasks to recents [1/2]
+1994815b5bc6 SystemUI: WeatherContentManager: Fix double percentage in humidity
+aeadefcd2172 SystemUI: axdynamicbar: allow expanding AospChip events when isolated
 
-   * kernel/oneplus/sm8750
-af6549c7993bd ANDROID: Define bazel target for wrapfd kselftests and run in presubmit
-1dfe45d8e27fb ANDROID: selftests/wrapfd: Define a wrapper for remap_file_pages()
+   * frameworks/native
+66483afc99 surfaceflinger: RefreshRateOverlay: optional panel refresh rate source
 
-   * vendor/addons
-72a1bcf8 iconpacks: relocate misplaced framework drawables
-96c91941 iconpacks: cleanup deprecated ThemePicker overlays
+====================
+     07-05-2026
+====================
+
+====================
+     07-04-2026
+====================
+
+   * vendor/oneplus/sm8550-common
+61ff23e sm8550-common: Drop prebuilt libvmmem
+
+   * vendor/oneplus/sm8750-common
+9b94963 sm8750-common: Drop prebuilt libvmmem
+1b726d8 sm8750-common: Remove libqtigefar from dependency check again
+
+====================
+     07-03-2026
+====================
+
+   * art
+27e2a709e9 art: drop non-AOSP global -O3
+
+   * hardware/qcom-caf/sm8550/display
+d679d895cd Revert "vmmem: Make libvmmem_headers available"
+7ea46e207c Revert "vmmem: Add dummy libvmmem shared_lib"
 
