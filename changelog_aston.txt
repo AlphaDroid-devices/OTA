@@ -2,6 +2,29 @@ Device: OnePlus 12R (aston)
 Changelog: elpaablo
 
 ====================
+     31-07-2026
+====================
+
+* Haptics: full rework on top of the stock OnePlus effect pack
+  - Every system haptic now plays a stock waveform, on a stronger ladder (taps, clicks and long presses were too weak)
+  - Added composed haptics (primitives), so the system can build richer effects instead of single taps
+  - Per-gesture customization: long press, gesture navigation, toggles, scroll limits and keyboard now feel distinct
+  - Added the stock notification/ringtone vibration patterns
+* Ringtones: included OPlus ringtones, notifications and alarms, with stock defaults (Night sky / Light / Cloudscape)
+* Alert slider: new "Launch app" mode - each of the three positions can open an app of your choice, and the slider dialog shows that app's icon and name
+* Performance: moved to the Lineage power HAL (libperfmgr) and dropped the old QTI perfd stack; power profiles tuned from the measured CPU energy curves, with ADPF support for games
+* Device Settings:
+  - HBM and One Pulse PWM no longer fight each other when toggled quickly: the panel settles between mode switches and a refusal from the kernel is honored instead of being shown as applied
+  - HBM now turns off with the screen, and the tile no longer shows a stale ON afterwards
+  - Refresh rate preference locks at 120Hz while HBM is on
+  - Quick Settings tiles refresh reliably after a change
+* Memory & storage: Dalvik heap raised to the 12GB profile for better multitasking headroom, and extra reserved space in the system partitions
+* Auto-brightness: a manual brightness tweak is no longer carried over after the screen turns on again or auto-brightness is re-enabled
+* AOD brightness: the always-on display now really shows at the 10 nits default, instead of the much dimmer stock doze value (~2 nits)
+* Charging: lockscreen and Dynamic Bar now show the real SuperVOOC charging power, live, with the adapter class (100W)
+* Screen off gestures: enabled the gesture settings, including the heart gesture
+
+====================
      18-07-2026
 ====================
 
