@@ -1,0 +1,29 @@
+{
+    "response": [
+        {
+            "maintainer": "Javi",
+            "oem": "Poco",
+            "device": "klee",
+            "filename": "AlphaDroid-16-20260815-gapps-klee-v4.6.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/klee/AlphaDroid-16-20260815-gapps-klee-v4.6.zip/download",
+            "timestamp": 1786815849,
+            "md5": "ba7192273aa79b63bb9af277615c6dbe",
+            "sha256": "83f425fb38793ba8678a93d13e76049fe7e2824e3aeae4bf290d3135a7ed77d9",
+            "size": 4162405156,
+            "version": "4.6",
+            "buildtype": "Official",
+            "buildvariant": "gapps",
+            "forum": "",
+            "gapps": "",
+            "firmware": "",
+            "modem": "",
+            "bootloader": "",
+            "recovery": "",
+            "paypal": "https://www.paypal.com/donate/?hosted_button_id=UKKSXJYZDMH58",
+            "telegram": "https://t.me/stahed_klee_support",
+            "dt": "",
+            "common-dt": "",
+            "kernel": ""
+        }
+    ]
+}
