@@ -2,6 +2,27 @@ Device: OnePlus Ace 3 (astonc)
 Mantainer: elpaablo
 
 ====================
+     30-08-2026
+====================
+
+* Charging animation: the stock SuperVOOC animation, rebuilt on the OnePlus GLES engine
+  - Real charging ring, drawn live from the charging state instead of a fixed frame loop
+  - Waits for the adapter to identify itself before picking SuperVOOC frames, so a normal charger no longer gets the SuperVOOC treatment
+  - The wattage mark reflects what the adapter actually reports
+  - The animation ends where the asset ends instead of looping into a stall
+  - Selectable in AlphaVisuals; falls back to the frame animation where the engine is unavailable
+* Fast charging controls in Device Settings
+  - Fast charging switch: turn SuperVOOC off to charge at a gentler 3A / ~30W
+  - Night charging: caps the current further while charging overnight, applied only while fast charging is off
+* Auto-brightness: a bad light reading on wake is no longer used to seed the curve, so the screen stops landing on the wrong level right after unlocking; stray zero samples from the sensor are dropped rather than fed into it
+* AOD: colour-balance capture now stops while the panel is off, instead of running for nothing
+* Device Settings no longer gets killed in the background, so tiles and toggles keep their state
+* Alert slider: an app now launches only when the slider actually moves - waking the screen no longer re-launches it
+* Screen off gestures: the gesture mask is written synchronously, so toggling a gesture sticks
+* Memory: Dalvik heap raised to the 12GB profile for more multitasking headroom
+* Now Playing: background music recognition enabled - the phone identifies music playing around it and shows the song on the lockscreen and the Dynamic Bar, with album art. Switch in Settings > Sound, plus a lockscreen shortcut
+
+====================
      31-07-2026
 ====================
 
