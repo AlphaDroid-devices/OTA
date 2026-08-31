@@ -2,6 +2,13 @@ Device: OnePlus Ace 3 (astonc)
 Mantainer: elpaablo
 
 ====================
+     31-08-2026
+====================
+
+* Disable background music recognition by default
+* Build AlphaDroid latest fixes
+
+====================
      30-08-2026
 ====================
 
