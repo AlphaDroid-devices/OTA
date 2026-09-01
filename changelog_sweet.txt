@@ -1,7 +1,205 @@
 Highlights & Device Specific Changes:
 Build type: Monthly
+Build variants: Gapps / Vanilla
 Device: Xiaomi Redmi Note 10 Pro (sweet)
 Device maintainer: Javi
+
+====================
+     01-09-2026
+====================
+
+# AlphaDroid Android 16 Version 4.7
+
+## 🔐 August 2026 Security Patch
+
+* Updated to the **August 2026 Android Security Patch**.
+* Integrated the latest security fixes and platform security improvements from the August 2026 security bulletin.
+* Improved overall system security and compatibility with the latest Android 16 security baseline.
+
+## Complete Device Changelog
+
+### 📱 Build Variants
+
+* Added official **GApps build** with Google applications and services pre-integrated.
+* Added official **Vanilla build** for users who prefer a clean AOSP experience without bundled Google applications.
+* Both GApps and Vanilla variants are available for the Xiaomi Redmi Note 10 Pro (sweet).
+
+### 🚀 Performance & Responsiveness
+
+* Optimized kernel memory management with updated swappiness and watermark thresholds.
+* Added animation performance tuning for a smoother UI experience.
+* Enabled 120 FPS support for compatible games.
+* Improved refresh-rate selection and per-app refresh-rate management.
+* Added per-app thermal control support.
+* Updated work duration configuration for improved task scheduling and system responsiveness.
+* Disabled SurfaceFlinger GL backpressure where unnecessary.
+* Improved display composition behavior and reduced unnecessary performance overhead.
+* Refined blur and transition behavior for a smoother UI experience.
+* Improved CPU/GPU power and performance hints for better efficiency and responsiveness.
+* Removed obsolete TASchedtune boost and high-cap handling.
+* Refined device-specific power and thermal configuration.
+
+### 🔊 Audio & XiaomiDolby
+
+* Added XiaomiDolby audio support based on Xiaomi's stock sound effects implementation.
+* Introduced a modern Material Expressive settings interface.
+* Migrated audio controls to Material 3 slider preferences.
+* Improved sliders with visible value ticks.
+* Restored volume lever support.
+* Added Spanish translations for XiaomiDolby.
+* Refactored and improved the Dolby icon.
+* Added DSPVolumeSynchronizer support.
+* Prevented DSPVolumeSynchronizer from being installed for clone apps and Private Space.
+* Updated Dolby integration and inherited the required Sony Dolby vendor configuration.
+* Removed stale Dolby data during upgrades to prevent configuration leftovers.
+* Improved audio configuration with additional ACDB IDs for voice recording.
+* Added ViperFX support to the common device configuration.
+* Integrated the required common device dependencies for ViperFX audio processing.
+
+### 🔵 Connectivity & Bluetooth
+
+* Fixed Bluetooth 5.x device connectivity issues, including smartwatches and other modern peripherals.
+* Improved Bluetooth compatibility with newer BLE devices.
+* Added WFD compatibility through the required input shim implementation.
+
+### 📷 Camera & Multimedia
+
+* Added Leica Camera support and restored the required camera components.
+* Improved camera compatibility with updated camera libraries and device-specific workarounds.
+* Added DeviceAsWebcam support.
+* Adjusted DeviceAsWebcam video encoding configuration for improved compatibility.
+* Removed the obsolete SoundTrigger HIDL implementation.
+* Updated multimedia compatibility and dependencies for Android 16.
+* Added extended torch mode support through the camera HAL.
+* Improved torch light control and flashlight compatibility.
+
+### 🔦 Device Features
+
+* Added torch light control.
+* Improved device-specific power and thermal configuration.
+* Updated CPU temperature overlay paths.
+* Restored required architecture setup.
+* Improved display cutout and refresh-rate configuration.
+* Added Gamebar overlay configuration.
+* Enabled anti-flicker by default.
+* Updated the LiveDisplay anti-flicker node configuration.
+* Added AOD wallpaper support.
+* Improved charging control with charging bypass support.
+* Added OEM fast-charge sysfs node configuration.
+* Allowed system_server to access the required fast-charging node through updated SELinux policy.
+
+### 🖥️ Display & UI
+
+* Switched refresh-rate handling to minimum and peak refresh-rate selection.
+* Improved display refresh-rate management and device-specific display behavior.
+* Added Material Expressive support to Xiaomi device settings.
+* Converted device settings components for modern Material 3 Expressive support.
+* Updated blur configuration and reduced excessive blur radius.
+* Tuned high-performance transition behavior.
+* Improved display rendering configuration.
+* Enabled and refined anti-flicker behavior.
+* Added AOD wallpaper configuration.
+* Improved overall UI smoothness and display responsiveness.
+
+### 🧩 Xiaomi Hardware
+
+* Updated Xiaomi hardware compatibility with additional AIDL interfaces.
+* Added FCM compatibility for display feature, fingerprint, camera, sensor, payment and other Xiaomi services.
+* Improved fingerprint HAL compatibility with updated AIDL implementations.
+* Added improved fingerprint enumerate/remove result parsing.
+* Updated compatibility matrices for Xiaomi-specific HALs.
+* Moved the Megvii stub to the compatibility repository.
+* Updated XiaomiParts from the newer sm8450-common implementation.
+* Converted XiaomiParts configuration for Material 3 Expressive support.
+* Migrated XiaomiParts to the updated AndroidX/Preference infrastructure.
+* Added additional Xiaomi device compatibility improvements.
+
+### ⚡ Charging & Power
+
+* Added charging control bypass mode.
+* Added OEM fast-charge sysfs node configuration.
+* Improved fast-charge node accessibility through updated SELinux rules.
+* Refined power and thermal configuration for better device behavior.
+* Updated work duration values to improve background and foreground task scheduling.
+* Improved powerhint configuration for better performance and efficiency.
+
+### 🛡️ SELinux & Security
+
+* Updated power HAL permissions and SELinux integration.
+* Added SELinux permission for system_server to access the fast-charge node.
+* Improved device policy compatibility with the current Android 16 framework.
+* Cleaned up obsolete security and framework dependencies.
+* Added required security and compatibility changes for the new kernel integration.
+
+### 🧠 Kernel — VantomKernel
+
+* Switched the device to **VantomKernel** for the current AlphaDroid Android 16 build.
+* Updated the kernel configuration for the SM6150 platform.
+* Added **KernelSU** integration.
+* Added **KernelSU-Next** compatibility.
+* Updated KernelSU-Next to the current supported version.
+* Added KernelSU hooks and required configuration changes.
+* Added **SUSFS** support.
+* Implemented SUSFS mount hiding and improved mount handling.
+* Improved SUSFS path handling and UID restrictions.
+* Added SUSFS security and AVC logging fixes.
+* Added required backports for KernelSU compatibility.
+* Added `seccomp` support required by KernelSU.
+* Added compatibility fixes for newer `prctl` side-channel detection.
+* Added KernelSU SELinux support for `ksud`.
+* Backported credential and filesystem fixes required by the KernelSU integration.
+* Added upstream `epoll_pwait2` support and related compatibility backports.
+* Disabled SDCARDFS on supported SM6150 configurations.
+* Added the `charging_enabled` power node for improved charging control.
+* Dropped the obsolete KCAL implementation.
+* Improved kernel security, stability and Android 16 compatibility.
+
+### 🛠️ Build System & Compatibility
+
+* Adapted the common device tree to AlphaDroid.
+* Updated Soong namespaces for the current AlphaDroid source layout.
+* Updated Soong configuration variables to use the correct boolean types.
+* Removed obsolete `TARGET_KERNEL_CONFIG` handling.
+* Removed deprecated OTA build dependencies.
+* Dropped obsolete framework detection components.
+* Removed the default Vulkan target where it is already provided by the platform.
+* Updated blob dependencies for the current tinyxml2 library.
+* Included required `libdpps` support.
+* Cleaned and regenerated proprietary blob lists.
+* Applied code formatting and general build-system cleanup.
+* Updated common device configuration for Android 16 compatibility.
+* Updated proprietary blob configuration for the current sweet device tree.
+* Removed obsolete and unused system properties.
+* Cleaned up legacy configuration flags.
+* Removed deprecated dependencies and unused framework components.
+
+### 📦 System & Stability
+
+* Improved upgrade handling by removing stale Dolby data.
+* Refined overlays and system properties to reduce unnecessary framework overhead.
+* Improved device-specific Android 16 compatibility.
+* Improved multimedia, camera and display compatibility.
+* Improved overall stability across the SM6150 common device base.
+* Updated the device tree and kernel integration for a more consistent Android 16 experience.
+
+### 📱 Overall
+
+This update brings a major refresh to the **Xiaomi Redmi Note 10 Pro (sweet)** experience on AlphaDroid Android 16.
+
+The update combines a heavily improved SM6150 common device tree, updated sweet-specific configuration and the new **VantomKernel**, bringing improvements across performance, display, audio, camera, Bluetooth, charging, thermal management, security and system stability.
+
+The device now features **Leica Camera support, ViperFX, XiaomiDolby improvements, Gamebar configuration, anti-flicker, AOD wallpapers, improved refresh-rate handling, enhanced fast charging controls, DeviceAsWebcam support and KernelSU/SUSFS integration**.
+
+For users who prefer Google services, an official **GApps build** is available. For users who want a cleaner AOSP experience, an official **Vanilla build** is also available.
+
+### Credits
+
+* aryannn999, neobuddy89 and LineageOS Team for continuing to support this fantastic device
+* Team AlphaDroid
+* VantomKernel contributors
+* All contributors to the Xiaomi SM6150 common device tree
+* All contributors to the Xiaomi Redmi Note 10 Pro device tree
+
 
 ====================
      18-07-2026
