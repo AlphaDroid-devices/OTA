@@ -4,6 +4,11 @@ Device: Xiaomi Redmi Note 13 Pro 5G (Garnet)
 Device maintainer: Jotanh
 
 ====================
+     04-09-2025
+====================
+- Source Update
+
+====================
      02-07-2025
 ====================
 - Added LeicaCamera 6.2
