@@ -1,0 +1,9 @@
+Highlights & Device Specific Changes:
+Build type: Monthly
+Device: Xiaomi Redmi Note 10s/Poco M5s (Rosemary/Rosemary_p)
+Device maintainer: Pietroe43
+
+====================
+     06-09-2026
+====================
+- Initial Build
