@@ -1,0 +1,29 @@
+{
+    "response": [
+        {
+            "maintainer": "stahed",
+            "oem": "Oneplus",
+            "device": "lexus",
+            "filename": "AlphaDroid-16-20260911-gapps-lexus-v4.7.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/lexus/AlphaDroid-16-20260911-gapps-lexus-v4.7.zip/download",
+            "timestamp": 1789129587,
+            "md5": "f8cd24b3ec2060da8c00e4c68776bc55",
+            "sha256": "3eaabc8d59be42b55ad163a60652d1d7581346d70bc22c514322a4cb5f31d6b8",
+            "size": 4516736954,
+            "version": "4.7",
+            "buildtype": "Official",
+            "buildvariant": "gapps",
+            "forum": "",
+            "gapps": "",
+            "firmware": "",
+            "modem": "",
+            "bootloader": "",
+            "recovery": "",
+            "paypal": "https://www.paypal.com/donate/?hosted_button_id=UKKSXJYZDMH58",
+            "telegram": "https://t.me/stahed_builds_lexus",
+            "dt": "",
+            "common-dt": "",
+            "kernel": ""
+        }
+    ]
+}
