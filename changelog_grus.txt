@@ -2,6 +2,21 @@ Device: Xiaomi Mi 9 SE (Grus)
 Device maintainer: elpaablo
 
 ====================
+     12-09-2026
+====================
+
+* AlphaDroid 4.7
+* Dropped Lunaris Dolby
+* Reworked the audio stack
+* Restored proximity sensor
+* Added support for background music recognition and ASI
+* Fixed UDFPS enrollment skip button covering the sensor
+* Lowered idle GPU clock (180 MHz at rest, 355 MHz on touch)
+* Shortened app-launch boost (3s → 2s)
+* Fixed gpio-keys pinctrl (hall / volume-up)
+
+
+====================
      13-07-2026
 ====================
 
