@@ -1,21 +1,287 @@
 ====================
-     08-30-2026
+     09-15-2026
+====================
+
+====================
+     09-14-2026
 ====================
 
    * device/oneplus/dodge
-5675922 dodge: Use 16GB dalvik heap config
+665569e dodge: apsfixup: Encode video-snapshot stills as VU
+7a04bb9 dodge: DeviceSettings: Compose UI and frosted banner
+
+   * frameworks/base
+b9fb8f5235b1 wm: Don't touch WindowManager in AxSandbox before systemReady
+
+====================
+     09-13-2026
+====================
+
+   * build/make
+0e94b99cc0 build: Point RBE at buildbuddyfix and canonicalize working dir
+
+   * device/oneplus/dodge
+1e47d7b dodge: Set LRA resonant frequency for the vibrator HAL
 
    * device/oneplus/sm8750-common
-7382bce sm8750-common: Allow Melody hidden APIs and ship the APK
+ad84920 sm8750-common: Trim leftover powerhint idle cost
+a3f765e sm8750-common: Fix vibrator frequency and display-idle suspend loop
+
+   * frameworks/base
+f98d243f0f0a keystore: Don't force NO_AUTH_REQUIRED on TrickyStore imports
+a263052b58ac policy: Skip screen-on reclaim without memory pressure
 
    * hardware/oplus
+da7d87c oplus-fwk: Add the share sheet's shortcut loader and prediction wrappers
+
+   * kernel/oneplus/sm8550
+17e35842b287 kernel: drop retired OPEN_REDIRECT spoofs from fd/statfs
+c37143ebd8d1 kernel: Integrate ReSukiSU + defconfig + su-collision fix + SUSFS (gki-android14-5.15)
+9b5b7d5023d0 kernel: sync SUS_KSTAT call sites to susfs 2.3.0 3-arg API
+26ffc195f7f7 input: qcom-hv-haptics: stop promoting dev_dbg to dev_err
+
+   * kernel/oneplus/sm8750
+ee8bb5137a20 kernel: drop retired OPEN_REDIRECT spoofs from fd/statfs
+c545a19b9eda kernel: sync SUS_KSTAT call sites to susfs 2.3.0 3-arg API
+3e37020eab0e kernel: Integrate ReSukiSU + defconfig + su-collision fix + SUSFS (gki-android15-6.6)
+f16ccee51572 input: qcom-hv-haptics: stop promoting dev_dbg to dev_err
+
+   * kernel/oneplus/sm8750-devicetrees
+4e291d8d90 dodge: AA569: send DBV 0x51 before enter_idle in AOD sequences
+
+   * kernel/oneplus/sm8750-modules
+f67f6788dd display-drivers: oplus_ofp: apply AOD 0x51 before enter_idle
+
+   * packages/apps/AlphaSettings
+
+   * vendor/alpha
+3d0b344a3 Revert mustang BuildFingerprint overrides to stock Alpha
+
+====================
+     09-12-2026
+====================
+
+====================
+     09-11-2026
+====================
+
+====================
+     09-10-2026
+====================
+
+====================
+     09-09-2026
+====================
+
+   * device/oneplus/dodge
+93ec78a dodge: DeviceSettings: AOD brightness via light_mode force, not PeakLumin poke
+
+   * frameworks/base
+6e3c9dfbfca9 SystemUI: drop Clear Voice status-bar icon, keep QS tile
+e087ef303472 display: Drop fusion refusal zeros at any ambient
+62fa9a3da829 Settings: add per-app spoof Secure keys for UserSelectedAppSpoof
+3d87e25463fa PixelPropsUtils: add FGS/alarm/broadcast bypass array symbols
+
+   * packages/apps/AlphaSettings
+a36d856b AlphaSettings: add loadValue() on SettingPrimarySwitchPreference
+51e8ad67 AlphaSettings: restore PreferenceUtils for Spoofing hub
+06e59ba7 AlphaSettings: add common_system_badge string for SpoofingSharedUi
+
+   * vendor/alpha
+
+====================
+     09-08-2026
+====================
+
+   * device/oneplus/dodge
+281a81d dodge: Use stock ColorOS bins for AOSP haptic clicks
+5270472 dodge: DeviceSettings: drive AOD brightness through PeakLumin 0x81
+60b5f67 dodge: Keep Super Text off across camera config extracts
+5372127 dodge: DeviceSettings: start services as the system user
+0e529ae dodge: Drop the two-level Quick JPEG walk
+7af9753 dodge: Follow bufs one level deeper for the text-mode Quick JPEG
+01580ef dodge: DeviceSettings: draw RAM as a meter
+72a950a dodge: Swap portrait Quick JPEGs after all
+
+   * frameworks/base
+b184b193114d spoof: restore PixelPropsUtils for per-app identity
+6489109627fa SystemUI: Add Clear Voice QS tile
+ac324d4da0fa SystemUI: Show Clear Voice status icon during calls
+bcab7bd7b837 SystemUI: make Now Playing its own dynamic bar event type
+
+   * kernel/oneplus/sm8750-devicetrees
+6c71435269 dodge: AA569: send PeakLumin 0x81 in AOD high/low commands
+
+   * kernel/oneplus/sm8750-modules
+95afe51c37 display-drivers: oplus_ofp: AOD brightness is PeakLumin 0x81, not 0x51
+664be8e825 display-drivers: oplus_ofp: apply AOD brightness through LP1
+
+   * packages/apps/AlphaSettings
+48042c75 DynamicBar: add Now Playing event toggle
+
+   * packages/apps/Settings
+0863ff10e66 Settings: Wire Clear Voice rename from clearcalling
+
+   * vendor/alpha
+0490b6417 config: mustang BuildFingerprint for OOTB identity
+
+   * vendor/oneplus/dodge
+cd4b54e dodge: Hide the camera Super Text mode
+
+====================
+     09-07-2026
+====================
+
+   * device/oneplus/dodge
+12f83b9 dodge: Only run the apsfixup YUV scan when it is unambiguous
+15d6acf dodge: Find the Quick JPEG from the encode object, not the whole heap
+f3e9c01 dodge: Stop apsfixup U/V-swapping on-screen camera buffers
+f1b088b dodge: Stop apsfixup rescanning for TFRSN pointers forever
+68e6c05 dodge: Don't U/V-swap portrait Quick JPEGs
+0f7e5da dodge: Don't treat portrait aux Y as UV in apsfixup
+2615800 dodge: Keep the HEIF switch off across camera config extracts
+
+   * vendor/oneplus/dodge
+e41bb29 dodge: Turn off the camera HEIF photo format switch
+
+====================
+     09-06-2026
+====================
+
+====================
+     09-05-2026
+====================
+
+   * device/oneplus/dodge
+06b3132 dodge: add AOD brightness toggle to DeviceSettings
+cfb2bb2 dodge: DeviceSettings: autoscale the banner RAM trace
+
+   * device/oneplus/sm8750-common
+65dbfad sm8750-common: overlay: CarrierConfig: add JIO and ARITEL configs from sm8250-common
+
+====================
+     09-04-2026
+====================
+
+====================
+     09-03-2026
+====================
+
+   * device/oneplus/dodge
+848a363 dodge: DeviceSettings: live stats banner
+
+====================
+     09-02-2026
+====================
+
+   * device/oneplus/dodge
+a4a2eac dodge: drop the inert cool_down chown
+60d9f31 dodge: keep device settings resident
+cfeadf6 dodge: DeviceSettings: HBM sleep sync and RR lock UX
+64e9605 dodge: DeviceSettings: refresh QS tiles via requestListeningState
+8347a0d dodge: DeviceSettings: settle HBM/PWM switches and honor kernel refuses
+6f0aed4 dodge: Only launch slider app when the position actually changes
+
+   * device/oneplus/sm8750-common
+7998f6d sm8750-common: Allow Melody hidden APIs and ship the APK
+1f7896e sm8750-common: Let system write cool_down
+9d201b8 sm8750-common: Shorten the INTERACTION power floors
+2423c4f sm8750-common: Cap clocks in battery saver
+1a891a5 sm8750-common: Act on DISPLAY_UPDATE_IMMINENT
+441a1e6 sm8750-common: Boost game loading like app launch
+e7eaa9b sm8750-common: Arm powerhint after QTI post-boot tuning
+6841a73 sm8750-common: Drive both LLCC bwmons from powerhint
+bb88caf sm8750-common: Let LAUNCH outrank INTERACTION on uclamp min
+0992257 sm8750-common: Boost foreground uclamp on INTERACTION for SF
+4de75cb sm8750-common: Tune powerhint for sun OPP cliffs
+64836ad sm8750-common: Drop unwritable GPU force nodes from powerhint
+
+   * frameworks/base
+f1535a3df44d display: Retarget the SDR video floor to dodge's brightness curve
+484075e2ab55 display: Brightness floor for fullscreen SDR video
+2886168af6ed display: Fullscreen HDR brightness pin (ignore freeform/PiP, no SS crash)
+
+   * frameworks/native
+3dfcaf9442 surfaceflinger: Flag fullscreen video layers in HDR layer info
+
+   * kernel/oneplus/sm8750-modules
+28e2c5228f sm8750: charger: make cool_down writable by system
+
+   * packages/apps/AlphaSettings
+fe5cc371 AlphaSettings: Validate PIF fingerprints and auto-refresh
+ef7d0430 AlphaSettings: Default Now Playing on
+7fb7813d AlphaSettings: Add the haptic profile picker
+
+   * packages/apps/Settings
+03979357246 Settings: Drop the stale SettingsGoogle aconfig OWNERS line
+4c3627479fb Settings: Merge Clear Calling resources into Settings-core
+
+   * packages/providers/TelephonyProvider
+f5e8c87b TelephonyProvider: Let MODIFY_PHONE_STATE holders query APNs
+
+   * vendor/alpha
+5f7f31aa0 nowplaying: Seed listening on first boot only
+7b132eae0 alpha: Enable remote key provisioning
+
+   * vendor/certification
+31a1fee certification: Flatten the build-prop keys and add the RRO overlay
+
+   * vendor/pixel/gms
+6c28b38 gms: Ship the Now Playing sysconfig
+
+   * vendor/qcom/opensource/audio-hal/st-hal
+ff8b94b st-hal: Drop the software Now Playing sound trigger path
+
+   * vendor/qcom/opensource/audio-hal/st-hal-ar
+c8e5a49 st-hal-ar: Drop the software Now Playing sound trigger path
+
+   * vendor/qcom/opensource/audio-hal/st-hal-ar-legacy
+2214c74 st-hal-ar-legacy: Drop the software Now Playing sound trigger path
+
+====================
+     09-01-2026
+====================
+
+   * frameworks/base
+f63fcefab34a DisplayManager: also forget the slider offset on the screen-off reset
+1ae7b119ebf8 now playing
+188f16ae415a Picture Adjustment: don't crash system server if getPictureAdjustmentRanges fails
+179557b65918 DisplayManager: optionally forget the manual brightness set on screen off
+012155aaaa26 ImageReader: add nativeGetConsumer for Oplus Live Photo
+7358aaafb85c AHardwareBuffer fixes for OnePlus 13 stock Camera
+a3661d1672a5 SystemUI: add configurable status bar and QS header clock size
+4ddd8221f699 SettingsLib: Polish 5G UC icon to match UW style
+2a23eda2b627 display: Drop fusion ALS hard-zero samples in auto-brightness
+0137e67650fc SystemUI: Show carrier 5G UC/UW icons for T-Mobile/Verizon/Spectrum
+5978c20a2ca4 Frameworks: Enable VoNR by default
+
+   * system/media
+59639cbd audio: Register Dolby DAP effect UUIDs
+
+====================
+     08-31-2026
+====================
+
+   * device/oneplus/dodge
+1c81794 AlphaDroid Bringup Update
+5675922 dodge: Use 16GB dalvik heap config
+
+   * frameworks/base
+badde3c2ba7e SystemUI: Label PPS sessions in the charging HUD
+4c06af38da51 SystemUI: SuperVOOC charging ring
+ebed43fb4495 SystemUI: let charging overlays set frame duration and hold
+a87510e10c49 SystemUI: SuperVOOC charging anim with charger-id gate
+da58ce90bdfc base: adapt SuperVOOC lockscreen info for aston, fix Dynamic Bar
+b977f9cb507b base: Fix and improve lockscreen charging info for VOOC/SuperVOOC devices
+fb813772023b SystemUI: fit the QS media transport in a half-width card
+761e58ce01a4 SystemUI: keep an action pill's label on one line
+
+   * hardware/oplus
+5439079 sepolicy: use lineage libperfmgr path
 898b258 oplus-fwk: Stub Melody / HeyMelody Bluetooth APIs
 6a18f30 oplus-fwk: Fill the remaining oplus classes Melody links against
 fed0f1c oplus-fwk: Add the OplusActivityManager background restriction stub
 512000a OplusPermissions: Drop the signature gate on Melody's IOT perms
-
-   * kernel/oneplus/sm8750
-a62adad46b49 kernel: Integrate ReSukiSU + defconfig + su-collision fix + SUSFS (gki-android15-6.6)
 
    * packages/apps/AlphaVisuals
 7d32347 AlphaVisuals: allow deep linking into a screen
@@ -30,28 +296,85 @@ c80499f74b Launcher3: Switch to AppLock API for protected and hidden apps
 dcdcc14bbe [feat] add app lock launcher hooks
 18ffe61fbd Launcher3: Declare USE_APP_LOCK
 
+   * packages/apps/Settings
+0fb23cc87ca Settings: Default haptic profile to op13gentle; add intensity screen picker
+62fcb859827 Settings: Add haptic profile picker
+
    * packages/apps/Updater
 c09b57d Updater: List only newer same-variant builds
 f033eb2 Updater: Fix local update re-import
 
+   * packages/services/QuickLook
+f258bea QuickLook: accept AmbientIndication version 0 and 1
+792b86a NowPlaying: clear the chip when listening turns off
+
    * vendor/alpha
 ab2774a29 Build a few oplus ringtones
-0a8ec6dfe alpha: enable Now Playing through ASI
-39d5e76cf Bump alpha version to 4.7
-0707ec8e9 release: Bump Security String to 2026-08-01
 
    * vendor/oneplus/sm8750-common
 22ee194 sm8750-common: Import stock Melody app
 
 ====================
+     08-30-2026
+====================
+
+   * frameworks/base
+0e187ffdb654 Now Playing: make the device overlay the kill switch
+0d8afd335b64 Now Playing: default background recognition off
+b1def109571e SystemUI: point the UI style tile's long press at Alpha Visuals
+4be885bfa39f SystemUI: hold the keyguard card's hidden views hidden
+0d72a88557eb SystemUI: hide the lockscreen widgets behind a keyguard card
+67798418f3b9 SystemUI: a Now Playing lockscreen shortcut
+5975a990431d SoundTrigger: let a forced recognition recover a stalled session
+308203686f2c SoundTrigger: read the ambient music gate from the setting
+
+   * kernel/oneplus/sm8750
+a62adad46b49 kernel: Integrate ReSukiSU + defconfig + su-collision fix + SUSFS (gki-android15-6.6)
+
+   * packages/apps/AlphaSettings
+a0c51220 Sound: hide background music recognition where it is unsupported
+89b8418d Sound: default background music recognition off
+
+   * packages/services/QuickLook
+4cad0d2 NowPlaying: reader only
+f88e0c4 QuickLook: stop arming the microphone
+
+   * vendor/alpha
+0a8ec6dfe alpha: enable Now Playing through ASI
+39d5e76cf Bump alpha version to 4.7
+0707ec8e9 release: Bump Security String to 2026-08-01
+
+====================
      08-29-2026
 ====================
+
+   * frameworks/base
+5cf02ea01e64 SystemUI: centre the media card in its pager page
+53870fc42b0d AxDynamicBar: one download glyph for the whole transfer
+a81262fb6f88 SystemUI: tint the transfer card's fallback icon
+52929b1b0610 SystemUI: one source for the keyguard card's tonal button plate
+317252ee0fbc SystemUI: match the keyguard furniture's alpha to the lane chips
+24fe0258b8f2 SystemUI: stop the lockscreen lane chips fading their glyphs
+86432e813c2b SystemUI: fix the landscape QS grid's geometry
+48db4fa7bacb SystemUI: even split shade panes again
+121c39b1791f [ax_sysui] split shade scene, recoil animation, scroll and ui fixes
+92664f5ef77a AxDynamicBar: draw every bitmap icon through one helper
+592a362727d6 AxDynamicBar: one shape rule for pill bitmap icons
+
+   * packages/apps/AlphaSettings
+57828ba5 AlphaSettings: a Sound switch for background music recognition
 
    * packages/apps/Settings
 17e3703ecca Settings: wire Oplus Clear Calling from vendor/oplus/clearcalling
 
+   * packages/services/QuickLook
+a9b1882 QuickLook: rename the Now Playing setting and drop its row
+
    * vendor/alpha
 6d17e9c6e alpha: drop pixel-framework; inherit Oplus Clear Calling
+
+   * vendor/pixel/gms
+a6ac2c2 gms: add the Now Playing prebuilt
 
 ====================
      08-28-2026
@@ -60,24 +383,7 @@ ab2774a29 Build a few oplus ringtones
    * device/oneplus/dodge
 2d7f801 dodge: device-settings: SuperVOOC current cap
 
-   * device/oneplus/sm8750-common
-7c9a1c4 sm8750-common: Let system write cool_down
-
    * frameworks/base
-1ad4a10a5185 SystemUI: Label PPS sessions in the charging HUD
-ceda81fb603d SystemUI: SuperVOOC charging ring
-0f6861272e0a SystemUI: let charging overlays set frame duration and hold
-b3d1a672476f SystemUI: SuperVOOC charging anim with charger-id gate
-eecdcd861adc base: adapt SuperVOOC lockscreen info for aston, fix Dynamic Bar
-697c3d10390e base: Fix and improve lockscreen charging info for VOOC/SuperVOOC devices
-545dced05758 display: Gate fusion hard-zero debug logs behind DEBUG
-fbb3b2d5a982 display: Do not seed auto-brightness from fusion hard-zero on wake
-e505c2160c57 display: Drop fusion ALS hard-zero samples in auto-brightness
-04f593ecd3ad display: Brightness floor for fullscreen SDR video
-2d9263b7f096 display: Fullscreen HDR brightness pin (ignore freeform/PiP, no SS crash)
-c8ddace99ea4 Picture Adjustment: don't crash system server if getPictureAdjustmentRanges fails
-dfe2b12c898b base: ImageReader.getOplusHardwareBuffer() — OnePlus camera no-cleaner HardwareBuffer
-acc589608ef4 wm: ActivityStarter: Redirect proprietary OPlus file manager intents to DocumentsUI
 41420d4d3f9d services: don't harvest system processes in the screen-on reclaim
 9c22c27a75fe AxDynamicBar: draw a transfer as a card, not as the app's views
 681c8d226d64 AxDynamicBar: gate the keyguard play/pause tap
@@ -95,287 +401,4 @@ a95c8ae3c452 SystemUI: Now Playing album art on keyguard and dynamic bar
 
    * vendor/addons
 7744b1ac SuperVOOC: ship libnativeChargingRing and enable stock VFX
-
-====================
-     08-26-2026
-====================
-
-   * packages/services/QuickLook
-81f74d0 QuickLook: share the scoreboard test with SystemUI
-310f27f QuickLook: only draw a scoreboard when Smartspace sends one
-c415037 QuickLook: add Now Playing
-
-====================
-     08-25-2026
-====================
-
-   * vendor/alpha
-5347e7110 alpha: port Rising NowPlayingFlags for album art / On-Demand
-e0b90198f AxFX
-
-====================
-     08-24-2026
-====================
-
-   * hardware/oplus
-2d1f135 oplus-fwk: Make OplusViewSeamless.AnimationCallback a class
-
-   * packages/apps/AlphaSettings
-a98c469b AlphaSettings: drop the duplicate Now Playing switch
-
-   * vendor/pixel/gms
-53f878d gms: reinforce ASI <-> as.oss associations in nowplaying.xml
-
-====================
-     08-23-2026
-====================
-
-   * packages/apps/AlphaSettings
-b295c628 AlphaSettings: hide the Now Playing switch without the recognizer
-41ef0766 AlphaSettings: drop the duplicate Now Playing cloud toggle
-
-   * packages/apps/Settings
-1ad6a2661c2 Settings: surface the Now Playing tiles
-
-====================
-     08-22-2026
-====================
-
-   * packages/apps/AlphaSettings
-f4babe22 AlphaSettings: add the Now Playing cloud fallback toggle
-
-   * vendor/oneplus/salami
-5805fbf salami:  map Now Playing music detector UUID in ST platform info
-
-====================
-     08-21-2026
-====================
-
-   * frameworks/base
-0fe37990ba4c SystemUI: let Dynamic Bar inline reply take the IME
-095e200c007a SystemUI: one pair of cuts for every charging colour band
-93b26287b661 SystemUI: band the lane charging ring with C and the stack
-261b27988df3 SystemUI: drop the keyguard lane in the frame the card box grows
-034ef162e9be SystemUI: keep the card through a QS pull, not just a bouncer swipe
-e5c753e37d5e SystemUI: keep the keyguard card under QS and the bouncer
-5d08fc5dd0d9 SystemUI: gate the keyguard card on committed state, not drag progress
-fe24c50fb09b SystemUI: redirect the first peek of a generic alert to the Dynamic Bar
-dfc43878c889 SystemUI: never route a group summary into a Dynamic Bar event
-ec83058c1b83 SystemUI: offset overscroll on the media pager, dismiss behind Pin media player
-cd87decc2009 SystemUI: let the media track scrub without paging
-728248088c3a uimode: Apply custom dark-theme schedule while the screen is on
-6abd831968ed SystemUI: smart-cast the media chip before the optimistic flip
-872e6bea231a SystemUI: page media sessions on the E and D cards
-bfc1418bac4b SystemUI: stop idle media-art spin
-bfa1541ed97d SystemUI: the lane battery occupant follows its card
-b7dd900ab02b SystemUI: classify every keyguard card tap
-e0b33d1a52b9 SystemUI: keep the open keyguard card on its event
-30c4ab8007a5 SystemUI: solid stack headers for call, notif, clipboard
-f90746475b9e SystemUI: restore the lane's tinted glass
-915ed70d61a3 SystemUI: tighten the shared visualizer's cross-thread state
-f12d1902c4ee SystemUI: soften the keyguard furniture to sit with the Dynamic Bar lane
-51922d169da1 SystemUI: share the session-0 visualizer between Pulse and waveforms
-96176e0b422d SystemUI: lane chips carry the event colour instead of a tinted neutral
-7ea6de677e1d SystemUI: rotate the warm light accents so yellow darkens through amber
-f364a42e9770 SystemUI: classify QS page swipes so the shade stops closing itself
-ad0937069847 SystemUI: give the event palette a real light band
-7e569add7d6d SystemUI: steady the keyguard clocks and move the lap count into the ring
-67ad519efd75 SystemUI: classify card taps that leave the keyguard
-d004a02265bf SystemUI: keyguard cards send the app's real actions
-d01d20a00fd7 SystemUI: give the lockscreen battery chip a card
-d3bcc456de40 SystemUI: show a play glyph on the paused media lane circle
-9dd6f6f82a4c SystemUI: make lockscreen circle progress read on the plate
-f8b7ed0f0ede SystemUI: close the AxWaveform synthetic loop
-b729bb6d958a SystemUI: draw AxWaveform on the lockscreen media circle
-7683972dbd66 SystemUI: enlarge status-bar and cutout media art to 20dp
-a6c936604704 SystemUI: make lockscreen circle progress rings readable
-89f103396430 SystemUI: show album art on the lockscreen media circle
-11e5bae2ea98 SystemUI: only a solo lane occupant gets text
-b1e96e37b4cf SystemUI: sweep the chip surface maps
-6d83b589f2b9 SystemUI: keep charging as a text pill on the lockscreen lane
-81dd068eb2b4 SystemUI: drop the decorative chip loops
-206b94c9480c SystemUI: turn the lockscreen pill into a chip lane
-
-   * vendor/addons
-222e7dd3 SuperVOOC: hold the last frame a bit longer
-67a6761f Add SuperVOOC charging animation overlay
-
-====================
-     08-20-2026
-====================
-
-   * vendor/addons
-43553793 Move BCR to apk folder
-9fb88e0c Update ViviMusic to version 6.0.5.74
-
-====================
-     08-19-2026
-====================
-
-   * device/oneplus/dodge
-09e8f0d dodge: sepolicy: Grant the camera denials seen at runtime
-e2c2ee5 dodge: Stop apsfixup faulting on buffers the pipeline unmapped
-
-   * packages/apps/Settings
-96c48d0a706 Settings: Fix dark-theme schedule summary and time-picker double fire
-
-====================
-     08-18-2026
-====================
-
-   * device/oneplus/sm8750-common
-9091fb3 sm8750-common: Shorten the INTERACTION power floors
-fe2b84d sm8750-common: Cap clocks in battery saver
-b921748 sm8750-common: Act on DISPLAY_UPDATE_IMMINENT
-74f945d sm8750-common: Boost game loading like app launch
-
-====================
-     08-17-2026
-====================
-
-   * device/oneplus/sm8750-common
-734eea7 sm8750-common: Arm powerhint after QTI post-boot tuning
-abceca4 sm8750-common: Drive both LLCC bwmons from powerhint
-72485e5 sm8750-common: Let LAUNCH outrank INTERACTION on uclamp min
-
-   * hardware/oplus
-062c903 power: Stop DOUBLE_TAP_TO_WAKE from aborting the Power HAL
-
-   * packages/apps/AlphaSettings
-21911d02 AlphaSettings: drop the lockscreen battery chip mode
-
-   * vendor/alpha
-c5757764e config: inherit vendor/pixel-framework
-
-====================
-     08-16-2026
-====================
-
-   * device/oneplus/dodge
-f97a56d dodge: device-settings: Add toggle and QS tile for LTPO
-
-   * frameworks/base
-7b482fc8269a SystemUI: normalise accents by luminance instead of HSL lightness
-809169ea0d34 SystemUI: drive the Waveform style from the audio
-dec985762088 SystemUI: light-theme pass on the Dynamic Bar stack
-5ccee4247800 SystemUI: bare output chip and album art on the 2x2 media card
-cd25cc818a56 SystemUI: tighten the DB stack media art corner radius
-7a2f372dd084 SystemUI: night-lock the status bar and cutout chip
-f4162d79f043 SystemUI: give the theme a surface map
-5bc9cd2ddfad SystemUI: colour-code the media chip on the status bar and cutout
-825ad50c96b8 SystemUI: put the DB stack media card on our styles
-dfd8d45ec81b SystemUI: QS media card becomes a tile
-616e09d96337 SystemUI: keep media notifications out of the DB stack
-5acd937d11af SystemUI: collect Alpha's colours into one scheme
-82759ad578d6 SystemUI: glass chrome for the Dynamic Bar stack
-7197c341bc7f base: Opt-in low-power refresh rate with Battery Saver
-ba1f9f406ebc base: Allow disabling refresh rate lowering in battery saver
-4a80a3a00c6d base: Grant suspend permission to Flipendo
-180c50048fa0 SystemUI: hand the keyguard clock a size mask instead of overwriting it
-a71f34fc0532 SystemUI: one keyguard expand card, dressed by the media style
-567e1dcb407f SystemUI: drop the Wi-Fi standard icon
-06d866495e85 base: fix the crash dialog's paste upload
-66a803bfd47e SystemUI: make the HD and VoWiFi status bar icons deterministic
-07d8417db244 SystemUI: QS: one shape and span rule across the panel
-0b531411dea7 SystemUI: DynamicBar: don't pin the alert card on a transfer in progress
-159d32c38102 SystemUI: fix expanded charging card colours on light theme
-12c79a7d8eb2 SystemUI: prefer a playing session across the media surfaces
-f0ea22a61cfa SystemUI: let the Minimal style seek
-7e3612a69989 SystemUI: accent the Glass play button with the artwork colours
-43bfd15fb21f SystemUI: keep the lock screen up for 20s
-80497378337d SystemUI: draw the lockscreen output switcher like the other glyphs
-d96513eecaf7 SystemUI: Waveform lockscreen media style
-70dcf8a85078 SystemUI: Minimal lockscreen media style
-597bf3be275f SystemUI: Glass lockscreen media layout
-4bcfad68bfc0 SystemUI: move lockscreen media content to its own file
-1525e8601640 SystemUI: drive the Dynamic Bar's media from remedia
-e16affb16c67 SystemUI: glass the lockscreen media card
-af43332edcb9 SettingsLib: guard SliderPreference against empty value range
-9e16b1ef1bf4 SystemUI: honour the squiggle animation setting in the compose players
-ef5c804091f7 SystemUI: use vibrant primary colour for media accent
-f3c76ad781f6 SystemUI: drive the legacy media hub from remedia via Dagger
-5f57a88d5d1b SystemUI: redesign Dynamic Bar lockscreen media chip
-9e725b45d2c8 SystemUI: give QS two thirds of the split shade
-
-   * kernel/oneplus/sm8750-modules
-5550c189f4 sm8750: display: Restore manual brightness level after disabling HBM
-
-====================
-     08-15-2026
-====================
-
-   * device/oneplus/dodge
-a5fce03 dodge: Swap Quick JPEG U/V so the first still matches APS
-
-====================
-     08-14-2026
-====================
-
-   * device/oneplus/dodge
-312c4f2 dodge: Stop apsfixup from making heap pages read-only
-ea876d7 dodge: Restore chroma same-mapping repair on RAW_Bokeh
-fb945d0 dodge: Scan heap for TFRSN ptrs and set fusion bypass
-35a2474 dodge: Patch cached TFRSN pointers so close-up can skip
-3165b25 dodge: Skip TFRSN on close-up so macro does not freeze
-cee3d70 dodge: Discover apsfixup GOT slots and wrap HDR Process
-
-   * vendor/oneplus/dodge
-ec9cfa8 dodge: Sync the A.01 camera stack
-3c8f7e1 dodge: Restore the previous libAlgoInterface
-7fd1d30 dodge: Restore the previous libAlgoProcess
-18d4b05 dodge: Update libAlgoInterface
-d0dc90f dodge: Update libAlgoProcess
-
-====================
-     08-13-2026
-====================
-
-   * device/oneplus/salami
-296c784 salami: Wire lineage-libperfmgr mode extension and ADPF sepolicy
-
-   * device/oneplus/sm8550-common
-bad13d6 sm8550-common: Switch to lineage-libperfmgr Power HAL
-
-   * packages/apps/AlphaVisuals
-931c06a AlphaVisuals: add SuperVOOC charging animation option
-
-   * vendor/oneplus/sm8550-common
-00701d5 sm8550-common: Drop QTI perfd/iop/poweropt stack from packages
-
-   * vendor/qcom/opensource/audio-hal/st-hal
-b5b1db5 sthal: software Now Playing path for kalama (salami)
-
-   * vendor/qcom/opensource/audio-hal/st-hal-ar
-7dae7e1 sthal: implement software forceRecognition for Now Playing
-
-   * vendor/qcom/opensource/audio-hal/st-hal-ar-legacy
-7e6262e sthal-ar-legacy: software Now Playing path for kalama/salami
-
-====================
-     08-12-2026
-====================
-
-   * device/oneplus/dodge
-5846100 dodge: Match apsfixup chroma repair on geometry, not address range
-
-   * packages/apps/AlphaSettings
-72848a51 add [battery saver refresh rate] strings
-
-   * vendor/pixel/gms
-28e381e gms: drop shared connectivity (magictether) service binding
-956e47f gms: don't restrict GMS/AGSA associations for Now Playing
-
-====================
-     08-11-2026
-====================
-
-   * packages/apps/Settings
-3436efc6f36 Settings: Wire battery saver refresh-rate toggle for Alpha
-9afe6b639f6 Settings: Add toggle for 60Hz refresh rate on battery saver
-4644df23821 Settings: Adapt Google battery saver changes to A16 QPR2
-17b92137540 Settings: Implement reverse-engineered battery saver page
-
-   * vendor/qcom/opensource/audio-hal/st-hal-ar
-2959951 sthal: cooldown software Now Playing triggers
-bbceefa sthal: software ST path for Google Now Playing music model
 
