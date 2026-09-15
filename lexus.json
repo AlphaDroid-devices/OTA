@@ -4,15 +4,17 @@
             "maintainer": "stahed",
             "oem": "Oneplus",
             "device": "lexus",
-            "filename": "AlphaDroid-16-20260911-gapps-lexus-v4.7.zip",
-            "download": "https://sourceforge.net/projects/alphadroid-project/files/lexus/AlphaDroid-16-20260911-gapps-lexus-v4.7.zip/download",
-            "timestamp": 1789129587,
-            "md5": "f8cd24b3ec2060da8c00e4c68776bc55",
-            "sha256": "3eaabc8d59be42b55ad163a60652d1d7581346d70bc22c514322a4cb5f31d6b8",
-            "size": 4516736954,
+            "filename": "AlphaDroid-16-20260915-gapps-lexus-v4.7.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/lexus/AlphaDroid-16-20260915-gapps-lexus-v4.7.zip/download",
+            "timestamp": 1789500838,
+            "md5": "15a8efe7cbd15573dd177c03d546c45b",
+            "sha256": "012ffaf33855df8d0d731183132c198ef1e7d3b250b6100f1599ab9b829cd056",
+            "size": 4515281611,
             "version": "4.7",
             "buildtype": "Official",
             "buildvariant": "gapps",
+            "os_sdk_level": 36,
+            "os_patch_level": "2026-08-01",
             "forum": "",
             "gapps": "",
             "firmware": "",
@@ -21,9 +23,9 @@
             "recovery": "",
             "paypal": "https://www.paypal.com/donate/?hosted_button_id=UKKSXJYZDMH58",
             "telegram": "https://t.me/stahed_builds_lexus",
-            "dt": "",
-            "common-dt": "",
-            "kernel": ""
+            "dt": "https://github.com/AlphaDroid-devices/device_oneplus_lexus",
+            "common-dt": "https://github.com/AlphaDroid-devices/device_oneplus_sm8650-common",
+            "kernel": "https://github.com/AlphaDroid-devices/kernel_oneplus_sm8650"
         }
     ]
 }

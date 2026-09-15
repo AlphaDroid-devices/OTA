@@ -1,0 +1,144 @@
+Highlights & Device Specific Changes:
+Build type: Monthly
+Build variant: Gapps
+Device: OnePlus Nord 5 (lexus)
+Device maintainer: Javi
+
+====================
+15-09-2026
+====================
+
+# AlphaDroid Android 16 Version 4.7
+
+## 🔐 August 2026 Security Patch
+
+* Updated to the **August 2026 Android Security Patch**.
+* Integrated the latest security fixes and platform security improvements from the August 2026 security bulletin.
+* Updated to the latest **AlphaDroid 4.7** source.
+* Synced source on **September 15, 2026**.
+
+## Complete Device Changelog
+
+### 📱 Build
+
+* Official **GApps build** with Google applications and services pre-integrated.
+* Updated OnePlus Nord 5 device configuration for AlphaDroid 4.7.
+* Updated product and device configuration for Android 16.
+
+### 🚀 Performance & Responsiveness
+
+* Updated device configuration for the latest AlphaDroid 4.7 source.
+* Improved system responsiveness and device-specific performance configuration.
+* Updated power and performance configuration.
+* Refined CPU and GPU performance handling.
+* Updated thermal configuration for improved device behavior.
+* Synced the latest SM8650 common device changes.
+
+### 🖥️ Display & UI
+
+* Updated OnePlus Nord 5 display configuration.
+* Updated refresh-rate configuration.
+* Improved display power and refresh-rate handling.
+* Updated SurfaceFlinger configuration.
+* Updated display overlays and device-specific properties.
+* Refined display configuration for Android 16.
+* Updated LTPO/display configuration from the SM8650 common device tree.
+
+### 🔊 Audio & Dolby
+
+* Updated OnePlus Dolby integration.
+* Updated Dolby vendor configuration.
+* Synced latest audio configuration from the common device tree.
+* Updated audio-related proprietary configuration.
+* Improved compatibility with the latest AlphaDroid audio stack.
+
+### 📷 Camera & Multimedia
+
+* Updated camera configuration and dependencies.
+* Updated multimedia configuration for Android 16.
+* Updated camera and media compatibility from the SM8650 common tree.
+* Updated DeviceAsWebcam configuration.
+* Improved multimedia compatibility with the latest AlphaDroid source.
+
+### 🔵 Connectivity
+
+* Updated Bluetooth configuration.
+* Updated Wi-Fi and connectivity configuration.
+* Synced latest Qualcomm connectivity changes from the SM8650 common device tree.
+* Updated device-specific connectivity permissions and configuration.
+
+### ⚡ Charging & Power
+
+* Updated charging configuration.
+* Updated power HAL configuration.
+* Refined power-management configuration.
+* Updated charging and battery-related device properties.
+* Improved compatibility with the latest Android 16 power-management changes.
+
+### 📳 Haptics & LiveTap
+
+* Updated LiveTap vibrator integration.
+* Updated OnePlus vibrator configuration.
+* Improved vibrator HAL integration with Android 16.
+* Updated device-specific vibrator permissions and configuration.
+
+### 🧩 OnePlus Hardware
+
+* Updated OnePlus hardware configuration.
+* Synced latest `sm8650-common` changes.
+* Updated OnePlus-specific overlays and properties.
+* Updated hardware permissions and compatibility configuration.
+* Updated device-specific AIDL/HAL configuration.
+* Improved compatibility with the latest AlphaDroid framework.
+
+### 🛡️ SELinux & Security
+
+* Updated device-specific SELinux policies.
+* Updated permissions required by the latest Android 16 framework.
+* Improved compatibility with current AlphaDroid SELinux policy.
+* Cleaned up obsolete device-specific permissions and policies.
+* Integrated required security and compatibility changes.
+
+### 🧠 Kernel & Modules
+
+* Updated SM8650 kernel integration.
+* Updated kernel modules configuration.
+* Updated SM8650 device-tree configuration.
+* Synced latest kernel-related device changes.
+* Improved compatibility between the kernel, vendor and device trees.
+
+### 🛠️ Build System & Compatibility
+
+* Updated OnePlus Nord 5 device tree for AlphaDroid 4.7.
+* Updated SM8650 common device configuration.
+* Updated Soong namespaces and build configuration.
+* Updated proprietary blob dependencies.
+* Cleaned obsolete device-specific build configuration.
+* Updated Android 16 compatibility configuration.
+* Updated device overlays and product configuration.
+* Fixed duplicate `libvmmem` module definition by disabling the conflicting hardware-side module in favor of the vendor implementation.
+
+### 📦 System & Stability
+
+* Synced the latest AlphaDroid source.
+* Synced latest OnePlus Nord 5 device changes.
+* Synced latest SM8650 common changes.
+* Updated system properties and device configuration.
+* Improved overall Android 16 compatibility.
+* Improved device stability.
+* General performance and reliability improvements.
+
+### 📱 Overall
+
+This update brings **AlphaDroid Android 16 Version 4.7** to the **OnePlus Nord 5 (lexus)** with the **August 2026 Security Patch** and the latest source synchronization.
+
+The update includes refreshed OnePlus Nord 5 and SM8650 common device configuration, updated display and power management, improved hardware compatibility, updated LiveTap vibrator integration, refreshed multimedia and connectivity configuration, and various Android 16 compatibility and stability improvements.
+
+### Credits
+
+* **Trees:** @grepfox
+* **OnePlus Nord 5 contributors**
+* **SM8650 common device tree contributors**
+* **AlphaDroid Team**
+* **Qualcomm platform contributors**
+
