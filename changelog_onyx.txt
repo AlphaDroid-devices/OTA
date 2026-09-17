@@ -1,0 +1,16 @@
+Highlights & Device Specific Changes:
+Build type: Monthly
+Build variants: Gapps / Vanilla
+Device: Poco F7 / Redmi Turbo 4 Pro (onyx)
+Device maintainer: UnmoveD
+
+====================
+     17-09-2026
+====================
+* Initial Build
+* Based on OS3.0.303.0.WOLMIXM
+* Miui Camera & Dolby included
+* Update kernel 6.6.143
+* Import Xiaomi SeaAudio AIDL service
+* Reaply Dolby Vision
+* Include NotGameTurbo app
