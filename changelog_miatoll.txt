@@ -3,6 +3,17 @@ Device: Redmi Note 9s/Pro/Pro max, Poco m2 Pro (miatoll)
 Device maintainer: ナマン
 
 ====================
+    17-09-2026
+====================
+* Initial AlphaDroid 4.7 Build
+* September Security Patch
+* Added EROFS support
+* Tuned CPU scheduler and input boost for better touch responsiveness
+* Tuned scroll and pre-fling performance for smoother scrolling
+* Improved display composition smoothness
+* General performance and stability improvements
+
+====================
     28-06-2026
 ====================
 *Initial AlphaDroid 4.5 Build
