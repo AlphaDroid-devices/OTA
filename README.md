@@ -22,6 +22,8 @@ In order for a device to be OTA compliant, there are a few things to know.
       "version": "alphadroid version",
       "buildtype": "Official/Unofficial",
       "buildvariant": "vanilla/microg/gapps",
+      "os_sdk_level": 36,
+      "os_patch_level": "YYYY-MM-DD",
       "forum": "https://forum link"
       "gapps": "https://gapps link"
       "firmware": "https://firmware link",
@@ -37,6 +39,12 @@ In order for a device to be OTA compliant, there are a few things to know.
   ]
 }
 ```
+
+`os_sdk_level` (integer) and `os_patch_level` (string) are filled in automatically by
+`createjson.py` from `ro.system.build.version.sdk` and `ro.build.version.security_patch`. The
+updater uses them to decide whether a build is installable, so do not edit them by hand. JSONs
+written before these fields existed simply omit them; the updater falls back to reading the levels
+out of the package itself.
 
 ### 1.2 changelog.txt structure ###
 ```
