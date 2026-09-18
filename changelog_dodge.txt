@@ -1,6 +1,182 @@
 ====================
+     09-17-2026
+====================
+
+   * frameworks/base
+1d57799999ae display: Drop HDR video pin; boost only fullscreen video
+b48523a2c65e display: Gate HDR brightness pin on fullscreen video
+
+   * kernel/oneplus/sm8750
+7d001cc69f4c zram: refuse to build the idle lru under NUMA
+4b23cbe05de3 namespace: don't inherit ksu unshared marker in clone_mnt
+9411f389b748 read_write: fix ksu_handle_sys_read prototype
+29505d81449f fs-writeback: restore dirtytime_expire_interval guard
+266396e59fc9 kernel: drop retired OPEN_REDIRECT spoofs from fd/statfs
+8e7d16d7eb8e kernel: sync SUS_KSTAT call sites to susfs 2.3.0 3-arg API
+2a0b320cf23f kernel: Integrate ReSukiSU + defconfig + su-collision fix + SUSFS (gki-android15-6.6)
+91d3443e5e31 input: qcom-hv-haptics: stop promoting dev_dbg to dev_err
+788f5f356ed6 kernel: Integrate ReSukiSU + defconfig + su-collision fix + SUSFS (gki-android15-6.6)
+bfe809244cf2 uprev: AmberKernel v3.2
+75b2b24037fe fix build errors for kernel 6.6 compatibility across zram, lz4hc, and sysms_finder
+433ed40bf64c sysms_finder: fix redefinition errors by moving definitions out of header
+35e03a74d44c Enable RCU lazy
+813134814e03 sysms_finder: cleanup unused symbols
+bc547c3552b5 thermal: add sysctl-based global temperature offset
+2a749660f73a zram: track page types and optimize file-backed page shrinking
+97a99b1a8dc2 zram: adjust batch sizes for improved shrinking
+092b2cc9a631 zram: Fix compilation error
+d5d23c4f0341 zram: embed writeback request in bio via bioset front_pad
+dfb171a4eeb3 zram: enable asynchronous writeback
+f16e04f35bdc UPSTREAM: zram: modernize writeback interface
+ad8114d92ab7 UPSTREAM: zram: do not leak page on writeback_store error path
+c07ae3490fbf UPSTREAM: zram: do not leak page on recompress_store error path
+7f6dd6219684 UPSTREAM: zram: move post-processing target allocation
+4641ddfd4a3d UPSTREAM: zram: filter out recomp targets based on priority
+c365f9d42b0d zram: add async writeback infrastructure
+f537adeb9e3e zram: refactor writeback helpers
+6a712ae75d01 zram: do not skip the first bucket
+e0958554d922 zram: Fix compilation error and convert shrinker to use post-processing bucket
+d3df26a4032d zram: remove UNDER_WB and simplify writeback
+a0083bec4076 zram: reshuffle zram_free_page() flags operations
+f9e37ca6359d zram: rework writeback target selection strategy
+a7af722d6205 zram: rework recompress target selection strategy
+21e32c45ec99 zram: add max_pages param to recompression
+cbac83cba8da zram: permit only one post-processing operation at a time
+0f551f180a21 zram: introduce ZRAM_PP_SLOT flag
+0b35d1725a9d zram: disable shrinker during system suspend/sleep
+16725a2b1fad zram: Remove unnecessary memcg support from shrinker and LRU
+06030e5a7e0b zram: Remove unnecessary rcu_read_lock in zram_lru_add and zram_lru_del
+d77371f9442e mm/zram: Rename game_pid to sysms_finder for improved clarity
+cf371f2f08aa zram: Move cutoff_time initialization into monitor_func loop
+03d7ca62ce56 zram: Move CONFIG_ZRAM_TRACK_ENTRY_ACTIME check out of loop
+3fe62cda2d08 zram: Adjust idle page cutoff time to 30 seconds
+9014e8afa5de zram: Optimize writeback and usage calculation in zram_drv.c
+1d142fdea0ba zram: Implement second chance algorithm and adjust batch size
+2748a12afc39 zram: adjust batch sizes and pressure thresholds for improved shrinking
+a75b4798d1a4 zram: Reduce idle page marking time from 10 minutes to 5 minutes
+27c464cbffa4 zram: Add init_lock protection for mark_idle() in monitor_func
+661e6f98f941 zram: add shrinker for writeback of idle pages
+6abe46d3fadd zram: Add Immediate Recompression (ZRAM-IR) feature
+998eb82da1fe zram: Adjust monitoring thresholds and interval
+9336ced2e887 zram: Refactor disksize calculation
+0188fa59e81f zram: Introduce ZRAM_AUTO_SIZE feature for dynamic size adjustment
+db6508ed7a15 Use copy_page in uksm, zram_drv and kernel/power/swap.c
+f9f4139b1b47 zram: Set default compressor to LZ4 and initialize default disksize to 16GB
+831df53b2462 Compress multiple commits into one
+0249e541d816 AmberKernel: uprev v3
+c9569c50f636 config: enable thermal cooling devices and TLS module for SM8750
+ab5e6ee9693c Uprev: AmberKernelV2
+30b04190da32 FixUp! bad merge
+7bee39abd9c0 power: process: fix undeclared identifier 'todo_logging_on'
+67bdf66aa876 batman-adv: fix random jitter calculation
+4efec4956607 treewide: use power efficient workingqueues
+6139ddffb862 kernel: power: faster deepsleep
+78a972c717fa sched: core: tweaks perfomance for games CODM
+495cbcd54c59 treewide: Apply some memory optimizations patches.
+fdd068cdbc5b selinux: Allow init exec ksud under nosuid
+ad1b89abdbf7 sm8750: Amber Kernel
+b8a2aa16ecf0 fs: default to noatime
+fd2a95a0de71 f2fs: Demote GC thread to idle scheduler class
+47fe61b8837e PM: QoS: Add check to make sure CPU freq is non-negative
+43363f05280c f2fs: Enlarge min_fsync_blocks to 20
+b7a3f1975795 math: upgrade INTFP to v1.2
+4e6c9fc5025a block: upgrade ADIOS scheduler to v3.1.9
+8be527750a59 lib/string.c: Optimize memchr()
+ef8cf6a169e5 lib/string.c: Add a macro for memchr_inv()
+928ff9c5f7a2 xxhash: inline round() functions
+0b283cd5f8be mm/slab_common: Align all caches' objects to hardware cachelines
+e99aa2e23979 f2fs: add valid block ratio not to do excessive GC for one time GC
+1587b154e64d tpm: add WQ_PERCPU to alloc_workqueue users
+73956ab0e0d5 mm/page_alloc: optimize lowmem_reserve max lookup using its semantic monotonicity
+ced2ed4a8284 bpf: make kprobe_multi_link_prog_run always_inline
+8d5250c4632f bpf: optimize bpf_map_update_elem() for map-in-map types
+32157f5ebe56 loop: add missing bd_abort_claiming in loop_set_status
+96ba57354dd6 loop: don't change loop device under exclusive opener in loop_set_status
+05c95eeec53b bpf: Fix invalid prog->stats access when update_effective_progs fails
+d1813a997787 bpf: Improve program stats run-time calculation
+d9c76f1232e0 fs/fat: remove unnecessary wrapper fat_max_cache() fat_max_cache() always returned FAT_MAX_CACHE and did not use the inode parameter. So, use the FAT_MAX_CACHE constant directly
+6067c77cf109 mm/page_alloc: change all pageblocks migrate type on coalescing When a page is freed it coalesces with a buddy into a higher order page while possible.  When the buddy page migrate type differs, it is expected to be updated to match the one of the page being freed.
+89170879f335 mm/memremap: fix spurious large folio warning for FS-DAX This patch addresses a warning that I discovered while working on famfs, which is an fs-dax file system that virtually always does PMD faults (next famfs patch series coming after the holidays).
+b90251b3689c mm/vmalloc: move resched point into alloc_vmap_area() Currently vm_area_alloc_pages() contains two cond_resched() points. However, the page allocator already has its own in slow path so an extra resched is not optimal because it delays the loops.
+f79800f1ff98 mm/zone_device: support large zone device private folios
+107f276ed6ea mm/hmm: populate PFNs from PMD swap entry
+c2e5e5ee578e uksm: perform a range-walk in break_ksm Make break_ksm() receive an address range and change break_ksm_pmd_entry() to perform a range-walk and return the address of the first ksm page found.
+489619aa8616 drm/msm: Replace unsafe snprintf usage with scnprintf The refill_buf function uses snprintf to append to a fixed-size buffer. snprintf returns the length that would have been written, which can exceed the remaining buffer size. If this happens, ptr advances beyond the buffer and rem becomes negative. In the 2nd iteration, rem is treated as a large unsigned integer, causing snprintf to write oob.
+eec9bee8761f loop: use READ_ONCE() to read lo->lo_state without locking When lo->lo_mutex is not held, direct access may read stale data. This patch uses READ_ONCE() to read lo->lo_state and data_race() to silence code checkers, and changes all assignments to use WRITE_ONCE().
+c7cc85780f42 blk-mq: delete task running check in blk_hctx_poll() blk_hctx_poll() always checks if the task is running or not, and returns 1 if the task is running. This is a leftover from when polled IO was purely for synchronous IO, and doesn't make sense anymore when polled IO is purely asynchronous. Similarly, marking the task as TASK_RUNNING is also superflous, as the very much has to be running to enter the function in the first place.
+b0ce4c906613 blk-mq: use BLK_POLL_ONESHOT for synchronous poll completion blk_execute_rq() with polling is used in kernel code paths such as NVMe controller connect. The aggressive spinning in blk_hctx_poll() can prevent the completion task from getting a chance to run, causing a lockup.
+7144563a2de3 sched/fair: Fix pelt clock sync when entering idle
+e84566e25bf8 migrate: correct lock ordering for hugetlb file folios commit b7880cb upstream.
+89682bd353fc debugfs: Make debugfs_lookup() return NULL when debugfs is disabled
+7c5ec7310860 PM/Sleep: Start killing wakelocks after two minutes of idle (120s)
+045da52efcf5 selinux: Avoid dynamic memory allocation for INITCONTEXTLEN buffers
+6038e6bb96d7 Makefile: Force ARCH to be arm64
+55ae096b8aa1 kernel: Warn when an IRQ's affinity notifier gets overwritten
+fcefede11b6c sched/core: Forbid Unity-based games from changing their CPU affinity
+08f194705061 bpf: Avoid allocating small buffers for map keys and values
+1f373e8c19c8 Suppress overly verbose log spam
+631928f30a81 sched/fair: Reduce PELT half-life from 32 ms to 16 ms
+315f32e0dad0 AmberKernelV1-BETA
+1e65ea454736 gki_defconfig:  Enable boeffla_wl_blocker
+350242dfcc1a boeffla_wl_blocker: allow spaces to be stored
+5d247af28d69 boeffla_wl_blocker: Update `LIST_WL_DEFAULT`
+e06b35a5ad13 boeffla_wl_blocker: Increase `LENGTH_LIST_WL` and `LENGTH_LIST_WL_DEFAULT`
+0b1e820ead3d boeffla_wl_blocker: Remove timerfd from default block list
+4a935a40a5c7 boeffla_wl_blocker: Block some wakelocks by default
+598de10c3aa6 boeffla_wl_blocker: don't block wakelocks by default
+fe3201018b81 boeffla_wl_blocker: update to wakelock blocker driver v1.1.0
+ee9bf2a8888c boeffla_wl_blocker: update to wakelock blocker driver v1.0.1
+2cb65c98bbfc boeffla_wl_blocker: add generic wakelock blocker driver v1.0.0
+3872e1e5fc31 power: process: Use lesser time to enter sleep
+7f308c39133d gpu: drm: Use power efficient workingqueues
+9e4428e7e3ad gpu: drm: Use power efficient workingqueues
+f2da8fd6ae0f gki_defconfig: Don't sync when entering suspend
+a941134386f5 gki_defconfig: Disable some hardening configs
+39279ce23daa gki_defconfig: Enable LLVM Polly optimizer
+c7e2506846e4 Makefile: Rework on Polly optimizer flags
+48baa76b7728 kbuild: Add support for LLVM's Polly optimizer
+79fe55bd8ec9 mm: vmstat: use power efficient workingqueues
+b2f3c8b2e82c proc: Don't let Google Camera run in the background
+abc1b78cf986 PM / freezer: Reduce freeze timeout to 1 second for Android
+7d0d123bc226 mbcache: Speed up cache entry creation
+33a6ea7a875f arm64/mm: Optimize loop to reduce redundant operations of contpte_ptep_get
+8b9fd3b00cfb ANDROID: gki_defconfig: Enable Clang ThinLTO support
+3641f638ced0 ANDROID: gki_defconfig: Enable AUTOFDO_CLANG for AutoFDO optimizations
+cea38a7e19f1 arm64: debug: disable self-hosted debug by default
+b4f216c11ab9 lib: Disable debug_locks
+b382e24f1da5 Makefile: Enable -mcpu=oryon-1
+b366f99e4e5a f2fs: Demote GC thread to idle scheduler class
+c45baf02c407 f2fs: set ioprio of GC kthread to idle
+344e1d516faa f2fs/gc: Reduce GC thread urgent sleep time to 50ms
+ce664dbd7714 f2fs: Use copy_page for full page copy
+fc9b89d4e781 f2fs: reduce timeout for uncongestion
+da50d093de5d f2fs: Enable ATGC and GC_MERGE by default
+
+====================
+     09-16-2026
+====================
+
+   * device/oneplus/salami
+c1d53fe salami: Map Device Settings PWM to ColorOS dimlayer dimming
+1cc8ce4 salami: Ungray PWM and charging toggles on SM8550 sysfs
+efa3454 salami: Drive AOD brightness with stock SM8550 OFP values
+
+   * frameworks/base
+32df30fe5cc6 display: Drop SDR video brightness floor
+
+   * kernel/oneplus/sm8550
+2c83db1b0208 input: qcom-hv-haptics: stop promoting dev_dbg to dev_err
+cf92dac1a584 kernel: Integrate ReSukiSU + defconfig + su-collision fix + SUSFS (gki-android14-5.15)
+
+   * kernel/oneplus/sm8550-modules
+36837f646b9 display-drivers: Apply stored AOD high/low after display-on
+
+====================
      09-15-2026
 ====================
+
+   * device/oneplus/salami
+bd55711 salami: Port dodge Device Settings UI with SM8550 hardware paths
 
 ====================
      09-14-2026
@@ -8,7 +184,6 @@
 
    * device/oneplus/dodge
 665569e dodge: apsfixup: Encode video-snapshot stills as VU
-7a04bb9 dodge: DeviceSettings: Compose UI and frosted banner
 
    * frameworks/base
 b9fb8f5235b1 wm: Don't touch WindowManager in AxSandbox before systemReady
@@ -21,6 +196,7 @@ b9fb8f5235b1 wm: Don't touch WindowManager in AxSandbox before systemReady
 0e94b99cc0 build: Point RBE at buildbuddyfix and canonicalize working dir
 
    * device/oneplus/dodge
+7a04bb9 dodge: DeviceSettings: Compose UI and frosted banner
 1e47d7b dodge: Set LRA resonant frequency for the vibrator HAL
 
    * device/oneplus/sm8750-common
@@ -34,32 +210,18 @@ a263052b58ac policy: Skip screen-on reclaim without memory pressure
    * hardware/oplus
 da7d87c oplus-fwk: Add the share sheet's shortcut loader and prediction wrappers
 
-   * kernel/oneplus/sm8550
-17e35842b287 kernel: drop retired OPEN_REDIRECT spoofs from fd/statfs
-c37143ebd8d1 kernel: Integrate ReSukiSU + defconfig + su-collision fix + SUSFS (gki-android14-5.15)
-9b5b7d5023d0 kernel: sync SUS_KSTAT call sites to susfs 2.3.0 3-arg API
-26ffc195f7f7 input: qcom-hv-haptics: stop promoting dev_dbg to dev_err
-
-   * kernel/oneplus/sm8750
-ee8bb5137a20 kernel: drop retired OPEN_REDIRECT spoofs from fd/statfs
-c545a19b9eda kernel: sync SUS_KSTAT call sites to susfs 2.3.0 3-arg API
-3e37020eab0e kernel: Integrate ReSukiSU + defconfig + su-collision fix + SUSFS (gki-android15-6.6)
-f16ccee51572 input: qcom-hv-haptics: stop promoting dev_dbg to dev_err
-
    * kernel/oneplus/sm8750-devicetrees
 4e291d8d90 dodge: AA569: send DBV 0x51 before enter_idle in AOD sequences
 
    * kernel/oneplus/sm8750-modules
 f67f6788dd display-drivers: oplus_ofp: apply AOD 0x51 before enter_idle
 
-   * packages/apps/AlphaSettings
-
-   * vendor/alpha
-3d0b344a3 Revert mustang BuildFingerprint overrides to stock Alpha
-
 ====================
      09-12-2026
 ====================
+
+   * vendor/alpha
+3d0b344a3 Revert mustang BuildFingerprint overrides to stock Alpha
 
 ====================
      09-11-2026
@@ -79,13 +241,10 @@ f67f6788dd display-drivers: oplus_ofp: apply AOD 0x51 before enter_idle
    * frameworks/base
 6e3c9dfbfca9 SystemUI: drop Clear Voice status-bar icon, keep QS tile
 e087ef303472 display: Drop fusion refusal zeros at any ambient
-62fa9a3da829 Settings: add per-app spoof Secure keys for UserSelectedAppSpoof
-3d87e25463fa PixelPropsUtils: add FGS/alarm/broadcast bypass array symbols
 
    * packages/apps/AlphaSettings
 a36d856b AlphaSettings: add loadValue() on SettingPrimarySwitchPreference
 51e8ad67 AlphaSettings: restore PreferenceUtils for Spoofing hub
-06e59ba7 AlphaSettings: add common_system_badge string for SpoofingSharedUi
 
    * vendor/alpha
 
@@ -96,18 +255,13 @@ a36d856b AlphaSettings: add loadValue() on SettingPrimarySwitchPreference
    * device/oneplus/dodge
 281a81d dodge: Use stock ColorOS bins for AOSP haptic clicks
 5270472 dodge: DeviceSettings: drive AOD brightness through PeakLumin 0x81
-60b5f67 dodge: Keep Super Text off across camera config extracts
-5372127 dodge: DeviceSettings: start services as the system user
-0e529ae dodge: Drop the two-level Quick JPEG walk
-7af9753 dodge: Follow bufs one level deeper for the text-mode Quick JPEG
-01580ef dodge: DeviceSettings: draw RAM as a meter
-72a950a dodge: Swap portrait Quick JPEGs after all
 
    * frameworks/base
+62fa9a3da829 Settings: add per-app spoof Secure keys for UserSelectedAppSpoof
+3d87e25463fa PixelPropsUtils: add FGS/alarm/broadcast bypass array symbols
 b184b193114d spoof: restore PixelPropsUtils for per-app identity
 6489109627fa SystemUI: Add Clear Voice QS tile
 ac324d4da0fa SystemUI: Show Clear Voice status icon during calls
-bcab7bd7b837 SystemUI: make Now Playing its own dynamic bar event type
 
    * kernel/oneplus/sm8750-devicetrees
 6c71435269 dodge: AA569: send PeakLumin 0x81 in AOD high/low commands
@@ -117,7 +271,7 @@ bcab7bd7b837 SystemUI: make Now Playing its own dynamic bar event type
 664be8e825 display-drivers: oplus_ofp: apply AOD brightness through LP1
 
    * packages/apps/AlphaSettings
-48042c75 DynamicBar: add Now Playing event toggle
+06e59ba7 AlphaSettings: add common_system_badge string for SpoofingSharedUi
 
    * packages/apps/Settings
 0863ff10e66 Settings: Wire Clear Voice rename from clearcalling
@@ -125,14 +279,17 @@ bcab7bd7b837 SystemUI: make Now Playing its own dynamic bar event type
    * vendor/alpha
 0490b6417 config: mustang BuildFingerprint for OOTB identity
 
-   * vendor/oneplus/dodge
-cd4b54e dodge: Hide the camera Super Text mode
-
 ====================
      09-07-2026
 ====================
 
    * device/oneplus/dodge
+60b5f67 dodge: Keep Super Text off across camera config extracts
+5372127 dodge: DeviceSettings: start services as the system user
+0e529ae dodge: Drop the two-level Quick JPEG walk
+7af9753 dodge: Follow bufs one level deeper for the text-mode Quick JPEG
+01580ef dodge: DeviceSettings: draw RAM as a meter
+72a950a dodge: Swap portrait Quick JPEGs after all
 12f83b9 dodge: Only run the apsfixup YUV scan when it is unambiguous
 15d6acf dodge: Find the Quick JPEG from the encode object, not the whole heap
 f3e9c01 dodge: Stop apsfixup U/V-swapping on-screen camera buffers
@@ -141,7 +298,14 @@ f1b088b dodge: Stop apsfixup rescanning for TFRSN pointers forever
 0f7e5da dodge: Don't treat portrait aux Y as UV in apsfixup
 2615800 dodge: Keep the HEIF switch off across camera config extracts
 
+   * frameworks/base
+bcab7bd7b837 SystemUI: make Now Playing its own dynamic bar event type
+
+   * packages/apps/AlphaSettings
+48042c75 DynamicBar: add Now Playing event toggle
+
    * vendor/oneplus/dodge
+cd4b54e dodge: Hide the camera Super Text mode
 e41bb29 dodge: Turn off the camera HEIF photo format switch
 
 ====================
@@ -264,7 +428,6 @@ a3661d1672a5 SystemUI: add configurable status bar and QS header clock size
 
    * device/oneplus/dodge
 1c81794 AlphaDroid Bringup Update
-5675922 dodge: Use 16GB dalvik heap config
 
    * frameworks/base
 badde3c2ba7e SystemUI: Label PPS sessions in the charging HUD
@@ -273,15 +436,41 @@ ebed43fb4495 SystemUI: let charging overlays set frame duration and hold
 a87510e10c49 SystemUI: SuperVOOC charging anim with charger-id gate
 da58ce90bdfc base: adapt SuperVOOC lockscreen info for aston, fix Dynamic Bar
 b977f9cb507b base: Fix and improve lockscreen charging info for VOOC/SuperVOOC devices
-fb813772023b SystemUI: fit the QS media transport in a half-width card
-761e58ce01a4 SystemUI: keep an action pill's label on one line
 
    * hardware/oplus
 5439079 sepolicy: use lineage libperfmgr path
+
+   * packages/apps/Settings
+0fb23cc87ca Settings: Default haptic profile to op13gentle; add intensity screen picker
+62fcb859827 Settings: Add haptic profile picker
+
+   * packages/services/QuickLook
+f258bea QuickLook: accept AmbientIndication version 0 and 1
+792b86a NowPlaying: clear the chip when listening turns off
+
+====================
+     08-30-2026
+====================
+
+   * device/oneplus/dodge
+5675922 dodge: Use 16GB dalvik heap config
+
+   * frameworks/base
+fb813772023b SystemUI: fit the QS media transport in a half-width card
+761e58ce01a4 SystemUI: keep an action pill's label on one line
+0e187ffdb654 Now Playing: make the device overlay the kill switch
+0d8afd335b64 Now Playing: default background recognition off
+b1def109571e SystemUI: point the UI style tile's long press at Alpha Visuals
+
+   * hardware/oplus
 898b258 oplus-fwk: Stub Melody / HeyMelody Bluetooth APIs
 6a18f30 oplus-fwk: Fill the remaining oplus classes Melody links against
 fed0f1c oplus-fwk: Add the OplusActivityManager background restriction stub
 512000a OplusPermissions: Drop the signature gate on Melody's IOT perms
+
+   * packages/apps/AlphaSettings
+a0c51220 Sound: hide background music recognition where it is unsupported
+89b8418d Sound: default background music recognition off
 
    * packages/apps/AlphaVisuals
 7d32347 AlphaVisuals: allow deep linking into a screen
@@ -296,59 +485,32 @@ c80499f74b Launcher3: Switch to AppLock API for protected and hidden apps
 dcdcc14bbe [feat] add app lock launcher hooks
 18ffe61fbd Launcher3: Declare USE_APP_LOCK
 
-   * packages/apps/Settings
-0fb23cc87ca Settings: Default haptic profile to op13gentle; add intensity screen picker
-62fcb859827 Settings: Add haptic profile picker
-
    * packages/apps/Updater
 c09b57d Updater: List only newer same-variant builds
 f033eb2 Updater: Fix local update re-import
 
    * packages/services/QuickLook
-f258bea QuickLook: accept AmbientIndication version 0 and 1
-792b86a NowPlaying: clear the chip when listening turns off
+4cad0d2 NowPlaying: reader only
 
    * vendor/alpha
 ab2774a29 Build a few oplus ringtones
-
-   * vendor/oneplus/sm8750-common
-22ee194 sm8750-common: Import stock Melody app
-
-====================
-     08-30-2026
-====================
-
-   * frameworks/base
-0e187ffdb654 Now Playing: make the device overlay the kill switch
-0d8afd335b64 Now Playing: default background recognition off
-b1def109571e SystemUI: point the UI style tile's long press at Alpha Visuals
-4be885bfa39f SystemUI: hold the keyguard card's hidden views hidden
-0d72a88557eb SystemUI: hide the lockscreen widgets behind a keyguard card
-67798418f3b9 SystemUI: a Now Playing lockscreen shortcut
-5975a990431d SoundTrigger: let a forced recognition recover a stalled session
-308203686f2c SoundTrigger: read the ambient music gate from the setting
-
-   * kernel/oneplus/sm8750
-a62adad46b49 kernel: Integrate ReSukiSU + defconfig + su-collision fix + SUSFS (gki-android15-6.6)
-
-   * packages/apps/AlphaSettings
-a0c51220 Sound: hide background music recognition where it is unsupported
-89b8418d Sound: default background music recognition off
-
-   * packages/services/QuickLook
-4cad0d2 NowPlaying: reader only
-f88e0c4 QuickLook: stop arming the microphone
-
-   * vendor/alpha
 0a8ec6dfe alpha: enable Now Playing through ASI
 39d5e76cf Bump alpha version to 4.7
 0707ec8e9 release: Bump Security String to 2026-08-01
+
+   * vendor/oneplus/sm8750-common
+22ee194 sm8750-common: Import stock Melody app
 
 ====================
      08-29-2026
 ====================
 
    * frameworks/base
+4be885bfa39f SystemUI: hold the keyguard card's hidden views hidden
+0d72a88557eb SystemUI: hide the lockscreen widgets behind a keyguard card
+67798418f3b9 SystemUI: a Now Playing lockscreen shortcut
+5975a990431d SoundTrigger: let a forced recognition recover a stalled session
+308203686f2c SoundTrigger: read the ambient music gate from the setting
 5cf02ea01e64 SystemUI: centre the media card in its pager page
 53870fc42b0d AxDynamicBar: one download glyph for the whole transfer
 a81262fb6f88 SystemUI: tint the transfer card's fallback icon
@@ -368,6 +530,7 @@ a81262fb6f88 SystemUI: tint the transfer card's fallback icon
 17e3703ecca Settings: wire Oplus Clear Calling from vendor/oplus/clearcalling
 
    * packages/services/QuickLook
+f88e0c4 QuickLook: stop arming the microphone
 a9b1882 QuickLook: rename the Now Playing setting and drop its row
 
    * vendor/alpha
@@ -375,30 +538,4 @@ a9b1882 QuickLook: rename the Now Playing setting and drop its row
 
    * vendor/pixel/gms
 a6ac2c2 gms: add the Now Playing prebuilt
-
-====================
-     08-28-2026
-====================
-
-   * device/oneplus/dodge
-2d7f801 dodge: device-settings: SuperVOOC current cap
-
-   * frameworks/base
-41420d4d3f9d services: don't harvest system processes in the screen-on reclaim
-9c22c27a75fe AxDynamicBar: draw a transfer as a card, not as the app's views
-681c8d226d64 AxDynamicBar: gate the keyguard play/pause tap
-74a883a75537 AxDynamicBar: stop leaking alert dismissal timers
-bf3ea3819772 AxDynamicBar: draw a scoreboard only when the event is one
-5c68395d0f72 SystemUI: Now Playing card
-41740d640a50 SystemUI: card action controls are glass, not filled
-2a739f092dc2 SystemUI: Now Playing album art
-a95c8ae3c452 SystemUI: Now Playing album art on keyguard and dynamic bar
-635760e917c5 SoundTrigger: serve the ambient music model in software
-
-====================
-     08-27-2026
-====================
-
-   * vendor/addons
-7744b1ac SuperVOOC: ship libnativeChargingRing and enable stock VFX
 
