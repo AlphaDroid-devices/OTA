@@ -14,51 +14,66 @@ jobs:
     if: github.repository == 'AlphaDroid-devices/OTA'
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 2  # Need previous commit to compare changes
-          
+
       - name: Get changed files
         id: changes
+        env:
+          # Via the environment so a commit message cannot be expanded as shell
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+          COMMIT_TIMESTAMP: ${{ github.event.head_commit.timestamp }}
+          COMMIT_URL: ${{ github.event.head_commit.url }}
         run: |
           # Get list of changed files in this push
           CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD)
-          echo "changed_files=$CHANGED_FILES" >> $GITHUB_OUTPUT
-          
+
+          # A push touching more than one file is multiline, so it needs the delimiter form
+          {
+            echo "changed_files<<EOF_CHANGED_FILES"
+            echo "$CHANGED_FILES"
+            echo "EOF_CHANGED_FILES"
+          } >> "$GITHUB_OUTPUT"
+
           # Check if any JSON files were changed
           if echo "$CHANGED_FILES" | grep -q "\.json$"; then
-            echo "has_json_changes=true" >> $GITHUB_OUTPUT
-            echo "event_type=ota-device-update" >> $GITHUB_OUTPUT
+            echo "has_json_changes=true" >> "$GITHUB_OUTPUT"
+            echo "event_type=ota-device-update" >> "$GITHUB_OUTPUT"
             echo "Found JSON file changes, will trigger device update"
           else
-            echo "has_json_changes=false" >> $GITHUB_OUTPUT
-            echo "event_type=ota-update" >> $GITHUB_OUTPUT
+            echo "has_json_changes=false" >> "$GITHUB_OUTPUT"
+            echo "event_type=ota-update" >> "$GITHUB_OUTPUT"
             echo "No JSON file changes detected"
           fi
-          
+
+          # jq escapes the newlines and quotes that would otherwise produce invalid payload JSON
+          PAYLOAD=$(jq -nc \
+            --arg changed_files "$CHANGED_FILES" \
+            --arg repository "$GITHUB_REPOSITORY" \
+            --arg commit "$GITHUB_SHA" \
+            --arg ref "$GITHUB_REF" \
+            --arg pusher "$GITHUB_ACTOR" \
+            --arg timestamp "$COMMIT_TIMESTAMP" \
+            --arg commit_message "$COMMIT_MESSAGE" \
+            --arg commit_url "$COMMIT_URL" \
+            '$ARGS.named')
+          echo "payload=$PAYLOAD" >> "$GITHUB_OUTPUT"
+
           # Log the changes for debugging
           echo "Changed files:"
           echo "$CHANGED_FILES"
-          
+
       - name: Trigger website update
         if: steps.changes.outputs.has_json_changes == 'true'
-        uses: peter-evans/repository-dispatch@v2
+        uses: peter-evans/repository-dispatch@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          # Cross-repository dispatch needs a PAT with repo scope; GITHUB_TOKEN is scoped to this repo
+          token: ${{ secrets.ALPHADROID_WEBHOOK_TOKEN }}
           repository: alphadroid-project/alphadroid-project.github.io
           event-type: ${{ steps.changes.outputs.event_type }}
-          client-payload: |
-            {
-              "changed_files": "${{ steps.changes.outputs.changed_files }}",
-              "repository": "${{ github.repository }}",
-              "commit": "${{ github.sha }}",
-              "ref": "${{ github.ref }}",
-              "pusher": "${{ github.actor }}",
-              "timestamp": "${{ github.event.head_commit.timestamp }}",
-              "commit_message": "${{ github.event.head_commit.message }}",
-              "commit_url": "${{ github.event.head_commit.url }}"
-            }
-          
+          client-payload: ${{ steps.changes.outputs.payload }}
+
       - name: Log notification result
         run: |
           if [[ "${{ steps.changes.outputs.has_json_changes }}" == "true" ]]; then
