@@ -1,0 +1,8 @@
+Device: webhook test (webhooktest)
+Mantainer: webhook test
+
+====================
+     18-09-2026
+====================
+
+* Dummy entry to exercise the notify-website workflow

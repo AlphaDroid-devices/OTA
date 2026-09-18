@@ -1,0 +1,29 @@
+{
+    "response": [
+        {
+            "maintainer": "webhook test",
+            "oem": "AlphaDroid",
+            "device": "webhooktest",
+            "filename": "AlphaDroid-webhook-test.zip",
+            "download": "",
+            "timestamp": 1,
+            "md5": "",
+            "sha256": "",
+            "size": 0,
+            "version": "0.0",
+            "buildtype": "Test",
+            "buildvariant": "vanilla",
+            "forum": "",
+            "gapps": "",
+            "firmware": "",
+            "modem": "",
+            "bootloader": "",
+            "recovery": "",
+            "paypal": "",
+            "telegram": "",
+            "dt": "",
+            "common-dt": "",
+            "kernel": ""
+        }
+    ]
+}
