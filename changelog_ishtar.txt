@@ -1,0 +1,7 @@
+Device: Xiaomi 13 Ultra (ishtar)
+Device maintainer: hasan6034
+
+====================
+    19-09-2026
+====================
+* Initial AlphaDroid 4.7 Build
