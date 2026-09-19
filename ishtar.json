@@ -1,0 +1,31 @@
+{
+    "response": [
+        {
+            "maintainer": "hasan6034",
+            "oem": "Xiaomi",
+            "device": "ishtar",
+            "filename": "AlphaDroid-16-20260919-gapps-ishtar-v4.7.zip",
+            "download": "https://sourceforge.net/projects/alphadroid-project/files/ishtar/AlphaDroid-16-20260919-gapps-ishtar-v4.7.zip/download",
+            "timestamp": 1789833916,
+            "md5": "3e12e06b4eaae87e6e9a6a79eaedc0a3",
+            "sha256": "540aa7fd86c2bf400fa910ff680277b6363769fa0301ed6e31b5cb51a0fb9f2c",
+            "size": 4248483278,
+            "version": "4.7",
+            "buildtype": "Official",
+            "buildvariant": "gapps",
+            "os_sdk_level": 36,
+            "os_patch_level": "2026-08-01",
+            "forum": "",
+            "gapps": "",
+            "firmware": "",
+            "modem": "",
+            "bootloader": "",
+            "recovery": "",
+            "paypal": "",
+            "telegram": "https://t.me/selenetr",
+            "dt": "https://github.com/AlphaDroid-devices/device_xiaomi_ishtar",
+            "common-dt": "https://github.com/AlphaDroid-devices/device_xiaomi_sm8550-common",
+            "kernel": ""
+        }
+    ]
+}
