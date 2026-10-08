@@ -2,7 +2,134 @@ Highlights & Device Specific Changes:
 Build type: Monthly
 Build variants: Gapps / Vanilla
 Device: Xiaomi Redmi Note 10 Pro (sweet)
-Device maintainer: Javi
+Device maintainer: stahed
+
+====================
+     06-10-2026
+====================
+
+# AlphaDroid Android 16 Version 4.7 October Security Patch
+
+## 🚀 Performance & Responsiveness
+
+* Adapted the sweet device tree to AlphaDroid.
+* Improved kernel memory management with updated swappiness and watermark configuration.
+* Added animation performance tuning for a smoother UI experience.
+* Enabled 120 FPS support for compatible games.
+* Improved refresh-rate selection and per-app refresh-rate management.
+* Added per-app thermal control support.
+* Improved device-specific power and thermal configuration.
+* Updated CPU temperature overlay configuration.
+
+## 🔊 Audio & Dolby
+
+* Added Dolby Atmos support.
+* Added Sony audio blobs.
+* Updated Dolby vendor integration.
+* Added DSPVolumeSynchronizer support.
+* Improved device audio configuration and mixer settings.
+* Integrated required Dolby dependencies into the device tree.
+
+## 📷 Camera & Multimedia
+
+* Added Leica Camera support.
+* Added the required Leica Camera components and dependencies.
+* Updated camera-related device configuration.
+* Integrated camera improvements from the updated ReForge kernel.
+* Improved camera stability and compatibility.
+
+## 📱 Display & UI
+
+* Switched refresh-rate handling to minimum and peak refresh-rate selection.
+* Improved display refresh-rate management.
+* Added per-app refresh-rate configuration.
+* Improved display and power configuration.
+* Disabled Pocket Lock.
+* Updated display cutout configuration.
+* Improved overall UI smoothness and responsiveness.
+
+## 🔦 Device Features
+
+* Added torch light control.
+* Improved thermal configuration.
+* Improved USB OTG host path handling.
+* Updated device architecture configuration.
+* Added device-specific performance improvements.
+* Improved charging and power configuration.
+
+## ⚙️ SM6150 Common
+
+* Adapted the SM6150 common tree to AlphaDroid.
+* Removed obsolete TARGET_KERNEL_CONFIG handling.
+* Updated kernel BPF version override to 5.10.239.
+* Updated kernel compilation configuration.
+* Added Clang 22 compatibility.
+* Improved swappiness and watermark configuration.
+* Added 120 FPS gaming support.
+* Improved PowerHAL SELinux rules.
+* Fixed USB OTG host path matching.
+* Cleaned obsolete flags and dependencies.
+* Added dalvik property optimizations.
+
+## 🧠 Kernel — ReForge
+
+* Switched sweet to **ReForge Kernel**.
+* Added **KernelSU / KernelSU Next support**.
+* Added **SUSFS v2.3.0**.
+* Added KernelSU and NoMount integration from the device tree.
+* Regenerated the sweet kernel defconfig.
+* Updated and fixed multiple Qualcomm camera components.
+* Fixed camera memory leaks and NULL pointer issues.
+* Improved camera SMMU and ICP handling.
+* Fixed OIS driver issues.
+* Fixed EEPROM device handle leaks.
+* Updated camera_v3 components.
+* Imported updated camera_v3 support for Spectra 7150 Pro.
+* Improved kernel thermal management with the step_wise governor.
+* Cleaned kernel build warnings and legacy configuration.
+* Completed the ReForge kernel integration.
+
+## 🛡️ Root / Advanced Features
+
+* **KernelSU Next support**
+* **SUSFS v2.3.0**
+* **NoMount integration**
+* Automatic KernelSU integration from the device tree.
+
+## 🐛 Fixes & Improvements
+
+* Improved overall system stability.
+* Improved camera reliability.
+* Improved audio compatibility.
+* Improved thermal behavior.
+* Improved display and refresh-rate handling.
+* Improved gaming performance.
+* Improved USB OTG compatibility.
+* Cleaned obsolete configuration and dependencies.
+* Updated SM6150 common device configuration for AlphaDroid.
+
+## 📦 Build
+
+* Official **GApps build**.
+* Google applications and services are pre-integrated.
+* **No Vanilla build for this release.**
+
+## 📱 Overall
+
+This update brings a major refresh to the Xiaomi Redmi Note 10 Pro (sweet) on AlphaDroid Android 16.
+
+The build introduces the **ReForge Kernel**, **KernelSU Next**, **SUSFS v2.3.0**, **Leica Camera**, **Dolby Atmos**, and **Sony audio blobs**, together with extensive improvements to performance, camera, audio, display, thermal management and system stability.
+
+### Credits
+
+* Team AlphaDroid
+* ReForge Kernel contributors
+* Xiaomi SM6150 common contributors
+* @Georgeramzy01 For fantastic banner
+* Redmi Note 10 Pro device tree contributors
+
+* All contributors to the included camera and audio components
+
 
 ====================
      01-09-2026
